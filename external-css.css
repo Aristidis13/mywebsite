@@ -1,0 +1,181 @@
+/*--------------------------------------------- Custom Cursor CSS --------------------------------------------------*/
+#custom-cursor {
+    position:fixed;
+    z-index: 1000000;
+    width:30px;
+    height:30px;
+    color:aqua;
+    background-color: rgba(3, 166, 120, .8);
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    pointer-events: none;/*Κάνει τον cursor να μην έχει pointer events --> Μπορώ να πατήσω πράγματα*/
+    transform: translate(-50%,-50%);
+    transition: box-shadow 3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    width .5s ease-in-out, height .5s ease-in-out;
+    
+}
+
+.aboveLink {
+    box-shadow: 0 0 30px 10px rgba(3, 166, 120, .8);
+    width: auto !important;
+    height: 50px !important;
+}
+
+a:hover {
+    cursor: none;
+}
+
+.hoverText {
+    color: #fff !important;
+    transition: all 1s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/*NavBar*/
+.navbar-end.pr-6 {
+    padding-right: 4.2rem !important;
+}
+
+/*Background Image Styling*/
+#image {
+    background-image: url(images/background/ilmenskie-cave-gr-texture-3.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body{
+    font-family: 'Osvald', 'serif';
+    font-style: normal;
+    font-weight: 500;
+    cursor: none;
+}
+
+#intro1{
+    color:#555;
+    text-shadow: -.1rem .1rem 1px #888;
+    font-size: 2.2rem !important;
+}
+/*Add custom images to index.html list*/
+#customList {
+	margin-left: 0;
+	list-style-position: inside;
+}
+#customList :first-child{
+	list-style-image: url('images/bullets/seo-image.png');
+}
+
+#customList :nth-child(2){
+	list-style-image: url('images/bullets/frontend.jpg');
+}
+#customList :nth-child(3){
+	list-style-image: url('images/bullets/wordpress.jpg');
+}
+#customList :nth-child(4){
+	list-style-image: url('images/bullets/stock-image.jpg');
+}
+
+abbr{
+	color:rgb(80,80,80);
+	text-decoration-line: none;
+}
+/*--------------------------------------------------- Footer Settings -----------------------------------------------*/
+#footer {
+    display: grid;
+    grid: 50px auto auto / repeat(10, 10% );
+    justify-content: center;
+}
+.triangle {
+    grid-area: 1 / 1 / -1 / -1;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-bottom: 45vh solid rgb(97, 91, 91);
+  }
+
+/*Container για footer*/
+.container-wrapper {
+    grid-area: 2 / 4 / 3 / 8;
+    align-self: center;
+}
+
+.rights-line {
+    grid-area: 3 / 1 / 4 / -1;
+    text-align: center;
+    color: azure;
+}
+
+/*Container για .fa*/
+.social-links-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.social-media-text {
+    padding: 0 0 0 10px;
+}
+
+.fa:hover .social-media-text, .social-media-text:hover{
+    animation : socialTextTransforms 3s ease;
+    transition: transform 0s 3s;/**/
+    transform: translateX(-50%) scale(2,2) skew(10deg,0);
+    letter-spacing: 13px;
+}
+
+/*Icons*/
+.fa {
+    padding: 0.5em;
+    font-size: 1.5em;
+    width: 2em;
+    height: 2em;
+    text-decoration: none;
+    border-radius: 50%;
+    color: azure;
+    display: grid;
+    grid: auto /auto max-content;
+}
+
+.fa:hover::before {
+    opacity: 0;
+}
+
+.link-text {
+    color:grey;
+}
+
+.terms-line {
+    color :#555;
+    text-align: center;
+}
+
+.right {
+    grid-area: 6 / 1 / 2 / 11;
+    transform: rotate(35deg);
+    transform-origin: left;
+}
+
+.left {
+    grid-area: 1 / 1 / 2 / 6;
+    display: block;
+    height: 1px;
+    transform: rotate(-35deg);
+    transform-origin: right;
+}
+
+
+/*Animations*/
+
+/*Footer*/
+@keyframes socialTextTransforms {
+    14% { transform: translateX(10%) scale(2,2); color:rgb(255, 0, 0);}
+    28% { transform: translateX(10%) scale(1,2); color:orangered;}
+    42% { transform: translateX(10%) scale(2,1); color: yellow;}
+    56% { transform: translateX(10%) scale(1,1); color: rgb(0, 143, 0);}
+    70% { transform: translateX(50%) scale(2,2); color: lightskyblue;}
+    84% { transform: translateX(100%) scale(1,1); color:rgb(25, 26, 112);}
+    100% {transform: translateX(-50%) scale(2,2) skew(10deg,0); color:purple;}
+}
