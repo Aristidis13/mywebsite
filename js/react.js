@@ -1,5 +1,5 @@
 class ProjectList extends React.Component {
-    render() {
+    render() { 
         return (
             <section className="project-info">
                 <h3 className="project-title"> My Projects</h3>
