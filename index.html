@@ -5,9 +5,7 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T5VXKJM');
     </script> <!-- Google Tag Manager End -->
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-    <script type="text/babel" data-plugins="transform-class-properties" src="/js/react.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Software Engineer - Aris Barlos</title>
@@ -67,7 +65,7 @@
             }
         </style>
         <article id="projects">
-
+            <!--Here we will add the projects-->
         </article>
 
     </main>
@@ -84,70 +82,9 @@
                     </div>
                 </div>
             </div>
-            <div class="rights-line">
-                &copy; 2021 Aristeidis Barlos, All rights reserved
-            </div>
     </footer>
-    <script>
-        const burger = document.querySelector('#burger');
-        const navbarMenu = document.querySelector('#nav_links');
-        burger.addEventListener('click', () => {
-        navbarMenu.classList.toggle('is-active');
-        });
-    </script>
-      <script>
-        $(document).ready(function(){
-            var numOfMessages = 0; 
-            setInterval( function(){
-                funcCaller[numOfMessages]();
-                numOfMessages++;
-                if(numOfMessages===4) numOfMessages=0;/*numOfMessages must match exactly the number of functions*/ 
-            }, 4000, numOfMessages);
-        })
-        </script>
-        <script>
-            function func0(){ document.getElementById('intro1').innerHTML = '<span>Hello World! I\'m Aris and this is my Portfolio Website.</span>';}
-            function func1(){ document.getElementById('intro1').innerHTML = '<span>To view my public projects check \'My Projects\' Section.</span>';}
-                function func2(){ document.getElementById('intro1').innerHTML = '<span>To contact me, head to \'Let\'s Connect\' Section at the Top.</span>';}
-            function func3(){ document.getElementById('intro1').innerHTML = '<span>To connect with me, you can find me on my Social Media.</span>';}
-            var funcCaller = [];
-            funcCaller.push(func1);
-            funcCaller.push(func2);
-            funcCaller.push(func3);
-            funcCaller.push(func0);
-        </script>
-        <script>
-            /*Custom Cursor*/
-            jQuery(document).ready( function() {
-                var customCursor = jQuery('#custom-cursor');
-                /*Mouse move event για να ακολουθεί το div το Mouse*/
-                jQuery(document).on('mousemove', customCursor, function(e) {
-                    customCursor.css({
-                        'top': e.clientY+'px',
-                        'left': e.clientX+'px',
-                    });
-                }).on('mouseleave', customCursor, function(e){
-                    customCursor.css('opacity',0);
-                }).on('mouseover', customCursor, function(e){
-                    customCursor.css('opacity',1);
-                });
-
-                
-                /*Effects σε link hover*/
-                jQuery('a').on('mouseenter', customCursor, function(e){
-                    customCursor.addClass('aboveLink');
-                    customCursor.eq(0).prepend('<div>Click Me!</div>').addClass("hoverText");
-                }).on('mouseleave', customCursor, function(e){
-                    customCursor.removeClass('aboveLink');
-                    customCursor.empty();
-                });
-            });
-        </script>
-        <script>
-            var wordsVariable = console.group("Words");
-            console.log('Do not isolate yourself.Castles are more dangerous than protection');
-            console.log('Conceal your intentions');
-            console.groupEnd('End of my wise words');
-        </script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script type="text/babel" src="./js/react.js"></script>
 </body>
 </html>
