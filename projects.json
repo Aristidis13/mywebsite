@@ -6,7 +6,7 @@
 	},
 	{
 		"title": "EstateHub",
-		"description": "That was a lengthy project. The code can be found in Github. It's about the development of a business idea and it has been implemented in C# and wpf as a windows binary. ICONIX was the software development methodology that was followed and the files have the final use cases,robustness diagrams and sequence diagrams among other files, for this project.",
+		"description": "That was a lengthy project. The code can be found in Github. It's about the development of a business idea and it has been implemented in C# and wpf as a windows binary. ICONIX was the software development methodology that was followed and the files have the final use cases,robustness diagrams and sequence diagrams among other files, for this project."
 	},
 	{
 		"title": "Social Media Network",
@@ -27,5 +27,5 @@
 		"title": "Parser and Lexicological Analyser with Flex & Bison",
 		"description": "A parser that accepts as input a JSON file that contains multiple tweets.retweets and extended tweets and finds what fields are missing or have different values from what is expected. The JSON file can be a complex one in the sense that one field can contain JSON arrays. The project was created by C although Flex and Bison files can also run with C++.Full implementation is in Github .",
 		"language": "Greek"
-	},
+	}
 ]
