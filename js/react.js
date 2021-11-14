@@ -1,17 +1,22 @@
-console.log('I read this file');
-
 class ProjectList extends React.Component {
-    render() { 
+    render() {
+        const projectComponents = projects.map( (project) => (
+            <Project
+                title = {project.title}
+                description={project.description}
+                link = {project.link}
+            />
+        ));
         return (
             <section className="project-info">
                 <h3 className="project-title"> My Most Interesting Projects</h3>
                 <p class="project-intro">
-                    This is a collection of all the projects I wanted to make publicly available. Some of them are on Github while others exist only here.
-                    Also in some here can be found the exercise and in Github can be found the full implementation.
-                    All projects are under the MIT License as described in Github.
-                    In a nutshel, that means that you can use whatever you find useful but you cannot claim it as yours.
+                    This is a collection of all the projects I wanted to make publicly available  and consider the nicest.
+                    You should view my whole work in Github.
+                    If you have any interesting idea that you think can help us both improve or you are searching for collaborations
+                    with other programmers or think that you want to say hello contact me.
                 </p>
-                <Project />
+                {projectComponents}
             </section>
         );
     }
@@ -21,15 +26,14 @@ class ProjectList extends React.Component {
 class Project extends React.Component {
     render() {
         return (
+            <a href={this.props.link} target="_blank">
             <section className="project-info">
-                <h3 className="project-title"> Bash Scripting and Semaphores with C</h3>
+                <h3 className="project-title"> {this.props.title}</h3>
                 <p className="project-description">
-                    This is a compilation of a plethora of subjects. Fork-join programs, semaphores implemented in C, Bash Scripting and theoritical analysis
-                    for a few Scheduling Algorithms (ex. Round-Robbin) are the most important elements of this project. Code can be found in Github
-                    <a href="https://github.com/Aristidis13/Bash_Scripting/"> here </a> and <a href="https://github.com/Aristidis13/fork-join-semaphores-in-C/"> here </a>
-                    and the queries for the exercise can be found <a href="/files/os.rar">here</a>.
+                    {this.props.description}
                 </p>
             </section>
+            </a>
         );
     }
 }

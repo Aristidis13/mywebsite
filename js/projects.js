@@ -1,4 +1,4 @@
-const projects = [
+let projects = [
 	{
 		"title": "Parser and Lexicological Analyser with Flex & Bison",
 		"description": "A parser that accepts as input a JSON file that contains multiple tweets.retweets and extended tweets and finds what fields are missing or have different values from what is expected. The JSON file can be a complex one in the sense that one field can contain JSON arrays. The project was created by C although Flex and Bison files can also run with C++.Full implementation is in Github .",
@@ -32,6 +32,6 @@ const projects = [
 	{
 		"title": " Database Project in MySQL",
 		"description": "This is a project that is about relational MySQL Database handling. A Database about an erecruitment system is given, and you have to add more tables and appropriate information to them. Also queries have to be constructed that extract information from the tables. Specifically, there are two types of users that interact with the database.A recruiter and a candidate.It contains create statements, insertions, select statements,triggers and stored proecedures",
-		"link": "https://github.com/Aristidis13/Crowdsourcing-project"
+		"link": "https://github.com/Aristidis13/MySQL-database-expansion"
 	}
 ];
