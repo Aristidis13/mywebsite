@@ -2,6 +2,7 @@ class ProjectList extends React.Component {
     render() {
         const projectComponents = projects.map( (project) => (
             <Project
+                id = {'project-'+project.id}
                 title = {project.title}
                 description={project.description}
                 link = {project.link}
@@ -9,14 +10,8 @@ class ProjectList extends React.Component {
         ));
         return (
             <article id="projects">
-            <h2 className="project-title"> My Most Interesting Projects</h2>
-            <p class="project-intro">
-                This is a collection of all the projects I wanted to make publicly available  and consider the nicest.
-                You should view my whole work in Github.
-                If you have any interesting idea that you think can help us both improve or you are searching for collaborations
-                with other programmers or think that you want to say hello contact me.
-            </p>
-            {projectComponents}
+                <h2 className="project-header"> My Most Interesting Projects</h2>
+                {projectComponents}
         </article>
         );
     }
@@ -26,7 +21,7 @@ class ProjectList extends React.Component {
 class Project extends React.Component {
     render() {
         return (
-            <section className="project-info">
+            <section className="atomic-project" id={ this.props.id}>
                 <a href={this.props.link} target="_blank">
                     <section class="project-info">
                         <h3 class="project-title"> {this.props.title}</h3>

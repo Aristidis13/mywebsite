@@ -1,4 +1,11 @@
 /*--------------------------------------------- Custom Cursor CSS --------------------------------------------------*/
+html {
+    font-size: 16px;
+    background-color: #222733;
+    color:#f7fff7;
+    text-decoration: none ;
+}
+
 #custom-cursor {
     position:fixed;
     z-index: 1000000;
@@ -22,70 +29,78 @@
     height: 50px !important;
 }
 
-a:hover {
-    cursor: none;
-}
-
 .hoverText {
     color: #fff !important;
     transition: all 1s ease-in-out;
     display: flex;
     align-items: center;
 }
-
-/*
- * Projects
- */
-#projects {
-    display: flex;
+main {
+    display: grid;
+    grid-template: auto / 100%;
+    justify-content: center;
 }
 
+
+/*--------------------------------------------- Projects Section CSS -----------------------------------------*/
+#projects-section {
+    display: grid;
+    justify-items: center;
+}
+
+#projects {
+    display: grid;
+    text-decoration: none;
+    width: 80%;
+}
+
+/*Project Header*/
+.project-header {
+    text-align: center;
+    border-bottom: solid 3px #ffe66d;
+    padding-bottom: 2rem;
+    font-size: 4rem;
+    line-height: 4.5rem;
+}
+
+/*Project Class*/
+.atomic-project {
+    width: 40%;
+    margin-bottom: 3%;
+    border: solid 1px #a8ce72;
+    border-radius: 10px;
+}
+
+/*Το CTA και το intro-header επηρεάζουν την σειρά κατάταξης των projects στην σκάλα*/
+.atomic-project:nth-child(4n+2) {
+    justify-self: start;
+}
+.atomic-project:nth-child(2n+3) {
+    justify-self: center;
+}
+.atomic-project:nth-child(4n+4) {
+    justify-self: end;
+}
+
+/*Change Default link styles*/
+.atomic-project > a {
+    text-decoration: none;
+    color:#ff6b6b;
+}
+
+.project-title {
+    color: #a8ce72;
+}
 
 /*----------------------------------------------------------------------------------------------------------------*/
 
-/*NavBar*/
-.navbar-end.pr-6 {
-    padding-right: 4.2rem !important;
-}
-
 /*Background Image Styling*/
-#image {
-    background-image: url(images/background/ilmenskie-cave-gr-texture-3.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 body{
     font-family: 'Osvald', 'serif';
     font-style: normal;
     font-weight: 500;
-    cursor: none;
-}
-
-#intro1{
-    color:#555;
-    text-shadow: -.1rem .1rem 1px #888;
-    font-size: 2.2rem !important;
-}
-/*Add custom images to index.html list*/
-#customList {
-	margin-left: 0;
-	list-style-position: inside;
-}
-#customList :first-child{
-	list-style-image: url('images/bullets/seo-image.png');
-}
-
-#customList :nth-child(2){
-	list-style-image: url('images/bullets/frontend.jpg');
-}
-#customList :nth-child(3){
-	list-style-image: url('images/bullets/wordpress.jpg');
-}
-#customList :nth-child(4){
-	list-style-image: url('images/bullets/stock-image.jpg');
+    /*cursor: none;*/
+    margin: 0;
 }
 
 abbr{
@@ -96,7 +111,7 @@ abbr{
 #footer {
     display: grid;
     grid: 50px auto auto / repeat(10, 10% );
-    justify-content: center;
+    justify-items: center;
 }
 .triangle {
     grid-area: 1 / 1 / -1 / -1;
