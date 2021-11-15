@@ -43,7 +43,7 @@ let projects = [
 	},
 	{
 		"id": idGiver(),
-		"title": " Database Project in MySQL",
+		"title": "MySQL Database Project",
 		"description": "This is a project that is about relational MySQL Database handling. It's about the expansion of a given erecruitment system to fulfil the needs of recruiters and a candidates. It contains CREATE statements, insertions, selects, triggers and stored proecedures",
 		"link": "https://github.com/Aristidis13/MySQL-database-expansion"
 	}
