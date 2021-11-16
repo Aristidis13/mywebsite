@@ -1,11 +1,41 @@
-/*--------------------------------------------- Custom Cursor CSS --------------------------------------------------*/
+/* ---------------------------------------------- Highest DOM Elements ---------------------------------------*/
 html {
     font-size: 16px;
-    background-color: #222733;
-    color:#f7fff7;
+    background-color: #19091a;
     text-decoration: none ;
+    color: #ECECEC;
 }
 
+body {
+    margin: 0;
+}
+
+abbr {
+	color:rgb(80,80,80);
+	text-decoration-line: none;
+}
+
+/*---------------------------------------------------- Header-Canvas -------------------------------------------------*/
+header {
+    height: 100vh;
+    width:100vw;
+}
+
+canvas {
+    border: 5px white dashed;
+    width:100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+main {
+    display: grid;
+    grid-template: auto / 100%;
+    justify-content: center;
+}
+
+/*--------------------------------------------- Custom Cursor CSS --------------------------------------------------*/
 #custom-cursor {
     position:fixed;
     z-index: 1000000;
@@ -23,23 +53,15 @@ html {
     
 }
 
-.aboveLink {
-    box-shadow: 0 0 30px 10px rgba(3, 166, 120, .8);
-    width: auto !important;
-    height: 50px !important;
-}
-
 .hoverText {
     color: #fff !important;
     transition: all 1s ease-in-out;
     display: flex;
     align-items: center;
 }
-main {
-    display: grid;
-    grid-template: auto / 100%;
-    justify-content: center;
-}
+
+/*------------------------------------------------ Welcome Section -------------------------------------------*/
+
 
 
 /*--------------------------------------------- Projects Section CSS -----------------------------------------*/
@@ -57,7 +79,6 @@ main {
 /*Project Header*/
 .project-header {
     text-align: center;
-    border-bottom: solid 3px #ffe66d;
     padding-bottom: 2rem;
     font-size: 4rem;
     line-height: 4.5rem;
@@ -98,21 +119,75 @@ main {
     text-justify: distribute;
 }
 
-/*----------------------------------------------------------------------------------------------------------------*/
-
-/*Background Image Styling*/
-body{
-    font-family: 'Osvald', 'serif';
-    font-style: normal;
-    font-weight: 500;
-    /*cursor: none;*/
-    margin: 0;
+/*--------------------------------------------- Technical Experience -----------------------------------------*/
+/*--------------------------------------------------- Skills -------------------------------------------------*/
+#skills-section {
+    display:flex;
+    justify-content: center;
+}
+#skills {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width:80%;
+    margin: 0 auto;
 }
 
-abbr{
-	color:rgb(80,80,80);
-	text-decoration-line: none;
+.skill-container {
+    width: 28%;
+    margin: 1%;
+    max-width: 100%;
+    min-width:300px;
+    background-color: #ECECEC;
+    color: #222;
+    font-weight: 700;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.2s linear;
 }
+
+.skill-image {
+    width:50%;
+    height:40vh;
+}
+
+.skill-text {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 80%;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    color: #ECECEC;
+}
+
+figure:hover {
+    background-color: #8c2949;
+}
+
+figure:hover .skill-text {
+    visibility: visible;
+    opacity:1;
+}
+
+.skill-title {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.skill-url {
+    color: #ECECEC;
+    display: block;
+    margin-top: 4%;
+}
+
+/*------------------------------------------------ Current Project -------------------------------------------*/
+/*--------------------------------------------------- Contact ------------------------------------------------*/
+
+
 /*--------------------------------------------------- Footer Settings -----------------------------------------------*/
 #footer {
     display: grid;

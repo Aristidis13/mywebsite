@@ -12,4 +12,3 @@ context.strokeStyle = "red";
 // Creates the line
 context.closePath();
 context.stroke();
-console.log('I run');

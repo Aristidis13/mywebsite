@@ -48,3 +48,85 @@ let projects = [
 		"link": "https://github.com/Aristidis13/MySQL-database-expansion"
 	}
 ];
+
+idGiver.counter = 0; // Restarts Counter
+
+let skills = [
+	{
+		"id": idGiver(),
+		"title": "React",
+		"image":"skills/react.svg",
+		"description": "React is a Component based JS Library created from Facebook and a powerfull tool to make live DOM Updates.It has been used in this site.",
+		"url": "https://reactjs.org/"
+	},
+	{
+		"id": idGiver(),
+		"title": "CSS3",
+		"image":"/skills/css3.svg",
+		"description": "With Flexbox,Grid and Animations, CSS nowadays is a lot more than just a style-adding mechanism. It's central part of every UI and one of my favorites.",
+		"url": "https://www.w3.org/Style/CSS/"
+	},
+	{
+		"id": idGiver(),
+		"title": "HTML",
+		"image": "/skills/html5.svg",
+		"description": "HTML5 is a structuring and markup language that although not difficult to learn is difficult to master, especially ARIA, Canvas API and SVG Handling",
+		"url" :"https://www.w3.org/html/"
+	},
+	{
+		"id": idGiver(),
+		"title": "JavaScript ES6+",
+		"image": "/skills/javascript.svg",
+		"description": "A fullstack Programming Language. In ES+ Standard alongside Babel or some other JS compiler can be found everywhere!",
+		"url" :"https://www.w3.org/standards/webdesign/script"
+	},
+	{
+		"id": idGiver(),
+		"title": "Node.js",
+		"image": "/skills/node.svg",
+		"description": "Node.js is primarily used for traditional web sites and back-end API services and I've used it alongside React and MongoDB.",
+		"url" :"https://nodejs.org/en/"
+	},/*
+	{
+		"id": idGiver(),
+		"title": "MongoDB",
+		"image": "/skills/bulma.svg",
+		"description": "MongoDB is a modern solution in Database Design and is rapidly expanding due to its flexibility and scalability.",
+		"link": "https://www.mongodb.com/"
+	},*/
+	{
+		"id": idGiver(),
+		"title": "Wordpress",
+		"image": "./skills/wordpress.svg",
+		"description": "Wordpress is the most used Open Source CMS widelly used in many websites globally with a passionate community.",
+		"url": "https://wordpress.com/el/"
+	},
+	{
+		"id": idGiver(),
+		"title": "Bulma",
+		"image": "/skills/bulma.svg",
+		"description": "A lighweight CSS Framework, based mostly in Flexbox, has modular Components and no JavaScript.It can be used to create impressive layouts.",
+		"url": "https://bulma.io/"
+	},
+	{
+		"id": idGiver(),
+		"title": "PHP",
+		"image": "/skills/php.svg",
+		"description": "PHP was the holy grail of backend web developement and the first backend technology I learned to use.",
+		"url": "https://www.php.net/"
+	},
+	{
+		"id": idGiver(),
+		"title": "Java",
+		"image":"/skills/java.svg",
+		"description": "A widelly used, completely OOP Language that I had the oppertunity to use a lot during my college years.",
+		"url": "https://www.java.com/"
+	},
+	{
+		"id": idGiver(),
+		"title": "Git",
+		"image":"/skills/git.svg",
+		"description": "Git is a version control system widelly adopted in the developement of every project I've done.Alongside Github are pillars in the programming world",
+		"url": "https://git-scm.com/"
+	}
+];
