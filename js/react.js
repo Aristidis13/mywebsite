@@ -1,5 +1,5 @@
 /*
- * Projects
+ ************************************************************************* Projects
  */
 
 class ProjectList extends React.Component {
@@ -45,7 +45,58 @@ ReactDOM.render(
 
 
 /*
- * Skills
+ ****************************************************************** Technical Experience
+ */
+class ExperienceList extends React.Component {
+    render() {
+        const experienceComponents = experience.map((experienceElement) => 
+        <experienceElement 
+            id = {"experience-element-"+experience.id}
+            title = {experience.title}
+            subtitle = {experience.subtitle}
+            dateStart = {experience.dateStart}
+            dateEnd = {experience.dateEnd}
+            description = {experience.description}
+        />
+        );
+        return (
+            <article id="experience-elements">
+                <h2> Technical Experience</h2>
+                <p id="experience-intro-paragraph"></p>
+                <section id="experience">
+                    {experienceComponents}
+                </section>
+            </article>
+        )
+    }
+}
+
+class experienceElement extends React.Component {
+    render() {
+        return (
+            <section class="experience-element-container" id={this.props.id}>
+                <p class="time-period">
+                    <time class="date-start" dateTime=""> {this.props.dateStart}</time>
+                    - <time class="date-end"dateTime=""> {this.props.dateEnd} </time>
+                </p>
+                <div class="experience-title">
+                    <h3 class="experience-main-title"> {this.props.title} </h3>
+                    <h4 class="experience-secondary-title"> {this.props.subtitle} </h4>
+                </div>
+                <div class="decoration-container">
+                    <div class="dec-line"></div>
+                    <div class="dec-bullet"></div>
+                    <div class="dec-line"></div>
+                </div>
+                <p class="experience-description"> {this.props.description}</p>
+            </section>
+        )
+    }
+}
+
+
+/*
+ ********************************************************************* Skills
  */
 
 class SkillList extends React.Component {
@@ -88,6 +139,7 @@ class Skill extends React.Component {
         )
     }
 }
+
 ReactDOM.render(
     <SkillList />, document.getElementById('skills-section')
 );

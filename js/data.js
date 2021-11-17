@@ -4,6 +4,8 @@ function idGiver()  {
 	return idGiver.counter++;
 }
 
+/*PROJECTS */
+
 let projects = [
 	{
 		"id": idGiver(),
@@ -49,6 +51,48 @@ let projects = [
 	}
 ];
 
+/* EXPERIENCE */
+idGiver.counter = 0;
+
+let experience = [
+	{
+		"id": idGiver(),
+		"title": "Frontend Developer in 3CP Digital Agency",
+		"subtitle": "Using Frontend Languages and Wordpress",
+		"dateStart": 'Jan 2021',
+		"dateEnd": 'Sep 2021',
+		"description": "3CP Digital Agency is an amazing company based in Patras, Greece. During my work there I had the opportunity to help in the creation and maintanance of a plethora of sites by building sliders, carousels and more in a very professional and fast-paced enviroment. In my time there I had the opportunity to explore the world of Wordpress.",
+		"link": "https://3cp.gr/"
+	},
+	{
+		"id": idGiver(),
+		"title": "Student at Computer Engineering and Informatics Department",
+		"subtitle": "University of Patras",
+		"dateStart": 'Sep 2013',
+		"dateEnd": 'Sep 2020',
+		"description": "My studies there although mostly theoretical were very helpful to understand how to program and what it takes to be a great programmer. I had fun, built a plethora of programs and met amazing people.",
+		"link": "https://www.ceid.upatras.gr/en"
+	},
+	{
+		"id": idGiver(),
+		"title": "Freelancer in Fiverr",
+		"subtitle": "Building Apps or Sites using Frontend and Backend Languages",
+		"dateStart": 'Jan 2021',
+		"dateEnd": 'Present',
+		"description": "Occasionally when I have spare time from my other projects I use Fiverr to make websites, projects and more. If you want help with your projects find me and say 'Hello!'",
+		"link": "https://www.fiverr.com/arisbarlos?up_rollout=true"
+	},
+	{
+		"id": idGiver(),
+		"title": "Certifications",
+		"dateStart": 'September 2020',
+		"dateEnd": 'Present',
+		"description": "My Certifications as far include an Integrated Masters in Computer Science which I obtained at September 2020. I ",
+		"link": ""
+	}
+]
+
+/* SKILLS */
 idGiver.counter = 0; // Restarts Counter
 
 let skills = [
@@ -90,7 +134,7 @@ let skills = [
 	{
 		"id": idGiver(),
 		"title": "MongoDB",
-		"image": "/skills/bulma.svg",
+		"image": "/skills/mongodb.svg",
 		"description": "MongoDB is a modern solution in Database Design and is rapidly expanding due to its flexibility and scalability.",
 		"link": "https://www.mongodb.com/"
 	},*/
@@ -130,3 +174,5 @@ let skills = [
 		"url": "https://git-scm.com/"
 	}
 ];
+
+
