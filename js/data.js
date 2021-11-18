@@ -87,8 +87,8 @@ let experience = [
 		"title": "Certifications",
 		"dateStart": 'September 2020',
 		"dateEnd": 'Present',
-		"description": "My Certifications as far include an Integrated Masters in Computer Science which I obtained at September 2020. I ",
-		"link": ""
+		"description": "I never miss an opportunity to explore a new technology and therefore expand my collection of Certifications. My most important, is an Integrated Master in Computer Science which I obtained at September 2020. I also hold in high respect the Certification in Responsive Web Design which I got from freecodecamp after attending the lessons and doing all the projects there. Expect more in the future.",
+		"link": "https://www.freecodecamp.org/certification/aristidis13/responsive-web-design"
 	}
 ]
 

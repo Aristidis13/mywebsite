@@ -1,4 +1,4 @@
-/* ---------------------------------------------- Highest DOM Elements ---------------------------------------*/
+/* --------------------------------------------------- DOM Elements -----------------------------------------------------*/
 html {
     font-size: 16px;
     background-color: #19091a;
@@ -29,13 +29,24 @@ canvas {
     z-index: -1;
 }
 
+/*--------------------------------------------- Main General Settings and Custom Cursor ----------------------------------------*/
+.list-container {
+    width: 80%;
+}
+
 main {
     display: grid;
     grid-template: auto / 100%;
     justify-content: center;
 }
 
-/*--------------------------------------------- Custom Cursor CSS --------------------------------------------------*/
+.section-header {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 4rem;
+    line-height: 4.5rem;
+}
+
 #custom-cursor {
     position:fixed;
     z-index: 1000000;
@@ -73,15 +84,6 @@ main {
 #projects {
     display: grid;
     text-decoration: none;
-    width: 80%;
-}
-
-/*Project Header*/
-.project-header {
-    text-align: center;
-    padding-bottom: 2rem;
-    font-size: 4rem;
-    line-height: 4.5rem;
 }
 
 /*Project Class*/
@@ -120,6 +122,19 @@ main {
 }
 
 /*--------------------------------------------- Technical Experience -----------------------------------------*/
+#technical-experience {
+    display: flex;
+    justify-content: center;
+}
+
+#experience {
+    justify-content: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
 /*--------------------------------------------------- Skills -------------------------------------------------*/
 #skills-section {
     display:flex;
@@ -129,7 +144,6 @@ main {
     display:flex;
     flex-flow: row wrap;
     justify-content: center;
-    width:80%;
     margin: 0 auto;
 }
 

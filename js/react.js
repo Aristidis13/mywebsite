@@ -13,8 +13,8 @@ class ProjectList extends React.Component {
             />
         ));
         return (
-            <article id="projects">
-                <h2 className="project-header"> My Most Interesting Projects</h2>
+            <article class="list-container" id="projects">
+                <h2 class="section-header"> My Most Interesting Projects</h2>
                 {projectComponents}
         </article>
         );
@@ -25,7 +25,7 @@ class ProjectList extends React.Component {
 class Project extends React.Component {
     render() {
         return (
-            <section className="atomic-project" id={ this.props.id}>
+            <section class="atomic-project" id={ this.props.id}>
                 <a href={this.props.link} target="_blank">
                     <section class="project-info">
                         <h3 class="project-title"> {this.props.title}</h3>
@@ -50,18 +50,19 @@ ReactDOM.render(
 class ExperienceList extends React.Component {
     render() {
         const experienceComponents = experience.map((experienceElement) => 
-        <experienceElement 
-            id = {"experience-element-"+experience.id}
-            title = {experience.title}
-            subtitle = {experience.subtitle}
-            dateStart = {experience.dateStart}
-            dateEnd = {experience.dateEnd}
-            description = {experience.description}
+        <ExperienceElement 
+            id = {"experience-element-"+experienceElement.id}
+            title = {experienceElement.title}
+            subtitle = {experienceElement.subtitle}
+            dateStart = {experienceElement.dateStart}
+            dateEnd = {experienceElement.dateEnd}
+            description = {experienceElement.description}
+            link = {experienceElement.link}
         />
         );
         return (
-            <article id="experience-elements">
-                <h2> Technical Experience</h2>
+            <article class="list-container" id="experience-elements">
+                <h2 class="section-header"> Technical Experience</h2>
                 <p id="experience-intro-paragraph"></p>
                 <section id="experience">
                     {experienceComponents}
@@ -71,28 +72,37 @@ class ExperienceList extends React.Component {
     }
 }
 
-class experienceElement extends React.Component {
+class ExperienceElement extends React.Component {
     render() {
         return (
-            <section class="experience-element-container" id={this.props.id}>
+            <section class="list-container experience-element-container" id={this.props.id}>
                 <p class="time-period">
-                    <time class="date-start" dateTime=""> {this.props.dateStart}</time>
-                    - <time class="date-end"dateTime=""> {this.props.dateEnd} </time>
+                    <time class="date-start"> {this.props.dateStart + " "}</time>
+                    - <time class="date-end"> {" "+ this.props.dateEnd} </time>
                 </p>
-                <div class="experience-title">
-                    <h3 class="experience-main-title"> {this.props.title} </h3>
-                    <h4 class="experience-secondary-title"> {this.props.subtitle} </h4>
-                </div>
                 <div class="decoration-container">
                     <div class="dec-line"></div>
                     <div class="dec-bullet"></div>
                     <div class="dec-line"></div>
                 </div>
-                <p class="experience-description"> {this.props.description}</p>
+                <section class="exp-text-container">
+                    <div class="experience-title">
+                        <h3 class="experience-main-title"> {this.props.title} </h3>
+                        <h4 class="experience-secondary-title"> {this.props.subtitle} </h4>
+                    </div>
+                    <p class="experience-description"> {this.props.description}</p>
+                    <p class="experience-link-container"> 
+                        <a class="link experience-link" href={this.props.link}> {this.props.link} </a>
+                    </p>
+                </section>
             </section>
         )
     }
 }
+
+ReactDOM.render(
+    <ExperienceList/>,document.getElementById('technical-experience')
+)
 
 
 /*
@@ -111,8 +121,8 @@ class SkillList extends React.Component {
             />
         ));
         return (
-            <article id="atomic-skill-container">
-                <h2 className="project-header"> Skills Until Now</h2>
+            <article class="list-container" id="atomic-skill-container">
+                <h2 className="section-header"> Skills Until Now</h2>
                 <div id="skills">
                     {skillsComponents}
                 </div>
