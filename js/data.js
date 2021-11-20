@@ -57,6 +57,24 @@ idGiver.counter = 0;
 let experience = [
 	{
 		"id": idGiver(),
+		"title": "Certifications",
+		"subtitle": "The most Important",
+		"dateStart": 'Sep 2020',
+		"dateEnd": 'Present',
+		"description": "I never miss an opportunity to explore a new technology and therefore expand my collection of Certifications. My most important, is an Integrated Master in Computer Science which I obtained at September 2020. I also hold in high respect the Certification in Responsive Web Design which I got from freecodecamp after attending the lessons and doing all the projects there. Expect more in the future.",
+		"link": "https://www.freecodecamp.org/certification/aristidis13/responsive-web-design"
+	},
+	{
+		"id": idGiver(),
+		"title": "Freelancer in Fiverr",
+		"subtitle": "Building Apps or Sites using Frontend and Backend Languages",
+		"dateStart": 'Jan 2021',
+		"dateEnd": 'Present',
+		"description": "Occasionally when I have spare time from my other projects I use Fiverr to make websites, university projects and more. If you want help with your projects find me and say 'Hello!'",
+		"link": "https://www.fiverr.com/arisbarlos?up_rollout=true"
+	},
+	{
+		"id": idGiver(),
 		"title": "Frontend Developer in 3CP Digital Agency",
 		"subtitle": "Using Frontend Languages and Wordpress",
 		"dateStart": 'Jan 2021',
@@ -72,25 +90,8 @@ let experience = [
 		"dateEnd": 'Sep 2020',
 		"description": "My studies there although mostly theoretical were very helpful to understand how to program and what it takes to be a great programmer. I had fun, built a plethora of programs and met amazing people.",
 		"link": "https://www.ceid.upatras.gr/en"
-	},
-	{
-		"id": idGiver(),
-		"title": "Freelancer in Fiverr",
-		"subtitle": "Building Apps or Sites using Frontend and Backend Languages",
-		"dateStart": 'Jan 2021',
-		"dateEnd": 'Present',
-		"description": "Occasionally when I have spare time from my other projects I use Fiverr to make websites, projects and more. If you want help with your projects find me and say 'Hello!'",
-		"link": "https://www.fiverr.com/arisbarlos?up_rollout=true"
-	},
-	{
-		"id": idGiver(),
-		"title": "Certifications",
-		"dateStart": 'September 2020',
-		"dateEnd": 'Present',
-		"description": "I never miss an opportunity to explore a new technology and therefore expand my collection of Certifications. My most important, is an Integrated Master in Computer Science which I obtained at September 2020. I also hold in high respect the Certification in Responsive Web Design which I got from freecodecamp after attending the lessons and doing all the projects there. Expect more in the future.",
-		"link": "https://www.freecodecamp.org/certification/aristidis13/responsive-web-design"
 	}
-]
+];
 
 /* SKILLS */
 idGiver.counter = 0; // Restarts Counter

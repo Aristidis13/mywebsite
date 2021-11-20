@@ -81,20 +81,24 @@ class ExperienceElement extends React.Component {
                     - <time class="date-end"> {" "+ this.props.dateEnd} </time>
                 </p>
                 <div class="decoration-container">
-                    <div class="dec-line"></div>
                     <div class="dec-bullet"></div>
-                    <div class="dec-line"></div>
+                    <div class="line"></div>
                 </div>
                 <section class="exp-text-container">
                     <div class="experience-title">
-                        <h3 class="experience-main-title"> {this.props.title} </h3>
-                        <h4 class="experience-secondary-title"> {this.props.subtitle} </h4>
+                        <div class="titles-container">
+                            <h3 class="experience-main-title"> {this.props.title} </h3>
+                            <h4 class="experience-secondary-title"> {this.props.subtitle} </h4>
+                        </div>
                     </div>
-                    <p class="experience-description"> {this.props.description}</p>
-                    <p class="experience-link-container"> 
-                        <a class="link experience-link" href={this.props.link}> {this.props.link} </a>
-                    </p>
+                    <div class="experience-description-container">
+                        <p class="experience-description">{this.props.description}</p>
+                        <p class="experience-link-container"> 
+                            <a class="link experience-link" href={this.props.link}> {this.props.link} </a>
+                        </p>
+                    </div>
                 </section>
+                <p class="read-more"> Read More </p>
             </section>
         )
     }
