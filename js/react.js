@@ -48,6 +48,9 @@ ReactDOM.render(
  ****************************************************************** Technical Experience
  */
 class ExperienceList extends React.Component {
+    handleTitleClick(id) {
+        console.log(id+' was clicked');
+    }
     render() {
         const experienceComponents = experience.map((experienceElement) => 
         <ExperienceElement 
@@ -58,6 +61,7 @@ class ExperienceList extends React.Component {
             dateEnd = {experienceElement.dateEnd}
             description = {experienceElement.description}
             link = {experienceElement.link}
+            toggleClass = {this.handleTitleClick}
         />
         );
         return (
@@ -73,6 +77,16 @@ class ExperienceList extends React.Component {
 }
 
 class ExperienceElement extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpen:false
+        }
+        this.handleToggle = this.handleToggle.bind(this);
+    }
+    handleToggle() {
+        this.props.toggleClass(this.props.id);
+    }
     render() {
         return (
             <section class="list-container experience-element-container" id={this.props.id}>
@@ -87,7 +101,7 @@ class ExperienceElement extends React.Component {
                 <section class="exp-text-container">
                     <div class="experience-title">
                         <div class="titles-container">
-                            <h3 class="experience-main-title"> {this.props.title} </h3>
+                            <h3 class="experience-main-title" onClick={this.handleToggle}> {this.props.title} </h3>
                             <h4 class="experience-secondary-title"> {this.props.subtitle} </h4>
                         </div>
                     </div>
@@ -98,7 +112,7 @@ class ExperienceElement extends React.Component {
                         </p>
                     </div>
                 </section>
-                <p class="read-more"> Read More </p>
+                <p class="read-more" onClick={this.handleToggle}> Read More </p>
             </section>
         )
     }
