@@ -108,7 +108,7 @@ class ExperienceElement extends React.Component {
                     <div class="experience-description-container">
                         <p class="experience-description">{this.props.description}</p>
                         <p class="experience-link-container"> 
-                            <a class="link experience-link" href={this.props.link}> {this.props.link} </a>
+                            <a class="link experience-link" href={this.props.link} target="_blank"> {this.props.link} </a>
                         </p>
                     </div>
                 </section>
@@ -150,7 +150,7 @@ class SkillList extends React.Component {
 }
 
 class Skill extends React.Component {
-    render(){
+    render() {
         return (
             <figure class="skill-container" id={"skill-"+this.props.id}>
                 <img class="skill-image" src={this.props.image} />
@@ -159,7 +159,7 @@ class Skill extends React.Component {
                     <div class="skill-description">
                         {this.props.description}
                     </div>
-                    <a href={this.props.url} class="skill-url">
+                    <a href={this.props.url} class="skill-url" target="_blank">
                         {this.props.url}
                     </a>
                 </figcaption>
@@ -171,3 +171,7 @@ class Skill extends React.Component {
 ReactDOM.render(
     <SkillList />, document.getElementById('skills-section')
 );
+
+/* 
+ ************************************************************* Social Links
+ */

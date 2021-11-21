@@ -175,5 +175,3 @@ let skills = [
 		"url": "https://git-scm.com/"
 	}
 ];
-
-
