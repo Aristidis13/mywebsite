@@ -193,7 +193,7 @@ h3.experience-main-title, .read-more, .experience-link {
 
 
 /*Added with JS to make description visible*/
-.description-open {
+.descriptionOpen {
     visibility: visible;
     opacity: 1;
     height: auto;

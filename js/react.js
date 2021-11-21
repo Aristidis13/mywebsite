@@ -80,7 +80,7 @@ class ExperienceElement extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen:false
+            className: 'list-container experience-element-container'
         }
         this.handleToggle = this.handleToggle.bind(this);
     }
@@ -89,7 +89,7 @@ class ExperienceElement extends React.Component {
     }
     render() {
         return (
-            <section class="list-container experience-element-container" id={this.props.id}>
+            <section class={this.state.className} id={this.props.id}>
                 <p class="time-period">
                     <time class="date-start"> {this.props.dateStart + " "}</time>
                     - <time class="date-end"> {" "+ this.props.dateEnd} </time>
