@@ -175,3 +175,42 @@ ReactDOM.render(
 /* 
  ************************************************************* Social Links
  */
+
+class SocialLinksList extends React.Component {
+    render() {
+        const socialLinksComponents = socialLinks.map( (socialLink) => ( 
+            <SocialLink 
+                id= {'socialLink-' + socialLink.id}
+                title = {socialLink.title}
+                url = {socialLink.url}
+                image = {socialLink.image}
+            />
+        ))
+        return (
+            <article  class="list-container"  id="links-container">
+                <h2 className="section-header"> Where to find me</h2>
+                <div id="social-links">
+                    {socialLinksComponents}
+                </div>
+            </article>
+        )
+    }
+}
+
+class SocialLink extends React.Component {
+    render() {
+        return (
+            <a class="link link-container social-link"
+               id={this.props.id}
+               href={this.props.url}
+               target="_blank"
+               rel="nofollow">
+                <p class="social-link-title">{this.props.title}</p>
+            </a>
+        )
+    }
+}
+
+ReactDOM.render(
+    <SocialLinksList />, document.getElementById('social-links-section')
+);

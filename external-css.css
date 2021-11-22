@@ -16,14 +16,9 @@ abbr {
 }
 
 /*---------------------------------------------------- Header-Canvas -------------------------------------------------*/
-header {
-    height: 100vh;
-    width:100vw;
-}
 
 canvas {
     border: 5px white dashed;
-    width:100vw;
     height: 100vh;
     position: absolute;
     z-index: -1;
@@ -32,12 +27,6 @@ canvas {
 /*--------------------------------------------- Main General Settings and Custom Cursor ----------------------------------------*/
 .list-container {
     width: 80%;
-}
-
-main {
-    display: grid;
-    grid-template: auto / 100%;
-    justify-content: center;
 }
 
 .section-header {
@@ -59,7 +48,7 @@ main {
 .link:hover,
 .link:focus,
 .link:active {
-    color:#ee453f;
+    color:#347;
 }
 
 #custom-cursor {
@@ -104,10 +93,15 @@ main {
 /*Project Class*/
 .atomic-project {
     width: 40%;
-    margin-bottom: 7%;
-    border: solid 1px #a8ce72;
+    margin-bottom: 2%;
     border-radius: 10px;
-    padding: 1% 5%;
+    padding: 1% 4%;
+    background-color: black;
+    transition: box-shadow 1.5s ease-out;
+}
+
+.atomic-project:hover {
+    box-shadow: inset 40vw 0 1px 0 rgba(51, 68, 119,.5);
 }
 
 /*Το CTA και το intro-header επηρεάζουν την σειρά κατάταξης των projects στην σκάλα*/
@@ -124,16 +118,18 @@ main {
 /*Change Default link styles*/
 .atomic-project > a {
     text-decoration: none;
-    color:#ff6b6b;
+    color:#ECECEC;
 }
 
 .project-title {
-    color: #a8ce72;
+    color: #c72b41;
     text-align: center;
+    font-size: 2.5rem;
 }
 .project-description {
     text-align: justify;
     text-justify: distribute;
+    font-size: 1.5rem;
 }
 
 /*--------------------------------------------- Technical Experience -----------------------------------------*/
@@ -167,7 +163,7 @@ main {
 h3.experience-main-title {
     font-size: 1.3rem;
     line-height: 1.5rem;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     font-weight: 400;
 }
 
@@ -193,7 +189,7 @@ h3.experience-main-title, .read-more, .experience-link {
 .experience-main-title:focus,
 .read-more:focus,
 .experience-link:focus  {
-    color:#ee453f;
+    color:#347;
 }
 
 .experience-description-container {
@@ -215,8 +211,8 @@ h3.experience-main-title, .read-more, .experience-link {
 }
 
 .experience-description {
-    font-size: 19px;
-    line-height: 25px;
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
 
 h4.experience-secondary-title {
@@ -232,7 +228,7 @@ h4.experience-secondary-title {
     font-weight: bold;
     font-size: 1.4rem;
     line-height: 1.4rem;
-    letter-spacing: 2px;
+    letter-spacing: 0.125px;
 }
 
 .exp-text-container {
@@ -258,8 +254,8 @@ h4.experience-secondary-title {
 }
 
 .dec-bullet {
-    width: 18px;
-    height: 18px;
+    width: 1.125rem;
+    height: 1.125rem;
     background-color: #ECECEC;
     border-radius: 50%;
     align-self: center;
@@ -267,7 +263,7 @@ h4.experience-secondary-title {
 }
 
 .line {
-    width: 2px;
+    width: 0.125rem;
     height: 100%;
     background-color: #ECECEC;
 }
@@ -316,7 +312,7 @@ h4.experience-secondary-title {
 }
 
 figure:hover {
-    background-color: #8c2949;
+    background-color: rgba(51, 68, 119,.5);
 }
 
 figure:hover .skill-text {
@@ -351,7 +347,7 @@ figure:hover .skill-text {
 
 #cproject {
     display: grid;
-    grid: "header image" auto "description image" auto / 50% 50%;
+    grid: auto / repeat(10, 10%);
     justify-items: center;
     align-items: center;
     background-color: #000;
@@ -359,18 +355,19 @@ figure:hover .skill-text {
 }
 
 .cproject-title {
-    grid-area: header;
+    display: block;
+    text-align:center;
     font-size: 1.9rem;
-    padding-top: 15%;
+    margin: 3rem;
+    padding-top: 1rem;
 }
 
 .cproject-description {
-    grid-area: description;
+    grid-area: 1/2/2/6;
     align-self: start;
     width: 85%;
     text-align: justify;
     text-justify: inter-character;
-    text-indent: 20px;
     line-height: 2rem;
     letter-spacing: 2px;
     font-size: 1.5rem;
@@ -380,116 +377,78 @@ figure:hover .skill-text {
 
 .cproject-link {
     display: block;
+    margin-bottom: 3rem;
+    text-align: center;
+    width: 100%;
 }
 
 .cproject-image {
-    grid-area: image;
     transition: background-color .8s cubic-bezier(0.47, 0, 0.745, 0.715);
+    width: 100%;
+    grid-area: 1 / 6 /2 / 10;
+    align-self: start;
+    justify-self: start;
+    margin: 100px 0 0 0;
 }
 
 .cproject-image:hover {
     background-color: #222;
 }
-.cproject-image img {
-    width: 90%;
+
+/*--------------------------------------------------- Social Links ------------------------------------------------*/
+#social-links-section {
+    display: flex;
+    justify-content: center;
 }
 
-/*--------------------------------------------------- Contact ------------------------------------------------*/
-
-
-/*--------------------------------------------------- Footer Settings -----------------------------------------------*/
-#footer {
+#social-links {
     display: grid;
-    grid: 50px auto auto / repeat(10, 10% );
+    grid: "area1 area1 void1 area2 area2" auto
+          "void2 area3 area3 area3 void3" auto
+          "area4 area4 void4 area5 area5" auto
+          /20% 20% 20% 20% 20%;
     justify-items: center;
 }
-.triangle {
-    grid-area: 1 / 1 / -1 / -1;
-    border-left: 50vw solid transparent;
-    border-right: 50vw solid transparent;
-    border-bottom: 45vh solid rgb(97, 91, 91);
-  }
 
-/*Container για footer*/
-.container-wrapper {
-    grid-area: 2 / 4 / 3 / 8;
-    align-self: center;
+#socialLink-0 {
+    grid-area: area1;
 }
-
-.rights-line {
-    grid-area: 3 / 1 / 4 / -1;
-    text-align: center;
-    color: azure;
+#socialLink-1 {
+    grid-area: area2;
 }
-
-/*Container για .fa*/
-.social-links-container {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+#socialLink-2 {
+    grid-area: area3;
 }
-
-.social-media-text {
-    padding: 0 0 0 10px;
+#socialLink-3 {
+    grid-area: area4;
 }
-
-.fa:hover .social-media-text, .social-media-text:hover{
-    animation : socialTextTransforms 3s ease;
-    transition: transform 0s 3s;/**/
-    transform: translateX(-50%) scale(2,2) skew(10deg,0);
-    letter-spacing: 13px;
+#socialLink-4 {
+    grid-area: area5;
 }
-
-/*Icons*/
-.fa {
-    padding: 0.5em;
-    font-size: 1.5em;
-    width: 2em;
-    height: 2em;
+.link-container {
     text-decoration: none;
-    border-radius: 50%;
-    color: azure;
-    display: grid;
-    grid: auto /auto max-content;
 }
 
-.fa:hover::before {
-    opacity: 0;
+.social-link-title {
+    font-size: 3rem;
+    letter-spacing: 5px;
 }
 
-.link-text {
-    color:grey;
+.link-container:hover {
+    animation: socialTextTransforms 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) .1s forwards;
 }
 
-.terms-line {
-    color :#555;
-    text-align: center;
-}
-
-.right {
-    grid-area: 6 / 1 / 2 / 11;
-    transform: rotate(35deg);
-    transform-origin: left;
-}
-
-.left {
-    grid-area: 1 / 1 / 2 / 6;
-    display: block;
-    height: 1px;
-    transform: rotate(-35deg);
-    transform-origin: right;
-}
-
-
-/*Animations*/
-
-/*Footer*/
+/*Animation*/
 @keyframes socialTextTransforms {
-    14% { transform: translateX(10%) scale(2,2); color:rgb(255, 0, 0);}
-    28% { transform: translateX(10%) scale(1,2); color:orangered;}
-    42% { transform: translateX(10%) scale(2,1); color: yellow;}
-    56% { transform: translateX(10%) scale(1,1); color: rgb(0, 143, 0);}
-    70% { transform: translateX(50%) scale(2,2); color: lightskyblue;}
-    84% { transform: translateX(100%) scale(1,1); color:rgb(25, 26, 112);}
-    100% {transform: translateX(-50%) scale(2,2) skew(10deg,0); color:purple;}
+    25% { transform: translateX(10%) scale(2,2); color:rgb(255, 0, 0);}
+    50% { transform: translateX(10%) scale(2,1); color: yellow;}
+    75% { transform: translateX(50%) scale(2,2); color: rgb(25, 194, 61);}
+    100% {transform: translateX(0) scale(2,2); color:grey;}
+}
+
+@media screen and (min-width:2000px) {
+    html {
+        font-size: 35px;
+    }
+    
 }

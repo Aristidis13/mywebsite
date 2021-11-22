@@ -9,9 +9,9 @@ function idGiver()  {
 let projects = [
 	{
 		"id": idGiver(),
-		"title": "Parser and Lexicological Analyser with Flex & Bison",
-		"description": "A custom compiler that accepts as input a JSON file that contains multiple tweets,retweets and extended tweets and finds what fields are missing or have different values from what is expected. The parser was written with C.",
-		"link": "https://github.com/Aristidis13/Flex-and-Bison-Parser"
+		"title": "A Crowdsourcing Project",
+		"description": "This is a Web Development project that was written with PHP, MySQL7, JS, HTML5, CSS3 and Chart.js. It contains Ajax handling, form validation,data submission and sorting based on user preferences. The user (admin or user) can upload files with his google location history data and see charts and heatmaps with the results of the uploads. It was a lengthy project and my first website ever.",
+		"link": "https://github.com/Aristidis13/Crowdsourcing-project"
 	},
 	{
 		"id": idGiver(),
@@ -27,28 +27,28 @@ let projects = [
 	},
 	{
 		"id": idGiver(),
-		"title": "Parallel Programming with OpenMP Framework",
-		"description": "The project examines 4 schedules of parallelization and their speed perforfance for a non-distributed workload with the OpenMP Framework and C++ as the programming language. I also optimized the code for speed and performance.",
-		"link" :"https://github.com/Aristidis13/Parallellization-with-OpenMP-Framework/"
-	},
-	{
-		"id": idGiver(),
 		"title": "Bash Scripting (& awk) in a logfile",
 		"description": "A Bash Script that performs a multitude of calculations in a log file using awk and sed and presents the results. It offered a great introduction to Linux Commands and Bash Scripting.",
 		"link": "https://github.com/Aristidis13/Bash_Scripting"
 	},
+/*	{
+		"id": idGiver(),
+		"title": "Parser and Lexicological Analyser with Flex & Bison",
+		"description": "A custom compiler that accepts as input a JSON file that contains multiple tweets,retweets and extended tweets and finds what fields are missing or have different values from what is expected. The parser was written with C.",
+		"link": "https://github.com/Aristidis13/Flex-and-Bison-Parser"
+	},*/
 	{
 		"id": idGiver(),
-		"title": "A Crowdsourcing Project",
-		"description": "This Web Development project contains was written with PHP, Vanilla JavaScript, HTML5, CSS3 and Chart.js. It contains Ajax handling, form validation,data submission, sorting based on user preferences and more. The user (admin or user) can upload files with his google location history data and see charts and heatmaps with the results of the uploads.",
-		"link": "https://github.com/Aristidis13/Crowdsourcing-project"
-	},
-	{
+		"title": "Parallel Programming with OpenMP Framework",
+		"description": "The project examines 4 schedules of parallelization and their speed perforfance for a non-distributed workload with the OpenMP Framework and C++ as the programming language. I also optimized the code for speed and performance.",
+		"link" :"https://github.com/Aristidis13/Parallellization-with-OpenMP-Framework/"
+	}
+/*	{
 		"id": idGiver(),
 		"title": "MySQL Database Project",
 		"description": "This is a project that is about relational MySQL Database handling. It's about the expansion of a given erecruitment system to fulfil the needs of recruiters and a candidates. It contains CREATE statements, insertions, selects, triggers and stored proecedures",
 		"link": "https://github.com/Aristidis13/MySQL-database-expansion"
-	}
+	}*/
 ];
 
 /* EXPERIENCE */
@@ -173,5 +173,35 @@ let skills = [
 		"image":"/skills/git.svg",
 		"description": "Git is a version control system widelly adopted in the developement of every project I've done.Alongside Github are pillars in the programming world",
 		"url": "https://git-scm.com/"
+	}
+];
+
+idGiver.counter = 0; // Restarts Counter
+
+let socialLinks = [
+	{
+		"id": idGiver(),
+		"title": "Github",
+		"url": "https://github.com/Aristidis13/"
+	},
+	{
+		"id": idGiver(),
+		"title": "LinkedIn",
+		"url": "https://www.linkedin.com/in/aris-barlos-69a3b8153/"
+	},
+	{
+		"id": idGiver(),
+		"title": "Email Me",
+		"url":"mailto:aris13pat@hotmail.com"
+	},
+	{
+		"id": idGiver(),
+		"title": "Facebook",
+		"url": "https://www.facebook.com/people/Aris-Barlos/100009788894945/"
+	},
+	{
+		"id": idGiver(),
+		"title": "Fiverr",
+		"url": "https://www.fiverr.com/arisbarlos?up_rollout=true"
 	}
 ];
