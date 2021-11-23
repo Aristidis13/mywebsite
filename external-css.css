@@ -15,15 +15,6 @@ abbr {
 	text-decoration-line: none;
 }
 
-/*---------------------------------------------------- Header-Canvas -------------------------------------------------*/
-
-canvas {
-    border: 5px white dashed;
-    height: 100vh;
-    position: absolute;
-    z-index: -1;
-}
-
 /*--------------------------------------------- Main General Settings and Custom Cursor ----------------------------------------*/
 .list-container {
     width: 80%;
