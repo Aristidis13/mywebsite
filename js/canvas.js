@@ -1,36 +1,42 @@
 let canvas = document.getElementById('intro-canvas'); // Access Canvas Element
 let context = canvas.getContext('2d');
 
-//Draw a Line
-context.beginPath();
-context.moveTo(10,10); // Προσδιορίζει την αρχή της γραμμής
-context.lineTo(100,100); // Προσδιορίζει το που τελειώνει η γραμμή (και την αρχή της επόμενης)
+let Circle = {
+    id: null,
+    x: null,
+    y: null,
+    radius: null,
+    color: null,
+    setup: function(id,x,y) {
+        this.id = id;
+        this.x= x;
+        this.y= y;
+        this.radius= Math.floor(10*Math.random()/2);
+    },
+    setColor: function(color) {
+        this.color=color;
+    },
+    draw: function() {
+        context.beginPath();
+        context.arc(this.x, this.y, this.radius, 0, 2*Math.PI,true);
+        context.fillStyle = this.color;
+        context.fill();
+    }
 
-// Specify the appearance of line
-context.lineWidth= 10; // Πάχος γραμμής
-context.strokeStyle = "red"; // Χρώμα γραμμής
+};
+// Circles Creator
+function drawCircles() {
+    let circles = [];
+    
+    for(i=0; i<200; i++) {
+        let newCircle = Object.create(Circle);
+        let xPos =  Math.round(Math.random()*canvas.width);
+        let yPos =  Math.round(Math.random()*canvas.height);
+        newCircle.setup(i,xPos,yPos); // i becomes id
+        newCircle.setColor('rgba(200,200,255,1)');
+        newCircle.draw();
+        circles.push(newCircle); 
+    }
+}
 
-// Creates the line
-context.closePath(); // Τελείωνει την γραμμή πηγαίνοντας πίσω στην αρχή
-context.stroke(); // Εμφανίζει την γραμμή
-
-// Quadratic Bezier Curver
-context.beginPath();
-context.moveTo(50,130); // Προσδιορίζει την αρχή της γραμμής
-context.quadraticCurveTo(20, 40, 300, 90);
-context.closePath();
-context.lineWidth = 5;
-context.strokeStyle = "#ececec"
-
-context.stroke(); // Εμφανίζει την γραμμή
-
-// Ορθογώνιο
-context.beginPath();
-context.rect(30,30,200,100);
-
-context.lineWidth = 2;
-context.strokeStyle = 'orangered';
-context.stroke();
-
-context.fillStyle = 'rgba(20,130,20,.5)';
-context.fill();
+drawCircles();
