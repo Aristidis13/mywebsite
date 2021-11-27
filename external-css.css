@@ -97,11 +97,13 @@ canvas {
     border-radius: 10px;
     padding: 1% 4%;
     background-color: black;
-    transition: box-shadow 1.5s ease-out;
+    transition: box-shadow 1.5s ease-out,
+                background-color 1.8s ease-in-out;
 }
 
 .atomic-project:hover {
     box-shadow: inset 40vw 0 1px 0 rgba(51, 68, 119,.5);
+    background-color: transparent;
 }
 
 /*Το CTA και το intro-header επηρεάζουν την σειρά κατάταξης των projects στην σκάλα*/
