@@ -149,21 +149,22 @@ class ExperienceElement extends React.Component {
                             <h4 class="experience-secondary-title"> {this.props.subtitle} </h4>
                         </div>
                     </div>
-                    <div class="experience-description-container">
-                        <p class="experience-description">{this.props.description}</p>
-                        <p class="experience-link-container"> 
-                            <a class="link experience-link" href={this.props.link} target="_blank"> {this.props.link} </a>
-                        </p>
-                    </div>
                 </section>
                 <p class="read-more" onClick={this.handleToggle}> Read More </p>
+                <div class="experience-description-container">
+                    <p class="experience-description">{this.props.description}</p>
+                    <p class="experience-link-container"> 
+                        <a class="link experience-link" href={this.props.link} target="_blank"> {this.props.link} </a>
+                    </p>
+                </div>
             </section>
         )
     }
 }
 
 ReactDOM.render(
-    <ExperienceList/>,document.getElementById('technical-experience')
+    <ExperienceList/>,
+    document.getElementById('technical-experience')
 )
 
 

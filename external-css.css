@@ -2,17 +2,19 @@
 html {
     font-size: 16px;
     background-color: #19091a;
-    text-decoration: none ;
-    color: #ECECEC;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    --mainTextColor: #ECECEC;
+    color: var(--mainTextColor);
 }
 
 body {
     margin: 0;
-}
-
-abbr {
-	color:rgb(80,80,80);
-	text-decoration-line: none;
+    width: 80%;
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: center;
 }
 
 canvas {
@@ -25,10 +27,6 @@ canvas {
 }
 
 /*--------------------------------------------- Main General Settings and Custom Cursor ----------------------------------------*/
-.list-container {
-    width: 80%;
-}
-
 .section-header {
     text-align: center;
     padding-bottom: 2rem;
@@ -76,11 +74,82 @@ canvas {
 }
 
 /*------------------------------------------------ Welcome Section -------------------------------------------*/
+:root {
+    --side: 12.5rem;
+}
 
+#header {
+    display: flex;
+    justify-content: center;
+}
 
+#navbar {
+    perspective: 31rem;
+    display:flex;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    justify-content: center;
+}
+
+#cube {
+    position: relative;
+    transform-style: preserve-3d;
+    width: var(--side);
+    height: var(--side);
+    animation: spin 20s infinite linear;
+}  
+
+.cubeSide {
+    list-style-type: none;
+    position: absolute;
+    width: var(--side);
+    height: var(--side);
+    background-color: aliceblue;
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(var(--side));
+    transform-origin: bottom;
+  }
+
+.right {
+    transform: rotateY( 90deg) translateZ(var(--side));
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(var(--side));
+}
+.left {
+    transform: rotateY(-90deg) translateZ(var(--side));
+}
+.top {
+    transform: rotateX( 90deg) translateZ(var(--side));
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(var(--side));
+}
+
+.cubeSide > .link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+@keyframes spin {
+    0%   { transform: rotateX(  0deg) rotateY(  0deg);}
+    17%  { transform: rotateX( 90deg) rotateY(  0deg);}
+    34%  { transform: rotateX(-90deg) rotateY(  0deg);}
+    50%  { transform: rotateX(  0deg) rotateY(  0deg);}
+    100% { transform: rotateX(0deg) rotateY(  360deg);}
+}
 
 /*--------------------------------------------- Projects Section CSS -----------------------------------------*/
-#projects-section {
+.separate-section {
     display: grid;
     justify-items: center;
 }
@@ -94,7 +163,7 @@ canvas {
 .atomic-project {
     width: 40%;
     margin-bottom: 2%;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     padding: 1% 4%;
     background-color: black;
     transition: box-shadow 1.5s ease-out,
@@ -120,7 +189,7 @@ canvas {
 /*Change Default link styles*/
 .atomic-project > a {
     text-decoration: none;
-    color:#ECECEC;
+    color: var(--mainTextColor);
 }
 
 .project-title {
@@ -148,8 +217,22 @@ canvas {
 }
 
 .experience-element-container {
-    display: flex;
-    flex-flow: row nowrap;
+    display: grid;
+    grid: "time decoration title cta" auto "time decoration description cta" auto / 20% 10% 1fr 10%;
+}
+/*Time Period Container*/
+.time-period {
+    grid-area: time;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.125rem;
+}
+
+/*Title Container*/
+.titles-container {
+    grid-area: title;
 }
 
 .experience-title {
@@ -158,9 +241,7 @@ canvas {
 
 }
 
-.titles-container {
-    flex: 1;
-}
+
 
 h3.experience-main-title {
     font-size: 1.3rem;
@@ -177,9 +258,9 @@ h3.experience-main-title, .read-more, .experience-link {
     width: fit-content;
     transition: color .6s ease-in-out;
 }
-
+/*Cta*/
 .read-more {
-    height: fit-content;
+    grid-area: cta;
 }
 
 .experience-main-title:hover,
@@ -195,11 +276,12 @@ h3.experience-main-title, .read-more, .experience-link {
 }
 
 .experience-description-container {
-    margin-bottom: 2.5rem;
-    visibility: hidden;
+    grid-area: description;
+    margin-bottom: 3rem;
+    /*visibility: hidden;
     opacity: 0;
     height: 0;
-    transition: height 1.5s ease-in 0,
+*/    transition: height 1.5s ease-in 0,
                 opacity 1.6s ease-out 0,
                 visibility 1.7s cubic-bezier(0.175, 0.225, 0.32, 0.975) .1s;
 }
@@ -224,14 +306,7 @@ h4.experience-secondary-title {
     margin: 2% 0;
 }
 
-.time-period {
-    flex: 1;
-    margin: 0;
-    font-weight: bold;
-    font-size: 1.4rem;
-    line-height: 1.4rem;
-    letter-spacing: 0.125px;
-}
+
 
 .exp-text-container {
     flex: 4;
@@ -248,7 +323,7 @@ h4.experience-secondary-title {
 }
 
 .decoration-container {
-    flex:1;
+    grid-area:  decoration;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -258,7 +333,7 @@ h4.experience-secondary-title {
 .dec-bullet {
     width: 1.125rem;
     height: 1.125rem;
-    background-color: #ECECEC;
+    background-color: var(--mainTextColor);
     border-radius: 50%;
     align-self: center;
 
@@ -267,7 +342,7 @@ h4.experience-secondary-title {
 .line {
     width: 0.125rem;
     height: 100%;
-    background-color: #ECECEC;
+    background-color:var(--mainTextColor);
 }
 
 /*--------------------------------------------------- Skills -------------------------------------------------*/
@@ -287,7 +362,7 @@ h4.experience-secondary-title {
     margin: 1%;
     max-width: 100%;
     min-width:300px;
-    background-color: #ECECEC;
+    background-color: var(--mainTextColor);
     color: #222;
     font-weight: 700;
     height: 40vh;
@@ -310,14 +385,16 @@ h4.experience-secondary-title {
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
-    color: #ECECEC;
+    color: var(--mainTextColor);
 }
 
-figure:hover {
+.skill-container:hover,
+.skill-container:focus {
     background-color: rgba(51, 68, 119,.5);
 }
 
-figure:hover .skill-text {
+.skill-container:hover .skill-text,
+.skill-container:focus .skill-text {
     visibility: visible;
     opacity:1;
 }
@@ -328,21 +405,16 @@ figure:hover .skill-text {
 }
 
 .skill-url {
-    color: #ECECEC;
+    color: var(--mainTextColor);
     display: block;
     margin-top: 4%;
 }
 
 /*------------------------------------------------ Current Project -------------------------------------------*/
-#cproject-section {
-    width: 80%;
-    margin: 20px auto;
-}
-
 .cproject-presentation {
     text-align: center;
     line-height: 2rem;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     font-size: 1.6rem;
     font-weight: 500;
 }
@@ -371,7 +443,7 @@ figure:hover .skill-text {
     text-align: justify;
     text-justify: inter-character;
     line-height: 2rem;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     font-size: 1.5rem;
     font-weight: 500;
     padding: 5% 40%;
@@ -390,7 +462,7 @@ figure:hover .skill-text {
     grid-area: 1 / 6 /2 / 10;
     align-self: start;
     justify-self: start;
-    margin: 100px 0 0 0;
+    margin: 6.25rem 0 0 0;
 }
 
 .cproject-image:hover {
@@ -410,6 +482,10 @@ figure:hover .skill-text {
           "area4 area4 void4 area5 area5" auto
           /20% 20% 20% 20% 20%;
     justify-items: center;
+}
+
+#links-container {
+    flex: 1;
 }
 
 #socialLink-0 {
@@ -433,7 +509,7 @@ figure:hover .skill-text {
 
 .social-link-title {
     font-size: 3rem;
-    letter-spacing: 5px;
+    letter-spacing: .25rem;
 }
 
 .link-container:hover {
@@ -451,6 +527,81 @@ figure:hover .skill-text {
 @media screen and (min-width:2000px) {
     html {
         font-size: 35px;
+    }    
+}
+
+@media screen and (min-width:360px) and (max-width:700px) {
+    html {
+        font-size: 12px;
+
     }
-    
+    /*Header*/
+    :root {
+        --side: 8rem;
+    }
+    #navbar {
+        perspective: 40rem;
+        justify-content: center;
+        align-items: center;
+    }
+    /*Projects Section*/
+    #projects {
+        justify-content: center;
+    }
+    .atomic-project {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .atomic-project:nth-child(4n+2),
+    .atomic-project:nth-child(2n+3),
+    .atomic-project:nth-child(4n+4) {
+        justify-self: center;
+    }
+    /*Technical Experience*/
+    .experience-element-container {
+        grid: "time" auto 
+              "title" auto
+              "cta" auto 
+              "description" auto
+              "decoration" auto / 100%;
+    }
+    .time-period, .titles-container {
+        margin: 1rem 0;
+    }
+    .dec-bullet {
+        display:none;
+    }
+    .decoration-container {
+        margin-bottom: 1.5rem;
+    }
+    .line {
+        height: 2px;
+        background-color: var(--mainTextColor);
+        width: 100%;
+    }
+    /*Skills*/
+    .skill-container {
+        width: 100%;
+    }
+
+    /*Current Project*/
+    #cproject {
+        border-radius: 20%;
+        padding: 0;
+    }
+    .cproject-title {
+        margin:1rem 0 2rem 0;
+        padding-top: 0;
+    }
+    .cproject-image {
+        display: none;
+    }
+    .cproject-description {
+        grid-area: 1/2/2/-2;
+        width: 100%;
+    }
+    /*Social Links*/
+
+
+
 }

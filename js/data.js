@@ -10,37 +10,37 @@ let cubeSides = [
 		"id": idGiver(),
 		"title": "Welcome",
 		"section": "welcome-section",
-		"class": "front cubeSide link"
+		"class": "front cubeSide"
 	},
 	{
 		"id": idGiver(),
 		"title": "My Projects",
 		"section": "projects-section",
-		"class": "back cubeSide link"
+		"class": "back cubeSide"
 	},
 	{
 		"id": idGiver(),
 		"title": "Experience",
 		"section": "technical-experience",
-		"class": "right cubeSide link"
+		"class": "right cubeSide"
 	},
 	{
 		"id": idGiver(),
 		"title": "My Skills",
 		"section": "skills-section",
-		"class": "left cubeSide link"
+		"class": "left cubeSide"
 	},
 	{
 		"id": idGiver(),
 		"title": "Current Project",
 		"section": "cproject-section",
-		"class": "top cubeSide link"
+		"class": "top cubeSide"
 	},
 	{
 		"id": idGiver(),
 		"title": "Where to Find Me",
 		"section": "social-links-section",
-		"class": "bottom cubeSide link"
+		"class": "bottom cubeSide"
 	}
 
 ];
