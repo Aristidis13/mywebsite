@@ -171,7 +171,7 @@ canvas {
 }
 
 .atomic-project:hover {
-    box-shadow: inset 40vw 0 1px 0 rgba(51, 68, 119,.5);
+    box-shadow: inset 50rem 0 1px 0 rgba(51, 68, 119,.5);
     background-color: transparent;
 }
 
@@ -451,7 +451,7 @@ h4.experience-secondary-title {
 
 .cproject-link {
     display: block;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
     text-align: center;
     width: 100%;
 }
@@ -601,7 +601,42 @@ h4.experience-secondary-title {
         width: 100%;
     }
     /*Social Links*/
+}
 
-
-
+@media screen and (min-width: 700px) and (max-width:1000px) {
+    html {
+        font-size:14px;
+    }
+    /*Project*/
+    .atomic-project {
+        width: 65%;
+    }
+    .atomic-project:hover {
+        box-shadow: inset 65vw 0 1px 0 rgba(51, 68, 119,.5);
+    }
+    /*Skills*/
+    .skill-container {
+        flex: 1;
+        padding: 4rem 0;
+        height: auto;
+    }
+    .skill-image {
+        height: auto;
+    }
+    /*Current Project*/
+    #cproject {
+        border-radius: 20%;
+        padding: 0;
+    }
+    .cproject-title {
+        margin:1rem 0 2rem 0;
+        padding-top: 0;
+    }
+    .cproject-image {
+        display: none;
+    }
+    .cproject-description {
+        grid-area: 1/2/2/-2;
+        width: 100%;
+    }
 }
