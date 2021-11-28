@@ -1,3 +1,46 @@
+/************************************************************************* Welcome
+ */
+class Cube extends React.Component {
+    render() {
+        const sides = cubeSides.map((side)=>(
+            <CubeSide
+                id = {'cubeSide-'+side.id}
+                title = {side.title}
+                section = {side.section}
+                class = {side.class}
+            />
+        ));
+        return(
+            <nav id="navbar">
+                <ul id="cube">
+                    {sides}
+                </ul>
+            </nav>
+        )
+    }
+}
+
+class CubeSide extends React.Component {
+    render() {
+        return(
+            <li class={this.props.class}>
+                <a
+                    class= "link list-item"
+                    id={ this.props.id}
+                    href={"#"+this.props.section}
+                    rel="nofollow">
+                    <h2 class="nav-title"> {this.props.title}</h2>
+                </a>
+            </li>
+        )
+    }
+}
+
+ReactDOM.render(
+    <Cube />,
+    document.getElementById('header')
+);
+
 /*
  ************************************************************************* Projects
  */
@@ -40,7 +83,8 @@ class Project extends React.Component {
 }
 
 ReactDOM.render(
-    <ProjectList />, document.getElementById('projects-section')
+    <ProjectList />,
+    document.getElementById('projects-section')
 );
 
 

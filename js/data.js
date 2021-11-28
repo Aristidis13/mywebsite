@@ -4,7 +4,51 @@ function idGiver()  {
 	return idGiver.counter++;
 }
 
+/* Cube Sides */
+let cubeSides = [
+	{
+		"id": idGiver(),
+		"title": "Welcome",
+		"section": "welcome-section",
+		"class": "front cubeSide link"
+	},
+	{
+		"id": idGiver(),
+		"title": "My Projects",
+		"section": "projects-section",
+		"class": "back cubeSide link"
+	},
+	{
+		"id": idGiver(),
+		"title": "Experience",
+		"section": "technical-experience",
+		"class": "right cubeSide link"
+	},
+	{
+		"id": idGiver(),
+		"title": "My Skills",
+		"section": "skills-section",
+		"class": "left cubeSide link"
+	},
+	{
+		"id": idGiver(),
+		"title": "Current Project",
+		"section": "cproject-section",
+		"class": "top cubeSide link"
+	},
+	{
+		"id": idGiver(),
+		"title": "Where to Find Me",
+		"section": "social-links-section",
+		"class": "bottom cubeSide link"
+	}
+
+];
+
+
 /*PROJECTS */
+
+idGiver.counter = 0;
 
 let projects = [
 	{

@@ -1,6 +1,6 @@
 let canvas = document.getElementById('intro-canvas'); // Access Canvas Element
 let context = canvas.getContext('2d');
-let header= document.getElementById('intro');
+let canvasContainer= document.getElementById('intro');
 
 // Specify width and Height of Canvas
 
@@ -10,7 +10,7 @@ globalThis.addEventListener('resize', specifyHeightAndWidth, false);
 function specifyHeightAndWidth() {
     canvas.width = globalThis.innerWidth;
     canvas.height = globalThis.innerHeight;
-    header.replaceChild(canvas,canvas);
+    canvasContainer.replaceChild(canvas,canvas);
     setupCircles();
 }
 
@@ -26,8 +26,8 @@ function Circle( x, y, radius, speed, width) {
     this.width=width;
     this.counterX = 0;
     this.counterY = 0;
-    this.signX = Math.random() > 0.5 ? 1 : 0;
-    this.signY = Math.random() > 0.5 ? 1 : 0;
+    this.signX = Math.random() > 0.5 ? 1 : -1;
+    this.signY = Math.random() > 0.5 ? 1 : -1;
     this.opacity = 0.5 + Math.random()* 0.5;
     this.counter =0;
 };
