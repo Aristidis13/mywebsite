@@ -49,23 +49,6 @@ canvas {
     color:#347;
 }
 
-#custom-cursor {
-    position:fixed;
-    z-index: 1000000;
-    width:30px;
-    height:30px;
-    color:aqua;
-    background-color: rgba(3, 166, 120, .8);
-    top: 0px;
-    left: 0px;
-    border-radius: 50%;
-    pointer-events: none;/*Κάνει τον cursor να μην έχει pointer events --> Μπορώ να πατήσω πράγματα*/
-    transform: translate(-50%,-50%);
-    transition: box-shadow 3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    width .5s ease-in-out, height .5s ease-in-out;
-    
-}
-
 .hoverText {
     color: #fff !important;
     transition: all 1s ease-in-out;
@@ -241,8 +224,6 @@ canvas {
 
 }
 
-
-
 h3.experience-main-title {
     font-size: 1.3rem;
     line-height: 1.5rem;
@@ -288,7 +269,7 @@ h3.experience-main-title, .read-more, .experience-link {
 
 
 /*Added with JS to make description visible*/
-.descriptionOpen {
+.descriptionVisible {
     visibility: visible;
     opacity: 1;
     height: auto;

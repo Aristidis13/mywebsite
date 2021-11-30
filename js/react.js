@@ -92,8 +92,15 @@ ReactDOM.render(
  ****************************************************************** Technical Experience
  */
 class ExperienceList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { descriptionsAppear: []
+        };
+    }
     handleTitleClick(id) {
         console.log(id+' was clicked');
+        // Na graftei enas tropos metaforas dedomenwn apo paidi se List me state
+        
     }
     render() {
         const experienceComponents = experience.map((experienceElement) => 
@@ -105,7 +112,7 @@ class ExperienceList extends React.Component {
             dateEnd = {experienceElement.dateEnd}
             description = {experienceElement.description}
             link = {experienceElement.link}
-            toggleClass = {this.handleTitleClick}
+            toggleClassProperty = {this.handleTitleClick}
         />
         );
         return (
@@ -124,12 +131,17 @@ class ExperienceElement extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            className: 'list-container experience-element-container'
+            className: 'list-container experience-element-container',
+            descriptionAppears: false
         }
         this.handleToggle = this.handleToggle.bind(this);
     }
     handleToggle() {
-        this.props.toggleClass(this.props.id);
+        this.props.toggleClassProperty(this.props.id);
+        this.state.descriptionAppears
+            ? this.setState({descriptionAppears: false})
+            : this.setState({descriptionAppears: true});
+        console.log("State is " + this.state.descriptionAppears);
     }
     render() {
         return (
