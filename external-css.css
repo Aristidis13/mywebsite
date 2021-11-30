@@ -94,7 +94,11 @@ canvas {
 .front {
     transform: rotateY(0deg) translateZ(var(--side));
     transform-origin: bottom;
-  }
+}
+
+.nav-title {
+    text-align: center;
+}
 
 .right {
     transform: rotateY( 90deg) translateZ(var(--side));
@@ -371,14 +375,20 @@ h4.experience-secondary-title {
 }
 
 .skill-container:hover,
-.skill-container:focus {
+.skill-container:focus,
+.touchedSkill {
     background-color: rgba(51, 68, 119,.5);
 }
 
 .skill-container:hover .skill-text,
-.skill-container:focus .skill-text {
+.skill-container:focus .skill-text,
+.touchedSkill .skill-text {
     visibility: visible;
     opacity:1;
+}
+
+.touchedSkill {
+    touch-action: none;
 }
 
 .skill-title {

@@ -92,16 +92,6 @@ ReactDOM.render(
  ****************************************************************** Technical Experience
  */
 class ExperienceList extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { descriptionsAppear: []
-        };
-    }
-    handleTitleClick(id) {
-        console.log(id+' was clicked');
-        // Na graftei enas tropos metaforas dedomenwn apo paidi se List me state
-        
-    }
     render() {
         const experienceComponents = experience.map((experienceElement) => 
         <ExperienceElement 
@@ -112,7 +102,6 @@ class ExperienceList extends React.Component {
             dateEnd = {experienceElement.dateEnd}
             description = {experienceElement.description}
             link = {experienceElement.link}
-            toggleClassProperty = {this.handleTitleClick}
         />
         );
         return (
@@ -136,14 +125,11 @@ class ExperienceElement extends React.Component {
         this.handleToggle = this.handleToggle.bind(this);
     }
     handleToggle() {
-        this.props.toggleClassProperty(this.props.id);
         !this.state.className.includes("descriptionVisible")
             ? this.setState({
-                descriptionAppears: true,
                 className: "experience-description-container descriptionVisible" 
             })
             : this.setState({
-                descriptionAppears: false,
                 className: "experience-description-container"
             });
     }
@@ -200,7 +186,8 @@ class SkillList extends React.Component {
             />
         ));
         return (
-            <article class="list-container" id="atomic-skill-container">
+            <article className="list-container" 
+                     id="atomic-skill-container">
                 <h2 className="section-header"> Skills Until Now</h2>
                 <div id="skills">
                     {skillsComponents}
@@ -211,11 +198,28 @@ class SkillList extends React.Component {
 }
 
 class Skill extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            hasDescription: false,
+            className: "skill-container"
+        }
+        this.handleTouchStart = this.handleTouchStart.bind(this);
+    }
+    handleTouchStart(e) {
+        !this.state.className.includes("touchedSkill")
+            ? this.setState({ className: "skill-container touchedSkill"})
+            : this.setState({ className: "skill-container"});
+    }
+
     render() {
         return (
-            <figure class="skill-container" id={"skill-"+this.props.id}>
-                <img class="skill-image" src={this.props.image} />
-                <figcaption class="skill-text">
+            <figure class={this.state.className}
+                    id={"skill-"+this.props.id}
+                    onTouchStart={this.handleTouchStart} 
+                ><img class="skill-image" src={this.props.image} />
+                <figcaption class="skill-text"
+                            onTouchStart={this.handleTouchStart}>
                     <h3 class="skill-title"> {this.props.title} </h3>
                     <div class="skill-description">
                         {this.props.description}
