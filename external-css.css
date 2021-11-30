@@ -259,12 +259,10 @@ h3.experience-main-title, .read-more, .experience-link {
 .experience-description-container {
     grid-area: description;
     margin-bottom: 3rem;
-    /*visibility: hidden;
+    visibility: hidden;
     opacity: 0;
     height: 0;
-*/    transition: height 1.5s ease-in 0,
-                opacity 1.6s ease-out 0,
-                visibility 1.7s cubic-bezier(0.175, 0.225, 0.32, 0.975) .1s;
+
 }
 
 
@@ -273,6 +271,9 @@ h3.experience-main-title, .read-more, .experience-link {
     visibility: visible;
     opacity: 1;
     height: auto;
+    transition: height 1.5s ease-in 0,
+                opacity 1.6s ease-out 0,
+                visibility 1.7s cubic-bezier(0.175, 0.225, 0.32, 0.975) .1s;
 }
 
 .experience-description {

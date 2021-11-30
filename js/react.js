@@ -131,21 +131,25 @@ class ExperienceElement extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            className: 'list-container experience-element-container',
-            descriptionAppears: false
+            className: "experience-description-container",
         }
         this.handleToggle = this.handleToggle.bind(this);
     }
     handleToggle() {
         this.props.toggleClassProperty(this.props.id);
-        this.state.descriptionAppears
-            ? this.setState({descriptionAppears: false})
-            : this.setState({descriptionAppears: true});
-        console.log("State is " + this.state.descriptionAppears);
+        !this.state.className.includes("descriptionVisible")
+            ? this.setState({
+                descriptionAppears: true,
+                className: "experience-description-container descriptionVisible" 
+            })
+            : this.setState({
+                descriptionAppears: false,
+                className: "experience-description-container"
+            });
     }
     render() {
         return (
-            <section class={this.state.className} id={this.props.id}>
+            <section class='list-container experience-element-container' id={this.props.id}>
                 <p class="time-period">
                     <time class="date-start"> {this.props.dateStart + " "}</time>
                     - <time class="date-end"> {" "+ this.props.dateEnd} </time>
@@ -163,7 +167,7 @@ class ExperienceElement extends React.Component {
                     </div>
                 </section>
                 <p class="read-more" onClick={this.handleToggle}> Read More </p>
-                <div class="experience-description-container">
+                <div class={this.state.className}>
                     <p class="experience-description">{this.props.description}</p>
                     <p class="experience-link-container"> 
                         <a class="link experience-link" href={this.props.link} target="_blank"> {this.props.link} </a>
