@@ -56,7 +56,7 @@ canvas {
     align-items: center;
 }
 
-/*------------------------------------------------ Welcome Section -------------------------------------------*/
+/*------------------------------------------------ Intro Section -------------------------------------------*/
 :root {
     --side: 12.5rem;
 }
@@ -133,6 +133,15 @@ canvas {
     34%  { transform: rotateX(-90deg) rotateY(  0deg);}
     50%  { transform: rotateX(  0deg) rotateY(  0deg);}
     100% { transform: rotateX(0deg) rotateY(  360deg);}
+}
+
+/*--------------------------------------------- Welcome Section ----------------------------------------------*/
+#photo-container {
+    max-width: 70%;
+}
+
+#personal-photo {
+    width:300px;
 }
 
 /*--------------------------------------------- Projects Section CSS -----------------------------------------*/
