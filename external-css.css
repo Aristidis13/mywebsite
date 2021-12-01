@@ -136,12 +136,36 @@ canvas {
 }
 
 /*--------------------------------------------- Welcome Section ----------------------------------------------*/
+
+#welcome-elements > .section-header {
+    grid-area: title;
+}
+
+#welcome-elements {
+    display:grid;
+    grid: "title title title" auto "text void photo" auto / 40% 20% 40%;
+}
+#text-container {
+    grid-area: text;
+}
 #photo-container {
-    max-width: 70%;
+    grid-area: photo;
+    margin: 0;
 }
 
 #personal-photo {
-    width:300px;
+    width:100%;
+    filter: grayscale(70%);
+    
+}
+
+#personal-photo:hover {
+    animation: tick .2s ease-out 2;
+}
+
+@keyframes tick {
+    from {filter: drop-shadow(16px 16px 20px blue) invert(75%);}
+    to { filter:none}
 }
 
 /*--------------------------------------------- Projects Section CSS -----------------------------------------*/
@@ -284,8 +308,7 @@ h3.experience-main-title, .read-more, .experience-link {
     visibility: visible;
     opacity: 1;
     height: auto;
-    transition: height 1.5s ease-in 0,
-                opacity 1.6s ease-out 0,
+    transition: opacity 1.6s ease-out,
                 visibility 1.7s cubic-bezier(0.175, 0.225, 0.32, 0.975) .1s;
 }
 

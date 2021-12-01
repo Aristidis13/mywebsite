@@ -46,30 +46,25 @@ ReactDOM.render(
  */
  class WelcomeSection extends React.Component {
     render() {
-        // const welcomeComponents = welcome.map((welcomeElement) => 
-        // <WelcomeElement
-        //     id = {"text-element-"+experienceElement.id}
-        //     title = {experienceElement.title}
-        //     subtitle = {experienceElement.subtitle}
-        //     dateStart = {experienceElement.dateStart}
-        //     dateEnd = {experienceElement.dateEnd}
-        //     description = {experienceElement.description}
-        //     link = {experienceElement.link}
-        // />
-        // );
+        //
+        const welcomeComponents = welcome.map((welcomeElement) => (
+        <WelcomeElement
+             id = {"text-element-"+welcomeElement.id}
+             text = {welcomeElement.text}
+        />
+        )
+         );
         return (
             <article class="list-container" id="welcome-elements">
                 <h2 class="section-header"> Welcome</h2>
-                <p id="welcome-intro-paragraph"></p>
-                <section id="welcome">
-                    {/* {welcomeComponents} */}
+                <section id="text-container">
+                    {welcomeComponents}
                 </section>
                 <figure id="photo-container">
                     <img class="photo"
                          id="personal-photo"
                          src="./photos/Aris_Barlos.jpg"
                          alt="Aris Barlos - Software Engineer" />
-                    <figcaption class="caption">This is Aris trying to be pretty!</figcaption>
                 </figure>
             </article>
         )
@@ -79,16 +74,9 @@ ReactDOM.render(
 class WelcomeElement extends React.Component {
     render() {
         return (
-            <section class='list-container experience-element-container' id={this.props.id}>
-                {/* Δημιουργία ενός στοιχείου που θα δείχνει την ιστορία
-                    Λογική
-                    α) Φορτώνω όλα τα Στοιχεία-προτάσεις που έχω γράψει
-                    β) Κάνω load τις πρώτες 3
-                    γ) Περιμένω για κάποιο διάστημα
-                    δ) Παίρνω τις φορτωμένες load και τις βάζω τελευταίες
-                    ε) Επαναλαμβάνω τα β) - ε) βήματα
-                */}
-            </section>
+            <p class='presentation-text' id={this.props.id}>
+                {this.props.text}
+            </p>
         )
     }
 }

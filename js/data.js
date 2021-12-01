@@ -4,6 +4,49 @@ function idGiver()  {
 	return idGiver.counter++;
 }
 
+let welcome = [
+	{
+		"id": idGiver(),
+		"text": "Hello and Welcome to my website. My name is Aris Barlos and I come from Patras, Greece."
+	},
+	{
+		"id": idGiver(),
+		"text": "I'm a software developer with interest in ML, AI and Web Developement."
+	},
+	{
+		"id": idGiver(),
+		"text": "I started programming at University and since then I found a passion I never thought I had."
+	},
+	{
+		"id": idGiver(),
+		"text": "I have small corporate programming experience BUT"
+	},
+	{
+		"id": idGiver(),
+		"text": "I have programmed every day for the last 2 years and whatever project I was working on..."
+	},
+	{
+		"id": idGiver(),
+		"text": "I have being able to bring it to fruition, without compromising my personal deadlines or my vision for them."
+	},
+	{
+		"id": idGiver(),
+		"text": "As a person I hold in high respect people that value truthness, openness and are self-reliant with a little dose of humor. :)"
+	},
+	{
+		"id": idGiver(),
+		"text": "My personal hobbies are varying. I read books about programming and finance, lift heavy things, play basketball and program in new technologies I want to explore"
+	},
+	{
+		"id": idGiver(),
+		"text": "Either a simple visitor, a recruiter or somebody that hoped in randomly, I hope you like my site."
+	},
+	{
+		"id": idGiver(),
+		"text": "Have a nice day! Or night. :)"
+	}
+];
+
 /* Cube Sides */
 let cubeSides = [
 	{
