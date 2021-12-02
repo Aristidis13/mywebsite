@@ -148,6 +148,19 @@ canvas {
 #text-container {
     grid-area: text;
 }
+
+.presentation-text {
+    width:40vw;
+    font-size: 2rem;
+    white-space:nowrap;
+    overflow: hidden;
+    animation: write 4s steps(60, end);
+}
+
+@keyframes write {
+    from {width:0}
+}
+
 #photo-container {
     grid-area: photo;
     margin: 0;

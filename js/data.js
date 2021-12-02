@@ -7,15 +7,71 @@ function idGiver()  {
 let welcome = [
 	{
 		"id": idGiver(),
-		"text": "Hello and Welcome to my website. My name is Aris Barlos and I come from Patras, Greece."
+		"text": "Hello!"
 	},
 	{
 		"id": idGiver(),
-		"text": "I'm a software developer with interest in ML, AI and Web Developement."
+		"text": "Welcome to my website."
 	},
 	{
 		"id": idGiver(),
-		"text": "I started programming at University and since then I found a passion I never thought I had."
+		"text": "My name is Aris Barlos."
+	},
+	{
+		"id": idGiver(),
+		"text": "I come from Patras, Greece."
+	},
+	{
+		"id": idGiver(),
+		"text": "I'm a software developer,"
+	},
+	{
+		"id": idGiver(),
+		"text": "with Bachelor in Computer Science"
+	},
+	{
+		"id": idGiver(),
+		"text": "interest in ML, AI and Web Developement"
+	},
+	{
+		"id": idGiver(),
+		"text": "I started programming at University"
+	},
+	{
+		"id": idGiver(),
+		"text": "Since then I found a passion"
+	},
+	{
+		"id": idGiver(),
+		"text": "I never thought I had."
+	},
+	{
+		"id": idGiver(),
+		"text": "I have programmed thousands of hours"
+	},
+	{
+		"id": idGiver(),
+		"text": "and every day"
+	},
+	{
+		"id": idGiver(),
+		"text": "for the last couple of years"
+	},
+	{
+		"id": idGiver(),
+		"text": "Whatever project I worked on..."
+	},
+	{
+		"id": idGiver(),
+		"text": "I brought it to fruition,"
+	},
+	{
+		"id": idGiver(),
+		"text": "without compromising my vision"
+	},
+	{
+		"id": idGiver(),
+		"text": "or deadlines I set for myself"
 	},
 	{
 		"id": idGiver(),
@@ -23,11 +79,15 @@ let welcome = [
 	},
 	{
 		"id": idGiver(),
-		"text": "I have programmed every day for the last 2 years and whatever project I was working on..."
+		"text": "I have programmed thousands of hours and whatever project I was working on..."
 	},
 	{
 		"id": idGiver(),
-		"text": "I have being able to bring it to fruition, without compromising my personal deadlines or my vision for them."
+		"text": "I have programmed thousands of hours and whatever project I was working on..."
+	},
+	{
+		"id": idGiver(),
+		"text": ""
 	},
 	{
 		"id": idGiver(),
