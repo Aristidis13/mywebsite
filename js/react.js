@@ -49,17 +49,17 @@ ReactDOM.render(
         //
         const welcomeComponents = welcome.map((welcomeElement) => (
         <WelcomeElement
-             id = {"text-element-"+welcomeElement.id}
-             text = {welcomeElement.text}
+            id =   { "text-element-"+welcomeElement.id  }
+            text = { welcomeElement.text }
         />
         )
          );
         return (
             <article class="list-container" id="welcome-elements">
                 <h2 class="section-header"> Welcome</h2>
-                <section id="text-container">
-                    {welcomeComponents}
-                </section>
+                <p id="text-container">
+                        {welcomeComponents}
+                </p>
                 <figure id="photo-container">
                     <img class="photo"
                          id="personal-photo"
@@ -74,7 +74,7 @@ ReactDOM.render(
 class WelcomeElement extends React.Component {
     render() {
         return (
-            <p class='presentation-text' id={this.props.id}>
+            <p class="presentation-text" id={this.props.id}>
                 {this.props.text}
             </p>
         )
@@ -197,7 +197,6 @@ class ExperienceElement extends React.Component {
                         </div>
                     </div>
                 </section>
-                <p class="read-more" onClick={this.handleToggle}> Read More </p>
                 <div class={this.state.className}>
                     <p class="experience-description">{this.props.description}</p>
                     <p class="experience-link-container"> 

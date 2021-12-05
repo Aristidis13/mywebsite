@@ -1,111 +1,30 @@
-idGiver.counter = 0;
-
 function idGiver()  {
 	return idGiver.counter++;
 }
 
+idGiver.counter = 0;
+
 let welcome = [
 	{
 		"id": idGiver(),
-		"text": "Hello!"
+		"text": "Welcome to my website. I come from Patras, Greece and I'm a software developer, with Bachelor in Computer Science."
 	},
 	{
 		"id": idGiver(),
-		"text": "Welcome to my website."
+		"text": "I have small corporate programming experience BUT in every project I worked on so far, I brought it to fruition without compromising my vision or personal deadlines."
 	},
 	{
 		"id": idGiver(),
-		"text": "My name is Aris Barlos."
+		"text": "When I have spare time, I read books about programming and finance, lift heavy things, play basketball and make side projects in order to learn new technologies."
 	},
 	{
 		"id": idGiver(),
-		"text": "I come from Patras, Greece."
-	},
-	{
-		"id": idGiver(),
-		"text": "I'm a software developer,"
-	},
-	{
-		"id": idGiver(),
-		"text": "with Bachelor in Computer Science"
-	},
-	{
-		"id": idGiver(),
-		"text": "interest in ML, AI and Web Developement"
-	},
-	{
-		"id": idGiver(),
-		"text": "I started programming at University"
-	},
-	{
-		"id": idGiver(),
-		"text": "Since then I found a passion"
-	},
-	{
-		"id": idGiver(),
-		"text": "I never thought I had."
-	},
-	{
-		"id": idGiver(),
-		"text": "I have programmed thousands of hours"
-	},
-	{
-		"id": idGiver(),
-		"text": "and every day"
-	},
-	{
-		"id": idGiver(),
-		"text": "for the last couple of years"
-	},
-	{
-		"id": idGiver(),
-		"text": "Whatever project I worked on..."
-	},
-	{
-		"id": idGiver(),
-		"text": "I brought it to fruition,"
-	},
-	{
-		"id": idGiver(),
-		"text": "without compromising my vision"
-	},
-	{
-		"id": idGiver(),
-		"text": "or deadlines I set for myself"
-	},
-	{
-		"id": idGiver(),
-		"text": "I have small corporate programming experience BUT"
-	},
-	{
-		"id": idGiver(),
-		"text": "I have programmed thousands of hours and whatever project I was working on..."
-	},
-	{
-		"id": idGiver(),
-		"text": "I have programmed thousands of hours and whatever project I was working on..."
-	},
-	{
-		"id": idGiver(),
-		"text": ""
-	},
-	{
-		"id": idGiver(),
-		"text": "As a person I hold in high respect people that value truthness, openness and are self-reliant with a little dose of humor. :)"
-	},
-	{
-		"id": idGiver(),
-		"text": "My personal hobbies are varying. I read books about programming and finance, lift heavy things, play basketball and program in new technologies I want to explore"
-	},
-	{
-		"id": idGiver(),
-		"text": "Either a simple visitor, a recruiter or somebody that hoped in randomly, I hope you like my site."
-	},
-	{
-		"id": idGiver(),
-		"text": "Have a nice day! Or night. :)"
+		"text": "Either a simple visitor, a recruiter or somebody that came by chance, I hope you like my site. Have a nice day."
 	}
 ];
+
+/*Re-initialize counter */
+idGiver.counter = 0;
 
 /* Cube Sides */
 let cubeSides = [
@@ -135,8 +54,8 @@ let cubeSides = [
 	},
 	{
 		"id": idGiver(),
-		"title": "Current Project",
-		"section": "cproject-section",
+		"title": "News",
+		"section": "news-section",
 		"class": "top cubeSide"
 	},
 	{
@@ -169,7 +88,7 @@ let projects = [
 	{
 		"id": idGiver(),
 		"title": "Social Media Network",
-		"description": "A Social Network that was created for the Java course in my college. This project is created in purely OOP fashion. The user among others can post, like a post, comment, message, add friends and more.",
+		"description": "A Social Network that was created for the Java course in my University. The user among others can post, like a post, comment, message, add friends and more.It doesn't contain UI.",
 		"link" :"https://github.com/Aristidis13/Social-Network"
 	},
 	{
@@ -189,13 +108,13 @@ let projects = [
 		"title": "Parallel Programming with OpenMP Framework",
 		"description": "The project examines 4 schedules of parallelization and their speed perforfance for a non-distributed workload with the OpenMP Framework and C++ as the programming language. I also optimized the code for speed and performance.",
 		"link" :"https://github.com/Aristidis13/Parallellization-with-OpenMP-Framework/"
-	}
-/*	{
+	},
+	{
 		"id": idGiver(),
 		"title": "MySQL Database Project",
 		"description": "This is a project that is about relational MySQL Database handling. It's about the expansion of a given erecruitment system to fulfil the needs of recruiters and a candidates. It contains CREATE statements, insertions, selects, triggers and stored proecedures",
 		"link": "https://github.com/Aristidis13/MySQL-database-expansion"
-	}*/
+	}
 ];
 
 /* EXPERIENCE */

@@ -1,21 +1,45 @@
 /* --------------------------------------------------- DOM Elements -----------------------------------------------------*/
 html {
+    scrollbar-width: thin !important;          /* "auto" or "thin" */
+    scrollbar-color: var(--red-secondary) var(--mainTextColor) !important;   /* scroll thumb and track */
     font-size: 16px;
     background-color: #19091a;
     text-decoration: none;
     display: flex;
     justify-content: center;
+    /*Colors*/
+    --blue-secondary : #347;
+    --red-secondary: #c72b41;
     --mainTextColor: #ECECEC;
     color: var(--mainTextColor);
 }
 
+
+/* Works on Chrome, Edge, and Safari */
+html::-webkit-scrollbar {
+    width: .5rem;
+  }
+  
+html::-webkit-scrollbar-track {
+    background: white;
+}
+  
+html::-webkit-scrollbar-thumb {
+    background-color: var(--red-secondary);
+    border-radius: 1.5rem;
+}
+
 body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Archivo', sans-serif; 
+    font-family: 'Playfair Display', serif;
     margin: 0;
     width: 80%;
     display: flex;
     flex-flow:column nowrap;
     justify-content: center;
 }
+
 
 canvas {
     position: fixed;
@@ -32,11 +56,12 @@ canvas {
     padding-bottom: 2rem;
     font-size: 4rem;
     line-height: 4.5rem;
+    font-family: Archivo;
 }
 
 .link {
     text-decoration: underline;
-    color: #c72b41;
+    color: var(--red-secondary);
     cursor: grab;
     margin: 0;
     width: fit-content;
@@ -46,9 +71,9 @@ canvas {
 .link:hover,
 .link:focus,
 .link:active {
-    color:#347;
+    color: var(--blue-secondary);
 }
-
+/*Class for hover of custom cursor*/
 .hoverText {
     color: #fff !important;
     transition: all 1s ease-in-out;
@@ -136,31 +161,32 @@ canvas {
 }
 
 /*--------------------------------------------- Welcome Section ----------------------------------------------*/
-
 #welcome-elements > .section-header {
     grid-area: title;
 }
 
 #welcome-elements {
     display:grid;
-    grid: "title title title" auto "text void photo" auto / 40% 20% 40%;
+    grid: "title title title" auto "text void photo" auto / 60% 10% 30%;
 }
+
 #text-container {
     grid-area: text;
+    margin: 0;
 }
 
 .presentation-text {
-    width:40vw;
-    font-size: 2rem;
-    white-space:nowrap;
-    overflow: hidden;
-    animation: write 4s steps(60, end);
+    display: inline-block;
+    margin: 0 0 1.5rem;
+    letter-spacing: .15em;
+    text-align: justify;
+    text-justify: inter-character;
+    text-indent: 2rem;
+    font-size: 1.5rem;
 }
 
-@keyframes write {
-    from {width:0}
-}
 
+/*Photo section settings*/
 #photo-container {
     grid-area: photo;
     margin: 0;
@@ -168,17 +194,7 @@ canvas {
 
 #personal-photo {
     width:100%;
-    filter: grayscale(70%);
-    
-}
-
-#personal-photo:hover {
-    animation: tick .2s ease-out 2;
-}
-
-@keyframes tick {
-    from {filter: drop-shadow(16px 16px 20px blue) invert(75%);}
-    to { filter:none}
+    filter: grayscale(100%);
 }
 
 /*--------------------------------------------- Projects Section CSS -----------------------------------------*/
@@ -194,7 +210,7 @@ canvas {
 
 /*Project Class*/
 .atomic-project {
-    width: 40%;
+    width: 45%;
     margin-bottom: 2%;
     border-radius: 0.625rem;
     padding: 1% 4%;
@@ -226,14 +242,16 @@ canvas {
 }
 
 .project-title {
-    color: #c72b41;
+    color: var(--red-secondary);
     text-align: center;
     font-size: 2.5rem;
+    font-family: Archivo,"sans-serif";
 }
 .project-description {
     text-align: justify;
     text-justify: distribute;
     font-size: 1.5rem;
+    font-family: 'Cormorant', serif;
 }
 
 /*--------------------------------------------- Technical Experience -----------------------------------------*/
@@ -251,7 +269,7 @@ canvas {
 
 .experience-element-container {
     display: grid;
-    grid: "time decoration title cta" auto "time decoration description cta" auto / 20% 10% 1fr 10%;
+    grid: "time decoration title" auto "time decoration description" auto / 20% 10% 70%;
 }
 /*Time Period Container*/
 .time-period {
@@ -274,36 +292,31 @@ canvas {
 
 }
 
-h3.experience-main-title {
+.experience-main-title {
+    font-family: Archivo,"sans-serif";
     font-size: 1.3rem;
     line-height: 1.5rem;
     letter-spacing: 0.125rem;
     font-weight: 400;
 }
 
-h3.experience-main-title, .read-more, .experience-link {
+.experience-main-title,  .experience-link {
     text-decoration: underline;
-    color: #c72b41;
+    color: var(--red-secondary);
     cursor: grab;
     margin: 0;
     width: fit-content;
     transition: color .6s ease-in-out;
 }
-/*Cta*/
-.read-more {
-    grid-area: cta;
-}
+
 
 .experience-main-title:hover,
-.read-more:hover,
 .experience-link:hover,
 .experience-main-title:active,
-.read-more:active,
 .experience-link:active,
 .experience-main-title:focus,
-.read-more:focus,
 .experience-link:focus  {
-    color:#347;
+    color:var(--blue-secondary);
 }
 
 .experience-description-container {
@@ -437,6 +450,7 @@ h4.experience-secondary-title {
 }
 
 .skill-title {
+    font-family: Archivo,"serif";
     font-weight: 900;
     font-size: 2rem;
 }
@@ -447,8 +461,8 @@ h4.experience-secondary-title {
     margin-top: 4%;
 }
 
-/*------------------------------------------------ Current Project -------------------------------------------*/
-.cproject-presentation {
+/*------------------------------------------------ News -------------------------------------------*/
+.news-presentation {
     text-align: center;
     line-height: 2rem;
     letter-spacing: 0.125rem;
@@ -456,7 +470,7 @@ h4.experience-secondary-title {
     font-weight: 500;
 }
 
-#cproject {
+#news {
     display: grid;
     grid: auto / repeat(10, 10%);
     justify-items: center;
@@ -465,7 +479,7 @@ h4.experience-secondary-title {
     border-radius: 70% 40% 70% 40%;
 }
 
-.cproject-title {
+.news-title {
     display: block;
     text-align:center;
     font-size: 1.9rem;
@@ -473,7 +487,7 @@ h4.experience-secondary-title {
     padding-top: 1rem;
 }
 
-.cproject-description {
+.news-description {
     grid-area: 1/2/2/6;
     align-self: start;
     width: 85%;
@@ -486,14 +500,14 @@ h4.experience-secondary-title {
     padding: 5% 40%;
 }
 
-.cproject-link {
+.news-link {
     display: block;
     margin: 3rem 0;
     text-align: center;
     width: 100%;
 }
 
-.cproject-image {
+.news-image {
     transition: background-color .8s cubic-bezier(0.47, 0, 0.745, 0.715);
     width: 100%;
     grid-area: 1 / 6 /2 / 10;
@@ -502,7 +516,7 @@ h4.experience-secondary-title {
     margin: 6.25rem 0 0 0;
 }
 
-.cproject-image:hover {
+.news-image:hover {
     background-color: #222;
 }
 
@@ -581,6 +595,11 @@ h4.experience-secondary-title {
         justify-content: center;
         align-items: center;
     }
+    /*Welcome Section*/
+    #welcome-elements {
+        grid: "title" auto "photo" auto "void" 3rem "text" auto / 100%;
+    }
+
     /*Projects Section*/
     #projects {
         justify-content: center;
@@ -597,8 +616,7 @@ h4.experience-secondary-title {
     /*Technical Experience*/
     .experience-element-container {
         grid: "time" auto 
-              "title" auto
-              "cta" auto 
+              "title" auto 
               "description" auto
               "decoration" auto / 100%;
     }
@@ -622,18 +640,18 @@ h4.experience-secondary-title {
     }
 
     /*Current Project*/
-    #cproject {
+    #news {
         border-radius: 20%;
         padding: 0;
     }
-    .cproject-title {
+    .news-title {
         margin:1rem 0 2rem 0;
         padding-top: 0;
     }
-    .cproject-image {
+    .news-image {
         display: none;
     }
-    .cproject-description {
+    .news-description {
         grid-area: 1/2/2/-2;
         width: 100%;
     }
@@ -661,18 +679,18 @@ h4.experience-secondary-title {
         height: auto;
     }
     /*Current Project*/
-    #cproject {
+    #news {
         border-radius: 20%;
         padding: 0;
     }
-    .cproject-title {
+    .news-title {
         margin:1rem 0 2rem 0;
         padding-top: 0;
     }
-    .cproject-image {
+    .news-image {
         display: none;
     }
-    .cproject-description {
+    .news-description {
         grid-area: 1/2/2/-2;
         width: 100%;
     }
