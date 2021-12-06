@@ -282,6 +282,52 @@ ReactDOM.render(
 );
 
 /* 
+ ************************************************************* News
+ */
+ class NewsList extends React.Component {
+    render() {
+        const news = news.map( (newel) => ( 
+            <New 
+                id= {'new-' + newel.id}
+                title = {newel.title}
+                url = {newel.url}
+                image = {newel.image}
+            />
+        ))
+        return (
+            <article  class="list-container"  id="news-container">
+                <h2 class="section-header"> News</h2>
+                <section class="news-container"  id="news">
+                    <p class="news-description">
+                        <span class="news-title"> My Website </span>
+                        Currently I learn ReactJS and find ways to make SVGs come to life <strong>by reading books</strong>!
+                        I know its old-school. But a great way to learn something well and have a reference when you need it! 
+                        The books I currently study are
+                    <a class="link"
+                       href="https://www.amazon.com/Using-SVG-CSS3-HTML5-Graphics-ebook/dp/B076HZ31YZ/ref=sr_1_1?keywords=using+svg+with+html5+and+css3&qid=1637525631&sr=8-1"
+                       target="_blank"
+                       rel="nofolow">Using SVGs with HTML5 and CSS3 </a> and for ReactJS
+                    <a class="link"
+                        href="https://www.amazon.com/Fullstack-React-Complete-ReactJS-Friends/dp/0991344626/ref=sr_1_1?keywords=fullstack+react&qid=1637524475&sr=8-1"
+                        target="_blank"
+                        rel="nofolow"> Fullstack React: The Complete Guide to ReactJS and Friends
+                    </a> for those wondering.
+                    They will be usefull for my next projects too! If you want to talk to me find a book you think is good and DM me.
+                     I would love to talk to you!
+                    If you just want to review my current project well what are you waiting for?
+                    <a href="https://github.com/Aristidis13/mywebsite"
+                       class="news-link link"
+                       target="_blank"
+                       rel="nofolow"> Pay a visit!</a>
+                </p>
+                <img class="news-image" src="./photos/news.svg" alt="" />
+            </section>
+            </article>
+        )
+    }
+}
+
+/* 
  ************************************************************* Social Links
  */
 

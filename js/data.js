@@ -242,6 +242,44 @@ let skills = [
 	}
 ];
 
+/*NEWS*/
+idGiver.counter = 0;
+let news = [
+	{
+		"id":"books",
+		"title": "Books I read this period",
+		"text": "Books alongside online tutorials, are a great tool to learn the basics of pretty much everything. Also I find them usefull and as reference. I have a special place in my heart for good books. If you have a book recommendation, I would love to know.",
+		"books": [
+			{
+				"id":idGiver(),
+				"title": "Using SVGs with HTML5 and CSS3",
+				"link": "https://www.amazon.com/Using-SVG-CSS3-HTML5-Graphics-ebook/dp/B076HZ31YZ/ref=sr_1_1?keywords=using+svg+with+html5+and+css3&qid=1637525631&sr=8-1",
+				"description":"A complete and extremely helpful book that gives valuable knowledge of SVG and its animations."
+			},
+			{
+				"id":idGiver(),
+				"title": "Fullstack React: The Complete Guide to ReactJS and Friends",
+				"link": "https://www.amazon.com/Fullstack-React-Complete-ReactJS-Friends/dp/0991344626/ref=sr_1_1?keywords=fullstack+react&qid=1637524475&sr=8-1",
+				"description": "A React Book for React Beginners that teaches the fundamentals of React, Redux and more."
+			}
+		]
+	},
+	{
+		"id":"cproject",
+		"title": "My Current Project",
+		"text": "Currently I refactor code in my Thesis and the Crowdsourcing Project and study ReactJS",
+		"link": "https://github.com/Aristidis13/Crowdsourcing-project",
+		"cta": "Pay a visit"
+	},
+	{
+		"id":"general",
+		"title": "What I do",
+		"text": "Currently I learn ReactJS and find ways to make SVGs come to life. I also plan on "
+	}
+];
+
+
+/*SOCIAL LINKS*/
 idGiver.counter = 0; // Restarts Counter
 
 let socialLinks = [
