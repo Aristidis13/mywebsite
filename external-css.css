@@ -11,6 +11,7 @@ html {
     --blue-secondary : #347;
     --red-secondary: #c72b41;
     --mainTextColor: #ECECEC;
+    --news-section-width : 70%;
     color: var(--mainTextColor);
 }
 
@@ -472,32 +473,58 @@ h4.experience-secondary-title {
 
 #news {
     display: grid;
-    grid: auto / repeat(10, 10%);
+    grid: "cproject cproject" auto "general books" auto / 50% 50%;
     justify-items: center;
-    align-items: center;
+    align-items: start;
     background-color: #000;
     border-radius: 70% 40% 70% 40%;
 }
+/*Books I read element*/
+#new-books {
+    grid-area: books;
+}
+
+#new-cproject {
+    grid-area: cproject;
+}
+
+#new-general {
+    grid-area: general;
+}
 
 .news-title {
-    display: block;
     text-align:center;
-    font-size: 1.9rem;
-    margin: 3rem;
-    padding-top: 1rem;
+    font-size: 2rem;
+    width: var(--news-section-width);
+    margin: 3rem auto;
+}
+
+#new-books .news-title {
+    text-align: start;
+}
+
+#new-cproject .news-description {
+    width: 50%;
+    margin: 1rem auto;
+}
+
+#new-general > .news-description {
+    margin: 0 auto 0;
+    padding-bottom: 9rem;
+}
+
+#new-books .news-description {
+    padding-bottom:10rem;
 }
 
 .news-description {
-    grid-area: 1/2/2/6;
-    align-self: start;
-    width: 85%;
+    width: var(--news-section-width);
     text-align: justify;
     text-justify: inter-character;
     line-height: 2rem;
     letter-spacing: 0.125rem;
     font-size: 1.5rem;
     font-weight: 500;
-    padding: 5% 40%;
 }
 
 .news-link {
@@ -507,18 +534,18 @@ h4.experience-secondary-title {
     width: 100%;
 }
 
-.news-image {
+/* .news-image {
     transition: background-color .8s cubic-bezier(0.47, 0, 0.745, 0.715);
     width: 100%;
-    grid-area: 1 / 6 /2 / 10;
+    grid-area: image;
     align-self: start;
     justify-self: start;
     margin: 6.25rem 0 0 0;
-}
+} */
 
-.news-image:hover {
+/* .news-image:hover {
     background-color: #222;
-}
+} */
 
 /*--------------------------------------------------- Social Links ------------------------------------------------*/
 #social-links-section {
@@ -639,21 +666,39 @@ h4.experience-secondary-title {
         width: 100%;
     }
 
-    /*Current Project*/
+    /*News*/
     #news {
-        border-radius: 20%;
-        padding: 0;
+        border-radius: 70% 40%;
+        grid: "cproject" auto "general" auto "books" auto / 100%;
+    }
+    #new-cproject > .news-title {
+        margin-top: 8rem;
+        margin-left: auto;
+        text-align: end;
+        padding-right: 1rem;
+    }
+    #new-cproject > .news-description {
+        margin-left: auto;
+        margin-right: 4rem;
+        width: 50%;
+    }
+    #new-general > .news-description {
+        margin: 0 auto 0;
+        padding-bottom: 3rem;
+    }
+
+    #new-books .news-description {
+        padding-bottom: 8rem;
+        width: 50%;
+        margin-right: auto;
+        margin-left: 4rem;
     }
     .news-title {
-        margin:1rem 0 2rem 0;
+        margin: 1rem auto 2rem;
         padding-top: 0;
     }
-    .news-image {
-        display: none;
-    }
     .news-description {
-        grid-area: 1/2/2/-2;
-        width: 100%;
+        width: 60%;
     }
     /*Social Links*/
 }
@@ -678,20 +723,38 @@ h4.experience-secondary-title {
     .skill-image {
         height: auto;
     }
-    /*Current Project*/
+    /*News*/
     #news {
-        border-radius: 20%;
-        padding: 0;
+        border-radius: 70% 40%;
+        grid: "cproject" auto "general" auto "books" auto / 100%;
+    }
+    #new-cproject > .news-title {
+        margin-top: 8rem;
+        margin-left: auto;
+        text-align: end;
+        padding-right: 1rem;
+    }
+    #new-cproject > .news-description {
+        margin-left: auto;
+        margin-right: 4rem;
+        width: 50%;
+    }
+    #new-general > .news-description {
+        margin: 0 auto 0;
+        padding-bottom: 3rem;
+    }
+
+    #new-books .news-description {
+        padding-bottom: 8rem;
+        width: 50%;
+        margin-right: auto;
+        margin-left: 4rem;
     }
     .news-title {
-        margin:1rem 0 2rem 0;
+        margin: 1rem auto 2rem;
         padding-top: 0;
     }
-    .news-image {
-        display: none;
-    }
     .news-description {
-        grid-area: 1/2/2/-2;
-        width: 100%;
+        width: 60%;
     }
 }

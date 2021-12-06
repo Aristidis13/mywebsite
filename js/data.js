@@ -247,65 +247,78 @@ idGiver.counter = 0;
 let news = [
 	{
 		"id":"books",
-		"title": "Books I read this period",
-		"text": "Books alongside online tutorials, are a great tool to learn the basics of pretty much everything. Also I find them usefull and as reference. I have a special place in my heart for good books. If you have a book recommendation, I would love to know.",
-		"books": [
-			{
-				"id":idGiver(),
-				"title": "Using SVGs with HTML5 and CSS3",
-				"link": "https://www.amazon.com/Using-SVG-CSS3-HTML5-Graphics-ebook/dp/B076HZ31YZ/ref=sr_1_1?keywords=using+svg+with+html5+and+css3&qid=1637525631&sr=8-1",
-				"description":"A complete and extremely helpful book that gives valuable knowledge of SVG and its animations."
-			},
-			{
-				"id":idGiver(),
-				"title": "Fullstack React: The Complete Guide to ReactJS and Friends",
-				"link": "https://www.amazon.com/Fullstack-React-Complete-ReactJS-Friends/dp/0991344626/ref=sr_1_1?keywords=fullstack+react&qid=1637524475&sr=8-1",
-				"description": "A React Book for React Beginners that teaches the fundamentals of React, Redux and more."
-			}
-		]
+		"title": "Books I read now",
+		"text": "Books alongside online tutorials, are a great tool to learn the basics of pretty much everything. Also I find them usefull and as reference. I have a special place in my heart for good books. If you have a book recommendation, I would love to know."
 	},
 	{
 		"id":"cproject",
-		"title": "My Current Project",
-		"text": "Currently I refactor code in my Thesis and the Crowdsourcing Project and study ReactJS",
-		"link": "https://github.com/Aristidis13/Crowdsourcing-project",
-		"cta": "Pay a visit"
+		"title": "What I do",
+		"text": "Currently I refactor and expand my codebase in my Thesis. Additionally, I refactor and expand the codebase in the Crowdsourcing Project. Finally I study ReactJS and make some small side projects.",
+		"link": "https://github.com/Aristidis13/Crowdsourcing-project"
 	},
 	{
 		"id":"general",
-		"title": "What I do",
-		"text": "Currently I learn ReactJS and find ways to make SVGs come to life. I also plan on "
+		"title": "What I learn",
+		"text": "Currently I learn ReactJS and find ways to make SVGs come to life. Additionally, I think about ways to improve my Thesis Code and make it even better.I'm open for collaborations or Frontend web development work.",
+		"link":""
 	}
 ];
 
+let books = [
+	{
+		"id":idGiver(),
+		"title": "Using SVGs with HTML5 and CSS3",
+		"url": "https://www.amazon.com/Using-SVG-CSS3-HTML5-Graphics-ebook/dp/B076HZ31YZ/ref=sr_1_1?keywords=using+svg+with+html5+and+css3&qid=1637525631&sr=8-1",
+		"description":"A complete and extremely helpful book that gives valuable knowledge of SVG and its animations."
+	},
+	{
+		"id":idGiver(),
+		"title": "Fullstack React: The Complete Guide to ReactJS and Friends",
+		"url": "https://www.amazon.com/Fullstack-React-Complete-ReactJS-Friends/dp/0991344626/ref=sr_1_1?keywords=fullstack+react&qid=1637524475&sr=8-1",
+		"description": "A React Book for React Beginners that teaches the fundamentals of React, Redux and more."
+	}
+];
 
 /*SOCIAL LINKS*/
+
 idGiver.counter = 0; // Restarts Counter
+const socialLinksLinkClass = "link link-container social-link";
+const socialLinksTextClass = "social-link-title";
 
 let socialLinks = [
 	{
 		"id": idGiver(),
 		"title": "Github",
-		"url": "https://github.com/Aristidis13/"
+		"url": "https://github.com/Aristidis13/",
+		"linkClass":socialLinksLinkClass,
+		"textClass":socialLinksTextClass
 	},
 	{
 		"id": idGiver(),
 		"title": "LinkedIn",
-		"url": "https://www.linkedin.com/in/aris-barlos-69a3b8153/"
+		"url": "https://www.linkedin.com/in/aris-barlos-69a3b8153/",
+		"linkClass":socialLinksLinkClass,
+		"textClass":socialLinksTextClass
 	},
 	{
 		"id": idGiver(),
 		"title": "Email Me",
-		"url":"mailto:aris13pat@hotmail.com"
+		"url":"mailto:aris13pat@hotmail.com",
+		"linkClass":socialLinksLinkClass,
+		"textClass":socialLinksTextClass
 	},
 	{
 		"id": idGiver(),
 		"title": "Facebook",
-		"url": "https://www.facebook.com/people/Aris-Barlos/100009788894945/"
+		"url": "https://www.facebook.com/people/Aris-Barlos/100009788894945/",
+		"linkClass":socialLinksLinkClass,
+		"textClass":socialLinksTextClass
 	},
 	{
 		"id": idGiver(),
 		"title": "Fiverr",
-		"url": "https://www.fiverr.com/arisbarlos?up_rollout=true"
+		"url": "https://www.fiverr.com/arisbarlos?up_rollout=true",
+		"linkClass":socialLinksLinkClass,
+		"textClass":socialLinksTextClass
 	}
 ];
