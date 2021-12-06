@@ -518,6 +518,7 @@ h4.experience-secondary-title {
 }
 
 .news-description {
+    font-family: Cormorant, serif;
     width: var(--news-section-width);
     text-align: justify;
     text-justify: inter-character;
