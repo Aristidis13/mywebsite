@@ -7,10 +7,12 @@ html {
     text-decoration: none;
     display: flex;
     justify-content: center;
+    scroll-behavior: smooth;
     /*Colors*/
     --blue-secondary : #347;
-    --red-secondary: #c72b41;
-    --mainTextColor: #ECECEC;
+    --red-secondary: rgb(199, 43, 65);
+    --mainTextColor: #ececec;
+    --anime-color: rgba(199, 43, 65, 0.3);
     --news-section-width : 70%;
     color: var(--mainTextColor);
 }
@@ -68,6 +70,35 @@ canvas {
     width: fit-content;
     transition: color .6s ease-in-out;
 }
+/*Back Button*/
+#back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    background-color: var(--red-secondary);
+    position:fixed;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    animation: ripple 1.5s linear infinite;
+    transition: all 0.7s ease;
+}
+
+@keyframes ripple {
+    0% { box-shadow: 0 0 0 0 var(--anime-color),
+        0 0 0 1px var(--anime-color),
+        0 0 0 3px var(--anime-color);
+    }
+    100% {
+      box-shadow: 0 0 0 0 var(--anime-color),
+        0 0 0 4px var(--anime-color),
+        0 0 0 20px var(--anime-color);
+    }
+}
+
 
 .link:hover,
 .link:focus,
@@ -99,6 +130,7 @@ canvas {
     width: 90vw;
     height: 90vh;
     justify-content: center;
+    cursor:grab;
 }
 
 #cube {
@@ -110,11 +142,16 @@ canvas {
 }  
 
 .cubeSide {
+    user-select: none;
     list-style-type: none;
     position: absolute;
     width: var(--side);
     height: var(--side);
     background-color: aliceblue;
+}
+/*Added with React to pause the animation*/
+.pausedAnimation {
+    animation-play-state: paused !important;
 }
 
 .front {
@@ -351,8 +388,6 @@ h4.experience-secondary-title {
     margin: 2% 0;
 }
 
-
-
 .exp-text-container {
     flex: 4;
     
@@ -381,7 +416,6 @@ h4.experience-secondary-title {
     background-color: var(--mainTextColor);
     border-radius: 50%;
     align-self: center;
-
 }
 
 .line {

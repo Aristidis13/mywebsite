@@ -36,7 +36,7 @@ let cubeSides = [
 	},
 	{
 		"id": idGiver(),
-		"title": "My Projects",
+		"title": "Projects",
 		"section": "projects-section",
 		"class": "back cubeSide"
 	},
@@ -60,7 +60,7 @@ let cubeSides = [
 	},
 	{
 		"id": idGiver(),
-		"title": "Where to Find Me",
+		"title": "Links",
 		"section": "social-links-section",
 		"class": "bottom cubeSide"
 	}

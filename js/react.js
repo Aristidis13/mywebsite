@@ -1,6 +1,22 @@
 /************************************************************************* Intro
  */
 class Cube extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            className:  ""
+        }
+        this.handlePointerDown = this.handlePointerDown.bind(this);
+        this.handlePointerUp = this.handlePointerUp.bind(this);
+    }
+    handlePointerDown(event) {
+        console.log('PointerDown Works');
+        this.setState({ className:"pausedAnimation"})
+        
+    }
+    handlePointerUp(event) {
+        this.setState({ className:""})
+    }
     render() {
         const sides = cubeSides.map((side)=>(
             <CubeSide
@@ -11,8 +27,8 @@ class Cube extends React.Component {
             />
         ));
         return(
-            <nav id="navbar">
-                <ul id="cube">
+            <nav id="navbar" onPointerDown={this.handlePointerDown} onPointerUp={this.handlePointerUp}>
+                <ul id="cube" class={this.state.className}>
                     {sides}
                 </ul>
             </nav>
@@ -46,7 +62,6 @@ ReactDOM.render(
  */
  class WelcomeSection extends React.Component {
     render() {
-        //
         const welcomeComponents = welcome.map((welcomeElement) => (
         <WelcomeElement
             id =   { "text-element-"+welcomeElement.id  }
