@@ -247,7 +247,7 @@ class SkillList extends React.Component {
         return (
             <article className="list-container" 
                      id="atomic-skill-container">
-                <h2 className="section-header"> Skills Until Now</h2>
+                <h2 className="section-header">Skills</h2>
                 <div id="skills">
                     {skillsComponents}
                 </div>

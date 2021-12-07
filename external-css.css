@@ -89,13 +89,15 @@ canvas {
 
 @keyframes ripple {
     0% { box-shadow: 0 0 0 0 var(--anime-color),
-        0 0 0 1px var(--anime-color),
-        0 0 0 3px var(--anime-color);
+        0 0 0 .0625rem var(--anime-color),
+        0 0 0 .125rem var(--anime-color),
+        0 0 0 .25rem var(--anime-color);
     }
     100% {
       box-shadow: 0 0 0 0 var(--anime-color),
-        0 0 0 4px var(--anime-color),
-        0 0 0 20px var(--anime-color);
+        0 0 0 0.25rem var(--anime-color),
+        0 0 0 0.875rem var(--anime-color),
+        0 0 0 1.25rem var(--anime-color);
     }
 }
 
@@ -507,7 +509,7 @@ h4.experience-secondary-title {
 
 #news {
     display: grid;
-    grid: "cproject cproject" auto "general books" auto / 50% 50%;
+    grid: "cproject cproject" auto "general books" auto "void void" 11rem / 50% 50%;
     justify-items: center;
     align-items: start;
     background-color: #000;
@@ -547,10 +549,6 @@ h4.experience-secondary-title {
     padding-bottom: 9rem;
 }
 
-#new-books .news-description {
-    padding-bottom:10rem;
-}
-
 .news-description {
     font-family: Cormorant, serif;
     width: var(--news-section-width);
@@ -560,6 +558,7 @@ h4.experience-secondary-title {
     letter-spacing: 0.125rem;
     font-size: 1.5rem;
     font-weight: 500;
+    text-align-last: center;
 }
 
 .news-link {
