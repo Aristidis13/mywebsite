@@ -1,0 +1,794 @@
+/* --------------------------------------------------- DOM Elements -----------------------------------------------------*/
+html {
+    scrollbar-width: thin !important;          /* "auto" or "thin" */
+    scrollbar-color: var(--red-secondary) var(--mainTextColor) !important;   /* scroll thumb and track */
+    font-size: 16px;
+    background-color: #19091a;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    scroll-behavior: smooth;
+    /*Colors*/
+    --blue-secondary : #347;
+    --red-secondary: rgb(199, 43, 65);
+    --mainTextColor: #ececec;
+    --anime-color: rgba(199, 43, 65, 0.3);
+    --news-section-width : 70%;
+    color: var(--mainTextColor);
+}
+
+
+/* Works on Chrome, Edge, and Safari */
+html::-webkit-scrollbar {
+    width: .5rem;
+  }
+  
+html::-webkit-scrollbar-track {
+    background: white;
+}
+  
+html::-webkit-scrollbar-thumb {
+    background-color: var(--red-secondary);
+    border-radius: 1.5rem;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Archivo', sans-serif; 
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    width: 80%;
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+}
+
+
+canvas {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/*--------------------------------------------- Main General Settings and Custom Cursor ----------------------------------------*/
+.section-header {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    font-family: Archivo;
+}
+
+.link {
+    text-decoration: underline;
+    color: var(--red-secondary);
+    cursor: grab;
+    margin: 0;
+    width: fit-content;
+    transition: color .6s ease-in-out;
+}
+/*Back Button*/
+#back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    background-color: var(--red-secondary);
+    position:fixed;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    animation: ripple 1.5s linear infinite;
+    transition: all 0.7s ease;
+}
+
+@keyframes ripple {
+    0% { box-shadow: 0 0 0 0 var(--anime-color),
+        0 0 0 .0625rem var(--anime-color),
+        0 0 0 .125rem var(--anime-color),
+        0 0 0 .25rem var(--anime-color);
+    }
+    100% {
+      box-shadow: 0 0 0 0 var(--anime-color),
+        0 0 0 0.25rem var(--anime-color),
+        0 0 0 0.875rem var(--anime-color),
+        0 0 0 1.25rem var(--anime-color);
+    }
+}
+
+
+.link:hover,
+.link:focus,
+.link:active {
+    color: var(--blue-secondary);
+}
+/*Class for hover of custom cursor*/
+.hoverText {
+    color: #fff !important;
+    transition: all 1s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+/*------------------------------------------------ Intro Section -------------------------------------------*/
+:root {
+    --side: 12.5rem;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+}
+
+#navbar {
+    perspective: 31rem;
+    display:flex;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    justify-content: center;
+    cursor:grab;
+}
+
+#cube {
+    position: relative;
+    transform-style: preserve-3d;
+    width: var(--side);
+    height: var(--side);
+    animation: spin 20s infinite linear;
+}  
+
+.cubeSide {
+    user-select: none;
+    list-style-type: none;
+    position: absolute;
+    width: var(--side);
+    height: var(--side);
+    background-color: aliceblue;
+}
+/*Added with React to pause the animation*/
+.pausedAnimation {
+    animation-play-state: paused !important;
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(var(--side));
+    transform-origin: bottom;
+}
+
+.nav-title {
+    text-align: center;
+}
+
+.right {
+    transform: rotateY( 90deg) translateZ(var(--side));
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(var(--side));
+}
+.left {
+    transform: rotateY(-90deg) translateZ(var(--side));
+}
+.top {
+    transform: rotateX( 90deg) translateZ(var(--side));
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(var(--side));
+}
+
+.cubeSide > .link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+@keyframes spin {
+    0%   { transform: rotateX(  0deg) rotateY(  0deg);}
+    17%  { transform: rotateX( 90deg) rotateY(  0deg);}
+    34%  { transform: rotateX(-90deg) rotateY(  0deg);}
+    50%  { transform: rotateX(  0deg) rotateY(  0deg);}
+    100% { transform: rotateX(0deg) rotateY(  360deg);}
+}
+
+/*--------------------------------------------- Welcome Section ----------------------------------------------*/
+#welcome-elements > .section-header {
+    grid-area: title;
+}
+
+#welcome-elements {
+    display:grid;
+    grid: "title title title" auto "text void photo" auto / 60% 10% 30%;
+}
+
+#text-container {
+    grid-area: text;
+    margin: 0;
+}
+
+.presentation-text {
+    display: inline-block;
+    margin: 0 0 1.5rem;
+    letter-spacing: .15em;
+    text-align: justify;
+    text-justify: inter-character;
+    text-indent: 2rem;
+    font-size: 1.5rem;
+}
+
+
+/*Photo section settings*/
+#photo-container {
+    grid-area: photo;
+    margin: 0;
+}
+
+#personal-photo {
+    width:100%;
+    filter: grayscale(100%);
+}
+
+/*--------------------------------------------- Projects Section CSS -----------------------------------------*/
+.separate-section {
+    display: grid;
+    justify-items: center;
+}
+
+#projects {
+    display: grid;
+    text-decoration: none;
+}
+
+/*Project Class*/
+.atomic-project {
+    width: 45%;
+    margin-bottom: 2%;
+    border-radius: 0.625rem;
+    padding: 1% 4%;
+    background-color: black;
+    transition: box-shadow 1.5s ease-out,
+                background-color 1.8s ease-in-out;
+}
+
+.atomic-project:hover {
+    box-shadow: inset 50rem 0 1px 0 rgba(51, 68, 119,.5);
+    background-color: transparent;
+}
+
+/*Το CTA και το intro-header επηρεάζουν την σειρά κατάταξης των projects στην σκάλα*/
+.atomic-project:nth-child(4n+2) {
+    justify-self: start;
+}
+.atomic-project:nth-child(2n+3) {
+    justify-self: center;
+}
+.atomic-project:nth-child(4n+4) {
+    justify-self: end;
+}
+
+/*Change Default link styles*/
+.atomic-project > a {
+    text-decoration: none;
+    color: var(--mainTextColor);
+}
+
+.project-title {
+    color: var(--red-secondary);
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: Archivo,"sans-serif";
+}
+.project-description {
+    text-align: justify;
+    text-justify: distribute;
+    font-size: 1.5rem;
+    font-family: 'Cormorant', serif;
+}
+
+/*--------------------------------------------- Technical Experience -----------------------------------------*/
+#technical-experience {
+    display: flex;
+    justify-content: center;
+}
+
+#experience {
+    justify-content: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.experience-element-container {
+    display: grid;
+    grid: "time decoration title" auto "time decoration description" auto / 20% 10% 70%;
+}
+/*Time Period Container*/
+.time-period {
+    grid-area: time;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.125rem;
+}
+
+/*Title Container*/
+.titles-container {
+    grid-area: title;
+}
+
+.experience-title {
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.experience-main-title {
+    font-family: Archivo,"sans-serif";
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.125rem;
+    font-weight: 400;
+}
+
+.experience-main-title,  .experience-link {
+    text-decoration: underline;
+    color: var(--red-secondary);
+    cursor: grab;
+    margin: 0;
+    width: fit-content;
+    transition: color .6s ease-in-out;
+}
+
+
+.experience-main-title:hover,
+.experience-link:hover,
+.experience-main-title:active,
+.experience-link:active,
+.experience-main-title:focus,
+.experience-link:focus  {
+    color:var(--blue-secondary);
+}
+
+.experience-description-container {
+    grid-area: description;
+    margin-bottom: 3rem;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+
+}
+
+
+/*Added with JS to make description visible*/
+.descriptionVisible {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    transition: opacity 1.6s ease-out,
+                visibility 1.7s cubic-bezier(0.175, 0.225, 0.32, 0.975) .1s;
+}
+
+.experience-description {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+h4.experience-secondary-title {
+    color : #706f6f;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 2% 0;
+}
+
+.exp-text-container {
+    flex: 4;
+    
+}
+
+/*Last Box Settings*/
+.exp-text-container:last-child {
+    padding-bottom: 0;
+}
+
+.experience-link-container {
+    margin-bottom: 0;
+}
+
+.decoration-container {
+    grid-area:  decoration;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dec-bullet {
+    width: 1.125rem;
+    height: 1.125rem;
+    background-color: var(--mainTextColor);
+    border-radius: 50%;
+    align-self: center;
+}
+
+.line {
+    width: 0.125rem;
+    height: 100%;
+    background-color:var(--mainTextColor);
+}
+
+/*--------------------------------------------------- Skills -------------------------------------------------*/
+#skills-section {
+    display:flex;
+    justify-content: center;
+}
+#skills {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.skill-container {
+    width: 28%;
+    margin: 1%;
+    max-width: 100%;
+    min-width:300px;
+    background-color: var(--mainTextColor);
+    color: #222;
+    font-weight: 700;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.2s linear;
+}
+
+.skill-image {
+    width:50%;
+    height:40vh;
+}
+
+.skill-text {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 80%;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    color: var(--mainTextColor);
+}
+
+.skill-container:hover,
+.skill-container:focus,
+.touchedSkill {
+    background-color: rgba(51, 68, 119,.5);
+}
+
+.skill-container:hover .skill-text,
+.skill-container:focus .skill-text,
+.touchedSkill .skill-text {
+    visibility: visible;
+    opacity:1;
+}
+
+.touchedSkill {
+    touch-action: none;
+}
+
+.skill-title {
+    font-family: Archivo,"serif";
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.skill-url {
+    color: var(--mainTextColor);
+    display: block;
+    margin-top: 4%;
+}
+
+/*------------------------------------------------ News -------------------------------------------*/
+.news-presentation {
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: 0.125rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+#news {
+    display: grid;
+    grid: "cproject cproject" auto "general books" auto "void void" 11rem / 50% 50%;
+    justify-items: center;
+    align-items: start;
+    background-color: #000;
+    border-radius: 70% 40% 70% 40%;
+}
+/*Books I read element*/
+#new-books {
+    grid-area: books;
+}
+
+#new-cproject {
+    grid-area: cproject;
+}
+
+#new-general {
+    grid-area: general;
+}
+
+.news-title {
+    text-align:center;
+    font-size: 2rem;
+    width: var(--news-section-width);
+    margin: 3rem auto;
+}
+
+#new-books .news-title {
+    text-align: start;
+}
+
+#new-cproject .news-description {
+    width: 50%;
+    margin: 1rem auto;
+}
+
+#new-general > .news-description {
+    margin: 0 auto 0;
+    padding-bottom: 9rem;
+}
+
+.news-description {
+    font-family: Cormorant, serif;
+    width: var(--news-section-width);
+    text-align: justify;
+    text-justify: inter-character;
+    line-height: 2rem;
+    letter-spacing: 0.125rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align-last: center;
+}
+
+.news-link {
+    display: block;
+    margin: 3rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* .news-image {
+    transition: background-color .8s cubic-bezier(0.47, 0, 0.745, 0.715);
+    width: 100%;
+    grid-area: image;
+    align-self: start;
+    justify-self: start;
+    margin: 6.25rem 0 0 0;
+} */
+
+/* .news-image:hover {
+    background-color: #222;
+} */
+
+/*--------------------------------------------------- Social Links ------------------------------------------------*/
+#social-links-section {
+    display: flex;
+    justify-content: center;
+}
+
+#social-links {
+    display: grid;
+    grid: "area1 area1 void1 area2 area2" auto
+          "void2 area3 area3 area3 void3" auto
+          "area4 area4 void4 area5 area5" auto
+          /20% 20% 20% 20% 20%;
+    justify-items: center;
+}
+
+#links-container {
+    flex: 1;
+}
+
+#socialLink-0 {
+    grid-area: area1;
+}
+#socialLink-1 {
+    grid-area: area2;
+}
+#socialLink-2 {
+    grid-area: area3;
+}
+#socialLink-3 {
+    grid-area: area4;
+}
+#socialLink-4 {
+    grid-area: area5;
+}
+.link-container {
+    text-decoration: none;
+}
+
+.social-link-title {
+    font-size: 3rem;
+    letter-spacing: .25rem;
+}
+
+.link-container:hover {
+    animation: socialTextTransforms 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) .1s forwards;
+}
+
+/*Animation*/
+@keyframes socialTextTransforms {
+    25% { transform: translateX(10%) scale(2,2); color:rgb(255, 0, 0);}
+    50% { transform: translateX(10%) scale(2,1); color: yellow;}
+    75% { transform: translateX(50%) scale(2,2); color: rgb(25, 194, 61);}
+    100% {transform: translateX(0) scale(2,2); color:grey;}
+}
+
+@media screen and (min-width:2000px) {
+    html {
+        font-size: 35px;
+    }    
+}
+
+@media screen and (min-width:360px) and (max-width:700px) {
+    html {
+        font-size: 12px;
+
+    }
+    /*Header*/
+    :root {
+        --side: 8rem;
+    }
+    #navbar {
+        perspective: 40rem;
+        justify-content: center;
+        align-items: center;
+    }
+    /*Welcome Section*/
+    #welcome-elements {
+        grid: "title" auto "photo" auto "void" 3rem "text" auto / 100%;
+    }
+
+    /*Projects Section*/
+    #projects {
+        justify-content: center;
+    }
+    .atomic-project {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .atomic-project:nth-child(4n+2),
+    .atomic-project:nth-child(2n+3),
+    .atomic-project:nth-child(4n+4) {
+        justify-self: center;
+    }
+    /*Technical Experience*/
+    .experience-element-container {
+        grid: "time" auto 
+              "title" auto 
+              "description" auto
+              "decoration" auto / 100%;
+    }
+    .time-period, .titles-container {
+        margin: 1rem 0;
+    }
+    .dec-bullet {
+        display:none;
+    }
+    .decoration-container {
+        margin-bottom: 1.5rem;
+    }
+    .line {
+        height: 2px;
+        background-color: var(--mainTextColor);
+        width: 100%;
+    }
+    /*Skills*/
+    .skill-container {
+        width: 100%;
+    }
+
+    /*News*/
+    #news {
+        border-radius: 70% 40%;
+        grid: "cproject" auto "general" auto "books" auto / 100%;
+    }
+    #new-cproject > .news-title {
+        margin-top: 8rem;
+        margin-left: auto;
+        text-align: end;
+        padding-right: 1rem;
+    }
+    #new-cproject > .news-description {
+        margin-left: auto;
+        margin-right: 4rem;
+        width: 50%;
+    }
+    #new-general > .news-description {
+        margin: 0 auto 0;
+        padding-bottom: 3rem;
+    }
+
+    #new-books .news-description {
+        padding-bottom: 8rem;
+        width: 50%;
+        margin-right: auto;
+        margin-left: 4rem;
+    }
+    .news-title {
+        margin: 1rem auto 2rem;
+        padding-top: 0;
+    }
+    .news-description {
+        width: 60%;
+    }
+    /*Social Links*/
+}
+
+@media screen and (min-width: 700px) and (max-width:1000px) {
+    html {
+        font-size:14px;
+    }
+    /*Project*/
+    .atomic-project {
+        width: 65%;
+    }
+    .atomic-project:hover {
+        box-shadow: inset 65vw 0 1px 0 rgba(51, 68, 119,.5);
+    }
+    /*Skills*/
+    .skill-container {
+        flex: 1;
+        padding: 4rem 0;
+        height: auto;
+    }
+    .skill-image {
+        height: auto;
+    }
+    /*News*/
+    #news {
+        border-radius: 70% 40%;
+        grid: "cproject" auto "general" auto "books" auto / 100%;
+    }
+    #new-cproject > .news-title {
+        margin-top: 8rem;
+        margin-left: auto;
+        text-align: end;
+        padding-right: 1rem;
+    }
+    #new-cproject > .news-description {
+        margin-left: auto;
+        margin-right: 4rem;
+        width: 50%;
+    }
+    #new-general > .news-description {
+        margin: 0 auto 0;
+        padding-bottom: 3rem;
+    }
+
+    #new-books .news-description {
+        padding-bottom: 8rem;
+        width: 50%;
+        margin-right: auto;
+        margin-left: 4rem;
+    }
+    .news-title {
+        margin: 1rem auto 2rem;
+        padding-top: 0;
+    }
+    .news-description {
+        width: 60%;
+    }
+}
