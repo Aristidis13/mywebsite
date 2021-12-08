@@ -282,10 +282,10 @@ class Skill extends React.Component {
                     <h3 class="skill-title"> {this.props.title} </h3>
                     <div class="skill-description">
                         {this.props.description}
+                        <a class="skill-url" href={this.props.url} target="_blank">
+                            {this.props.url}
+                        </a>
                     </div>
-                    <a href={this.props.url} class="skill-url" target="_blank">
-                        {this.props.url}
-                    </a>
                 </figcaption>
             </figure>
         )
