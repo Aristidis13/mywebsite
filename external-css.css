@@ -130,7 +130,7 @@ canvas {
     display:flex;
     align-items: center;
     width: 90vw;
-    height: 90vh;
+    height: 95vh;
     justify-content: center;
     cursor:grab;
 }
@@ -140,7 +140,9 @@ canvas {
     transform-style: preserve-3d;
     width: var(--side);
     height: var(--side);
-    animation: spin 20s infinite linear;
+    animation: spin 30s infinite linear;
+    margin: 0;
+    padding: 0;
 }  
 
 .cubeSide {
@@ -347,6 +349,8 @@ canvas {
     margin: 0;
     width: fit-content;
     transition: color .6s ease-in-out;
+    display:block;
+    word-break:break-all;
 }
 
 
@@ -442,7 +446,7 @@ h4.experience-secondary-title {
     width: 28%;
     margin: 1%;
     max-width: 100%;
-    min-width:300px;
+    min-width:280px;
     background-color: var(--mainTextColor);
     color: #222;
     font-weight: 700;
@@ -461,8 +465,9 @@ h4.experience-secondary-title {
 .skill-text {
     position: absolute;
     top: 0;
+    left:10%;
+    right: 10%;
     text-align: center;
-    width: 80%;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
@@ -496,6 +501,7 @@ h4.experience-secondary-title {
     color: var(--mainTextColor);
     display: block;
     margin-top: 4%;
+    word-break: break-all;
 }
 
 /*------------------------------------------------ News -------------------------------------------*/
@@ -652,7 +658,7 @@ h4.experience-secondary-title {
         --side: 8rem;
     }
     #navbar {
-        perspective: 40rem;
+        perspective: 20rem;
         justify-content: center;
         align-items: center;
     }
@@ -661,12 +667,21 @@ h4.experience-secondary-title {
         grid: "title" auto "photo" auto "void" 3rem "text" auto / 100%;
     }
 
+    #photo-container {
+        display: flex;
+    }
+    #personal-photo {
+        width: 70%;
+        margin: auto;
+    }
+
     /*Projects Section*/
     #projects {
         justify-content: center;
     }
     .atomic-project {
-        width: 100%;
+        width: 80%;
+        padding: 5% 10%;
         margin-bottom: 10%;
     }
     .atomic-project:nth-child(4n+2),
@@ -680,6 +695,7 @@ h4.experience-secondary-title {
               "title" auto 
               "description" auto
               "decoration" auto / 100%;
+        justify-content: center;
     }
     .time-period, .titles-container {
         margin: 1rem 0;
@@ -735,6 +751,12 @@ h4.experience-secondary-title {
         width: 60%;
     }
     /*Social Links*/
+    #social-links {
+        padding-bottom: 8rem;
+    }
+    .social-link-title {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (min-width: 700px) and (max-width:1000px) {

@@ -7,7 +7,7 @@ idGiver.counter = 0;
 let welcome = [
 	{
 		"id": idGiver(),
-		"text": "Welcome to my website. I come from Patras, Greece. I'm a software developer, with Bachelor in Computer Science."
+		"text": "Welcome to my website. I'm Aris Barlos and I come from Patras, Greece. I'm a software developer, with Bachelor in Computer Science."
 	},
 	{
 		"id": idGiver(),
@@ -124,10 +124,10 @@ let experience = [
 	{
 		"id": idGiver(),
 		"title": "Certifications",
-		"subtitle": "TMy Most Important",
+		"subtitle": "My Most Important",
 		"dateStart": 'Sep 2020',
 		"dateEnd": 'Present',
-		"description": "I always take the opportunity to explore new technologies and therefore expand my collection of Certifications. My most precious is a Diploma in Computer Science (Integrated Master), which I obtained in September 2020. I also like the Certification in Responsive Web Design I got from freecodecamp after attending the lessons and doing all the projects there. Certifications are not the holy grail of mastering skills but are a great way to personally assess if you have a certain level of competence in a new skill. I'm not actively collecting more right now but expect more in the future.",
+		"description": "I always take the opportunity to explore new technologies and therefore expand my collection of Certifications. My most precious is the Diploma in Computer Science (Integrated Master), which I obtained in September 2020. I also like the Certification in Responsive Web Design from freecodecamp, after attending the lessons and doing all the projects. Certifications are not the holy grail of mastering skills but are a great way to personally assess if you have a certain level of competence in a new skill. I'm not actively collecting more right now but expect more in the future.",
 		"link": "https://www.freecodecamp.org/certification/aristidis13/responsive-web-design"
 	},
 	{
@@ -189,7 +189,7 @@ let skills = [
 		"title": "JavaScript ES6+",
 		"image": "/skills/javascript.svg",
 		"description": "A language I have used many times, I comprehend and aim to perfect in the future.",
-		"url" :"https://www.w3.org/standards/webdesign/script"
+		"url" :"https://www.javascript.com/"
 	},
 	{
 		"id": idGiver(),
@@ -231,7 +231,7 @@ let skills = [
 		"title": "SEO",
 		"image": "/skills/seo.svg",
 		"description": "I learned SEO for completing my Thesis. I'm no expert in any case, but I can comprehend SEO both as a programmer and content creator.",
-		"url": "https://developers.google.com/search/docs/beginner/seo-starter-guide"
+		"url": "https://developers.google.com/search/docs"
 	},
 	{
 		"id": idGiver(),
@@ -273,7 +273,7 @@ let news = [
 	{
 		"id":"general",
 		"title": "What I learn",
-		"text": "The goal I currently set for me is mastering ReactJS and exploring various ways of making SVGs come to life. Moreover, I think about how to improve my Thesis Code and make it even better, and also learn to be a better programmer at the same time. I'm also open to the idea of collaborating for Frontend web development work in projects and being more active in Fiverr.",
+		"text": "In the case of learning technologies,  I learn ReactJS and explore various ways of making SVGs come to life. Moreover, I think about how to improve my Thesis Code and make it even better, and also learn to be a better programmer at the same time. I'm also open to the idea of collaborating for Frontend web development work in projects.",
 		"link":""
 	}
 
