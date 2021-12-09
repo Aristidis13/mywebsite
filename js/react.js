@@ -10,7 +10,6 @@ class Cube extends React.Component {
         this.handlePointerUp = this.handlePointerUp.bind(this);
     }
     handlePointerDown(event) {
-        console.log('PointerDown Works');
         this.setState({ className:"pausedAnimation"})
         
     }
