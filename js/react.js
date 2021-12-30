@@ -362,20 +362,22 @@ class SocialLinksList extends React.Component {
         )
     }
 }
+// import React from "react";
 
-class Link extends React.Component {
-    render() {
-        return (
-            <a class={this.props.linkClass}
-               id={this.props.id}
-               href={this.props.url}
-               target="_blank"
-               rel="nofollow">
-                <p class={this.props.textClass}>{this.props.title}</p>
-            </a>
-        )
-    }
+
+const Link = function(props) {
+    return (
+        <a class={props.linkClass}
+           id={props.id}
+           href={props.url}
+           target="_blank"
+           rel="nofollow">
+            <p class={props.textClass}>{props.title}</p>
+        </a>
+    )
 }
+
+// export default Link;
 
 ReactDOM.render(
     <SocialLinksList />, document.getElementById('social-links-section')
