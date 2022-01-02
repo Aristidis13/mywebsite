@@ -1,6 +1,6 @@
 # mywebsite
-\.
-\.
+\ 
+\ 
 ## Description
 A remote repository for [my website](https://www.arisbarlos.com),
 The code can be a template for even better portfolio sites in the future and is free for everybody to test and re-develop any way he likes.
