@@ -8,8 +8,6 @@ The code can be a template for even better portfolio sites in the future and is 
 I used **React** and for the rendering of the page, and **plain Javascript** for the animations in Canvas.
 I also used **Babel** because I used ES6 syntax.
 
----
-
 ## File System
 The file system is really simple.
 
@@ -22,6 +20,9 @@ skills Folder | Contains SVG images that are used in my skills-section. It's an 
 photos folder | General photos that are used in my website
 js Folder | Contains every js file I created.
 
+<br/>
+<br/>
+<br/>
 
 js Folder  | Description  
 :---: | :---:     
