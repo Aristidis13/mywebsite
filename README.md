@@ -1,8 +1,8 @@
 # mywebsite
 
 ## Description
-A remote repository for [my website](https://www.arisbarlos.com),
-The code can be a template for even better portfolio sites in the future and is free for everybody to test and re-develop any way he likes.
+A remote repository for [my website](https://www.arisbarlos.com). <br/>
+The code can be a template for even better portfolio sites in the future and <br/> is free for everybody to test and re-develop any way he likes.
 
 ### Languages/ Dependencies
 I used **React** and for the rendering of the page and **plain Javascript** for the animations in Canvas.
@@ -23,8 +23,6 @@ skills Folder | Contains SVG images that are used in my document. It's an image 
 photos folder | General photos that are used in my website
 js Folder | Contains every js file I created.
 
-<br/>
-<br/>
 <br/>
 
 js Folder  | Description  
