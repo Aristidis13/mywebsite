@@ -10,8 +10,6 @@ I also used **Babel** because I used ES6 syntax.
 
 ## File System
 The file system is really simple.
-- js folder contains every JS file I used. _data.js_ contains objects with page content.
-- - _react.js_
 
      File     |  Description  
      :--:     |     :---:     
