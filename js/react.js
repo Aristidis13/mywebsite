@@ -35,7 +35,7 @@ class Cube extends React.Component {
     }
 }
 
-class CubeSide extends React.Component {
+class CubeSide extends React.PureComponent {
     render() {
         return(
             <li class={this.props.class}>
@@ -85,7 +85,7 @@ ReactDOM.render(
     }
 }
 
-class WelcomeElement extends React.Component {
+class WelcomeElement extends React.PureComponent {
     render() {
         return (
             <p class="presentation-text" id={this.props.id}>
@@ -124,7 +124,7 @@ class ProjectList extends React.Component {
 }
 
 
-class Project extends React.Component {
+class Project extends React.PureComponent {
     render() {
         return (
             <section class="atomic-project" id={ this.props.id}>
@@ -319,7 +319,7 @@ ReactDOM.render(
     }
 }
 
-class New extends React.Component {
+class New extends React.PureComponent {
     render() {
         return (
             <section class="new-container" id={this.props.id}>
@@ -363,18 +363,16 @@ class SocialLinksList extends React.Component {
     }
 }
 
-class Link extends React.Component {
-    render() {
-        return (
-            <a class={this.props.linkClass}
-               id={this.props.id}
-               href={this.props.url}
-               target="_blank"
-               rel="nofollow">
-                <p class={this.props.textClass}>{this.props.title}</p>
-            </a>
-        )
-    }
+const Link = function(props) {
+    return (
+        <a class={props.linkClass}
+           id={props.id}
+           href={props.url}
+           target="_blank"
+           rel="nofollow">
+            <p class={props.textClass}>{props.title}</p>
+        </a>
+    )
 }
 
 ReactDOM.render(
