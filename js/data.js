@@ -19,7 +19,7 @@ let welcome = [
 	},
 	{
 		"id": idGiver(),
-		"text": "I hope you like my site. Have a nice day."
+		"text": "I hope you like my site."
 	}
 ];
 
@@ -78,6 +78,12 @@ let projects = [
 		"title": "Crowdsource Analysis Website",
 		"description": "A Web Development project I built with PHP, MySQL7, JS, HTML5, CSS3, and Chart.js. Contains Ajax handling, form validation, data submission, and sorting based on user preferences. The user (admin or user) can upload files with his google location history data and see charts and heatmaps with the results of the uploads. It was a lengthy project and my first website ever.",
 		"link": "https://github.com/Aristidis13/Crowdsourcing-project"
+	},
+	{
+		"id": idGiver(),
+		"title": "React Calculator",
+		"description": "A SPA I built with React and Redux with an exclusive focus on practicing. I used the create-react-app as a setup since it is a SPA. The app can compute a plethora of operations and return the result on the screen. The app is modular because I wanted to experiment with modular JS programming. Also, the redux seemed unnecessary because it's a small app, but it was a more intriguing way to code. In conclusion, a responsive web app focused on Frontend Components with the sole purpose of experimenting.",
+		"link": "https://github.com/Aristidis13/react-calculator"
 	},
 	{
 		"id": idGiver(),
@@ -225,14 +231,14 @@ let skills = [
 		"image": "/skills/bootstrap.svg",
 		"description": "Bootstrap was the first Framework I used. I rarely use it anymore since I use Grid and Flexbox themselves. Nonetheless, Bootstrap is still a viable option for quick layouts.",
 		"url": "https://getbootstrap.com/"
-	},
+	},/*
 	{
 		"id": idGiver(),
 		"title": "SEO",
 		"image": "/skills/seo.svg",
 		"description": "I learned SEO for completing my Thesis. I'm no expert in any case, but I can comprehend SEO both as a programmer and content creator.",
 		"url": "https://developers.google.com/search/docs"
-	},
+	},*/
 	{
 		"id": idGiver(),
 		"title": "PHP",
@@ -262,13 +268,13 @@ let news = [
 	{
 		"id":"cproject",
 		"title": "What I do",
-		"text": "Currently,  I refactor and extend the codebase for my dissertation, to make significant improvements to its functionality. Additionally, I refactor and extend the codebase in the Crowdsourcing Project. Finally, I devote time, mastering ReactJS by building apps.",
-		"link": "https://github.com/Aristidis13/Crowdsourcing-project"
+		"text": "Currently,  I refactor and extend the codebase for my dissertation, to make significant improvements to its functionality. Additionally, I build as a side project webpack e-commerce app.",
+		"link": "https://github.com/Aristidis13/SEO-Analyzer"
 	},
 	{
 		"id":"books",
 		"title": "Books I read now",
-		"text": 'I find books helpful to learn the basics of pretty much anything. In programming specifically,  I find them useful to learn the basics and as a reference in times of need too. Having read many books since I was a kid, I greatly appreciate a good book. Currently, I study "Using SVGS with HTML5 and CSS3" and "Fullstack React - A Complete Guide to React JS and Friends.". If you have a book suggestion, I would love to know.'
+		"text": 'I find books helpful to get depth in my knowledge of pretty much any topic. In programming specifically,  I find them useful to learn the basics and as a reference in times of need too. Having read many books since I was a kid, I greatly appreciate a good book. Currently, I check "Using SVGS with HTML5 and CSS3" and "React 17:Design Patterns and Best Practices". If you have a book suggestion, I would love to know.'
 	},
 	{
 		"id":"general",
