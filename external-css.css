@@ -3,12 +3,13 @@ html {
     scrollbar-width: thin !important;          /* "auto" or "thin" */
     scrollbar-color: var(--red-secondary) var(--mainTextColor) !important;   /* scroll thumb and track */
     font-size: 16px;
-    background-color: #19091a;
+    background-color: var(--background-main);
     text-decoration: none;
     display: flex;
     justify-content: center;
     scroll-behavior: smooth;
     /*Colors*/
+    --background-main: #19091a;
     --blue-secondary : #347;
     --red-secondary: rgb(199, 43, 65);
     --mainTextColor: #ececec;
@@ -30,6 +31,10 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
     background-color: var(--red-secondary);
     border-radius: 1.5rem;
+}
+/*Text selection*/
+::selection, ::-moz-selection {
+    color: var(--red-secondary);
 }
 
 body {
