@@ -197,7 +197,7 @@ let skills = [
 		"description": "A language I have used many times, I comprehend and aim to perfect in the future.",
 		"url" :"https://www.javascript.com/"
 	},
-	{
+	/*{
 		"id": idGiver(),
 		"title": "Node.js",
 		"image": "/skills/node.svg",
