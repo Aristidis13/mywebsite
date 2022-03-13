@@ -4,12 +4,16 @@ let canvasContainer= document.getElementById('intro');
 
 // Specify width and Height of Canvas
 
-globalThis.addEventListener('load', specifyHeightAndWidth, false);
-globalThis.addEventListener('resize', specifyHeightAndWidth, false);
+globalThis.addEventListener('load', animateCanvas, false);
+globalThis.addEventListener('resize', setCanvasSize, false);
 
-function specifyHeightAndWidth() {
+function setCanvasSize() {
     canvas.width = globalThis.innerWidth;
     canvas.height = globalThis.innerHeight;
+}
+
+function animateCanvas() {
+    setCanvasSize(canvas);
     canvasContainer.replaceChild(canvas,canvas);
     context.clearRect(0, 0, canvas.width, canvas.height);
     
@@ -48,7 +52,7 @@ let circles = [];
 function setupCircles() {
     circles.length = 0;
     let circle = [];
-    for(i=0; i<100; i++) {
+    for(i=0; i<120; i++) {
         circle = new Circle();
         circles.push(circle); 
     }
