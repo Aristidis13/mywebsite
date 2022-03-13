@@ -1,5 +1,15 @@
 /************************************************************************* Intro
  */
+ class Text extends React.PureComponent {
+    render() {
+        return (
+            <p className={"text "+this.props.classNames} id={this.props.propId}>
+                {this.props.text || this.props.children}
+            </p>
+        )
+    }
+};
+
 class Cube extends React.Component {
     constructor(props) {
         super(props);
@@ -27,7 +37,7 @@ class Cube extends React.Component {
         ));
         return(
             <nav id="navbar" onPointerDown={this.handlePointerDown} onPointerUp={this.handlePointerUp}>
-                <ul id="cube" class={this.state.className}>
+                <ul id="cube" className={this.state.className}>
                     {sides}
                 </ul>
             </nav>
@@ -38,44 +48,34 @@ class Cube extends React.Component {
 class CubeSide extends React.PureComponent {
     render() {
         return(
-            <li class={this.props.class}>
+            <li className={this.props.class}>
                 <a
-                    class= "link list-item"
+                    className= "link list-item"
                     id={ this.props.id}
                     href={"#"+this.props.section}
                     rel="nofollow">
-                    <h2 class="nav-title"> {this.props.title}</h2>
+                    <h2 className="nav-title"> {this.props.title}</h2>
                 </a>
             </li>
         )
     }
 }
 
-ReactDOM.render(
-    <Cube />,
-    document.getElementById('header')
-);
+ReactDOM.render(<Cube />,document.getElementById('header'));
 
 /*
  ************************************************************************* Welcome
  */
  class WelcomeSection extends React.Component {
     render() {
-        const welcomeComponents = welcome.map((welcomeElement) => (
-        <WelcomeElement
-            id =   { "text-element-"+welcomeElement.id  }
-            text = { welcomeElement.text }
-        />
-        )
-         );
+        const welcomeComponents = welcome.map((el) => <Text text = { el.text } classNames = {"presentation-text"} />
+        );
         return (
-            <article class="list-container" id="welcome-elements">
-                <h2 class="section-header"> Welcome</h2>
-                <p id="text-container">
-                        {welcomeComponents}
-                </p>
+            <article className="list-container" id="welcome-elements">
+                <h2 className="section-header"> Welcome</h2>
+                <div id="text-container"> {welcomeComponents} </div>
                 <figure id="photo-container">
-                    <img class="photo"
+                    <img className="photo"
                          id="personal-photo"
                          src="./photos/Aris_Barlos.jpg"
                          alt="Aris Barlos - Software Engineer" />
@@ -85,15 +85,7 @@ ReactDOM.render(
     }
 }
 
-class WelcomeElement extends React.PureComponent {
-    render() {
-        return (
-            <p class="presentation-text" id={this.props.id}>
-                {this.props.text}
-            </p>
-        )
-    }
-}
+
 
 ReactDOM.render(
     <WelcomeSection/>,
@@ -115,25 +107,24 @@ class ProjectList extends React.Component {
             />
         ));
         return (
-            <article class="list-container" id="projects">
-                <h2 class="section-header"> My Most Interesting Projects</h2>
+            <article className="list-container" id="projects">
+                <h2 className="section-header"> My Most Interesting Projects</h2>
                 {projectComponents}
-        </article>
+            </article>
         );
     }
 }
 
-
 class Project extends React.PureComponent {
     render() {
         return (
-            <section class="atomic-project" id={ this.props.id}>
+            <section className="atomic-project" id={ this.props.id}>
                 <a href={this.props.link} target="_blank">
-                    <section class="project-info">
-                        <h3 class="project-title"> {this.props.title}</h3>
-                        <p class="project-description">
+                    <section className="project-info">
+                        <h3 className="project-title"> {this.props.title}</h3>
+                        <Text classNames="project-description" >
                             {this.props.description}
-                        </p>
+                        </Text>
                     </section>
                 </a>
             </section>
@@ -141,11 +132,7 @@ class Project extends React.PureComponent {
     }
 }
 
-ReactDOM.render(
-    <ProjectList />,
-    document.getElementById('projects-section')
-);
-
+ReactDOM.render( <ProjectList />, document.getElementById('projects-section'));
 
 /*
  ****************************************************************** Technical Experience
@@ -164,8 +151,8 @@ class ExperienceList extends React.Component {
         />
         );
         return (
-            <article class="list-container" id="experience-elements">
-                <h2 class="section-header"> Technical Experience</h2>
+            <article className="list-container" id="experience-elements">
+                <h2 className="section-header"> Technical Experience</h2>
                 <p id="experience-intro-paragraph"></p>
                 <section id="experience">
                     {experienceComponents}
@@ -179,42 +166,42 @@ class ExperienceElement extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            className: "experience-description-container",
+            classNames: "experience-description-container",
         }
         this.handleToggle = this.handleToggle.bind(this);
     }
     handleToggle() {
-        !this.state.className.includes("descriptionVisible")
+        !this.state.classNames.includes("descriptionVisible")
             ? this.setState({
-                className: "experience-description-container descriptionVisible" 
+                classNames: "descriptionVisible" 
             })
             : this.setState({
-                className: "experience-description-container"
+                classNames: ""
             });
     }
     render() {
         return (
-            <section class='list-container experience-element-container' id={this.props.id}>
-                <p class="time-period">
-                    <time class="date-start"> {this.props.dateStart + " "}</time>
-                    - <time class="date-end"> {" "+ this.props.dateEnd} </time>
+            <section className='list-container experience-element-container' id={this.props.id}>
+                <p className="time-period">
+                    <time className="date-start"> {this.props.dateStart + " "}</time>
+                    - <time className="date-end"> {" "+ this.props.dateEnd} </time>
                 </p>
-                <div class="decoration-container">
-                    <div class="dec-bullet"></div>
-                    <div class="line"></div>
+                <div className="decoration-container">
+                    <div className="dec-bullet"></div>
+                    <div className="line"></div>
                 </div>
-                <section class="exp-text-container">
-                    <div class="experience-title">
-                        <div class="titles-container">
-                            <h3 class="experience-main-title" onClick={this.handleToggle}> {this.props.title} </h3>
-                            <h4 class="experience-secondary-title"> {this.props.subtitle} </h4>
+                <section className="exp-text-container">
+                    <div className="experience-title">
+                        <div className="titles-container">
+                            <h3 className="experience-main-title" onClick={this.handleToggle}> {this.props.title} </h3>
+                            <h4 className="experience-secondary-title"> {this.props.subtitle} </h4>
                         </div>
                     </div>
                 </section>
-                <div class={this.state.className}>
-                    <p class="experience-description">{this.props.description}</p>
-                    <p class="experience-link-container"> 
-                        <a class="link experience-link" href={this.props.link} target="_blank"> {this.props.link} </a>
+                <div className={"experience-description-container "+this.state.classNames}>
+                    <Text classNames="experience-description">{this.props.description}</Text>
+                    <p className="experience-link-container"> 
+                        <a className="link experience-link" href={this.props.link} target="_blank"> {this.props.link} </a>
                     </p>
                 </div>
             </section>
@@ -272,16 +259,16 @@ class Skill extends React.Component {
 
     render() {
         return (
-            <figure class={this.state.className}
+            <figure className={this.state.className}
                     id={"skill-"+this.props.id}
                     onTouchStart={this.handleTouchStart} 
-                ><img class="skill-image" src={this.props.image} />
-                <figcaption class="skill-text"
+                ><img className="skill-image" src={this.props.image} />
+                <figcaption className="skill-text"
                             onTouchStart={this.handleTouchStart}>
-                    <h3 class="skill-title"> {this.props.title} </h3>
-                    <div class="skill-description">
+                    <h3 className="skill-title"> {this.props.title} </h3>
+                    <div className="skill-description">
                         {this.props.description}
-                        <a class="skill-url" href={this.props.url} target="_blank">
+                        <a className="skill-url" href={this.props.url} target="_blank">
                             {this.props.url}
                         </a>
                     </div>
@@ -309,9 +296,9 @@ ReactDOM.render(
             />
         ))
         return (
-            <article  class="list-container"  id="news-container">
-                <h2 class="section-header"> News</h2>
-                <section class="news-container"  id="news">
+            <article  className="list-container"  id="news-container">
+                <h2 className="section-header"> News</h2>
+                <section className="news-container"  id="news">
                     {newsElements}
                 </section>
             </article>
@@ -322,11 +309,11 @@ ReactDOM.render(
 class New extends React.PureComponent {
     render() {
         return (
-            <section class="new-container" id={this.props.id}>
-                    <h3 class="news-title">{this.props.title}</h3>
-                    <p class="news-description">
+            <section className="new-container" id={this.props.id}>
+                    <h3 className="news-title">{this.props.title}</h3>
+                    <Text classNames="news-description">
                         {this.props.text}
-                    </p>
+                    </Text>
             </section>
         )
     }
@@ -353,7 +340,7 @@ class SocialLinksList extends React.Component {
             />
         ))
         return (
-            <article  class="list-container"  id="links-container">
+            <article  className="list-container"  id="links-container">
                 <h2 className="section-header"> Where to find me</h2>
                 <div id="social-links">
                     {socialLinksComponents}
@@ -365,12 +352,12 @@ class SocialLinksList extends React.Component {
 
 const Link = function(props) {
     return (
-        <a class={props.linkClass}
+        <a className={props.linkClass}
            id={props.id}
            href={props.url}
            target="_blank"
            rel="nofollow">
-            <p class={props.textClass}>{props.title}</p>
+            <p className={props.textClass}>{props.title}</p>
         </a>
     )
 }
