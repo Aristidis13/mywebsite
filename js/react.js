@@ -268,7 +268,9 @@ class Skill extends React.Component {
                     id={"skill-"+this.props.id}
                     onTouchStart={this.handleTouchStart}
                     onTouchEnd={this.handleTouchEnd}>
-                <img className="skill-image" src={this.props.image} />
+                <img className="skill-image" src={this.props.image}
+                    onTouchStart={this.handleTouchStart}
+                    onTouchEnd={this.handleTouchEnd}/>
                 <figcaption className="skill-text">
                     <h3 className="skill-title"> {this.props.title} </h3>
                     <div className="skill-description">

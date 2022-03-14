@@ -87,6 +87,12 @@ let projects = [
 	},
 	{
 		"id": idGiver(),
+		"title": "Dog App",
+		"description": "A responsive app I built with React,TypeScript a few React Libraries (for API Calls,Pagination and more), TypeScript, CSS3, and the Dog API. It contains Ajax API Calls with axios, a search bar for easier navigation and search, and dog fetching with button pressing.",
+		"link": "https://github.com/Aristidis13/dogs"
+	},
+	{
+		"id": idGiver(),
 		"title": "EstateHub",
 		"description": "This project focused on the development of an enterprise idea and the Software lifecycle. I and my colleagues used ICONIX Methodology with a custom-defined workflow. In addition to the project lifecycle, we explored various UML Diagrams such as use-cases and robustness, sequence diagrams. We implemented our idea with C# and WPF as a windows binary.",
 		"link": "https://github.com/katagis/estatehub"
@@ -108,13 +114,13 @@ let projects = [
 		"title": "Flex-Bison Parser and Lexicological Analyser",
 		"description": "A custom compiler that accepts as input a JSON file that contains multiple tweets, retweets, and extended tweets and finds what fields are missing or have different values from the expected. I built this with C and created the Lexicological Analyzer with Flex and the parser with Bison (former YACC).",
 		"link": "https://github.com/Aristidis13/Flex-and-Bison-Parser"
-	},*/
+	},
 	{
 		"id": idGiver(),
 		"title": "Parallellization with C++ OpenMP Framework",
 		"description": "The project examines four parallelization schedules and their speed for a non-distributed workload with the OpenMP Framework and C++ as the programming language. Additionally, I optimized the assigned codebase, for speed and performance.",
 		"link" :"https://github.com/Aristidis13/Parallellization-with-OpenMP-Framework/"
-	},
+	},*/
 	{
 		"id": idGiver(),
 		"title": "MySQL Database Expansion",
@@ -178,6 +184,13 @@ let skills = [
 	},
 	{
 		"id": idGiver(),
+		"title": "TypeScript",
+		"image": "/skills/typescript.svg",
+		"description": "A language I have used and I really like. They benefits of TypeScript are suited for the build of simple or complex apps.",
+		"url" :"https://www.typescriptlang.org/"
+	},
+	{
+		"id": idGiver(),
 		"title": "CSS3",
 		"image":"/skills/css3.svg",
 		"description": "With Flexbox, Grid, and Animations, CSS nowadays is much more than just a style-adding mechanism. It's the central part of every UI and one, I deeply understand.",
@@ -231,14 +244,14 @@ let skills = [
 		"image": "/skills/bootstrap.svg",
 		"description": "Bootstrap was the first Framework I used. I rarely use it anymore since I use Grid and Flexbox themselves. Nonetheless, Bootstrap is still a viable option for quick layouts.",
 		"url": "https://getbootstrap.com/"
-	},/*
+	},
 	{
 		"id": idGiver(),
 		"title": "SEO",
 		"image": "/skills/seo.svg",
 		"description": "I learned SEO for completing my Thesis. I'm no expert in any case, but I can comprehend SEO both as a programmer and content creator.",
 		"url": "https://developers.google.com/search/docs"
-	},*/
+	},
 	{
 		"id": idGiver(),
 		"title": "PHP",
