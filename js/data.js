@@ -210,6 +210,13 @@ let skills = [
 		"description": "A language I have used many times, I comprehend and aim to perfect in the future.",
 		"url" :"https://www.javascript.com/"
 	},
+	{
+		"id": idGiver(),
+		"title": "jQuery",
+		"image": "/skills/jquery.svg",
+		"description": "A library I have used in my previous job and in college. jQuery is easy to understand and program with it although React and other JS Frameworks are more \"hot\".",
+		"url" :"https://jquery.com/"
+	},
 	/*{
 		"id": idGiver(),
 		"title": "Node.js",
