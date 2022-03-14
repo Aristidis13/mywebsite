@@ -32,7 +32,7 @@ class Cube extends React.Component {
                 id = {'cubeSide-'+side.id}
                 title = {side.title}
                 section = {side.section}
-                class = {side.class}
+                classNames = {side.class}
             />
         ));
         return(
@@ -48,7 +48,7 @@ class Cube extends React.Component {
 class CubeSide extends React.PureComponent {
     render() {
         return(
-            <li className={this.props.class}>
+            <li className={this.props.classNames}>
                 <a
                     className= "link list-item"
                     id={ this.props.id}
