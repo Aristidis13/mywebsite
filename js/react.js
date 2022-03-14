@@ -19,11 +19,11 @@ class Cube extends React.Component {
         this.handlePointerDown = this.handlePointerDown.bind(this);
         this.handlePointerUp = this.handlePointerUp.bind(this);
     }
-    handlePointerDown(event) {
+    handlePointerDown() {
         this.setState({ className:"pausedAnimation"})
         
     }
-    handlePointerUp(event) {
+    handlePointerUp() {
         this.setState({ className:""})
     }
     render() {
@@ -247,24 +247,29 @@ class Skill extends React.Component {
         super(props);
         this.state = {
             hasDescription: false,
-            className: "skill-container"
+            classNames: ""
         }
         this.handleTouchStart = this.handleTouchStart.bind(this);
+        this.handleTouchEnd = this.handleTouchEnd.bind(this);
     }
-    handleTouchStart(e) {
-        !this.state.className.includes("touchedSkill")
-            ? this.setState({ className: "skill-container touchedSkill"})
-            : this.setState({ className: "skill-container"});
+    handleTouchStart() {
+        !this.state.classNames.includes("touchedSkill")
+            ? this.setState({ classNames: "touchedSkill"})
+            : this.setState({ classNames: ""});
+    };
+    handleTouchEnd(e) {
+        if(this.state.classNames.includes("touchedSkill"))
+            this.setState( {classNames:""})
     }
 
     render() {
         return (
-            <figure className={this.state.className}
+            <figure className={"skill-container "+this.state.classNames}
                     id={"skill-"+this.props.id}
-                    onTouchStart={this.handleTouchStart} 
-                ><img className="skill-image" src={this.props.image} />
-                <figcaption className="skill-text"
-                            onTouchStart={this.handleTouchStart}>
+                    onTouchStart={this.handleTouchStart}
+                    onTouchEnd={this.handleTouchEnd}>
+                <img className="skill-image" src={this.props.image} />
+                <figcaption className="skill-text">
                     <h3 className="skill-title"> {this.props.title} </h3>
                     <div className="skill-description">
                         {this.props.description}
