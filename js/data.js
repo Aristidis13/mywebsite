@@ -144,21 +144,21 @@ let experience = [
 	},
 	{
 		"id": idGiver(),
-		"title": "Freelancer in Fiverr",
-		"subtitle": "(not actively started yet)",
-		"dateStart": 'Oct 2021',
-		"dateEnd": 'Present',
-		"description": "When I have time and clients, you may find me building websites, university projects, and more in Fiverr.  If you want help with your projects, find me there and tell me your project. I may not be the best-fitted person for the task, but I will help you find what you need and a person with the right skills who will help you achieve your goal. And if I am, I communicate clearly what you may need and what I charge for it.",
-		"link": "https://www.fiverr.com/arisbarlos?up_rollout=true"
-	},
-	{
-		"id": idGiver(),
 		"title": "Frontend Developer in 3CP Digital Agency",
 		"subtitle": "Using Frontend Languages and Wordpress",
 		"dateStart": 'Jan 2021',
 		"dateEnd": 'Sep 2021',
 		"description": "3CP Digital Agency is a company based in Patras, Greece. I created, maintained, and expanded a plethora of sites. I used custom code to make sliders, carousels, and more in a very professional and fast-paced environment. Alongside custom code, I learned how WordPress works under the hood. This company was also the start of my corporate experience.",
 		"link": "https://3cp.gr/"
+	},
+	{
+		"id": idGiver(),
+		"title": "Freelancer in Fiverr",
+		"subtitle": "(not actively started yet)",
+		"dateStart": 'Oct 2021',
+		"dateEnd": 'Present',
+		"description": "When I have time and clients, you may find me building websites, university projects, and more in Fiverr.  If you want help with your projects, find me there and tell me your project. I may not be the best-fitted person for the task, but I will help you find what you need and a person with the right skills who will help you achieve your goal. And if I am, I communicate clearly what you may need and what I charge for it.",
+		"link": "https://www.fiverr.com/arisbarlos?up_rollout=true"
 	},
 	{
 		"id": idGiver(),
