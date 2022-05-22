@@ -4,7 +4,7 @@ function idGiver()  {
 
 idGiver.counter = 0;
 
-let welcome = [
+const welcome = [
 	{
 		"id": idGiver(),
 		"text": "Welcome to my website. I'm Aris Barlos and I come from Patras, Greece. I'm a software developer, with Bachelor in Computer Science."
@@ -27,7 +27,7 @@ let welcome = [
 idGiver.counter = 0;
 
 /* Cube Sides */
-let cubeSides = [
+const cubeSides = [
 	{
 		"id": idGiver(),
 		"title": "Welcome",
@@ -72,7 +72,7 @@ let cubeSides = [
 
 idGiver.counter = 0;
 
-let projects = [
+const projects = [
 	{
 		"id": idGiver(),
 		"title": "Crowdsource Analysis Website",
@@ -120,19 +120,19 @@ let projects = [
 		"title": "Parallellization with C++ OpenMP Framework",
 		"description": "The project examines four parallelization schedules and their speed for a non-distributed workload with the OpenMP Framework and C++ as the programming language. Additionally, I optimized the assigned codebase, for speed and performance.",
 		"link" :"https://github.com/Aristidis13/Parallellization-with-OpenMP-Framework/"
-	},*/
+	},
 	{
 		"id": idGiver(),
 		"title": "MySQL Database Expansion",
 		"description": "A project about relational MySQL Database handling and Databases in general. It's an expansion of a given e-recruitment system to fulfill the needs of recruiters and candidates. I used a plethora of CREATE statements, insertions, selects, triggers, and stored procedures.",
 		"link": "https://github.com/Aristidis13/MySQL-database-expansion"
-	}
+	}*/
 ];
 
 /* EXPERIENCE */
 idGiver.counter = 0;
 
-let experience = [
+const experience = [
 	{
 		"id": idGiver(),
 		"title": "Certifications",
@@ -174,7 +174,7 @@ let experience = [
 /* SKILLS */
 idGiver.counter = 0; // Restarts Counter
 
-let skills = [
+const skills = [
 	{
 		"id": idGiver(),
 		"title": "React",
@@ -284,7 +284,7 @@ let skills = [
 
 /*NEWS*/
 idGiver.counter = 0;
-let news = [
+const news = [
 	{
 		"id":"cproject",
 		"title": "What I do",
@@ -305,7 +305,7 @@ let news = [
 
 ];
 
-let books = [
+const books = [
 	{
 		"id":idGiver(),
 		"title": "Using SVGs with HTML5 and CSS3",
@@ -326,7 +326,7 @@ idGiver.counter = 0; // Restarts Counter
 const socialLinksLinkClass = "link link-container social-link";
 const socialLinksTextClass = "social-link-title";
 
-let socialLinks = [
+const socialLinks = [
 	{
 		"id": idGiver(),
 		"title": "Github",
