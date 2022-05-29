@@ -246,14 +246,22 @@ class Skill extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            hasDescription: true,
+            hasDescription: false,
             classNames: ""
         }
         this.handleTouchStart = this.handleTouchStart.bind(this);
         this.handleTouchEnd = this.handleTouchEnd.bind(this);
     }
-    handleTouchStart() { this.setState({hasDescription :true}) };
-    handleTouchEnd(e) { this.setState({ hasDescription: false}) }
+    handleTouchStart() {
+        !this.state.classNames.includes("touchedSkill")
+            ? this.setState({ classNames: "touchedSkill"})
+            : this.setState({ classNames: ""});
+    };
+    handleTouchEnd(e) {
+        if(this.state.classNames.includes("touchedSkill"))
+            this.setState( {classNames:""})
+    }
+
     render() {
         return (
             <figure className={"skill-container "+this.state.classNames}
@@ -263,32 +271,17 @@ class Skill extends React.Component {
                 <img className="skill-image" src={this.props.image}
                     onTouchStart={this.handleTouchStart}
                     onTouchEnd={this.handleTouchEnd}/>
-                    
-                    {this.state.hasDescription && <TextWithHeader
-                        generalHeaderClass={"skill-text"}
-                        title={this.props.title}
-                        titleClass={"skill-title"}
-                        description={this.props.description}
-                        descriptionClass = {"skill-description"}
-                        url={this.props.url}
-                        urlClass = {"skill-url"}
-                    />}
+                <figcaption className="skill-text">
+                    <h3 className="skill-title"> {this.props.title} </h3>
+                    <div className="skill-description">
+                        {this.props.description}
+                        <a className="skill-url" href={this.props.url} target="_blank">
+                            {this.props.url}
+                        </a>
+                    </div>
+                </figcaption>
             </figure>
         )
-    }
-}
-
-class TextWithHeader extends React.PureComponent {
-    render() { 
-        return ( <figcaption className={this.props.generalHeaderClass || ""}>
-            <h3 className={this.props.titleClass || ""}> {this.props.title} </h3>
-            <div className={this.props.descriptionClass || ""}>
-                {this.props.description}
-                    <a className={this.props.urlClass || ""} href={this.props.url} target="_blank">
-                        {this.props.url}
-                    </a>
-            </div>
-        </figcaption>)
     }
 }
 
