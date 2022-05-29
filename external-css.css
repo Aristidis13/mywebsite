@@ -33,7 +33,7 @@ html::-webkit-scrollbar-thumb {
     border-radius: 1.5rem;
 }
 /*Text selection*/
-::selection, ::-webkit-selection, ::-moz-selection {
+::selection, ::-moz-selection {
     color: var(--red-secondary);
 }
 

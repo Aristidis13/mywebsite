@@ -4,7 +4,7 @@ function idGiver()  {
 
 idGiver.counter = 0;
 
-const welcome = [
+let welcome = [
 	{
 		"id": idGiver(),
 		"text": "Welcome to my website. I'm Aris Barlos and I come from Patras, Greece. I'm a software developer, with Bachelor in Computer Science."
@@ -27,7 +27,7 @@ const welcome = [
 idGiver.counter = 0;
 
 /* Cube Sides */
-const cubeSides = [
+let cubeSides = [
 	{
 		"id": idGiver(),
 		"title": "Welcome",
@@ -72,7 +72,7 @@ const cubeSides = [
 
 idGiver.counter = 0;
 
-const projects = [
+let projects = [
 	{
 		"id": idGiver(),
 		"title": "Crowdsource Analysis Website",
@@ -120,19 +120,19 @@ const projects = [
 		"title": "Parallellization with C++ OpenMP Framework",
 		"description": "The project examines four parallelization schedules and their speed for a non-distributed workload with the OpenMP Framework and C++ as the programming language. Additionally, I optimized the assigned codebase, for speed and performance.",
 		"link" :"https://github.com/Aristidis13/Parallellization-with-OpenMP-Framework/"
-	},
+	},*/
 	{
 		"id": idGiver(),
 		"title": "MySQL Database Expansion",
 		"description": "A project about relational MySQL Database handling and Databases in general. It's an expansion of a given e-recruitment system to fulfill the needs of recruiters and candidates. I used a plethora of CREATE statements, insertions, selects, triggers, and stored procedures.",
 		"link": "https://github.com/Aristidis13/MySQL-database-expansion"
-	}*/
+	}
 ];
 
 /* EXPERIENCE */
 idGiver.counter = 0;
 
-const experience = [
+let experience = [
 	{
 		"id": idGiver(),
 		"title": "Certifications",
@@ -144,21 +144,21 @@ const experience = [
 	},
 	{
 		"id": idGiver(),
-		"title": "Frontend Developer in 3CP Digital Agency",
-		"subtitle": "Using Frontend Languages and Wordpress",
-		"dateStart": 'Jan 2021',
-		"dateEnd": 'Sep 2021',
-		"description": "3CP Digital Agency is a company based in Patras, Greece. I created, maintained, and expanded a plethora of sites. I used custom code to make sliders, carousels, and more in a very professional and fast-paced environment. Alongside custom code, I learned how WordPress works under the hood. This company was also the start of my corporate experience.",
-		"link": "https://3cp.gr/"
-	},
-	{
-		"id": idGiver(),
 		"title": "Freelancer in Fiverr",
 		"subtitle": "(not actively started yet)",
 		"dateStart": 'Oct 2021',
 		"dateEnd": 'Present',
 		"description": "When I have time and clients, you may find me building websites, university projects, and more in Fiverr.  If you want help with your projects, find me there and tell me your project. I may not be the best-fitted person for the task, but I will help you find what you need and a person with the right skills who will help you achieve your goal. And if I am, I communicate clearly what you may need and what I charge for it.",
 		"link": "https://www.fiverr.com/arisbarlos?up_rollout=true"
+	},
+	{
+		"id": idGiver(),
+		"title": "Frontend Developer in 3CP Digital Agency",
+		"subtitle": "Using Frontend Languages and Wordpress",
+		"dateStart": 'Jan 2021',
+		"dateEnd": 'Sep 2021',
+		"description": "3CP Digital Agency is a company based in Patras, Greece. I created, maintained, and expanded a plethora of sites. I used custom code to make sliders, carousels, and more in a very professional and fast-paced environment. Alongside custom code, I learned how WordPress works under the hood. This company was also the start of my corporate experience.",
+		"link": "https://3cp.gr/"
 	},
 	{
 		"id": idGiver(),
@@ -174,7 +174,7 @@ const experience = [
 /* SKILLS */
 idGiver.counter = 0; // Restarts Counter
 
-const skills = [
+let skills = [
 	{
 		"id": idGiver(),
 		"title": "React",
@@ -284,7 +284,7 @@ const skills = [
 
 /*NEWS*/
 idGiver.counter = 0;
-const news = [
+let news = [
 	{
 		"id":"cproject",
 		"title": "What I do",
@@ -305,7 +305,7 @@ const news = [
 
 ];
 
-const books = [
+let books = [
 	{
 		"id":idGiver(),
 		"title": "Using SVGs with HTML5 and CSS3",
@@ -326,7 +326,7 @@ idGiver.counter = 0; // Restarts Counter
 const socialLinksLinkClass = "link link-container social-link";
 const socialLinksTextClass = "social-link-title";
 
-const socialLinks = [
+let socialLinks = [
 	{
 		"id": idGiver(),
 		"title": "Github",
