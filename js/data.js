@@ -344,7 +344,7 @@ let socialLinks = [
 	{
 		"id": idGiver(),
 		"title": "Email Me",
-		"url":"mailto:aris13pat@hotmail.com",
+		"url":"mailto:contact@arisbarlos.com",
 		"linkClass":socialLinksLinkClass,
 		"textClass":socialLinksTextClass
 	},
