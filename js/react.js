@@ -19,13 +19,8 @@ class Cube extends React.Component {
         this.handlePointerDown = this.handlePointerDown.bind(this);
         this.handlePointerUp = this.handlePointerUp.bind(this);
     }
-    handlePointerDown() {
-        this.setState({ className:"pausedAnimation"})
-        
-    }
-    handlePointerUp() {
-        this.setState({ className:""})
-    }
+    handlePointerDown() { this.setState({ className:"pausedAnimation"}) }
+    handlePointerUp() { this.setState({ className:""}) }
     render() {
         const sides = cubeSides.map((side)=>(
             <CubeSide
