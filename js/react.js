@@ -46,6 +46,7 @@ class CubeSide extends React.PureComponent {
             <li className={this.props.classNames}>
                 <a
                     className= "link list-item"
+                    hreflang="en"
                     id={ this.props.id}
                     href={"#"+this.props.section}
                     rel="nofollow">
@@ -114,7 +115,7 @@ class Project extends React.PureComponent {
     render() {
         return (
             <section className="atomic-project" id={ this.props.id}>
-                <a href={this.props.link} target="_blank">
+                <a href={this.props.link} target="_blank" hreflang="en">
                     <section className="project-info">
                         <h3 className="project-title"> {this.props.title}</h3>
                         <Text classNames="project-description" >
@@ -196,7 +197,7 @@ class ExperienceElement extends React.Component {
                 <div className={"experience-description-container "+this.state.classNames}>
                     <Text classNames="experience-description">{this.props.description}</Text>
                     <p className="experience-link-container"> 
-                        <a className="link experience-link" href={this.props.link} target="_blank"> {this.props.link} </a>
+                        <a className="link experience-link" href={this.props.link} hreflang="en" target="_blank"> {this.props.link} </a>
                     </p>
                 </div>
             </section>
@@ -263,14 +264,16 @@ class Skill extends React.Component {
                     id={"skill-"+this.props.id}
                     onTouchStart={this.handleTouchStart}
                     onTouchEnd={this.handleTouchEnd}>
-                <img className="skill-image" src={this.props.image}
+                <img className="skill-image"
+                    alt={this.props.title}
+                    src={this.props.image}
                     onTouchStart={this.handleTouchStart}
                     onTouchEnd={this.handleTouchEnd}/>
                 <figcaption className="skill-text">
                     <h3 className="skill-title"> {this.props.title} </h3>
                     <div className="skill-description">
                         {this.props.description}
-                        <a className="skill-url" href={this.props.url} target="_blank">
+                        <a className="skill-url" href={this.props.url} hreflang="en" target="_blank">
                             {this.props.url}
                         </a>
                     </div>
@@ -357,6 +360,7 @@ const Link = function(props) {
         <a className={props.linkClass}
            id={props.id}
            href={props.url}
+           hreflang="en"
            target="_blank"
            rel="nofollow">
             <p className={props.textClass}>{props.title}</p>
