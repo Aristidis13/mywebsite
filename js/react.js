@@ -1,4 +1,4 @@
-/************************************************************************* Intro
+/************************************************************************* General
  */
  class Text extends React.PureComponent {
     render() {
@@ -10,12 +10,42 @@
     }
 };
 
+class Container extends React.PureComponent {
+    render() {
+    return(
+    <article className="list-container" id={this.props.id}>
+        <h2 className="section-header"> {this.props.header} </h2>
+        <section id={this.props.sectionId}> {this.props.children} </section>
+    </article>)}
+}
+const Item = props => (
+    <section className={this.props?.className} id={ this.props?.id}>
+        {this.props?.link ?
+        <a href={this.props?.link} target="_blank" hreflang="en">
+            <section className="project-info">
+                <h3 className="project-title">
+                    {this.props.title}</h3>
+                <Text classNames="project-description" >
+                    {this.props.description}
+                </Text>
+            </section>
+        </a>
+        :             <section className="project-info">
+                <h3 className="project-title"> {this.props.title}</h3>
+                <Text classNames="project-description" >
+                    {this.props.description}
+                </Text>
+            </section>
+        }
+    </section>
+);
+
+/************************************************************************* Intro
+ */
 class Cube extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            className:  ""
-        }
+        this.state = { className:  "" }
         this.handlePointerDown = this.handlePointerDown.bind(this);
         this.handlePointerUp = this.handlePointerUp.bind(this);
     }
@@ -64,29 +94,22 @@ ReactDOM.render(<Cube />,document.getElementById('header'));
  */
  class WelcomeSection extends React.Component {
     render() {
-        const welcomeComponents = welcome.map((el) => <Text text = { el.text } classNames = {"presentation-text"} />
-        );
+        const welcomeComponents = welcome.map((el) => <Text text = { el.text } classNames = {"presentation-text"} /> );
         return (
-            <article className="list-container" id="welcome-elements">
-                <h2 className="section-header"> Welcome</h2>
-                <div id="text-container"> {welcomeComponents} </div>
+            <Container id="welcome-elements" header={<>Welcome</>} sectionId="text-container">
+                <section>{welcomeComponents}</section>
                 <figure id="photo-container">
                     <img className="photo"
                          id="personal-photo"
                          src="./photos/Aris_Barlos.jpg"
                          alt="Aris Barlos - Software Engineer" />
                 </figure>
-            </article>
+            </Container>
         )
     }
 }
 
-
-
-ReactDOM.render(
-    <WelcomeSection/>,
-    document.getElementById('welcome-section')
-)
+ReactDOM.render( <WelcomeSection/>, document.getElementById('welcome-section') );
 
 /*
  ************************************************************************* Projects
@@ -94,18 +117,16 @@ ReactDOM.render(
 
 class ProjectList extends React.Component {
     render() {
-        const projectComponents = projects.map( (project) => (
-            <Project
-                id = {'project-'+project.id}
-                title = {project.title}
-                description={project.description}
-                link = {project.link}
-            />
-        ));
         return (
             <article className="list-container" id="projects">
                 <h2 className="section-header"> My Most Interesting Projects</h2>
-                {projectComponents}
+                 {projects.map(project =>
+                    <Project
+                        id={'project-'+project.id}
+                        title = {project.title}
+                        description={project.description}
+                        link = {project.link}
+                    />)}
             </article>
         );
     }
@@ -147,13 +168,9 @@ class ExperienceList extends React.Component {
         />
         );
         return (
-            <article className="list-container" id="experience-elements">
-                <h2 className="section-header"> Technical Experience</h2>
-                <p id="experience-intro-paragraph"></p>
-                <section id="experience">
-                    {experienceComponents}
-                </section>
-            </article>
+            <Container id="experience-elements" header={<>Technical Experience</>}>
+                <section id="experience">{experienceComponents}</section>
+            </Container>
         )
     }
 }
@@ -161,9 +178,7 @@ class ExperienceList extends React.Component {
 class ExperienceElement extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            classNames: "experience-description-container",
-        }
+        this.state = { classNames: "experience-description-container" }
         this.handleToggle = this.handleToggle.bind(this);
     }
     handleToggle() {
@@ -205,16 +220,11 @@ class ExperienceElement extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <ExperienceList/>,
-    document.getElementById('technical-experience')
-)
-
+ReactDOM.render( <ExperienceList/>, document.getElementById('technical-experience') );
 
 /*
  ********************************************************************* Skills
  */
-
 class SkillList extends React.Component {
     render() {
         const skillsComponents = skills.map( (skill) => ( 
@@ -230,9 +240,7 @@ class SkillList extends React.Component {
             <article className="list-container" 
                      id="atomic-skill-container">
                 <h2 className="section-header">Skills</h2>
-                <div id="skills">
-                    {skillsComponents}
-                </div>
+                <div id="skills"> {skillsComponents} </div>
             </article>
         )
     }
@@ -241,10 +249,7 @@ class SkillList extends React.Component {
 class Skill extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            hasDescription: false,
-            classNames: ""
-        }
+        this.state = { hasDescription: false, classNames: ""};
         this.handleTouchStart = this.handleTouchStart.bind(this);
         this.handleTouchEnd = this.handleTouchEnd.bind(this);
     }
@@ -283,50 +288,7 @@ class Skill extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <SkillList />, document.getElementById('skills-section')
-);
-
-/* 
- ************************************************************* News
- */
- class NewsList extends React.Component {
-    render() {
-        const newsElements = news.map( (newel) => ( 
-            <New 
-                id= {'new-' + newel.id}
-                title = {newel.title}
-                url = {newel.link}
-                text = {newel.text}
-            />
-        ))
-        return (
-            <article  className="list-container"  id="news-container">
-                <h2 className="section-header"> News</h2>
-                <section className="news-container"  id="news">
-                    {newsElements}
-                </section>
-            </article>
-        )
-    }
-}
-
-class New extends React.PureComponent {
-    render() {
-        return (
-            <section className="new-container" id={this.props.id}>
-                    <h3 className="news-title">{this.props.title}</h3>
-                    <Text classNames="news-description">
-                        {this.props.text}
-                    </Text>
-            </section>
-        )
-    }
-}
-
-ReactDOM.render(
-    <NewsList/>,document.getElementById('news-section')
-)
+ReactDOM.render( <SkillList />, document.getElementById('skills-section') );
 
 /* 
  ************************************************************* Social Links
@@ -341,16 +303,15 @@ class SocialLinksList extends React.Component {
                 url = {socialLink.url}
                 image = {socialLink.image}
                 linkClass= {socialLink.linkClass}
-                textClass= {socialLink.textClass}
-            />
+                className={socialLink.textClass}
+                >
+                    <p className={socialLink.textClass}>{socialLink.title}</p>
+            </Link>
         ))
         return (
-            <article  className="list-container"  id="links-container">
-                <h2 className="section-header"> Where to find me</h2>
-                <div id="social-links">
-                    {socialLinksComponents}
-                </div>
-            </article>
+            <Container id="links-container" header={<>Where to find me</>} sectionId="social-links">
+                {socialLinksComponents}
+            </Container>
         )
     }
 }
@@ -363,11 +324,9 @@ const Link = function(props) {
            hreflang="en"
            target="_blank"
            rel="nofollow">
-            <p className={props.textClass}>{props.title}</p>
+            {props.children}
         </a>
     )
 }
 
-ReactDOM.render(
-    <SocialLinksList />, document.getElementById('social-links-section')
-);
+ReactDOM.render( <SocialLinksList />, document.getElementById('social-links-section') );

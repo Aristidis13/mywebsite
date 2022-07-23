@@ -6,7 +6,6 @@ let circles = [];
 globalThis.addEventListener('load', animateCanvas, false);
 globalThis.addEventListener('resize',setCanvasSize, false);
 
-
 function setCanvasSize() {
     canvas.width = globalThis.innerWidth;
     canvas.height = globalThis.innerHeight;
