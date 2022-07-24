@@ -193,8 +193,8 @@ class ExperienceElement extends React.Component {
         id={this.props.id}
       >
         <p className="time-period">
-          <time className="date-start"> {this.props.dateStart + " "}</time>-{" "}
-          <time className="date-end"> {" " + this.props.dateEnd} </time>
+          <time className="date-start"> {this.props.dateStart}</time>-
+          <time className="date-end"> {this.props.dateEnd} </time>
         </p>
         <div className="decoration-container">
           <div className="dec-bullet"></div>
@@ -226,8 +226,7 @@ class ExperienceElement extends React.Component {
               href={this.props.link}
               target="_blank"
             >
-              {" "}
-              {this.props.link}{" "}
+              {this.props.link}
             </a>
           </p>
         </div>
