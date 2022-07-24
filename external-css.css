@@ -1,7 +1,9 @@
 /* --------------------------------------------------- DOM Elements -----------------------------------------------------*/
 html {
-    scrollbar-width: thin !important;          /* "auto" or "thin" */
-    scrollbar-color: var(--red-secondary) var(--mainTextColor) !important;   /* scroll thumb and track */
+    scrollbar-width: thin !important;
+    /* "auto" or "thin" */
+    scrollbar-color: var(--red-secondary) var(--mainTextColor) !important;
+    /* scroll thumb and track */
     font-size: 16px;
     background-color: var(--background-main);
     text-decoration: none;
@@ -10,11 +12,11 @@ html {
     scroll-behavior: smooth;
     /*Colors*/
     --background-main: #19091a;
-    --blue-secondary : #347;
+    --blue-secondary: #347;
     --red-secondary: rgb(199, 43, 65);
     --mainTextColor: #ececec;
     --anime-color: rgba(199, 43, 65, 0.3);
-    --news-section-width : 70%;
+    --news-section-width: 70%;
     color: var(--mainTextColor);
 }
 
@@ -22,29 +24,31 @@ html {
 /* Works on Chrome, Edge, and Safari */
 html::-webkit-scrollbar {
     width: .5rem;
-  }
-  
+}
+
 html::-webkit-scrollbar-track {
     background: white;
 }
-  
+
 html::-webkit-scrollbar-thumb {
     background-color: var(--red-secondary);
     border-radius: 1.5rem;
 }
+
 /*Text selection*/
-::selection, ::-moz-selection {
+::selection,
+::-moz-selection {
     color: var(--red-secondary);
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-family: 'Archivo', sans-serif; 
+    font-family: 'Archivo', sans-serif;
     font-family: 'Playfair Display', serif;
     margin: 0;
     width: 80%;
     display: flex;
-    flex-flow:column nowrap;
+    flex-flow: column nowrap;
     justify-content: center;
 }
 
@@ -75,14 +79,15 @@ canvas {
     width: fit-content;
     transition: color .6s ease-in-out;
 }
+
 /*Back Button*/
 #back-to-top {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction:column;
+    flex-direction: column;
     background-color: var(--red-secondary);
-    position:fixed;
+    position: fixed;
     bottom: 2rem;
     right: 2rem;
     border-radius: 50%;
@@ -93,16 +98,18 @@ canvas {
 }
 
 @keyframes ripple {
-    0% { box-shadow: 0 0 0 0 var(--anime-color),
-        0 0 0 .0625rem var(--anime-color),
-        0 0 0 .125rem var(--anime-color),
-        0 0 0 .25rem var(--anime-color);
+    0% {
+        box-shadow: 0 0 0 0 var(--anime-color),
+            0 0 0 .0625rem var(--anime-color),
+            0 0 0 .125rem var(--anime-color),
+            0 0 0 .25rem var(--anime-color);
     }
+
     100% {
-      box-shadow: 0 0 0 0 var(--anime-color),
-        0 0 0 0.25rem var(--anime-color),
-        0 0 0 0.875rem var(--anime-color),
-        0 0 0 1.25rem var(--anime-color);
+        box-shadow: 0 0 0 0 var(--anime-color),
+            0 0 0 0.25rem var(--anime-color),
+            0 0 0 0.875rem var(--anime-color),
+            0 0 0 1.25rem var(--anime-color);
     }
 }
 
@@ -112,6 +119,7 @@ canvas {
 .link:active {
     color: var(--blue-secondary);
 }
+
 /*Class for hover of custom cursor*/
 .hoverText {
     color: #fff !important;
@@ -132,12 +140,12 @@ canvas {
 
 #navbar {
     perspective: 31rem;
-    display:flex;
+    display: flex;
     align-items: center;
     width: 90vw;
     height: 95vh;
     justify-content: center;
-    cursor:grab;
+    cursor: grab;
 }
 
 #cube {
@@ -148,7 +156,7 @@ canvas {
     animation: spin 30s infinite linear;
     margin: 0;
     padding: 0;
-}  
+}
 
 .cubeSide {
     user-select: none;
@@ -158,6 +166,7 @@ canvas {
     height: var(--side);
     background-color: aliceblue;
 }
+
 /*Added with React to pause the animation*/
 .pausedAnimation {
     animation-play-state: paused !important;
@@ -173,23 +182,26 @@ canvas {
 }
 
 .right {
-    transform: rotateY( 90deg) translateZ(var(--side));
+    transform: rotateY(90deg) translateZ(var(--side));
 }
 
 .back {
     transform: rotateY(180deg) translateZ(var(--side));
 }
+
 .left {
     transform: rotateY(-90deg) translateZ(var(--side));
 }
+
 .top {
-    transform: rotateX( 90deg) translateZ(var(--side));
+    transform: rotateX(90deg) translateZ(var(--side));
 }
+
 .bottom {
     transform: rotateX(-90deg) translateZ(var(--side));
 }
 
-.cubeSide > .link {
+.cubeSide>.link {
     display: flex;
     width: 100%;
     height: 100%;
@@ -200,20 +212,34 @@ canvas {
 }
 
 @keyframes spin {
-    0%   { transform: rotateX(  0deg) rotateY(  0deg);}
-    17%  { transform: rotateX( 90deg) rotateY(  0deg);}
-    34%  { transform: rotateX(-90deg) rotateY(  0deg);}
-    50%  { transform: rotateX(  0deg) rotateY(  0deg);}
-    100% { transform: rotateX(0deg) rotateY(  360deg);}
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    17% {
+        transform: rotateX(90deg) rotateY(0deg);
+    }
+
+    34% {
+        transform: rotateX(-90deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(0deg) rotateY(360deg);
+    }
 }
 
 /*--------------------------------------------- Welcome Section ----------------------------------------------*/
-#welcome-elements > .section-header {
+#welcome-elements>.section-header {
     grid-area: title;
 }
 
 #welcome-elements {
-    display:grid;
+    display: grid;
     grid: "title title title" auto "text void photo" auto / 60% 10% 30%;
 }
 
@@ -240,7 +266,7 @@ canvas {
 }
 
 #personal-photo {
-    width:100%;
+    width: 100%;
     filter: grayscale(100%);
 }
 
@@ -263,11 +289,11 @@ canvas {
     padding: 1% 4%;
     background-color: black;
     transition: box-shadow 1.5s ease-out,
-                background-color 1.8s ease-in-out;
+        background-color 1.8s ease-in-out;
 }
 
 .atomic-project:hover {
-    box-shadow: inset 50rem 0 1px 0 rgba(51, 68, 119,.5);
+    box-shadow: inset 50rem 0 1px 0 rgba(51, 68, 119, .5);
     background-color: transparent;
 }
 
@@ -275,15 +301,17 @@ canvas {
 .atomic-project:nth-child(4n+2) {
     justify-self: start;
 }
+
 .atomic-project:nth-child(2n+3) {
     justify-self: center;
 }
+
 .atomic-project:nth-child(4n+4) {
     justify-self: end;
 }
 
 /*Change Default link styles*/
-.atomic-project > a {
+.atomic-project>a {
     text-decoration: none;
     color: var(--mainTextColor);
 }
@@ -292,8 +320,9 @@ canvas {
     color: var(--red-secondary);
     text-align: center;
     font-size: 2.5rem;
-    font-family: Archivo,"sans-serif";
+    font-family: Archivo, "sans-serif";
 }
+
 .project-description {
     text-align: justify;
     text-justify: distribute;
@@ -318,6 +347,7 @@ canvas {
     display: grid;
     grid: "time decoration title" auto "time decoration description" auto / 20% 10% 70%;
 }
+
 /*Time Period Container*/
 .time-period {
     grid-area: time;
@@ -340,22 +370,23 @@ canvas {
 }
 
 .experience-main-title {
-    font-family: Archivo,"sans-serif";
+    font-family: Archivo, "sans-serif";
     font-size: 1.3rem;
     line-height: 1.5rem;
     letter-spacing: 0.125rem;
     font-weight: 400;
 }
 
-.experience-main-title,  .experience-link {
+.experience-main-title,
+.experience-link {
     text-decoration: underline;
     color: var(--red-secondary);
     cursor: grab;
     margin: 0;
     width: fit-content;
     transition: color .6s ease-in-out;
-    display:block;
-    word-break:break-all;
+    display: block;
+    word-break: break-all;
 }
 
 
@@ -364,8 +395,8 @@ canvas {
 .experience-main-title:active,
 .experience-link:active,
 .experience-main-title:focus,
-.experience-link:focus  {
-    color:var(--blue-secondary);
+.experience-link:focus {
+    color: var(--blue-secondary);
 }
 
 .experience-description-container {
@@ -384,7 +415,7 @@ canvas {
     opacity: 1;
     height: auto;
     transition: opacity 1.6s ease-out,
-                visibility 1.7s cubic-bezier(0.175, 0.225, 0.32, 0.975) .1s;
+        visibility 1.7s cubic-bezier(0.175, 0.225, 0.32, 0.975) .1s;
 }
 
 .experience-description {
@@ -393,7 +424,7 @@ canvas {
 }
 
 h4.experience-secondary-title {
-    color : #706f6f;
+    color: #706f6f;
     text-decoration: none;
     font-size: 1.1rem;
     margin: 2% 0;
@@ -401,7 +432,6 @@ h4.experience-secondary-title {
 
 .exp-text-container {
     flex: 4;
-    
 }
 
 /*Last Box Settings*/
@@ -414,7 +444,7 @@ h4.experience-secondary-title {
 }
 
 .decoration-container {
-    grid-area:  decoration;
+    grid-area: decoration;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -432,16 +462,17 @@ h4.experience-secondary-title {
 .line {
     width: 0.125rem;
     height: 100%;
-    background-color:var(--mainTextColor);
+    background-color: var(--mainTextColor);
 }
 
 /*--------------------------------------------------- Skills -------------------------------------------------*/
 #skills-section {
-    display:flex;
+    display: flex;
     justify-content: center;
 }
+
 #skills {
-    display:flex;
+    display: flex;
     flex-flow: row wrap;
     justify-content: center;
     margin: 0 auto;
@@ -451,7 +482,7 @@ h4.experience-secondary-title {
     width: 28%;
     margin: 1%;
     max-width: 100%;
-    min-width:280px;
+    min-width: 280px;
     background-color: var(--mainTextColor);
     color: #222;
     font-weight: 700;
@@ -463,14 +494,14 @@ h4.experience-secondary-title {
 }
 
 .skill-image {
-    width:50%;
-    height:40vh;
+    width: 50%;
+    height: 40vh;
 }
 
 .skill-text {
     position: absolute;
     top: 0;
-    left:10%;
+    left: 10%;
     right: 10%;
     text-align: center;
     visibility: hidden;
@@ -482,14 +513,14 @@ h4.experience-secondary-title {
 .skill-container:hover,
 .skill-container:focus,
 .touchedSkill {
-    background-color: rgba(51, 68, 119,.5);
+    background-color: rgba(51, 68, 119, .5);
 }
 
 .skill-container:hover .skill-text,
 .skill-container:focus .skill-text,
 .touchedSkill .skill-text {
     visibility: visible;
-    opacity:1;
+    opacity: 1;
 }
 
 .touchedSkill {
@@ -497,7 +528,7 @@ h4.experience-secondary-title {
 }
 
 .skill-title {
-    font-family: Archivo,"serif";
+    font-family: Archivo, "serif";
     font-weight: 900;
     font-size: 2rem;
 }
@@ -526,6 +557,7 @@ h4.experience-secondary-title {
     background-color: #000;
     border-radius: 70% 40% 70% 40%;
 }
+
 /*Books I read element*/
 #new-books {
     grid-area: books;
@@ -540,7 +572,7 @@ h4.experience-secondary-title {
 }
 
 .news-title {
-    text-align:center;
+    text-align: center;
     font-size: 2rem;
     width: var(--news-section-width);
     margin: 3rem auto;
@@ -555,7 +587,7 @@ h4.experience-secondary-title {
     margin: 1rem auto;
 }
 
-#new-general > .news-description {
+#new-general>.news-description {
     margin: 0 auto 0;
     padding-bottom: 9rem;
 }
@@ -600,10 +632,7 @@ h4.experience-secondary-title {
 
 #social-links {
     display: grid;
-    grid: "area1 area1 void1 area2 area2" auto
-          "void2 area3 area3 area3 void3" auto
-          "area4 area4 void4 area5 area5" auto
-          /20% 20% 20% 20% 20%;
+    grid: "area1 area1 void1 area2 area2" auto "void2 area3 area3 area3 void3" auto "area4 area4 void4 area5 area5" auto /20% 20% 20% 20% 20%;
     justify-items: center;
 }
 
@@ -614,18 +643,23 @@ h4.experience-secondary-title {
 #socialLink-0 {
     grid-area: area1;
 }
+
 #socialLink-1 {
     grid-area: area2;
 }
+
 #socialLink-2 {
     grid-area: area3;
 }
+
 #socialLink-3 {
     grid-area: area4;
 }
+
 #socialLink-4 {
     grid-area: area5;
 }
+
 .link-container {
     text-decoration: none;
 }
@@ -641,16 +675,31 @@ h4.experience-secondary-title {
 
 /*Animation*/
 @keyframes socialTextTransforms {
-    25% { transform: translateX(10%) scale(2,2); color:rgb(255, 0, 0);}
-    50% { transform: translateX(10%) scale(2,1); color: yellow;}
-    75% { transform: translateX(50%) scale(2,2); color: rgb(25, 194, 61);}
-    100% {transform: translateX(0) scale(2,2); color:grey;}
+    25% {
+        transform: translateX(10%) scale(2, 2);
+        color: rgb(255, 0, 0);
+    }
+
+    50% {
+        transform: translateX(10%) scale(2, 1);
+        color: yellow;
+    }
+
+    75% {
+        transform: translateX(50%) scale(2, 2);
+        color: rgb(25, 194, 61);
+    }
+
+    100% {
+        transform: translateX(0) scale(2, 2);
+        color: grey;
+    }
 }
 
 @media screen and (min-width:2000px) {
     html {
         font-size: 35px;
-    }    
+    }
 }
 
 @media screen and (min-width:360px) and (max-width:700px) {
@@ -658,15 +707,18 @@ h4.experience-secondary-title {
         font-size: 12px;
 
     }
+
     /*Header*/
     :root {
         --side: 8rem;
     }
+
     #navbar {
         perspective: 20rem;
         justify-content: center;
         align-items: center;
     }
+
     /*Welcome Section*/
     #welcome-elements {
         grid: "title" auto "photo" auto "void" 3rem "text" auto / 100%;
@@ -675,6 +727,7 @@ h4.experience-secondary-title {
     #photo-container {
         display: flex;
     }
+
     #personal-photo {
         width: 70%;
         margin: auto;
@@ -684,38 +737,44 @@ h4.experience-secondary-title {
     #projects {
         justify-content: center;
     }
+
     .atomic-project {
         width: 80%;
         padding: 5% 10%;
         margin-bottom: 10%;
     }
+
     .atomic-project:nth-child(4n+2),
     .atomic-project:nth-child(2n+3),
     .atomic-project:nth-child(4n+4) {
         justify-self: center;
     }
+
     /*Technical Experience*/
     .experience-element-container {
-        grid: "time" auto 
-              "title" auto 
-              "description" auto
-              "decoration" auto / 100%;
+        grid: "time" auto "title" auto "description" auto "decoration" auto / 100%;
         justify-content: center;
     }
-    .time-period, .titles-container {
+
+    .time-period,
+    .titles-container {
         margin: 1rem 0;
     }
+
     .dec-bullet {
-        display:none;
+        display: none;
     }
+
     .decoration-container {
         margin-bottom: 1.5rem;
     }
+
     .line {
         height: 2px;
         background-color: var(--mainTextColor);
         width: 100%;
     }
+
     /*Skills*/
     .skill-container {
         width: 100%;
@@ -726,18 +785,21 @@ h4.experience-secondary-title {
         border-radius: 70% 40%;
         grid: "cproject" auto "general" auto "books" auto / 100%;
     }
-    #new-cproject > .news-title {
+
+    #new-cproject>.news-title {
         margin-top: 8rem;
         margin-left: auto;
         text-align: end;
         padding-right: 1rem;
     }
-    #new-cproject > .news-description {
+
+    #new-cproject>.news-description {
         margin-left: auto;
         margin-right: 4rem;
         width: 50%;
     }
-    #new-general > .news-description {
+
+    #new-general>.news-description {
         margin: 0 auto 0;
         padding-bottom: 3rem;
     }
@@ -748,17 +810,21 @@ h4.experience-secondary-title {
         margin-right: auto;
         margin-left: 4rem;
     }
+
     .news-title {
         margin: 1rem auto 2rem;
         padding-top: 0;
     }
+
     .news-description {
         width: 60%;
     }
+
     /*Social Links*/
     #social-links {
         padding-bottom: 8rem;
     }
+
     .social-link-title {
         font-size: 2rem;
     }
@@ -766,41 +832,49 @@ h4.experience-secondary-title {
 
 @media screen and (min-width: 700px) and (max-width:1000px) {
     html {
-        font-size:14px;
+        font-size: 14px;
     }
+
     /*Project*/
     .atomic-project {
         width: 65%;
     }
+
     .atomic-project:hover {
-        box-shadow: inset 65vw 0 1px 0 rgba(51, 68, 119,.5);
+        box-shadow: inset 65vw 0 1px 0 rgba(51, 68, 119, .5);
     }
+
     /*Skills*/
     .skill-container {
         flex: 1;
         padding: 4rem 0;
         height: auto;
     }
+
     .skill-image {
         height: auto;
     }
+
     /*News*/
     #news {
         border-radius: 70% 40%;
         grid: "cproject" auto "general" auto "books" auto / 100%;
     }
-    #new-cproject > .news-title {
+
+    #new-cproject>.news-title {
         margin-top: 8rem;
         margin-left: auto;
         text-align: end;
         padding-right: 1rem;
     }
-    #new-cproject > .news-description {
+
+    #new-cproject>.news-description {
         margin-left: auto;
         margin-right: 4rem;
         width: 50%;
     }
-    #new-general > .news-description {
+
+    #new-general>.news-description {
         margin: 0 auto 0;
         padding-bottom: 3rem;
     }
@@ -811,10 +885,12 @@ h4.experience-secondary-title {
         margin-right: auto;
         margin-left: 4rem;
     }
+
     .news-title {
         margin: 1rem auto 2rem;
         padding-top: 0;
     }
+
     .news-description {
         width: 60%;
     }
