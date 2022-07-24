@@ -1,10 +1,10 @@
 /* eslint-disable no-tabs */
 /* eslint-disable no-unused-vars */
 function idGiver () {
-  return idGiver.counter++
+  return idGiver.counter++;
 }
 
-idGiver.counter = 0
+idGiver.counter = 0;
 
 const welcome = [
   {
@@ -23,10 +23,10 @@ const welcome = [
     id: idGiver(),
     text: "I hope you like my site."
   }
-]
+];
 
 /* Re-initialize counter */
-idGiver.counter = 0
+idGiver.counter = 0;
 
 /* Cube Sides */
 const cubeSides = [
@@ -66,11 +66,11 @@ const cubeSides = [
     section: "social-links-section",
     class: "bottom cubeSide"
   }
-]
+];
 
 /* PROJECTS */
 
-idGiver.counter = 0
+idGiver.counter = 0;
 
 const projects = [
   {
@@ -134,10 +134,10 @@ const projects = [
       "A project about relational MySQL Database handling and Databases in general. It's an expansion of a given e-recruitment system to fulfill the needs of recruiters and candidates. I used a plethora of CREATE statements, insertions, selects, triggers, and stored procedures.",
     link: "https://github.com/Aristidis13/MySQL-database-expansion"
   }
-]
+];
 
 /* EXPERIENCE */
-idGiver.counter = 0
+idGiver.counter = 0;
 
 const experience = [
   {
@@ -180,10 +180,10 @@ const experience = [
       "In my studies at the University oF Patras, I learned how to learn and found my interest in programming. I evolved as a human being and realized that continuous learning, will be an X-Factor for my success in business and life. My studies there had many different projects and theoretical knowledge. They helped me understand how to program and what it takes to be a great programmer. I had fun and built a plethora of programs. Did I mention I met amazing people there, too?",
     link: "https://www.ceid.upatras.gr/en"
   }
-]
+];
 
 /* SKILLS */
-idGiver.counter = 0 // Restarts Counter
+idGiver.counter = 0; // Restarts Counter
 
 const skills = [
   {
@@ -304,7 +304,7 @@ const skills = [
       "A version control system I pair with Github and has saved my projects. I use it within my VS Code, but I can handle terminal commands too.",
     url: "https://git-scm.com/"
   }
-]
+];
 
 /* NEWS */
 // idGiver.counter = 0
@@ -347,9 +347,9 @@ const skills = [
 
 /* SOCIAL LINKS */
 
-idGiver.counter = 0 // Restarts Counter
-const socialLinksLinkClass = "link link-container social-link"
-const socialLinksTextClass = "social-link-title"
+idGiver.counter = 0; // Restarts Counter
+const socialLinksLinkClass = "link link-container social-link";
+const socialLinksTextClass = "social-link-title";
 
 const socialLinks = [
   {
@@ -387,4 +387,4 @@ const socialLinks = [
     linkClass: socialLinksLinkClass,
     textClass: socialLinksTextClass
   }
-]
+];
