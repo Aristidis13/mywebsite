@@ -1,64 +1,64 @@
 const canvas = document.getElementById("intro-canvas"); // Access Canvas Element
 const context = canvas.getContext("2d");
-const canvasContainer = document.getElementById('intro');
-const circles = []
+const canvasContainer = document.getElementById("intro");
+const circles = [];
 
-globalThis.addEventListener('load', animateCanvas, false)
-globalThis.addEventListener('resize', setCanvasSize, false)
+globalThis.addEventListener("load", animateCanvas, false);
+globalThis.addEventListener("resize", setCanvasSize, false);
 
-function setCanvasSize() {
+function setCanvasSize () {
   canvas.width = globalThis.innerWidth;
-  canvas.height = globalThis.innerHeight
-  repositionCircles()
+  canvas.height = globalThis.innerHeight;
+  repositionCircles();
 }
 
-function repositionCircles() {
+function repositionCircles () {
   for (const circle of circles) {
     circle.x = Math.round(Math.random() * canvas.width);
-    circle.y = Math.round(Math.random() * canvas.height)
+    circle.y = Math.round(Math.random() * canvas.height);
   }
 }
 
-function animateCanvas() {
+function animateCanvas () {
   setCanvasSize();
-  canvasContainer.replaceChild(canvas, canvas)
-  context.clearRect(0, 0, canvas.width, canvas.height)
-  setupCircles()
+  canvasContainer.replaceChild(canvas, canvas);
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  setupCircles();
 }
 
-function setupCircles() {
+function setupCircles () {
   circles.length = 0;
-  for (i = 0; i < 120; i++) {
-    const circle = new Circle()
-    circles.push(circle)
+  for (let i = 0; i < 120; i++) {
+    const circle = new Circle();
+    circles.push(circle);
   }
   drawAndUpdate();
 }
 
-function drawAndUpdate() {
+function drawAndUpdate () {
   context.clearRect(0, 0, canvas.width, canvas.height);
   for (const circle of circles) {
-    circle.reDraw()
+    circle.reDraw();
   }
   requestAnimationFrame(drawAndUpdate);
 }
 
 // Circle Constructor
 class Circle {
-  constructor() {
+  constructor () {
     this.x = Math.round(Math.random() * canvas.width); // Starting x coordinate
     this.y = Math.round(Math.random() * canvas.height); // Starting Y coordinate
-    this.radius = 100
-    this.speed = 0.2 + Math.random() // Speed of Circle
-    this.size = 5 + Math.random() * 5
-    this.signX = Math.random() > 0.5 ? 1 : -1
-    this.signY = Math.random() > 0.5 ? 1 : -1
-    this.counterX = this.signX * this.speed
-    this.counterY = this.signY * this.speed
-    this.opacity = 0.5 + Math.random() * 0.5
+    this.radius = 100;
+    this.speed = 0.2 + Math.random(); // Speed of Circle
+    this.size = 5 + Math.random() * 5;
+    this.signX = Math.random() > 0.5 ? 1 : -1;
+    this.signY = Math.random() > 0.5 ? 1 : -1;
+    this.counterX = this.signX * this.speed;
+    this.counterY = this.signY * this.speed;
+    this.opacity = 0.5 + Math.random() * 0.5;
   }
 
-  reDraw() {
+  reDraw () {
     this.counterX += this.signX * this.speed;
     this.counterY += this.signY * this.speed;
     context.beginPath();
@@ -69,9 +69,9 @@ class Circle {
       0,
       2 * Math.PI,
       true
-    )
+    );
     context.closePath();
-    (context.fillStyle = "rgba(255,255,255," + this.opacity + ")"),
-    context.fill()
+    context.fillStyle = "rgba(255,255,255," + this.opacity + ")";
+    context.fill();
   }
 }
