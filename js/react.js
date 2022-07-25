@@ -2,6 +2,7 @@
 /* eslint-disable no-undef */
 /** *********************************************************************** Intro
  */
+
 class Text extends React.PureComponent {
   render () {
     return (
@@ -30,6 +31,10 @@ class Cube extends React.Component {
     this.setState({ className: "" });
   }
 
+  componentDidUpdate () {
+    console.log("Cube rerendered");
+  }
+
   render () {
     const sides = cubeSides.map((side) => (
       <CubeSide
@@ -54,6 +59,10 @@ class Cube extends React.Component {
 }
 
 class CubeSide extends React.PureComponent {
+  componentDidUpdate () {
+    console.log("CubeSide rerendered");
+  }
+
   render () {
     return (
       <li className={this.props.classNames}>
@@ -103,7 +112,7 @@ ReactDOM.render(<WelcomeSection />, document.getElementById("welcome-section"));
  ************************************************************************* Projects
  */
 
-class ProjectList extends React.Component {
+class ProjectList extends React.PureComponent {
   render () {
     const projectComponents = projects.map((project) => (
       <Project
@@ -145,9 +154,13 @@ ReactDOM.render(<ProjectList />, document.getElementById("projects-section"));
  ****************************************************************** Technical Experience
  */
 class ExperienceList extends React.Component {
+  componentDidUpdate () {
+    console.log("ExperienceList rerendered");
+  }
+
   render () {
     const experienceComponents = experience.map((experienceElement) => (
-      <ExperienceElement
+      <ExperienceContainer
         id={"experience-element-" + experienceElement.id}
         title={experienceElement.title}
         subtitle={experienceElement.subtitle}
@@ -160,78 +173,87 @@ class ExperienceList extends React.Component {
     return (
       <article className="list-container" id="experience-elements">
         <h2 className="section-header"> Technical Experience</h2>
-        <p id="experience-intro-paragraph"></p>
         <section id="experience">{experienceComponents}</section>
       </article>
     );
   }
 }
 
-class ExperienceElement extends React.Component {
+class ExperienceContainer extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {
-      classNames: "experience-description-container"
-    };
+    this.state = { isActive: false };
     this.handleToggle = this.handleToggle.bind(this);
-  }
+  };
 
-  handleToggle () {
-    !this.state.classNames.includes("descriptionVisible")
-      ? this.setState({
-        classNames: "descriptionVisible"
-      })
-      : this.setState({
-        classNames: ""
-      });
-  }
+  handleToggle () { this.setState({ isActive: !this.state.isActive }); };
 
   render () {
     return (
       <section
-        className="list-container experience-element-container"
+        className="experience-element-container"
         id={this.props.id}
-      >
-        <p className="time-period">
-          <time className="date-start"> {this.props.dateStart}</time>-
-          <time className="date-end"> {this.props.dateEnd} </time>
-        </p>
-        <div className="decoration-container">
-          <div className="dec-bullet"></div>
-          <div className="line"></div>
-        </div>
-        <section className="exp-text-container">
-          <div className="experience-title">
-            <div className="titles-container">
-              <h3 className="experience-main-title" onClick={this.handleToggle}>
-                {this.props.title}
-              </h3>
-              <h4 className="experience-secondary-title">
-                {this.props.subtitle}
-              </h4>
-            </div>
-          </div>
-        </section>
-        <div
-          className={
-            "experience-description-container " + this.state.classNames
-          }
-        >
-          <Text classNames="experience-description">
-            {this.props.description}
-          </Text>
-          <p className="experience-link-container">
-            <a
-              className="link experience-link"
-              href={this.props.link}
-              target="_blank"
-            >
-              {this.props.link}
-            </a>
-          </p>
-        </div>
+        onClick={this.handleToggle}>
+        <TimeLength dateStart={this.props.dateStart} dateEnd={this.props.dateEnd} />
+        <Line />
+        <Experience
+          isActive={this.state.isActive}
+          title={this.props.title}
+          subtitle={this.props.subtitle}
+          description={this.props.description}
+          link={this.props.link} />
       </section>
     );
+  }
+}
+
+class TimeLength extends React.PureComponent {
+  render () {
+    return (
+      <p className="time-period">
+        <time className="date-start"> {this.props.dateStart}</time>-
+        <time className="date-end"> {this.props.dateEnd} </time>
+      </p>);
+  }
+}
+
+class Line extends React.PureComponent {
+  render () {
+    return (
+      <div className="decoration-container">
+        <div className="dec-bullet"></div>
+        <div className="line"></div>
+      </div>);
+  }
+}
+
+class Experience extends React.Component {
+  render () {
+    return (
+      <div className="titles-container">
+        <h3 className="experience-main-title" >{this.props.title}</h3>
+        <h4 className="experience-secondary-title"> {this.props.subtitle} </h4>
+        {this.props.isActive &&
+          <ExperienceDescription
+            description={this.props.description}
+            link={this.props.link} />}
+      </div>
+    );
+  }
+}
+
+class ExperienceDescription extends React.PureComponent {
+  render () {
+    return (
+      <div className="experience-description-container" >
+        <Text classNames="experience-description">
+          {this.props.description}
+        </Text>
+        <Link
+            linkClass="link experience-link"
+            url={this.props.link}
+            title={this.props.link}/>
+      </div>);
   }
 }
 
@@ -351,7 +373,7 @@ const Link = (props) => {
       target="_blank"
       rel="nofollow"
     >
-      <p className={props.textClass}>{props.title}</p>
+      <p className={props?.textClass}>{props?.title}</p>
     </a>
   );
 };
