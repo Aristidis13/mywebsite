@@ -13,7 +13,40 @@ class Text extends React.PureComponent {
   }
 }
 
+class Container extends React.PureComponent {
+    render() {
+    return(
+    <article className="list-container" id={this.props.id}>
+        <h2 className="section-header"> {this.props.header} </h2>
+        <section id={this.props.sectionId}> {this.props.children} </section>
+    </article>)}
+}
+const Item = props => (
+    <section className={this.props?.className} id={ this.props?.id}>
+        {this.props?.link ?
+        <a href={this.props?.link} target="_blank" hreflang="en">
+            <section className="project-info">
+                <h3 className="project-title">
+                    {this.props.title}</h3>
+                <Text classNames="project-description" >
+                    {this.props.description}
+                </Text>
+            </section>
+        </a>
+        :             <section className="project-info">
+                <h3 className="project-title"> {this.props.title}</h3>
+                <Text classNames="project-description" >
+                    {this.props.description}
+                </Text>
+            </section>
+        }
+    </section>
+);
+
+/************************************************************************* Intro
+ */
 class Cube extends React.Component {
+
   constructor (props) {
     super(props);
     this.state = {
@@ -265,7 +298,6 @@ ReactDOM.render(
 /*
  ********************************************************************* Skills
  */
-
 class SkillList extends React.Component {
   render () {
     const skillsComponents = skills.map((skill) => (

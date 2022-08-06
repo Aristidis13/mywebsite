@@ -4,6 +4,7 @@ function idGiver () {
   return idGiver.counter++;
 }
 
+
 const welcome = [
   {
     id: idGiver(),
@@ -25,39 +26,44 @@ const welcome = [
 
 /* Re-initialize counter */
 idGiver.counter = 0;
-
 /* Cube Sides */
-const cubeSides = [
-  // {
-  //   id: idGiver(),
-  //   title: "Welcome",
-  //   section: "welcome-section",
-  //   class: "front cubeSide"
-  // },
-  {
-    id: idGiver(),
-    title: "Projects",
-    section: "projects-section",
-    class: "back cubeSide"
-  },
-  {
-    id: idGiver(),
-    title: "Experience",
-    section: "technical-experience",
-    class: "right cubeSide"
-  },
-  {
-    id: idGiver(),
-    title: "My Skills",
-    section: "skills-section",
-    class: "left cubeSide"
-  },
-  {
-    id: idGiver(),
-    title: "Links",
-    section: "social-links-section",
-    class: "bottom cubeSide"
-  }
+let cubeSides = [
+	// {
+	// 	"id": idGiver(),
+	// 	"title": "Welcome",
+	// 	"section": "welcome-section",
+	// 	"class": "front cubeSide"
+	// },
+	{
+		"id": idGiver(),
+		"title": "Projects",
+		"section": "projects-section",
+		"class": "back cubeSide"
+	},
+	{
+		"id": idGiver(),
+		"title": "Experience",
+		"section": "technical-experience",
+		"class": "right cubeSide"
+	},
+	{
+		"id": idGiver(),
+		"title": "My Skills",
+		"section": "skills-section",
+		"class": "left cubeSide"
+	},
+	// {
+	// 	"id": idGiver(),
+	// 	"title": "News",
+	// 	"section": "news-section",
+	// 	"class": "top cubeSide"
+	// },
+	{
+		"id": idGiver(),
+		"title": "Links",
+		"section": "social-links-section",
+		"class": "bottom cubeSide"
+	}
 ];
 
 /* PROJECTS */
@@ -227,6 +233,7 @@ const skills = [
     url: "https://jquery.com/"
   },
   /* {
+=======
 		"id": idGiver(),
 		"title": "Node.js",
 		"image": "/skills/node.svg",
@@ -301,6 +308,59 @@ const skills = [
 /* SOCIAL LINKS */
 
 idGiver.counter = 0; // Restarts Counter
+
+	},*/
+	{
+		"id": idGiver(),
+		"title": "WordPress",
+		"image": "./skills/wordpress.svg",
+		"description": "WordPress is the most used Open Source CMS, widely used in many websites globally with a passionate community.",
+		"url": "https://wordpress.com/el/"
+	},
+	{
+		"id": idGiver(),
+		"title": "Bulma",
+		"image": "/skills/bulma.svg",
+		"description": "A lightweight CSS framework. Built with Flexbox, it gives you the ability to create impressive layouts with modular Components and no JS. I used it on my previous website.",
+		"url": "https://bulma.io/"
+	},
+	{
+		"id": idGiver(),
+		"title": "Bootstrap",
+		"image": "/skills/bootstrap.svg",
+		"description": "Bootstrap was the first Framework I used. I rarely use it anymore since I use Grid and Flexbox themselves. Nonetheless, Bootstrap is still a viable option for quick layouts.",
+		"url": "https://getbootstrap.com/"
+	},
+	{
+		"id": idGiver(),
+		"title": "SEO",
+		"image": "/skills/seo.svg",
+		"description": "I learned SEO for completing my Thesis. I'm no expert in any case, but I can comprehend SEO both as a programmer and content creator.",
+		"url": "https://developers.google.com/search/docs"
+	},
+	{
+		"id": idGiver(),
+		"title": "PHP",
+		"image": "/skills/php.svg",
+		"description": "PHP was the holy grail of backend web development and the first backend technology I learned to use. Rarely do I use it nowadays.",
+		"url": "https://www.php.net/"
+	},
+	{
+		"id": idGiver(),
+		"title": "Java",
+		"image":"/skills/java.svg",
+		"description": "A widely used OOP Language that I learned during my college years. It helped me understand the concepts of OOP and is a fun language.",
+		"url": "https://www.java.com/"
+	},
+	{
+		"id": idGiver(),
+		"title": "Git",
+		"image":"/skills/git.svg",
+		"description": "A version control system I pair with Github and has saved my projects. I use it within my VS Code, but I can handle terminal commands too.",
+		"url": "https://git-scm.com/"
+	}
+];
+
 const socialLinksLinkClass = "link link-container social-link";
 const socialLinksTextClass = "social-link-title";
 
