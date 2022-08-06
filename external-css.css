@@ -15,11 +15,18 @@ html {
     --red-secondary: rgb(199, 43, 65);
     --mainTextColor: #ececec;
     --anime-color: rgba(199, 43, 65, 0.3);
+<<<<<<< HEAD
     --news-section-width: 70%;
+=======
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
     color: var(--mainTextColor);
 }
 
 /* Works on Chrome, Edge, and Safari */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
 html::-webkit-scrollbar {
     width: .5rem;
 }
@@ -40,8 +47,12 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
+<<<<<<< HEAD
 
     font-family: 'Playfair Display', 'Archivo', serif;
+=======
+font-family: 'Playfair Display', 'Archivo
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
     margin: 0;
     width: 80%;
     display: flex;
@@ -340,11 +351,29 @@ canvas {
     align-items: center;
 }
 
+#experience-elements {
+    width: 100%;
+}
+
 .experience-element-container {
     display: grid;
     grid: "time decoration title" auto "time decoration description" auto / 20% 10% 70%;
+    width: 100%;
+    transition: background-color .6s ease-in-out;
+    border-radius: 10px;
+    cursor: grab;
+    padding: 0 0.5rem 0rem 0.5rem;
 }
 
+<<<<<<< HEAD
+=======
+.experience-element-container:hover,
+.experience-element-container:active,
+.experience-element-container:focus {
+    background-color: var(--anime-color);
+}
+
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
 /*Time Period Container*/
 .time-period {
     grid-area: time;
@@ -353,17 +382,12 @@ canvas {
     font-size: 1.4rem;
     line-height: 1.4rem;
     letter-spacing: 0.125rem;
+    padding-bottom: 5rem;
 }
 
-/*Title Container*/
 .titles-container {
     grid-area: title;
-}
-
-.experience-title {
-    display: flex;
-    flex-flow: row wrap;
-
+    padding: 0.5rem;
 }
 
 .experience-main-title {
@@ -376,17 +400,25 @@ canvas {
 
 .experience-main-title,
 .experience-link {
+<<<<<<< HEAD
     text-decoration: underline;
     color: var(--red-secondary);
     cursor: grab;
     margin: 0;
     width: fit-content;
     transition: color .6s ease-in-out;
+=======
+    text-decoration: none;
+    color: var(--blue-secondary);
+    margin: 0;
+    width: fit-content;
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
     display: block;
     word-break: break-all;
 }
 
 
+<<<<<<< HEAD
 .experience-main-title:hover,
 .experience-link:hover,
 .experience-main-title:active,
@@ -413,6 +445,11 @@ canvas {
     height: auto;
     transition: opacity 1.6s ease-out,
         visibility 1.7s cubic-bezier(0.175, 0.225, 0.32, 0.975) .1s;
+=======
+.experience-description-container {
+    grid-area: description;
+    margin-bottom: 3rem;
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
 }
 
 .experience-description {
@@ -427,6 +464,7 @@ h4.experience-secondary-title {
     margin: 2% 0;
 }
 
+<<<<<<< HEAD
 .exp-text-container {
     flex: 4;
 
@@ -434,11 +472,10 @@ h4.experience-secondary-title {
 
 /*Last Box Settings*/
 .exp-text-container:last-child {
+=======
+#experience> :last-child .time-period {
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
     padding-bottom: 0;
-}
-
-.experience-link-container {
-    margin-bottom: 0;
 }
 
 .decoration-container {
