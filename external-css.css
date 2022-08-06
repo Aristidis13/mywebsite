@@ -1,4 +1,3 @@
-/* --------------------------------------------------- DOM Elements -----------------------------------------------------*/
 html {
     scrollbar-width: thin !important;
     /* "auto" or "thin" */
@@ -19,8 +18,8 @@ html {
     color: var(--mainTextColor);
 }
 
-
 /* Works on Chrome, Edge, and Safari */
+
 html::-webkit-scrollbar {
     width: .5rem;
 }
@@ -41,9 +40,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Archivo', sans-serif;
-    font-family: 'Playfair Display', serif;
+font-family: 'Playfair Display', 'Archivo
     margin: 0;
     width: 80%;
     display: flex;
@@ -325,8 +322,8 @@ canvas {
 .project-description {
     text-align: justify;
     text-justify: distribute;
-    font-size: 1.5rem;
-    font-family: 'Cormorant', serif;
+    font-size: 1.3rem;
+    font-family: 'Playfair Display', serif;
 }
 
 /*--------------------------------------------- Technical Experience -----------------------------------------*/
@@ -568,7 +565,7 @@ h4.experience-secondary-title {
 }
 
 .news-description {
-    font-family: Cormorant, serif;
+    font-family: 'Playfair Display', serif;
     width: var(--news-section-width);
     text-align: justify;
     text-justify: inter-character;
