@@ -16,6 +16,7 @@ html {
     --red-secondary: rgb(199, 43, 65);
     --mainTextColor: #ececec;
     --anime-color: rgba(199, 43, 65, 0.3);
+    --news-section-width: 70%;
     color: var(--mainTextColor);
 }
 
@@ -342,24 +343,9 @@ canvas {
     align-items: center;
 }
 
-#experience-elements {
-    width: 100%;
-}
-
 .experience-element-container {
     display: grid;
     grid: "time decoration title" auto "time decoration description" auto / 20% 10% 70%;
-    width: 100%;
-    transition: background-color .6s ease-in-out;
-    border-radius: 10px;
-    cursor: grab;
-    padding: 0 0.5rem 0rem 0.5rem;
-}
-
-.experience-element-container:hover,
-.experience-element-container:active,
-.experience-element-container:focus {
-    background-color: var(--anime-color);
 }
 
 /*Time Period Container*/
@@ -370,12 +356,17 @@ canvas {
     font-size: 1.4rem;
     line-height: 1.4rem;
     letter-spacing: 0.125rem;
-    padding-bottom: 5rem;
 }
 
+/*Title Container*/
 .titles-container {
     grid-area: title;
-    padding: 0.5rem;
+}
+
+.experience-title {
+    display: flex;
+    flex-flow: row wrap;
+
 }
 
 .experience-main-title {
@@ -388,18 +379,43 @@ canvas {
 
 .experience-main-title,
 .experience-link {
-    text-decoration: none;
-    color: var(--blue-secondary);
+    text-decoration: underline;
+    color: var(--red-secondary);
+    cursor: grab;
     margin: 0;
     width: fit-content;
+    transition: color .6s ease-in-out;
     display: block;
     word-break: break-all;
 }
 
 
+.experience-main-title:hover,
+.experience-link:hover,
+.experience-main-title:active,
+.experience-link:active,
+.experience-main-title:focus,
+.experience-link:focus {
+    color: var(--blue-secondary);
+}
+
 .experience-description-container {
     grid-area: description;
     margin-bottom: 3rem;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+
+}
+
+
+/*Added with JS to make description visible*/
+.descriptionVisible {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    transition: opacity 1.6s ease-out,
+        visibility 1.7s cubic-bezier(0.175, 0.225, 0.32, 0.975) .1s;
 }
 
 .experience-description {
@@ -414,8 +430,17 @@ h4.experience-secondary-title {
     margin: 2% 0;
 }
 
-#experience> :last-child .time-period {
+.exp-text-container {
+    flex: 4;
+}
+
+/*Last Box Settings*/
+.exp-text-container:last-child {
     padding-bottom: 0;
+}
+
+.experience-link-container {
+    margin-bottom: 0;
 }
 
 .decoration-container {
