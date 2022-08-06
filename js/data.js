@@ -4,6 +4,8 @@ function idGiver () {
   return idGiver.counter++;
 }
 
+idGiver.counter = 0;
+
 const welcome = [
   {
     id: idGiver(),
@@ -28,12 +30,12 @@ idGiver.counter = 0;
 
 /* Cube Sides */
 const cubeSides = [
-  // {
-  //   id: idGiver(),
-  //   title: "Welcome",
-  //   section: "welcome-section",
-  //   class: "front cubeSide"
-  // },
+  {
+    id: idGiver(),
+    title: "Welcome",
+    section: "welcome-section",
+    class: "front cubeSide"
+  },
   {
     id: idGiver(),
     title: "Projects",
@@ -51,6 +53,12 @@ const cubeSides = [
     title: "My Skills",
     section: "skills-section",
     class: "left cubeSide"
+  },
+  {
+    id: idGiver(),
+    title: "News",
+    section: "news-section",
+    class: "top cubeSide"
   },
   {
     id: idGiver(),
@@ -297,6 +305,45 @@ const skills = [
     url: "https://git-scm.com/"
   }
 ];
+
+/* NEWS */
+// idGiver.counter = 0
+// const news = [
+//   {
+//     id: "cproject",
+//     title: "What I do",
+//     text: "Currently,  I refactor and extend the codebase for my dissertation, to make significant improvements to its functionality. Additionally, I build as a side project webpack e-commerce app.",
+//     link: "https://github.com/Aristidis13/SEO-Analyzer",
+//   },
+//   {
+//     id: "books",
+//     title: "Books I read now",
+//     text: "I find books helpful to get depth in my knowledge of pretty much any topic. In programming specifically,  I find them useful to learn the basics and as a reference in times of need too. Having read many books since I was a kid, I greatly appreciate a good book. Currently, I check \"Using SVGS with HTML5 and CSS3\" and ''React 17:Design Patterns and Best Practices. If you have a book suggestion, I would love to know.",
+//   },
+//   {
+//     id: "general",
+//     title: "What I learn",
+//     text: "In the case of learning technologies,  I learn ReactJS and explore various ways of making SVGs come to life. Moreover, I think about how to improve my Thesis Code and make it even better, and also learn to be a better programmer at the same time. I'm also open to the idea of collaborating for Frontend web development work in projects.",
+//     link: "",
+//   },
+// ]
+
+// const books = [
+//   {
+//     id: idGiver(),
+//     title: "Using SVGs with HTML5 and CSS3",
+//     url: "https://www.amazon.com/Using-SVG-CSS3-HTML5-Graphics-ebook/dp/B076HZ31YZ/ref=sr_1_1?keywords=using+svg+with+html5+and+css3&qid=1637525631&sr=8-1",
+//     description:
+//       "A complete and extremely helpful book that gives valuable knowledge of SVG and its animations.",
+//   },
+//   {
+//     id: idGiver(),
+//     title: "Fullstack React: The Complete Guide to ReactJS and Friends",
+//     url: "https://www.amazon.com/Fullstack-React-Complete-ReactJS-Friends/dp/0991344626/ref=sr_1_1?keywords=fullstack+react&qid=1637524475&sr=8-1",
+//     description:
+//       "A React Book for React Beginners that teaches the fundamentals of React, Redux and more.",
+//   }
+// ];
 
 /* SOCIAL LINKS */
 
