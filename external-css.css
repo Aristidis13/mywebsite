@@ -20,7 +20,6 @@ html {
     color: var(--mainTextColor);
 }
 
-
 /* Works on Chrome, Edge, and Safari */
 html::-webkit-scrollbar {
     width: .5rem;
@@ -326,8 +325,8 @@ canvas {
 .project-description {
     text-align: justify;
     text-justify: distribute;
-    font-size: 1.5rem;
-    font-family: 'Cormorant', serif;
+    font-size: 1.3rem;
+    font-family: 'Playfair Display', serif;
 }
 
 /*--------------------------------------------- Technical Experience -----------------------------------------*/
@@ -358,6 +357,7 @@ canvas {
     letter-spacing: 0.125rem;
 }
 
+/*Title Container*/
 /*Title Container*/
 .titles-container {
     grid-area: title;
