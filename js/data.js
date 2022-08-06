@@ -1,36 +1,8 @@
-<<<<<<< HEAD
-function idGiver() {
-	return idGiver.counter++;
-}
-
-const welcome = [
-	{
-		id: idGiver(),
-		text: "Welcome to my website. I'm Aris Barlos and I come from Patras, Greece. I'm a software developer, with Bachelor in Computer Science."
-	},
-	{
-		id: idGiver(),
-		text: "I have relatively small corporate programming experience. So far, however, with every project I made, I brought it to fruition without sacrificing my vision or deadlines."
-	},
-	{
-		id: idGiver(),
-		text: "When I have spare time, I read books about programming and finance, lift heavy things, play basketball and do side projects to learn new technologies."
-	},
-	{
-		id: idGiver(),
-		text: "I hope you like my site."
-	}
-=======
 /* eslint-disable no-tabs */
 /* eslint-disable no-unused-vars */
 function idGiver () {
   return idGiver.counter++;
 }
-
-<<<<<<< HEAD
-idGiver.counter = 0;
-=======
->>>>>>> f86bb94a49e10b8f99910fe88dcec951377501e8
 
 const welcome = [
   {
@@ -49,20 +21,19 @@ const welcome = [
     id: idGiver(),
     text: "I hope you like my site."
   }
->>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
 ];
 
 /* Re-initialize counter */
 idGiver.counter = 0;
+
 /* Cube Sides */
 const cubeSides = [
-<<<<<<< HEAD
-  {
-    id: idGiver(),
-    title: "Welcome",
-    section: "welcome-section",
-    class: "front cubeSide"
-  },
+  // {
+  //   id: idGiver(),
+  //   title: "Welcome",
+  //   section: "welcome-section",
+  //   class: "front cubeSide"
+  // },
   {
     id: idGiver(),
     title: "Projects",
@@ -83,116 +54,14 @@ const cubeSides = [
   },
   {
     id: idGiver(),
-    title: "News",
-    section: "news-section",
-    class: "top cubeSide"
-  },
-  {
-    id: idGiver(),
     title: "Links",
     section: "social-links-section",
     class: "bottom cubeSide"
   }
-=======
-	{
-		id: idGiver(),
-		title: "",
-		section: "",
-		class: "top cubeSide"
-	},
-	{
-		id: idGiver(),
-		title: "",
-		section: "",
-		class: "bottom cubeSide"
-	},
-	{
-		id: idGiver(),
-		title: "Projects",
-		section: "projects-section",
-		class: "back cubeSide"
-	},
-	{
-		id: idGiver(),
-		title: "Experience",
-		section: "technical-experience",
-		class: "right cubeSide"
-	},
-	{
-		id: idGiver(),
-		title: "My Skills",
-		section: "skills-section",
-		class: "front cubeSide"
-	},
-	{
-		id: idGiver(),
-		title: "Links",
-		section: "social-links-section",
-		class: "left cubeSide"
-	}
->>>>>>> f86bb94a49e10b8f99910fe88dcec951377501e8
 ];
 
 /* PROJECTS */
 
-<<<<<<< HEAD
-/*PROJECTS */
-let projects = [
-	{
-		"id": idGiver(),
-		"title": "Crowdsource Analysis Website",
-		"description": "A Web Development project I built with PHP, MySQL7, JS, HTML5, CSS3, and Chart.js. Contains Ajax handling, form validation, data submission, and sorting based on user preferences. The user (admin or user) can upload files with his google location history data and see charts and heatmaps with the results of the uploads. It was a lengthy project and my first website ever.",
-		"link": "https://github.com/Aristidis13/Crowdsourcing-project"
-	},
-	{
-		"id": idGiver(),
-		"title": "React Calculator",
-		"description": "A SPA I built with React and Redux with an exclusive focus on practicing. I used the create-react-app as a setup since it is a SPA. The app can compute a plethora of operations and return the result on the screen. The app is modular because I wanted to experiment with modular JS programming. Also, the redux seemed unnecessary because it's a small app, but it was a more intriguing way to code. In conclusion, a responsive web app focused on Frontend Components with the sole purpose of experimenting.",
-		"link": "https://github.com/Aristidis13/react-calculator"
-	},
-	{
-		"id": idGiver(),
-		"title": "Dog App",
-		"description": "A responsive app I built with React,TypeScript a few React Libraries (for API Calls,Pagination and more), TypeScript, CSS3, and the Dog API. It contains Ajax API Calls with axios, a search bar for easier navigation and search, and dog fetching with button pressing.",
-		"link": "https://github.com/Aristidis13/dogs"
-	},
-	{
-		"id": idGiver(),
-		"title": "EstateHub",
-		"description": "This project focused on the development of an enterprise idea and the Software lifecycle. I and my colleagues used ICONIX Methodology with a custom-defined workflow. In addition to the project lifecycle, we explored various UML Diagrams such as use-cases and robustness, sequence diagrams. We implemented our idea with C# and WPF as a windows binary.",
-		"link": "https://github.com/katagis/estatehub"
-	},
-	{
-		"id": idGiver(),
-		"title": "Social Media Network",
-		"description": "I created this project for the Java course at my University. The user amongst other functionalities can post, like a post, comment, message, and add friends. This project was my first introduction to Object-Oriented Programming and Design.",
-		"link": "https://github.com/Aristidis13/Social-Network"
-	},
-	{
-		"id": idGiver(),
-		"title": "Linux Bash Scripting (&) awk)",
-		"description": "A Bash Script that performs a multitude of calculations in a log file using awk and sed and presents the results. It was a part of a lengthier project that focused on teaching the basics of Operating Systems. It offered a great introduction to Linux Commands and Bash Scripting. You can find each file for this project in my Github.",
-		"link": "https://github.com/Aristidis13/Bash_Scripting"
-	},
-	/*	{
-			"id": idGiver(),
-			"title": "Flex-Bison Parser and Lexicological Analyser",
-			"description": "A custom compiler that accepts as input a JSON file that contains multiple tweets, retweets, and extended tweets and finds what fields are missing or have different values from the expected. I built this with C and created the Lexicological Analyzer with Flex and the parser with Bison (former YACC).",
-			"link": "https://github.com/Aristidis13/Flex-and-Bison-Parser"
-		},
-		{
-			"id": idGiver(),
-			"title": "Parallellization with C++ OpenMP Framework",
-			"description": "The project examines four parallelization schedules and their speed for a non-distributed workload with the OpenMP Framework and C++ as the programming language. Additionally, I optimized the assigned codebase, for speed and performance.",
-			"link" :"https://github.com/Aristidis13/Parallellization-with-OpenMP-Framework/"
-		},*/
-	{
-		"id": idGiver(),
-		"title": "MySQL Database Expansion",
-		"description": "A project about relational MySQL Database handling and Databases in general. It's an expansion of a given e-recruitment system to fulfill the needs of recruiters and candidates. I used a plethora of CREATE statements, insertions, selects, triggers, and stored procedures.",
-		"link": "https://github.com/Aristidis13/MySQL-database-expansion"
-	}
-=======
 idGiver.counter = 0;
 
 const projects = [
@@ -257,7 +126,6 @@ const projects = [
       "A project about relational MySQL Database handling and Databases in general. It's an expansion of a given e-recruitment system to fulfill the needs of recruiters and candidates. I used a plethora of CREATE statements, insertions, selects, triggers, and stored procedures.",
     link: "https://github.com/Aristidis13/MySQL-database-expansion"
   }
->>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
 ];
 
 /* EXPERIENCE */
@@ -306,52 +174,6 @@ const experience = [
   }
 ];
 
-<<<<<<< HEAD
-let skills = [
-	{
-		"id": idGiver(),
-		"title": "React",
-		"image": "skills/react.svg",
-		"description": "Component-based and a powerful tool to make live DOM Updates for small projects or complex apps. Currently, knowing the basics, I strive to master it.",
-		"url": "https://reactjs.org/"
-	},
-	{
-		"id": idGiver(),
-		"title": "TypeScript",
-		"image": "/skills/typescript.svg",
-		"description": "A language I have used and I really like. They benefits of TypeScript are suited for the build of simple or complex apps.",
-		"url": "https://www.typescriptlang.org/"
-	},
-	{
-		"id": idGiver(),
-		"title": "CSS3",
-		"image": "/skills/css3.svg",
-		"description": "With Flexbox, Grid, and Animations, CSS nowadays is much more than just a style-adding mechanism. It's the central part of every UI and one, I deeply understand.",
-		"url": "https://www.w3.org/Style/CSS/"
-	},
-	{
-		"id": idGiver(),
-		"title": "HTML5",
-		"image": "/skills/html5.svg",
-		"description": "HTML5 is a structuring and markup language. Easy to learn, but hard to master, especially ARIA, Canvas API, and SVG Attributes.",
-		"url": "https://www.w3.org/html/"
-	},
-	{
-		"id": idGiver(),
-		"title": "JavaScript ES6+",
-		"image": "/skills/javascript.svg",
-		"description": "A language I have used many times, I comprehend and aim to perfect in the future.",
-		"url": "https://www.javascript.com/"
-	},
-	{
-		"id": idGiver(),
-		"title": "jQuery",
-		"image": "/skills/jquery.svg",
-		"description": "A library I have used in my previous job and in college. jQuery is easy to understand and program with it although React and other JS Frameworks are more \"hot\".",
-		"url": "https://jquery.com/"
-	},
-	/*{
-=======
 /* SKILLS */
 idGiver.counter = 0; // Restarts Counter
 
@@ -405,8 +227,6 @@ const skills = [
     url: "https://jquery.com/"
   },
   /* {
-=======
->>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
 		"id": idGiver(),
 		"title": "Node.js",
 		"image": "/skills/node.svg",
@@ -478,101 +298,6 @@ const skills = [
   }
 ];
 
-/* NEWS */
-// idGiver.counter = 0
-// const news = [
-//   {
-//     id: "cproject",
-//     title: "What I do",
-//     text: "Currently,  I refactor and extend the codebase for my dissertation, to make significant improvements to its functionality. Additionally, I build as a side project webpack e-commerce app.",
-//     link: "https://github.com/Aristidis13/SEO-Analyzer",
-//   },
-//   {
-//     id: "books",
-//     title: "Books I read now",
-//     text: "I find books helpful to get depth in my knowledge of pretty much any topic. In programming specifically,  I find them useful to learn the basics and as a reference in times of need too. Having read many books since I was a kid, I greatly appreciate a good book. Currently, I check \"Using SVGS with HTML5 and CSS3\" and ''React 17:Design Patterns and Best Practices. If you have a book suggestion, I would love to know.",
-//   },
-//   {
-//     id: "general",
-//     title: "What I learn",
-//     text: "In the case of learning technologies,  I learn ReactJS and explore various ways of making SVGs come to life. Moreover, I think about how to improve my Thesis Code and make it even better, and also learn to be a better programmer at the same time. I'm also open to the idea of collaborating for Frontend web development work in projects.",
-//     link: "",
-//   },
-// ]
-
-// const books = [
-//   {
-//     id: idGiver(),
-//     title: "Using SVGs with HTML5 and CSS3",
-//     url: "https://www.amazon.com/Using-SVG-CSS3-HTML5-Graphics-ebook/dp/B076HZ31YZ/ref=sr_1_1?keywords=using+svg+with+html5+and+css3&qid=1637525631&sr=8-1",
-//     description:
-//       "A complete and extremely helpful book that gives valuable knowledge of SVG and its animations.",
-//   },
-//   {
-//     id: idGiver(),
-//     title: "Fullstack React: The Complete Guide to ReactJS and Friends",
-//     url: "https://www.amazon.com/Fullstack-React-Complete-ReactJS-Friends/dp/0991344626/ref=sr_1_1?keywords=fullstack+react&qid=1637524475&sr=8-1",
-//     description:
-//       "A React Book for React Beginners that teaches the fundamentals of React, Redux and more.",
-//   }
-// ];
-
-/* SOCIAL LINKS */
-
-idGiver.counter = 0; // Restarts Counter
-
-	},*/
-	{
-		"id": idGiver(),
-		"title": "WordPress",
-		"image": "./skills/wordpress.svg",
-		"description": "WordPress is the most used Open Source CMS, widely used in many websites globally with a passionate community.",
-		"url": "https://wordpress.com/el/"
-	},
-	{
-		"id": idGiver(),
-		"title": "Bulma",
-		"image": "/skills/bulma.svg",
-		"description": "A lightweight CSS framework. Built with Flexbox, it gives you the ability to create impressive layouts with modular Components and no JS. I used it on my previous website.",
-		"url": "https://bulma.io/"
-	},
-	{
-		"id": idGiver(),
-		"title": "Bootstrap",
-		"image": "/skills/bootstrap.svg",
-		"description": "Bootstrap was the first Framework I used. I rarely use it anymore since I use Grid and Flexbox themselves. Nonetheless, Bootstrap is still a viable option for quick layouts.",
-		"url": "https://getbootstrap.com/"
-	},
-	{
-		"id": idGiver(),
-		"title": "SEO",
-		"image": "/skills/seo.svg",
-		"description": "I learned SEO for completing my Thesis. I'm no expert in any case, but I can comprehend SEO both as a programmer and content creator.",
-		"url": "https://developers.google.com/search/docs"
-	},
-	{
-		"id": idGiver(),
-		"title": "PHP",
-		"image": "/skills/php.svg",
-		"description": "PHP was the holy grail of backend web development and the first backend technology I learned to use. Rarely do I use it nowadays.",
-		"url": "https://www.php.net/"
-	},
-	{
-		"id": idGiver(),
-		"title": "Java",
-		"image": "/skills/java.svg",
-		"description": "A widely used OOP Language that I learned during my college years. It helped me understand the concepts of OOP and is a fun language.",
-		"url": "https://www.java.com/"
-	},
-	{
-		"id": idGiver(),
-		"title": "Git",
-		"image": "/skills/git.svg",
-		"description": "A version control system I pair with Github and has saved my projects. I use it within my VS Code, but I can handle terminal commands too.",
-		"url": "https://git-scm.com/"
-	}
-];
-
 /* SOCIAL LINKS */
 
 idGiver.counter = 0; // Restarts Counter
@@ -580,57 +305,6 @@ const socialLinksLinkClass = "link link-container social-link";
 const socialLinksTextClass = "social-link-title";
 
 const socialLinks = [
-<<<<<<< HEAD
-	{
-		"id": idGiver(),
-		"title": "WordPress",
-		"image": "./skills/wordpress.svg",
-		"description": "WordPress is the most used Open Source CMS, widely used in many websites globally with a passionate community.",
-		"url": "https://wordpress.com/el/"
-	},
-	{
-		"id": idGiver(),
-		"title": "Bulma",
-		"image": "/skills/bulma.svg",
-		"description": "A lightweight CSS framework. Built with Flexbox, it gives you the ability to create impressive layouts with modular Components and no JS. I used it on my previous website.",
-		"url": "https://bulma.io/"
-	},
-	{
-		"id": idGiver(),
-		"title": "Bootstrap",
-		"image": "/skills/bootstrap.svg",
-		"description": "Bootstrap was the first Framework I used. I rarely use it anymore since I use Grid and Flexbox themselves. Nonetheless, Bootstrap is still a viable option for quick layouts.",
-		"url": "https://getbootstrap.com/"
-	},
-	{
-		"id": idGiver(),
-		"title": "SEO",
-		"image": "/skills/seo.svg",
-		"description": "I learned SEO for completing my Thesis. I'm no expert in any case, but I can comprehend SEO both as a programmer and content creator.",
-		"url": "https://developers.google.com/search/docs"
-	},
-	{
-		"id": idGiver(),
-		"title": "PHP",
-		"image": "/skills/php.svg",
-		"description": "PHP was the holy grail of backend web development and the first backend technology I learned to use. Rarely do I use it nowadays.",
-		"url": "https://www.php.net/"
-	},
-	{
-		"id": idGiver(),
-		"title": "Java",
-		"image": "/skills/java.svg",
-		"description": "A widely used OOP Language that I learned during my college years. It helped me understand the concepts of OOP and is a fun language.",
-		"url": "https://www.java.com/"
-	},
-	{
-		"id": idGiver(),
-		"title": "Git",
-		"image": "/skills/git.svg",
-		"description": "A version control system I pair with Github and has saved my projects. I use it within my VS Code, but I can handle terminal commands too.",
-		"url": "https://git-scm.com/"
-	}
-=======
   {
     id: idGiver(),
     title: "Github",
@@ -666,5 +340,4 @@ const socialLinks = [
     linkClass: socialLinksLinkClass,
     textClass: socialLinksTextClass
   }
->>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
 ];
