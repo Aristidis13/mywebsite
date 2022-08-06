@@ -1,4 +1,3 @@
-/* --------------------------------------------------- DOM Elements -----------------------------------------------------*/
 html {
     scrollbar-width: thin !important;
     /* "auto" or "thin" */
@@ -16,12 +15,22 @@ html {
     --red-secondary: rgb(199, 43, 65);
     --mainTextColor: #ececec;
     --anime-color: rgba(199, 43, 65, 0.3);
+<<<<<<< HEAD
     --news-section-width: 70%;
+=======
+<<<<<<< HEAD
+    --news-section-width: 70%;
+=======
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
+>>>>>>> f86bb94a49e10b8f99910fe88dcec951377501e8
     color: var(--mainTextColor);
 }
 
-
 /* Works on Chrome, Edge, and Safari */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
 html::-webkit-scrollbar {
     width: .5rem;
 }
@@ -42,9 +51,12 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Archivo', sans-serif;
-    font-family: 'Playfair Display', serif;
+<<<<<<< HEAD
+
+    font-family: 'Playfair Display', 'Archivo', serif;
+=======
+font-family: 'Playfair Display', 'Archivo
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
     margin: 0;
     width: 80%;
     display: flex;
@@ -326,8 +338,8 @@ canvas {
 .project-description {
     text-align: justify;
     text-justify: distribute;
-    font-size: 1.5rem;
-    font-family: 'Cormorant', serif;
+    font-size: 1.3rem;
+    font-family: 'Playfair Display', serif;
 }
 
 /*--------------------------------------------- Technical Experience -----------------------------------------*/
@@ -346,8 +358,25 @@ canvas {
 .experience-element-container {
     display: grid;
     grid: "time decoration title" auto "time decoration description" auto / 20% 10% 70%;
+<<<<<<< HEAD
+=======
+    width: 100%;
+    transition: background-color .6s ease-in-out;
+    border-radius: 10px;
+    cursor: grab;
+    padding: 0 0.5rem 0rem 0.5rem;
 }
 
+<<<<<<< HEAD
+=======
+.experience-element-container:hover,
+.experience-element-container:active,
+.experience-element-container:focus {
+    background-color: var(--anime-color);
+>>>>>>> f86bb94a49e10b8f99910fe88dcec951377501e8
+}
+
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
 /*Time Period Container*/
 .time-period {
     grid-area: time;
@@ -379,17 +408,37 @@ canvas {
 
 .experience-main-title,
 .experience-link {
+<<<<<<< HEAD
     text-decoration: underline;
     color: var(--red-secondary);
     cursor: grab;
     margin: 0;
     width: fit-content;
     transition: color .6s ease-in-out;
+=======
+<<<<<<< HEAD
+    text-decoration: underline;
+    color: var(--red-secondary);
+    cursor: grab;
+    margin: 0;
+    width: fit-content;
+    transition: color .6s ease-in-out;
+=======
+    text-decoration: none;
+    color: var(--blue-secondary);
+    margin: 0;
+    width: fit-content;
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
+>>>>>>> f86bb94a49e10b8f99910fe88dcec951377501e8
     display: block;
     word-break: break-all;
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f86bb94a49e10b8f99910fe88dcec951377501e8
 .experience-main-title:hover,
 .experience-link:hover,
 .experience-main-title:active,
@@ -416,6 +465,14 @@ canvas {
     height: auto;
     transition: opacity 1.6s ease-out,
         visibility 1.7s cubic-bezier(0.175, 0.225, 0.32, 0.975) .1s;
+<<<<<<< HEAD
+=======
+=======
+.experience-description-container {
+    grid-area: description;
+    margin-bottom: 3rem;
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
+>>>>>>> f86bb94a49e10b8f99910fe88dcec951377501e8
 }
 
 .experience-description {
@@ -430,12 +487,25 @@ h4.experience-secondary-title {
     margin: 2% 0;
 }
 
+<<<<<<< HEAD
 .exp-text-container {
     flex: 4;
+=======
+<<<<<<< HEAD
+.exp-text-container {
+    flex: 4;
+
+>>>>>>> f86bb94a49e10b8f99910fe88dcec951377501e8
 }
 
 /*Last Box Settings*/
 .exp-text-container:last-child {
+<<<<<<< HEAD
+=======
+=======
+#experience> :last-child .time-period {
+>>>>>>> 609ab16407d04bf60cffd48310f956fad17345cf
+>>>>>>> f86bb94a49e10b8f99910fe88dcec951377501e8
     padding-bottom: 0;
 }
 
@@ -593,7 +663,7 @@ h4.experience-secondary-title {
 }
 
 .news-description {
-    font-family: Cormorant, serif;
+    font-family: 'Playfair Display', serif;
     width: var(--news-section-width);
     text-align: justify;
     text-justify: inter-character;
