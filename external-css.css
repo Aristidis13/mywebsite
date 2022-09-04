@@ -70,6 +70,10 @@ canvas {
     font-family: Archivo;
 }
 
+.list-container {
+    width: 100%
+}
+
 .link {
     text-decoration: underline;
     color: var(--red-secondary);
@@ -335,16 +339,18 @@ canvas {
     justify-content: center;
 }
 
-#experience {
-    justify-content: center;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+.exp-text-constainer {
+    padding-bottom: 1rem;
+}
+
+#experience-elements {
+    width: 100%
 }
 
 .experience-element-container {
     display: grid;
     grid: "time decoration title" auto "time decoration description" auto / 20% 10% 70%;
+    width: 100%;
 }
 
 /*Time Period Container*/
@@ -355,12 +361,6 @@ canvas {
     font-size: 1.4rem;
     line-height: 1.4rem;
     letter-spacing: 0.125rem;
-}
-
-/*Title Container*/
-/*Title Container*/
-.titles-container {
-    grid-area: title;
 }
 
 .experience-title {
@@ -387,6 +387,7 @@ canvas {
     transition: color .6s ease-in-out;
     display: block;
     word-break: break-all;
+    padding-bottom: 1rem;
 }
 
 
@@ -399,28 +400,10 @@ canvas {
     color: var(--blue-secondary);
 }
 
-.experience-description-container {
-    grid-area: description;
-    margin-bottom: 3rem;
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-
-}
-
-
-/*Added with JS to make description visible*/
-.descriptionVisible {
-    visibility: visible;
-    opacity: 1;
-    height: auto;
-    transition: opacity 1.6s ease-out,
-        visibility 1.7s cubic-bezier(0.175, 0.225, 0.32, 0.975) .1s;
-}
-
 .experience-description {
     font-size: 1.2rem;
     line-height: 2rem;
+    margin-bottom: 1rem
 }
 
 h4.experience-secondary-title {
@@ -432,15 +415,13 @@ h4.experience-secondary-title {
 
 .exp-text-container {
     flex: 4;
+    grid-area: title;
+    margin-bottom: .5rem;
 }
 
 /*Last Box Settings*/
 .exp-text-container:last-child {
     padding-bottom: 0;
-}
-
-.experience-link-container {
-    margin-bottom: 0;
 }
 
 .decoration-container {
@@ -756,8 +737,7 @@ h4.experience-secondary-title {
         justify-content: center;
     }
 
-    .time-period,
-    .titles-container {
+    .time-period {
         margin: 1rem 0;
     }
 
