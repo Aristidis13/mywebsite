@@ -1,4 +1,3 @@
-/* --------------------------------------------------- DOM Elements -----------------------------------------------------*/
 html {
     scrollbar-width: thin !important;
     /* "auto" or "thin" */
@@ -68,10 +67,6 @@ canvas {
     font-size: 4rem;
     line-height: 4.5rem;
     font-family: Archivo;
-}
-
-.list-container {
-    width: 100%
 }
 
 .link {
@@ -520,90 +515,6 @@ h4.experience-secondary-title {
     margin-top: 4%;
     word-break: break-all;
 }
-
-/*------------------------------------------------ News -------------------------------------------*/
-.news-presentation {
-    text-align: center;
-    line-height: 2rem;
-    letter-spacing: 0.125rem;
-    font-size: 1.6rem;
-    font-weight: 500;
-}
-
-#news {
-    display: grid;
-    grid: "cproject cproject" auto "general books" auto "void void" 11rem / 50% 50%;
-    justify-items: center;
-    align-items: start;
-    background-color: #000;
-    border-radius: 70% 40% 70% 40%;
-}
-
-/*Books I read element*/
-#new-books {
-    grid-area: books;
-}
-
-#new-cproject {
-    grid-area: cproject;
-}
-
-#new-general {
-    grid-area: general;
-}
-
-.news-title {
-    text-align: center;
-    font-size: 2rem;
-    width: var(--news-section-width);
-    margin: 3rem auto;
-}
-
-#new-books .news-title {
-    text-align: start;
-}
-
-#new-cproject .news-description {
-    width: 50%;
-    margin: 1rem auto;
-}
-
-#new-general>.news-description {
-    margin: 0 auto 0;
-    padding-bottom: 9rem;
-}
-
-.news-description {
-    font-family: Cormorant, serif;
-    width: var(--news-section-width);
-    text-align: justify;
-    text-justify: inter-character;
-    line-height: 2rem;
-    letter-spacing: 0.125rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-align-last: center;
-}
-
-.news-link {
-    display: block;
-    margin: 3rem 0;
-    text-align: center;
-    width: 100%;
-}
-
-/* .news-image {
-    transition: background-color .8s cubic-bezier(0.47, 0, 0.745, 0.715);
-    width: 100%;
-    grid-area: image;
-    align-self: start;
-    justify-self: start;
-    margin: 6.25rem 0 0 0;
-} */
-
-/* .news-image:hover {
-    background-color: #222;
-} */
 
 /*--------------------------------------------------- Social Links ------------------------------------------------*/
 #social-links-section {

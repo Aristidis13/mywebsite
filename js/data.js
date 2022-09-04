@@ -1,6 +1,6 @@
 /* eslint-disable no-tabs */
 /* eslint-disable no-unused-vars */
-function idGiver () {
+function idGiver() {
   return idGiver.counter++;
 }
 
@@ -116,17 +116,17 @@ const projects = [
     link: "https://github.com/Aristidis13/Bash_Scripting"
   },
   /*	{
-		"id": idGiver(),
-		"title": "Flex-Bison Parser and Lexicological Analyser",
-		"description": "A custom compiler that accepts as input a JSON file that contains multiple tweets, retweets, and extended tweets and finds what fields are missing or have different values from the expected. I built this with C and created the Lexicological Analyzer with Flex and the parser with Bison (former YACC).",
-		"link": "https://github.com/Aristidis13/Flex-and-Bison-Parser"
-	},
-	{
-		"id": idGiver(),
-		"title": "Parallellization with C++ OpenMP Framework",
-		"description": "The project examines four parallelization schedules and their speed for a non-distributed workload with the OpenMP Framework and C++ as the programming language. Additionally, I optimized the assigned codebase, for speed and performance.",
-		"link" :"https://github.com/Aristidis13/Parallellization-with-OpenMP-Framework/"
-	}, */
+    "id": idGiver(),
+    "title": "Flex-Bison Parser and Lexicological Analyser",
+    "description": "A custom compiler that accepts as input a JSON file that contains multiple tweets, retweets, and extended tweets and finds what fields are missing or have different values from the expected. I built this with C and created the Lexicological Analyzer with Flex and the parser with Bison (former YACC).",
+    "link": "https://github.com/Aristidis13/Flex-and-Bison-Parser"
+  },
+  {
+    "id": idGiver(),
+    "title": "Parallellization with C++ OpenMP Framework",
+    "description": "The project examines four parallelization schedules and their speed for a non-distributed workload with the OpenMP Framework and C++ as the programming language. Additionally, I optimized the assigned codebase, for speed and performance.",
+    "link" :"https://github.com/Aristidis13/Parallellization-with-OpenMP-Framework/"
+  }, */
   {
     id: idGiver(),
     title: "MySQL Database Expansion",
@@ -152,13 +152,12 @@ const experience = [
   },
   {
     id: idGiver(),
-    title: "Freelancer in Fiverr",
-    subtitle: "(not actively started yet)",
-    dateStart: "Oct 2021",
+    title: "Frontend Developer at Agile Actors",
+    subtitle: "Contractor at Eurobank Ergasias",
+    dateStart: "April 2022",
     dateEnd: "Present",
-    description:
-      "When I have time and clients, you may find me building websites, university projects, and more in Fiverr.  If you want help with your projects, find me there and tell me your project. I may not be the best-fitted person for the task, but I will help you find what you need and a person with the right skills who will help you achieve your goal. And if I am, I communicate clearly what you may need and what I charge for it.",
-    link: "https://www.fiverr.com/arisbarlos?up_rollout=true"
+    description: "Using React, Material UI, Ant Design, Redux, Redux-Saga, and a plethora of JS libraries, I create new Views and aesthetic UIs to transition this great Greek Bank to new heights. Although the work is challenging, the working environment is pleasant, and the projects are interesting. I saw a new world of problems, challenges, and ways to think with a complex banking system that requires adequate knowledge in Programming and Banking Business Knowledge. Also, I learn how a big company works, and have collaborated with smart and knowledgeable people. Did I mentioned that working in Agile Actors is an honor and a previledge and that they also hire entry-level programmers?",
+    link: "https://www.agileactors.com/"
   },
   {
     id: idGiver(),
@@ -235,19 +234,19 @@ const skills = [
     url: "https://jquery.com/"
   },
   /* {
-		"id": idGiver(),
-		"title": "Node.js",
-		"image": "/skills/node.svg",
-		"description": "As part of either MERN or MEAN stack, I prefer to use Node.js for the back-end of websites and apps alongside React and MongoDB.",
-		"url" :"https://nodejs.org/en/"
-	},/*
-	{
-		"id": idGiver(),
-		"title": "MongoDB",
-		"image": "/skills/mongodb.svg",
-		"description": "A modern solution in Database Design that rapidly expands due to its flexibility and scalability. I use it, alongside the other parts of the MERN stack.",
-		"link": "https://www.mongodb.com/"
-	}, */
+    "id": idGiver(),
+    "title": "Node.js",
+    "image": "/skills/node.svg",
+    "description": "As part of either MERN or MEAN stack, I prefer to use Node.js for the back-end of websites and apps alongside React and MongoDB.",
+    "url" :"https://nodejs.org/en/"
+  },/*
+  {
+    "id": idGiver(),
+    "title": "MongoDB",
+    "image": "/skills/mongodb.svg",
+    "description": "A modern solution in Database Design that rapidly expands due to its flexibility and scalability. I use it, alongside the other parts of the MERN stack.",
+    "link": "https://www.mongodb.com/"
+  }, */
   {
     id: idGiver(),
     title: "WordPress",
@@ -305,28 +304,6 @@ const skills = [
     url: "https://git-scm.com/"
   }
 ];
-
-/* NEWS */
-// idGiver.counter = 0
-// const news = [
-//   {
-//     id: "cproject",
-//     title: "What I do",
-//     text: "Currently,  I refactor and extend the codebase for my dissertation, to make significant improvements to its functionality. Additionally, I build as a side project webpack e-commerce app.",
-//     link: "https://github.com/Aristidis13/SEO-Analyzer",
-//   },
-//   {
-//     id: "books",
-//     title: "Books I read now",
-//     text: "I find books helpful to get depth in my knowledge of pretty much any topic. In programming specifically,  I find them useful to learn the basics and as a reference in times of need too. Having read many books since I was a kid, I greatly appreciate a good book. Currently, I check \"Using SVGS with HTML5 and CSS3\" and ''React 17:Design Patterns and Best Practices. If you have a book suggestion, I would love to know.",
-//   },
-//   {
-//     id: "general",
-//     title: "What I learn",
-//     text: "In the case of learning technologies,  I learn ReactJS and explore various ways of making SVGs come to life. Moreover, I think about how to improve my Thesis Code and make it even better, and also learn to be a better programmer at the same time. I'm also open to the idea of collaborating for Frontend web development work in projects.",
-//     link: "",
-//   },
-// ]
 
 // const books = [
 //   {
