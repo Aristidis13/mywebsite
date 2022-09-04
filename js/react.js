@@ -188,7 +188,7 @@ class ExperienceElement extends React.Component {
   render() {
     return (
       <section
-        className="list-container"
+        className="list-container experience-element-container"
         id={this.props.id}
       >
         <ExperienceTimePeriod start={this.props.dateStart} end={this.props.dateEnd} />
