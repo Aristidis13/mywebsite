@@ -82,6 +82,27 @@ class CubeSide extends React.PureComponent {
 
 ReactDOM.render(<Cube />, document.getElementById("header"));
 
+/********************************************************************** WelcomeSection
+*/
+class WelcomeView extends React.Component {
+  render() {
+    const welcomeComponents = welcome.map((el) => (
+      <Text text={el.text} classNames={"presentation-text"} />
+    ));
+    const welcomeComps = welcome.map((sentence) => (
+      sentence.text.split(" ")//<Text text={el.text} classNames={"presentation-text"} />
+    ));
+    console.log(welcomeComps)
+    return (
+      <>
+        <div id="text-container"> {welcomeComponents}</div>
+        <span className="button-text"> View My Site!</span>
+      </>)
+  }
+}
+
+ReactDOM.render(<WelcomeView />, document.getElementById("welcome-view"));
+
 /*
  ************************************************************************* Welcome
  */
@@ -174,7 +195,7 @@ class ExperienceList extends React.Component {
       </article>
     );
   }
-}
+};
 
 class ExperienceElement extends React.Component {
   constructor(props) {
@@ -201,7 +222,7 @@ class ExperienceElement extends React.Component {
       </section>
     );
   }
-}
+};
 
 class ExperienceTimePeriod extends React.PureComponent {
   render() {
