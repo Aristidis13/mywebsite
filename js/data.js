@@ -9,15 +9,23 @@ idGiver.counter = 0;
 const welcome = [
   {
     id: idGiver(),
-    text: "Welcome to my website. I'm Aris Barlos and I come from Patras, Greece. I'm a software developer, with Bachelor in Computer Science."
+    text: "Welcome to my website."
   },
   {
     id: idGiver(),
-    text: "I have relatively small corporate programming experience. So far, however, with every project I made, I brought it to fruition without sacrificing my vision or deadlines."
+    text: "I'm Aris Barlos a frontend developer, with Bachelor in Computer Science."
   },
   {
     id: idGiver(),
-    text: "When I have spare time, I read books about programming and finance, lift heavy things, play basketball and do side projects to learn new technologies."
+    text: "When I have spare time, I read books about programming, history and finance, lift heavy things, play or watch basketball and do side projects to learn new technologies."
+  },
+  {
+    id: idGiver(),
+    text: "Currently I work at Eurobank one of the four systemic banks of Greece, as an Agile Actor."
+  },
+  {
+    id: idGiver(),
+    text: "So far, with every project I made, I brought it to fruition without sacrificing my vision or deadlines."
   },
   {
     id: idGiver(),
@@ -30,17 +38,17 @@ idGiver.counter = 0;
 
 /* Cube Sides */
 const cubeSides = [
-  {
-    id: idGiver(),
-    title: "Welcome",
-    section: "welcome-section",
-    class: "front cubeSide"
-  },
+  // {
+  //   id: idGiver(),
+  //   title: "Welcome",
+  //   section: "welcome-section",
+  //   class: "front cubeSide"
+  // },
   {
     id: idGiver(),
     title: "Projects",
     section: "projects-section",
-    class: "back cubeSide"
+    class: "front cubeSide"
   },
   {
     id: idGiver(),
@@ -54,17 +62,17 @@ const cubeSides = [
     section: "skills-section",
     class: "left cubeSide"
   },
-  {
-    id: idGiver(),
-    title: "News",
-    section: "news-section",
-    class: "top cubeSide"
-  },
+  // {
+  //   id: idGiver(),
+  //   title: "News",
+  //   section: "news-section",
+  //   class: "top cubeSide"
+  // },
   {
     id: idGiver(),
     title: "Links",
     section: "social-links-section",
-    class: "bottom cubeSide"
+    class: "back cubeSide"
   }
 ];
 

@@ -40,9 +40,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Archivo', sans-serif;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Open Sans', 'Archivo', sans-serif;
     margin: 0;
     width: 80%;
     display: flex;
@@ -59,6 +57,23 @@ canvas {
     left: 0;
     right: 0;
 }
+
+/*---------------------------------------------------Welcome View --------------------------------------------------------------*/
+#welcome-view {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--mainTextColor);
+    color: var(--red-secondary);
+    /* overflow: hidden;
+    width: 100%;
+    height: 100%;
+    scrollbar-width: 0; */
+}
+
 
 /*--------------------------------------------- Main General Settings and Custom Cursor ----------------------------------------*/
 .section-header {
@@ -211,23 +226,11 @@ canvas {
 
 @keyframes spin {
     0% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-
-    17% {
-        transform: rotateX(90deg) rotateY(0deg);
-    }
-
-    34% {
-        transform: rotateX(-90deg) rotateY(0deg);
-    }
-
-    50% {
-        transform: rotateX(0deg) rotateY(0deg);
+        transform: rotateY(0deg);
     }
 
     100% {
-        transform: rotateX(0deg) rotateY(360deg);
+        transform: rotateY(360deg);
     }
 }
 
@@ -671,46 +674,6 @@ h4.experience-secondary-title {
         width: 100%;
     }
 
-    /*News*/
-    #news {
-        border-radius: 70% 40%;
-        grid: "cproject" auto "general" auto "books" auto / 100%;
-    }
-
-    #new-cproject>.news-title {
-        margin-top: 8rem;
-        margin-left: auto;
-        text-align: end;
-        padding-right: 1rem;
-    }
-
-    #new-cproject>.news-description {
-        margin-left: auto;
-        margin-right: 4rem;
-        width: 50%;
-    }
-
-    #new-general>.news-description {
-        margin: 0 auto 0;
-        padding-bottom: 3rem;
-    }
-
-    #new-books .news-description {
-        padding-bottom: 8rem;
-        width: 50%;
-        margin-right: auto;
-        margin-left: 4rem;
-    }
-
-    .news-title {
-        margin: 1rem auto 2rem;
-        padding-top: 0;
-    }
-
-    .news-description {
-        width: 60%;
-    }
-
     /*Social Links*/
     #social-links {
         padding-bottom: 8rem;
@@ -744,45 +707,5 @@ h4.experience-secondary-title {
 
     .skill-image {
         height: auto;
-    }
-
-    /*News*/
-    #news {
-        border-radius: 70% 40%;
-        grid: "cproject" auto "general" auto "books" auto / 100%;
-    }
-
-    #new-cproject>.news-title {
-        margin-top: 8rem;
-        margin-left: auto;
-        text-align: end;
-        padding-right: 1rem;
-    }
-
-    #new-cproject>.news-description {
-        margin-left: auto;
-        margin-right: 4rem;
-        width: 50%;
-    }
-
-    #new-general>.news-description {
-        margin: 0 auto 0;
-        padding-bottom: 3rem;
-    }
-
-    #new-books .news-description {
-        padding-bottom: 8rem;
-        width: 50%;
-        margin-right: auto;
-        margin-left: 4rem;
-    }
-
-    .news-title {
-        margin: 1rem auto 2rem;
-        padding-top: 0;
-    }
-
-    .news-description {
-        width: 60%;
     }
 }
