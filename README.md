@@ -5,8 +5,8 @@ A remote repository for [my website](https://www.arisbarlos.com). <br/>
 The code can be a template for even better portfolio sites in the future and <br/> is free for everybody to test and re-develop any way he likes.
 
 ### Languages/ Dependencies
-I used **React** and for the rendering of the page and **plain Javascript** for the animations in Canvas.
-I also used **Babel** because I used ES6 syntax.
+I used **React** for the rendering of the page and **plain Javascript** for the animations in Canvas.
+I also used **Babel**  to transform ES6 JavaScript syntax to ES5.
 
 <br/>
 <br/>
