@@ -17,15 +17,11 @@ const welcome = [
   },
   {
     id: idGiver(),
-    text: "When I have spare time, I read books about programming, history and finance, lift heavy things, play or watch basketball and do side projects to learn new technologies."
+    text: "When I have spare time, I read books about programming, history and finance, play basketball and do side projects to learn new technologies."
   },
   {
     id: idGiver(),
     text: "Currently I work at Eurobank one of the four systemic banks of Greece, as an Agile Actor."
-  },
-  {
-    id: idGiver(),
-    text: "So far, with every project I made, I brought it to fruition without sacrificing my vision or deadlines."
   },
   {
     id: idGiver(),
