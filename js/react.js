@@ -95,7 +95,9 @@ class WelcomeView extends React.Component {
     console.log(welcomeComps)
     return (
       <>
-        <div id="text-container"> {welcomeComponents}</div>
+        <section id="presentation-slide">
+          <div id="text-container"> {welcomeComponents}</div>
+        </section>
         <span className="button-text"> View My Site!</span>
       </>)
   }

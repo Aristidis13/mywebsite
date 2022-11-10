@@ -1,7 +1,7 @@
 html {
-    scrollbar-width: thin !important;
+    scrollbar-width: thin;
     /* "auto" or "thin" */
-    scrollbar-color: var(--red-secondary) var(--mainTextColor) !important;
+    scrollbar-color: var(--red-secondary) var(--mainTextColor);
     /* scroll thumb and track */
     font-size: 16px;
     background-color: var(--background-main);
@@ -16,7 +16,7 @@ html {
     --mainTextColor: #ececec;
     --anime-color: rgba(199, 43, 65, 0.3);
     --news-section-width: 70%;
-    color: var(--mainTextColor);
+    --startAnimation: 3s color: var(--mainTextColor);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -59,6 +59,53 @@ canvas {
 }
 
 /*---------------------------------------------------Welcome View --------------------------------------------------------------*/
+html.hasNoScroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+html.hasNoScroll::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes welcomeAnimation {
+    from {
+        right: 100%;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+@keyframes TextFadeAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes UpAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+
+#presentation-slide {
+    display: flex;
+    justify-content: center;
+}
+
 #welcome-view {
     position: fixed;
     top: 0;
@@ -68,15 +115,31 @@ canvas {
     z-index: 1;
     background-color: var(--mainTextColor);
     color: var(--red-secondary);
-    /* overflow: hidden;
-    width: 100%;
-    height: 100%;
-    scrollbar-width: 0; */
+    padding: 2% 4%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: end;
+    animation: 3s welcomeAnimation .25s cubic-bezier(0.5, 0.1, 0.1, 1) forwards;
+}
+
+#text-container {
+    opacity: 0;
+    width: 70%;
+    animation: TextFadeAnimation 1s ease-in 3s forwards;
+}
+
+.button-text {
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: .8s UpAnimation 5s linear forwards;
+
 }
 
 
 /*--------------------------------------------- Main General Settings and Custom Cursor ----------------------------------------*/
 .section-header {
+    color: white;
     text-align: center;
     padding-bottom: 2rem;
     font-size: 4rem;
@@ -599,7 +662,7 @@ h4.experience-secondary-title {
 
 @media screen and (min-width:360px) and (max-width:700px) {
     html {
-        font-size: 12px;
+        font-size: 10px;
 
     }
 
@@ -686,7 +749,7 @@ h4.experience-secondary-title {
 
 @media screen and (min-width: 700px) and (max-width:1000px) {
     html {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     /*Project*/
