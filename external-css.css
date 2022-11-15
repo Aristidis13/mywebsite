@@ -69,6 +69,10 @@ html.hasNoScroll::-webkit-scrollbar {
     display: none;
 }
 
+.textAnimation {
+    color: red
+}
+
 @keyframes welcomeAnimation {
     from {
         right: 100%;
@@ -313,13 +317,17 @@ html.hasNoScroll::-webkit-scrollbar {
 }
 
 .presentation-text {
-    display: inline-block;
+    display: flex;
+    flex-flow: row wrap;
     margin: 0 0 1.5rem;
     letter-spacing: .15em;
-    text-align: justify;
-    text-justify: inter-character;
-    text-indent: 2rem;
+    text-indent: 1rem;
     font-size: 1.5rem;
+}
+
+.word {
+    /*display: inline-flex;
+    /*justify-content: center; */
 }
 
 
@@ -675,20 +683,6 @@ h4.experience-secondary-title {
         perspective: 20rem;
         justify-content: center;
         align-items: center;
-    }
-
-    /*Welcome Section*/
-    #welcome-elements {
-        grid: "title" auto "photo" auto "void" 3rem "text" auto / 100%;
-    }
-
-    #photo-container {
-        display: flex;
-    }
-
-    #personal-photo {
-        width: 70%;
-        margin: auto;
     }
 
     /*Projects Section*/
