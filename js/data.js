@@ -25,7 +25,7 @@ const welcome = [
   },
   {
     id: idGiver(),
-    text: "I hope you like my site."
+    text: "If I caught your interest, hop in"
   }
 ];
 
