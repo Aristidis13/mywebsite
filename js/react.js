@@ -84,17 +84,27 @@ ReactDOM.render(<Cube />, document.getElementById("header"));
 
 /********************************************************************** WelcomeSection
 */
-const createHtmlFromSentence = sentence => sentence
+class Word extends React.PureComponent {
+  render() {
+    return (
+      <span className="word">
+        {
+          this.props.word
+            .split("")
+            .map(letter => <span className={"letter " + this.props.textAnimation}>
+              {letter}
+            </span>)}
+      </span>
+    );
+  }
+}
+
+const createHtmlFromSentence = (sentence, textAnimation) => sentence
   .text
   .split(" ")
-  .map(word => <span className="word">
-    {
-      word
-        .split("")
-        .map(letter => <span className="letter">
-          {letter}
-        </span>)}
-  </span>)
+  .map(word =>
+    <Word word={word} textAnimation={textAnimation} />
+  )
 
 class WelcomeView extends React.Component {
   constructor(props) {
@@ -108,7 +118,7 @@ class WelcomeView extends React.Component {
 
   handleClick() {
     this.setState({
-      textAnimation: this.state.textAnimation + "textAnimation",
+      textAnimation: this.state.textAnimation + " textAnimation",
       divAnimation: this.state.divAnimation + "divAnimation"
     })
     ///this.props.hide();
@@ -116,14 +126,17 @@ class WelcomeView extends React.Component {
 
   render() {
     const welcomeComponents = welcome.map(sentence => {
-      return <Text text={createHtmlFromSentence(sentence)} classNames={"presentation-text"} />
+      return <Text
+        text={createHtmlFromSentence(sentence, this.state.textAnimation)}
+        classNames={"presentation-text"}
+      />
     });
 
     return (
       <div id="welcome">
         <div id="welcome-view" className={this.state.divAnimation}>
           <section id="presentation-slide">
-            <div id="text-container" className={this.state.textAnimation}> {welcomeComponents}</div>
+            <div id="text-container"> {welcomeComponents}</div>
           </section>
           <span className="button-text" onClick={this.handleClick}> View My Site!</span>
         </div>
