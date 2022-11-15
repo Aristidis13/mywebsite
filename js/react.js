@@ -84,69 +84,52 @@ ReactDOM.render(<Cube />, document.getElementById("header"));
 
 /********************************************************************** WelcomeSection
 */
+const createHtmlFromSentence = sentence => sentence
+  .text
+  .split(" ")
+  .map(word => <span className="word">
+    {
+      word
+        .split("")
+        .map(letter => <span className="letter">
+          {letter}
+        </span>)}
+  </span>)
+
 class WelcomeView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isVisible: true
+      textAnimation: " ",
+      divAnimation: " "
     };
-    this.hide = this.hide.bind(this);
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  hide() {
-    this.setState({ isVisible: false });
+  handleClick() {
+    this.setState({
+      textAnimation: this.state.textAnimation + "textAnimation",
+      divAnimation: this.state.divAnimation + "divAnimation"
+    })
+    ///this.props.hide();
   }
 
   render() {
-    const welcomeComponents = welcome.map((el) => (
-      <Text text={el.text} classNames={"presentation-text"} />
-    ));
-
+    const welcomeComponents = welcome.map(sentence => {
+      return <Text text={createHtmlFromSentence(sentence)} classNames={"presentation-text"} />
+    });
 
     return (
-      this.state.isVisible ?
-        <div id="welcome-view">
+      <div id="welcome">
+        <div id="welcome-view" className={this.state.divAnimation}>
           <section id="presentation-slide">
-            <div id="text-container"> {welcomeComponents}</div>
+            <div id="text-container" className={this.state.textAnimation}> {welcomeComponents}</div>
           </section>
-          <span className="button-text" onClick={() => {
-            this.hide();
-            console.log('View my site clicked')
-            console.log('a. The text disappears')
-            console.log('b. The view diasppears')
-          }}> View My Site!</span>
-        </div> : null)
+          <span className="button-text" onClick={this.handleClick}> View My Site!</span>
+        </div>
+      </div>)
   }
 }
-
-ReactDOM.render(<WelcomeView />, document.getElementById("welcome"));
-
-/*
- ************************************************************************* Welcome
-//  */
-// class WelcomeSection extends React.Component {
-//   render() {
-//     const welcomeComponents = welcome.map((el) => (
-//       <Text text={el.text} classNames={"presentation-text"} />
-//     ));
-//     return (
-//       <article className="list-container" id="welcome-elements">
-//         <SectionHeader title="Welcome" />
-//         <div id="text-container"> {welcomeComponents} </div>
-//         <figure id="photo-container">
-//           <img
-//             className="photo"
-//             id="personal-photo"
-//             src="./photos/Aris_Barlos.jpg"
-//             alt="Aris Barlos - Software Engineer"
-//           />
-//         </figure>
-//       </article>
-//     );
-//   }
-// }
-
-// ReactDOM.render(<WelcomeSection />, document.getElementById("welcome-section"));
 
 /*
  ************************************************************************* Projects
@@ -163,10 +146,12 @@ class ProjectList extends React.Component {
       />
     ));
     return (
-      <article className="list-container" id="projects">
-        <SectionHeader title=" My Most Interesting Projects" />
-        {projectComponents}
-      </article>
+      <section className="separate-section" id="projects-section">
+        <article className="list-container" id="projects">
+          <SectionHeader title=" My Most Interesting Projects" />
+          {projectComponents}
+        </article>
+      </section>
     );
   }
 }
@@ -188,8 +173,6 @@ class Project extends React.PureComponent {
   }
 }
 
-ReactDOM.render(<ProjectList />, document.getElementById("projects-section"));
-
 /*
  ****************************************************************** Technical Experience
  */
@@ -207,10 +190,12 @@ class ExperienceList extends React.Component {
       />
     ));
     return (
-      <article className="list-container" id="experience-elements">
-        <SectionHeader title="Technical Experience" />
-        {experienceComponents}
-      </article>
+      <section className="separate-section" id="technical-experience">
+        <article className="list-container" id="experience-elements">
+          <SectionHeader title="Technical Experience" />
+          {experienceComponents}
+        </article>
+      </section>
     );
   }
 };
@@ -294,11 +279,6 @@ class ExperienceDescriptionContainer extends React.PureComponent {
   }
 };
 
-ReactDOM.render(
-  <ExperienceList />,
-  document.getElementById("technical-experience")
-);
-
 /*
  ********************************************************************* Skills
  */
@@ -315,10 +295,12 @@ class SkillList extends React.Component {
       />
     ));
     return (
-      <article className="list-container" id="atomic-skill-container">
-        <SectionHeader title="Skills" />
-        <div id="skills">{skillsComponents}</div>
-      </article>
+      <section className="separate-section" id="skills-section">
+        <article className="list-container" id="atomic-skill-container">
+          <SectionHeader title="Skills" />
+          <div id="skills">{skillsComponents}</div>
+        </article>
+      </section>
     );
   }
 }
@@ -374,8 +356,6 @@ class Skill extends React.Component {
   }
 }
 
-ReactDOM.render(<SkillList />, document.getElementById("skills-section"));
-
 /*
  ************************************************************* Social Links
  */
@@ -393,10 +373,12 @@ class SocialLinksList extends React.Component {
       />
     ));
     return (
-      <article className="list-container" id="links-container">
-        <SectionHeader title="Contact Me" />
-        <div id="social-links">{socialLinksComponents}</div>
-      </article>
+      <section className="separate-section" id="social-links-section">
+        <article className="list-container" id="links-container">
+          <SectionHeader title="Contact Me" />
+          <div id="social-links">{socialLinksComponents}</div>
+        </article>
+      </section>
     );
   }
 }
@@ -415,7 +397,29 @@ const Link = (props) => {
   );
 };
 
-ReactDOM.render(
-  <SocialLinksList />,
-  document.getElementById("social-links-section")
-);
+/** ***************************** Containner/
+*/
+class App extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      welcomeSectionIsVisible: true,
+    };
+    this.hide = this.hide.bind(this);
+  }
+  hide() {
+    this.setState({ welcomeSectionIsVisible: false });
+  }
+  render() {
+    return <>
+      {this.state.welcomeSectionIsVisible && <WelcomeView hide={this.hide} />}
+      <h1 style={{ display: "none" }}> Aris Barlos a Frontend Developer!</h1>
+      <ProjectList />
+      <ExperienceList />
+      <SkillList />
+      <SocialLinksList />
+    </>
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById("main"));
