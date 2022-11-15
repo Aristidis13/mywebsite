@@ -133,7 +133,7 @@ html.hasNoScroll::-webkit-scrollbar {
     font-size: 1.5rem;
     opacity: 0;
     animation: .8s UpAnimation 5s linear forwards;
-
+    cursor: grab;
 }
 
 

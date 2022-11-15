@@ -85,52 +85,68 @@ ReactDOM.render(<Cube />, document.getElementById("header"));
 /********************************************************************** WelcomeSection
 */
 class WelcomeView extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isVisible: true
+    };
+    this.hide = this.hide.bind(this);
+  }
+
+  hide() {
+    this.setState({ isVisible: false });
+  }
+
   render() {
     const welcomeComponents = welcome.map((el) => (
       <Text text={el.text} classNames={"presentation-text"} />
     ));
-    const welcomeComps = welcome.map((sentence) => (
-      sentence.text.split(" ")//<Text text={el.text} classNames={"presentation-text"} />
-    ));
-    console.log(welcomeComps)
+
+
     return (
-      <>
-        <section id="presentation-slide">
-          <div id="text-container"> {welcomeComponents}</div>
-        </section>
-        <span className="button-text"> View My Site!</span>
-      </>)
+      this.state.isVisible ?
+        <div id="welcome-view">
+          <section id="presentation-slide">
+            <div id="text-container"> {welcomeComponents}</div>
+          </section>
+          <span className="button-text" onClick={() => {
+            this.hide();
+            console.log('View my site clicked')
+            console.log('a. The text disappears')
+            console.log('b. The view diasppears')
+          }}> View My Site!</span>
+        </div> : null)
   }
 }
 
-ReactDOM.render(<WelcomeView />, document.getElementById("welcome-view"));
+ReactDOM.render(<WelcomeView />, document.getElementById("welcome"));
 
 /*
  ************************************************************************* Welcome
- */
-class WelcomeSection extends React.Component {
-  render() {
-    const welcomeComponents = welcome.map((el) => (
-      <Text text={el.text} classNames={"presentation-text"} />
-    ));
-    return (
-      <article className="list-container" id="welcome-elements">
-        <SectionHeader title="Welcome" />
-        <div id="text-container"> {welcomeComponents} </div>
-        <figure id="photo-container">
-          <img
-            className="photo"
-            id="personal-photo"
-            src="./photos/Aris_Barlos.jpg"
-            alt="Aris Barlos - Software Engineer"
-          />
-        </figure>
-      </article>
-    );
-  }
-}
+//  */
+// class WelcomeSection extends React.Component {
+//   render() {
+//     const welcomeComponents = welcome.map((el) => (
+//       <Text text={el.text} classNames={"presentation-text"} />
+//     ));
+//     return (
+//       <article className="list-container" id="welcome-elements">
+//         <SectionHeader title="Welcome" />
+//         <div id="text-container"> {welcomeComponents} </div>
+//         <figure id="photo-container">
+//           <img
+//             className="photo"
+//             id="personal-photo"
+//             src="./photos/Aris_Barlos.jpg"
+//             alt="Aris Barlos - Software Engineer"
+//           />
+//         </figure>
+//       </article>
+//     );
+//   }
+// }
 
-ReactDOM.render(<WelcomeSection />, document.getElementById("welcome-section"));
+// ReactDOM.render(<WelcomeSection />, document.getElementById("welcome-section"));
 
 /*
  ************************************************************************* Projects
