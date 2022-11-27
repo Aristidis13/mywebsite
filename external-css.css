@@ -178,6 +178,7 @@ html.hasNoScroll::-webkit-scrollbar {
     opacity: 0;
     animation: .8s UpAnimation 5s linear forwards;
     cursor: grab;
+    align-self: flex-end;
 }
 
 
