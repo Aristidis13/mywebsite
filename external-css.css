@@ -62,7 +62,7 @@ canvas {
 html.hasNoScroll {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    overflow-y: scroll;
+    overflow: scroll;
 }
 
 html.hasNoScroll::-webkit-scrollbar {
@@ -160,11 +160,11 @@ html.hasNoScroll::-webkit-scrollbar {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: end;
-    animation: 3s welcomeAnimation .25s linear forwards;
+    animation: 3s welcomeAnimation ease forwards;
 }
 
 .divAnimation {
-    animation: 3s welcomeOutAnimation .25s linear forwards !important;
+    animation: 3s welcomeOutAnimation 3s ease forwards !important;
 }
 
 #text-container {
@@ -465,6 +465,7 @@ html.hasNoScroll::-webkit-scrollbar {
     font-size: 1.4rem;
     line-height: 1.4rem;
     letter-spacing: 0.125rem;
+    color: white;
 }
 
 .experience-title {
@@ -507,7 +508,8 @@ html.hasNoScroll::-webkit-scrollbar {
 .experience-description {
     font-size: 1.2rem;
     line-height: 2rem;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    color: white;
 }
 
 h4.experience-secondary-title {

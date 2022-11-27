@@ -122,10 +122,10 @@ class WelcomeView extends React.Component {
     this.setState({
       textAnimation: " letterAnimation",
       presentationSlide: " presentation-slide-animation",
-      continueAnimation: " continue-animation"
+      continueAnimation: " continue-animation",
+      divAnimation: " divAnimation"
     })
-    setTimeout(() => this.setState({ divAnimation: " divAnimation" }), 4000)
-    //this.props.hide();
+    // setTimeout(() => this.props.hide(), 4000)
   }
 
   render() {
