@@ -34,22 +34,16 @@ idGiver.counter = 0;
 
 /* Cube Sides */
 const cubeSides = [
-  // {
-  //   id: idGiver(),
-  //   title: "Welcome",
-  //   section: "welcome-section",
-  //   class: "front cubeSide"
-  // },
   {
     id: idGiver(),
     title: "Projects",
-    section: "projects-section",
+    section: "projects",
     class: "front cubeSide"
   },
   {
     id: idGiver(),
     title: "Experience",
-    section: "technical-experience",
+    section: "experience-elements",
     class: "right cubeSide"
   },
   {
@@ -58,12 +52,6 @@ const cubeSides = [
     section: "skills-section",
     class: "left cubeSide"
   },
-  // {
-  //   id: idGiver(),
-  //   title: "News",
-  //   section: "news-section",
-  //   class: "top cubeSide"
-  // },
   {
     id: idGiver(),
     title: "Links",

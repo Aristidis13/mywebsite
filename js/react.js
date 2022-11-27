@@ -110,37 +110,40 @@ class WelcomeView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      textAnimation: " ",
-      divAnimation: " "
+      textAnimation: "",
+      divAnimation: "",
+      presentationSlide: "",
+      continueAnimation: ""
     };
     this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick() {
     this.setState({
-      textAnimation: this.state.textAnimation + " textAnimation",
-      divAnimation: this.state.divAnimation + "divAnimation"
+      textAnimation: " letterAnimation",
+      presentationSlide: " presentation-slide-animation",
+      continueAnimation: " continue-animation"
     })
-    ///this.props.hide();
+    setTimeout(() => this.setState({ divAnimation: " divAnimation" }), 4000)
+    //this.props.hide();
   }
 
   render() {
     const welcomeComponents = welcome.map(sentence => {
       return <Text
         text={createHtmlFromSentence(sentence, this.state.textAnimation)}
-        classNames={"presentation-text"}
+        classNames={"presentation-text " + this.state.presentationSlide}
       />
     });
 
     return (
-      <div id="welcome">
-        <div id="welcome-view" className={this.state.divAnimation}>
-          <section id="presentation-slide">
-            <div id="text-container"> {welcomeComponents}</div>
-          </section>
-          <span className="button-text" onClick={this.handleClick}> View My Site!</span>
-        </div>
-      </div>)
+      <div id="welcome-view" className={this.state.divAnimation}>
+        <section id="presentation-slide">
+          <div id="text-container"> {welcomeComponents}</div>
+        </section>
+        <span className={"button-text " + this.state.continueAnimation} onClick={this.handleClick}> View My Site!</span>
+      </div>
+    )
   }
 }
 
@@ -159,11 +162,9 @@ class ProjectList extends React.Component {
       />
     ));
     return (
-      <section className="separate-section" id="projects-section">
-        <article className="list-container" id="projects">
-          <SectionHeader title=" My Most Interesting Projects" />
-          {projectComponents}
-        </article>
+      <section className="list-container" id="projects">
+        <SectionHeader title=" My Most Interesting Projects" />
+        {projectComponents}
       </section>
     );
   }
@@ -203,11 +204,9 @@ class ExperienceList extends React.Component {
       />
     ));
     return (
-      <section className="separate-section" id="technical-experience">
-        <article className="list-container" id="experience-elements">
-          <SectionHeader title="Technical Experience" />
-          {experienceComponents}
-        </article>
+      <section className="list-container" id="experience-elements">
+        <SectionHeader title="Technical Experience" />
+        {experienceComponents}
       </section>
     );
   }
@@ -308,11 +307,9 @@ class SkillList extends React.Component {
       />
     ));
     return (
-      <section className="separate-section" id="skills-section">
-        <article className="list-container" id="atomic-skill-container">
-          <SectionHeader title="Skills" />
-          <div id="skills">{skillsComponents}</div>
-        </article>
+      <section className="list-container" id="skills-section">
+        <SectionHeader title="Skills" />
+        <div id="skills">{skillsComponents}</div>
       </section>
     );
   }
@@ -386,11 +383,9 @@ class SocialLinksList extends React.Component {
       />
     ));
     return (
-      <section className="separate-section" id="social-links-section">
-        <article className="list-container" id="links-container">
-          <SectionHeader title="Contact Me" />
-          <div id="social-links">{socialLinksComponents}</div>
-        </article>
+      <section className="list-container" id="social-links-section">
+        <SectionHeader title="Contact Me" />
+        <div id="social-links">{socialLinksComponents}</div>
       </section>
     );
   }
