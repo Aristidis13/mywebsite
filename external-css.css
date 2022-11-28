@@ -181,7 +181,6 @@ html.hasNoScroll::-webkit-scrollbar {
     align-self: flex-end;
 }
 
-
 /*--------------------------------------------- Main General Settings and Custom Cursor ----------------------------------------*/
 .section-header {
     color: white;
@@ -274,9 +273,9 @@ html.hasNoScroll::-webkit-scrollbar {
     transform-style: preserve-3d;
     width: var(--side);
     height: var(--side);
-    animation: spin 30s infinite linear;
     margin: 0;
     padding: 0;
+    transition: 1s transform ease
 }
 
 .cubeSide {
@@ -286,11 +285,6 @@ html.hasNoScroll::-webkit-scrollbar {
     width: var(--side);
     height: var(--side);
     background-color: aliceblue;
-}
-
-/*Added with React to pause the animation*/
-.pausedAnimation {
-    animation-play-state: paused !important;
 }
 
 .front {
@@ -330,16 +324,6 @@ html.hasNoScroll::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotateY(0deg);
-    }
-
-    100% {
-        transform: rotateY(360deg);
-    }
 }
 
 /*--------------------------------------------- Welcome Section ----------------------------------------------*/
@@ -709,8 +693,6 @@ h4.experience-secondary-title {
 
     #navbar {
         perspective: 20rem;
-        justify-content: center;
-        align-items: center;
     }
 
     /*Projects Section*/
