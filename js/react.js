@@ -26,41 +26,33 @@ class Cube extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      className: ""
+      spin: 0,
+      degrees: '',
     };
-    this.handlePointerDown = this.handlePointerDown.bind(this);
-    this.handlePointerUp = this.handlePointerUp.bind(this);
   }
 
-  handlePointerDown() {
-    this.setState({ className: "pausedAnimation" });
+  componentDidMount() {
+    setInterval(() => {
+      const state = this.state;
+      this.setState({ spin: state.spin + 90 });
+      this.setState({ degrees: 'rotateY(' + this.state.spin + 'deg)' });
+    }, 3000);
   }
 
-  handlePointerUp() {
-    this.setState({ className: "" });
-  }
-
-  render() {
-    const sides = cubeSides.map((side) => (
-      <CubeSide
-        id={"cubeSide-" + side.id}
-        title={side.title}
-        section={side.section}
-        classNames={side.class}
-      />
-    ));
-    return (
-      <nav
-        id="navbar"
-        onPointerDown={this.handlePointerDown}
-        onPointerUp={this.handlePointerUp}
-      >
-        <ul id="cube" className={this.state.className}>
-          {sides}
-        </ul>
-      </nav>
-    );
-  }
+  render = () => (
+    <nav id="navbar">
+      <ul id="cube" style={{ transform: this.state.degrees }}>
+        {cubeSides.map((side) => (
+          <CubeSide
+            id={"cubeSide-" + side.id}
+            title={side.title}
+            section={side.section}
+            classNames={side.class}
+          />
+        ))}
+      </ul>
+    </nav>
+  );
 }
 
 class CubeSide extends React.PureComponent {
