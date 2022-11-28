@@ -275,9 +275,14 @@ class ExperienceDescriptionContainer extends React.PureComponent {
         {this.props.description}
         <a
           className="link experience-link"
-          href={this.props.link}
+          href={this.props.link[0]}
           target="_blank"
-        > {this.props.link} </a>
+        > {this.props.link[0]} </a>
+        <a
+          className="link experience-link"
+          href={this.props.link[1]}
+          target="_blank"
+        > {this.props.link[1]} </a>
       </Text>
     )
   }

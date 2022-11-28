@@ -100,32 +100,6 @@ const projects = [
       "I created this project for the Java course at my University. The user amongst other functionalities can post, like a post, comment, message, and add friends. This project was my first introduction to Object-Oriented Programming and Design.",
     link: "https://github.com/Aristidis13/Social-Network"
   },
-  {
-    id: idGiver(),
-    title: "Linux Bash Scripting (&) awk)",
-    description:
-      "A Bash Script that performs a multitude of calculations in a log file using awk and sed and presents the results. It was a part of a lengthier project that focused on teaching the basics of Operating Systems. It offered a great introduction to Linux Commands and Bash Scripting. You can find each file for this project in my Github.",
-    link: "https://github.com/Aristidis13/Bash_Scripting"
-  },
-  /*	{
-    "id": idGiver(),
-    "title": "Flex-Bison Parser and Lexicological Analyser",
-    "description": "A custom compiler that accepts as input a JSON file that contains multiple tweets, retweets, and extended tweets and finds what fields are missing or have different values from the expected. I built this with C and created the Lexicological Analyzer with Flex and the parser with Bison (former YACC).",
-    "link": "https://github.com/Aristidis13/Flex-and-Bison-Parser"
-  },
-  {
-    "id": idGiver(),
-    "title": "Parallellization with C++ OpenMP Framework",
-    "description": "The project examines four parallelization schedules and their speed for a non-distributed workload with the OpenMP Framework and C++ as the programming language. Additionally, I optimized the assigned codebase, for speed and performance.",
-    "link" :"https://github.com/Aristidis13/Parallellization-with-OpenMP-Framework/"
-  }, */
-  {
-    id: idGiver(),
-    title: "MySQL Database Expansion",
-    description:
-      "A project about relational MySQL Database handling and Databases in general. It's an expansion of a given e-recruitment system to fulfill the needs of recruiters and candidates. I used a plethora of CREATE statements, insertions, selects, triggers, and stored procedures.",
-    link: "https://github.com/Aristidis13/MySQL-database-expansion"
-  }
 ];
 
 /* EXPERIENCE */
@@ -139,8 +113,8 @@ const experience = [
     dateStart: "Sep 2020",
     dateEnd: "Present",
     description:
-      "I always take the opportunity to explore new technologies and therefore expand my collection of Certifications. My most precious is the Diploma in Computer Science (Integrated Master), which I obtained in September 2020. I also like the Certification in Responsive Web Design from freecodecamp, after attending the lessons and doing all the projects. Certifications are not the holy grail of mastering skills but are a great way to personally assess if you have a certain level of competence in a new skill. I'm not actively collecting more right now but expect more in the future.",
-    link: "https://www.freecodecamp.org/certification/aristidis13/responsive-web-design"
+      "I always take the opportunity to explore new technologies and therefore expand my collection of Certifications. My most precious is the Diploma in Computer Science (Integrated Master), which I obtained in September 2020. I also like the Certifications in Responsive Web Design and JavaScript from freecodecamp, after attending the lessons and doing all the projects. Certifications are not the holy grail of mastering skills but are a great way to personally assess if you have a certain level of competence in a new skill.",
+    link: ["https://www.freecodecamp.org/certification/aristidis13/responsive-web-design", "https://www.freecodecamp.org/certification/aristidis13/javascript-algorithms-and-data-structures"]
   },
   {
     id: idGiver(),
@@ -214,7 +188,7 @@ const skills = [
     title: "JavaScript ES6+",
     image: "/skills/javascript.svg",
     description:
-      "A language I have used many times, I comprehend and aim to perfect in the future.",
+      "The language I have used countless times professionally and for side projects.",
     url: "https://www.javascript.com/"
   },
   {
@@ -225,20 +199,27 @@ const skills = [
       "A library I have used in my previous job and in college. jQuery is easy to understand and program with it although React and other JS Frameworks are more hot.",
     url: "https://jquery.com/"
   },
-  /* {
+  {
     "id": idGiver(),
     "title": "Node.js",
     "image": "/skills/node.svg",
     "description": "As part of either MERN or MEAN stack, I prefer to use Node.js for the back-end of websites and apps alongside React and MongoDB.",
-    "url" :"https://nodejs.org/en/"
-  },/*
+    "url": "https://nodejs.org/en/"
+  },
   {
     "id": idGiver(),
     "title": "MongoDB",
     "image": "/skills/mongodb.svg",
     "description": "A modern solution in Database Design that rapidly expands due to its flexibility and scalability. I use it, alongside the other parts of the MERN stack.",
-    "link": "https://www.mongodb.com/"
-  }, */
+    "url": "https://www.mongodb.com/"
+  },
+  {
+    "id": idGiver(),
+    "title": "MySQL",
+    "image": "/skills/mysql.svg",
+    "description": "The first Query language I worked on back in my college days. I built projects and had fun playing with it",
+    url: "https://www.mysql.com/"
+  },
   {
     id: idGiver(),
     title: "WordPress",
@@ -262,6 +243,22 @@ const skills = [
     description:
       "Bootstrap was the first Framework I used. I rarely use it anymore since I use Grid and Flexbox themselves. Nonetheless, Bootstrap is still a viable option for quick layouts.",
     url: "https://getbootstrap.com/"
+  },
+  {
+    id: idGiver(),
+    title: "Material UI",
+    image: "/skills/material-ui.svg",
+    description:
+      "I used Material UI in many projects professionnal or not because it offers a variety of modern prebuilt components library.",
+    url: "https://mui.com/"
+  },
+  {
+    id: idGiver(),
+    title: "Ant Design",
+    image: "/skills/ant-design.svg",
+    description:
+      "Ant Design is an enterprise-class UI design language and React UI library with a set of high-quality React components and completely free.My favorite component library.",
+    url: "https://ant.design/"
   },
   {
     id: idGiver(),
@@ -294,25 +291,24 @@ const skills = [
     description:
       "A version control system I pair with Github and has saved my projects. I use it within my VS Code, but I can handle terminal commands too.",
     url: "https://git-scm.com/"
+  },
+  {
+    id: idGiver(),
+    title: "Webpack",
+    image: "/skills/webpack.svg",
+    description:
+      "Webpack is a free and open-source module bundler for JS. It is made primarily for JS, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included.",
+    url: "https://webpack.js.org/"
+  },
+  {
+    id: idGiver(),
+    title: "Express JS",
+    image: "/skills/express-js.svg",
+    description:
+      "Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+    url: "https://expressjs.com/"
   }
 ];
-
-// const books = [
-//   {
-//     id: idGiver(),
-//     title: "Using SVGs with HTML5 and CSS3",
-//     url: "https://www.amazon.com/Using-SVG-CSS3-HTML5-Graphics-ebook/dp/B076HZ31YZ/ref=sr_1_1?keywords=using+svg+with+html5+and+css3&qid=1637525631&sr=8-1",
-//     description:
-//       "A complete and extremely helpful book that gives valuable knowledge of SVG and its animations.",
-//   },
-//   {
-//     id: idGiver(),
-//     title: "Fullstack React: The Complete Guide to ReactJS and Friends",
-//     url: "https://www.amazon.com/Fullstack-React-Complete-ReactJS-Friends/dp/0991344626/ref=sr_1_1?keywords=fullstack+react&qid=1637524475&sr=8-1",
-//     description:
-//       "A React Book for React Beginners that teaches the fundamentals of React, Redux and more.",
-//   }
-// ];
 
 /* SOCIAL LINKS */
 
