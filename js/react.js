@@ -213,6 +213,7 @@ class ExperienceElement extends React.Component {
   handleToggle() {
     this.setState({ isActive: !this.state.isActive })
   }
+
   render() {
     return (
       <section
@@ -273,16 +274,13 @@ class ExperienceDescriptionContainer extends React.PureComponent {
     return this.props.isActive && (
       <Text classNames="experience-description">
         {this.props.description}
-        <a
-          className="link experience-link"
-          href={this.props.link[0]}
-          target="_blank"
-        > {this.props.link[0]} </a>
-        <a
-          className="link experience-link"
-          href={this.props.link[1]}
-          target="_blank"
-        > {this.props.link[1]} </a>
+        {this.props.link.map(urlInArr =>
+          <a
+            className="link experience-link"
+            href={urlInArr}
+            target="_blank"
+          > {urlInArr} </a>)
+        }
       </Text>
     )
   }

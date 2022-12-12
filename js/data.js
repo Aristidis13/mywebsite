@@ -123,7 +123,7 @@ const experience = [
     dateStart: "April 2022",
     dateEnd: "Present",
     description: "Using React, Material UI, Ant Design, Redux, Redux-Saga, and a plethora of JS libraries, I create new Views and aesthetic UIs to transition this great Greek Bank to new heights. Although the work is challenging, the working environment is pleasant, and the projects are interesting. I saw a new world of problems, challenges, and ways to think with a complex banking system that requires adequate knowledge in Programming and Banking Business Knowledge. Also, I learn how a big company works, and have collaborated with smart and knowledgeable people. Did I mentioned that working in Agile Actors is an honor and a previledge and that they also hire entry-level programmers?",
-    link: "https://www.agileactors.com/"
+    link: ["https://www.agileactors.com/"]
   },
   {
     id: idGiver(),
@@ -133,7 +133,7 @@ const experience = [
     dateEnd: "Sep 2021",
     description:
       "3CP Digital Agency is a company based in Patras, Greece. I created, maintained, and expanded a plethora of sites. I used custom code to make sliders, carousels, and more in a very professional and fast-paced environment. Alongside custom code, I learned how WordPress works under the hood. This company was also the start of my corporate experience.",
-    link: "https://3cp.gr/"
+    link: ["https://3cp.gr/"]
   },
   {
     id: idGiver(),
@@ -143,7 +143,7 @@ const experience = [
     dateEnd: "Sep 2020",
     description:
       "In my studies at the University oF Patras, I learned how to learn and found my interest in programming. I evolved as a human being and realized that continuous learning, will be an X-Factor for my success in business and life. My studies there had many different projects and theoretical knowledge. They helped me understand how to program and what it takes to be a great programmer. I had fun and built a plethora of programs. Did I mention I met amazing people there, too?",
-    link: "https://www.ceid.upatras.gr/en"
+    link: ["https://www.ceid.upatras.gr/en"]
   }
 ];
 
