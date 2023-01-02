@@ -178,7 +178,27 @@ html.hasNoScroll::-webkit-scrollbar {
     opacity: 0;
     animation: .8s UpAnimation 5s linear forwards;
     cursor: grab;
+    color: var(--blue-secondary);
     align-self: flex-end;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.button-text::after {
+    color: var(--blue-secondary);
+    content: "";
+    transition: .2s all linear;
+    width: 0;
+    margin: 0 auto;
+    height: 2px;
+    display: block;
+    background-color: var(--blue-secondary);
+}
+
+.button-text:hover::after,
+.button-text:active::after,
+.button-text:focus::after {
+    width: 100%;
 }
 
 /*--------------------------------------------- Main General Settings and Custom Cursor ----------------------------------------*/
