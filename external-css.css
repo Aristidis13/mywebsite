@@ -144,7 +144,7 @@ canvas {
     right: 0;
     left: 0;
     margin: 0;
-    z-index: 1;
+    z-index: 2;
     background-color: var(--mainTextColor);
     color: var(--red-secondary);
     display: flex;
@@ -222,6 +222,7 @@ canvas {
     bottom: 2rem;
     right: 2rem;
     border-radius: 50%;
+    z-index: 1;
     width: 4rem;
     height: 4rem;
     animation: ripple 1.5s linear infinite;
