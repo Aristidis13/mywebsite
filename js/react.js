@@ -117,7 +117,7 @@ class WelcomeView extends React.Component {
       continueAnimation: " continue-animation",
       divAnimation: " divAnimation"
     })
-    // setTimeout(() => this.props.hide(), 4000)
+    document.documentElement.style.overflowY = "scroll"
   }
 
   render() {

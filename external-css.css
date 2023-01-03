@@ -59,16 +59,6 @@ canvas {
 }
 
 /*---------------------------------------------------Welcome View --------------------------------------------------------------*/
-html.hasNoScroll {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    overflow: scroll;
-}
-
-html.hasNoScroll::-webkit-scrollbar {
-    display: none;
-}
-
 /*Animates letters*/
 .letterAnimation {
     animation: 4s letterAnimation .5s linear forwards;
