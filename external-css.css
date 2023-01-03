@@ -133,6 +133,7 @@ canvas {
 #presentation-slide {
     display: flex;
     justify-content: center;
+    max-height: 98%;
 }
 
 #welcome-view {
