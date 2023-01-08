@@ -69,7 +69,7 @@ const projects = [
     title: "Dog App",
     coreTechnologies: new Set(['React', 'TypeScript']),
     description:
-      "This app provides an abundant pictures of our best friends from dog API. The user can search Dog Races and find mesmerizing or strange photos of that race or its subcategories.",
+      "This app provides abundant pictures of our best friends from dog API. The user can search Dog Races and find mesmerizing or strange photos of that race or its subcategories.",
     link: "https://github.com/Aristidis13/dogs"
   },
   {
