@@ -430,12 +430,22 @@ canvas {
     text-align: center;
     font-size: 2.5rem;
     font-family: Archivo, "sans-serif";
+    margin-bottom: 0;
+}
+
+.project-subtitle {
+    margin-top: .5rem;
+    color: var(--red-secondary);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Archivo, "sans-serif";
 }
 
 .project-description {
     text-align: justify;
     text-justify: distribute;
     font-size: 1.3rem;
+    margin-top: 0;
     font-family: 'Playfair Display', serif;
 }
 
@@ -481,13 +491,16 @@ canvas {
 
 .experience-main-title,
 .experience-link {
-    text-decoration: underline;
+    /*    text-decoration: underline;
+ */
     color: var(--red-secondary);
     cursor: grab;
     margin: 0;
     width: fit-content;
     transition: color .6s ease-in-out;
     display: block;
+    width: 100%;
+    text-align: center;
     word-break: break-all;
     padding-bottom: 1rem;
 }
@@ -507,13 +520,17 @@ canvas {
     line-height: 2rem;
     margin-bottom: 1rem;
     color: white;
+    text-align: justify;
+    text-justify: inter-character;
+    text-indent: 2rem;
 }
 
 h4.experience-secondary-title {
     color: #706f6f;
     text-decoration: none;
     font-size: 1.1rem;
-    margin: 2% 0;
+    margin: 0 0 2%;
+    text-align: center;
 }
 
 .exp-text-container {
@@ -586,6 +603,8 @@ h4.experience-secondary-title {
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
     color: var(--mainTextColor);
 }
 
@@ -610,13 +629,6 @@ h4.experience-secondary-title {
     font-family: Archivo, "serif";
     font-weight: 900;
     font-size: 2rem;
-}
-
-.skill-url {
-    color: var(--mainTextColor);
-    display: block;
-    margin-top: 4%;
-    word-break: break-all;
 }
 
 /*--------------------------------------------------- Social Links ------------------------------------------------*/
@@ -695,7 +707,6 @@ h4.experience-secondary-title {
 @media screen and (min-width:360px) and (max-width:700px) {
     html {
         font-size: 10px;
-
     }
 
     /*Header*/
@@ -753,6 +764,10 @@ h4.experience-secondary-title {
         width: 100%;
     }
 
+    .skill-text {
+        font-size: 2.1rem;
+    }
+
     /*Social Links*/
     #social-links {
         padding-bottom: 8rem;
@@ -782,6 +797,10 @@ h4.experience-secondary-title {
         flex: 1;
         padding: 4rem 0;
         height: auto;
+    }
+
+    .skill-text {
+        font-size: 1.5rem;
     }
 
     .skill-image {
