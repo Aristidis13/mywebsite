@@ -121,12 +121,10 @@ class WelcomeView extends React.Component {
   }
 
   render() {
-    const welcomeComponents = welcome.map(sentence => {
-      return <Text
-        text={createHtmlFromSentence(sentence, this.state.textAnimation)}
-        classNames={"presentation-text " + this.state.presentationSlide}
-      />
-    });
+    const welcomeComponents = welcome.map(sentence => <Text
+      text={createHtmlFromSentence(sentence, this.state.textAnimation)}
+      classNames={"presentation-text " + this.state.presentationSlide}
+    />);
 
     return (
       <div id="welcome-view" className={this.state.divAnimation}>
@@ -151,6 +149,7 @@ class ProjectList extends React.Component {
         title={project.title}
         description={project.description}
         link={project.link}
+        coreSkills={project.coreTechnologies}
       />
     ));
     return (
@@ -163,6 +162,15 @@ class ProjectList extends React.Component {
 }
 
 class Project extends React.PureComponent {
+  constructor() {
+    super();
+    this.makeSkills = this.makeSkills.bind(this);
+  }
+  makeSkills() {
+    let coreTechnologiesAsStr = "";
+    this.props.coreSkills.forEach(skill => coreTechnologiesAsStr += skill + ', ');
+    return coreTechnologiesAsStr.substring(0, coreTechnologiesAsStr.length - 2);
+  }
   render() {
     return (
       <section className="atomic-project" id={this.props.id}>
@@ -170,6 +178,7 @@ class Project extends React.PureComponent {
           <section className="project-info">
             <h3 className="project-title"> {this.props.title}</h3>
             <Text classNames="project-description">
+              <h4 className="project-subTitle"><i>{this.makeSkills()}</i></h4>
               {this.props.description}
             </Text>
           </section>
@@ -270,17 +279,25 @@ class ExperienceTitleContainer extends React.PureComponent {
 };
 
 class ExperienceDescriptionContainer extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.createLinks = this.createLinks.bind(this);
+  }
+
+  createLinks() {
+    let linksAsJSX = [];
+    for (let link of this.props.link.entries()) {
+      linksAsJSX.push(<a className="link experience-link" href={link[1]} target="_blank"> {link[0]}</a>);
+    }
+    console.log(linksAsJSX);
+    return linksAsJSX;
+  }
+
   render() {
     return this.props.isActive && (
       <Text classNames="experience-description">
         {this.props.description}
-        {this.props.link.map(urlInArr =>
-          <a
-            className="link experience-link"
-            href={urlInArr}
-            target="_blank"
-          > {urlInArr} </a>)
-        }
+        {this.props.link !== null && this.createLinks()}
       </Text>
     )
   }
@@ -351,9 +368,6 @@ class Skill extends React.Component {
           <h3 className="skill-title"> {this.props.title} </h3>
           <div className="skill-description">
             {this.props.description}
-            <a className="skill-url" href={this.props.url} target="_blank">
-              {this.props.url}
-            </a>
           </div>
         </figcaption>
       </figure>
