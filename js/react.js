@@ -40,9 +40,9 @@ class Cube extends React.Component {
   render = () => (
     <nav id="navbar">
       <ul id="cube" style={{ transform: this.state.degrees }}>
-        {cubeSides.map((side) => (
+        {cubeSides.map((side, id) => (
           <CubeSide
-            id={"cubeSide-" + side.id}
+            id={"cubeSide-" + id}
             title={side.title}
             section={side.section}
             classNames={side.class}
@@ -142,9 +142,9 @@ class WelcomeView extends React.Component {
 
 class ProjectList extends React.Component {
   render() {
-    const projectComponents = projects.map((project) => (
+    const projectComponents = projects.map((project, id) => (
       <Project
-        id={"project-" + project.id}
+        id={"project-" + id}
         title={project.title}
         description={project.description}
         link={project.link}
@@ -192,9 +192,9 @@ class Project extends React.PureComponent {
  */
 class ExperienceList extends React.Component {
   render() {
-    const experienceComponents = experience.map((experienceElement) => (
+    const experienceComponents = experience.map((experienceElement, idx) => (
       <ExperienceElement
-        id={"experience-element-" + experienceElement.id}
+        id={"experience-element-" + idx}
         title={experienceElement.title}
         subtitle={experienceElement.subtitle}
         dateStart={experienceElement.dateStart}
@@ -303,9 +303,9 @@ class ExperienceDescriptionContainer extends React.PureComponent {
 
 class SkillList extends React.Component {
   render() {
-    const skillsComponents = skills.map((skill) => (
+    const skillsComponents = skills.map((skill, id) => (
       <Skill
-        id={skill.id}
+        id={'skill-' + id}
         title={skill.title}
         url={skill.url}
         image={skill.image}
@@ -375,9 +375,9 @@ class Skill extends React.Component {
 
 class SocialLinksList extends React.Component {
   render() {
-    const socialLinksComponents = socialLinks.map((socialLink) => (
+    const socialLinksComponents = socialLinks.map((socialLink, id) => (
       <Link
-        id={"socialLink-" + socialLink.id}
+        id={"socialLink-" + id}
         title={socialLink.title}
         url={socialLink.url}
         image={socialLink.image}
