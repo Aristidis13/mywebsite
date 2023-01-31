@@ -233,45 +233,35 @@ const skills = [
 ];
 
 /* SOCIAL LINKS */
-
-idGiver.counter = 0; // Restarts Counter
-const socialLinksLinkClass = "link link-container social-link";
-const socialLinksTextClass = "social-link-title";
-
 const socialLinks = [
   {
-    id: idGiver(),
     title: "Github",
     url: "https://github.com/Aristidis13/",
-    linkClass: socialLinksLinkClass,
-    textClass: socialLinksTextClass
+    linkClass: "link link-container social-link",
+    textClass: "social-link-title"
   },
   {
-    id: idGiver(),
     title: "LinkedIn",
     url: "https://www.linkedin.com/in/aris-barlos-69a3b8153/",
-    linkClass: socialLinksLinkClass,
-    textClass: socialLinksTextClass
+    linkClass: "link link-container social-link",
+    textClass: "social-link-title"
   },
   {
-    id: idGiver(),
     title: "Email Me",
     url: "mailto:contact@arisbarlos.com",
-    linkClass: socialLinksLinkClass,
-    textClass: socialLinksTextClass
+    linkClass: "link link-container social-link",
+    textClass: "social-link-title"
   },
   {
-    id: idGiver(),
     title: "Facebook",
     url: "https://www.facebook.com/people/Aris-Barlos/100009788894945/",
-    linkClass: socialLinksLinkClass,
-    textClass: socialLinksTextClass
+    linkClass: "link link-container social-link",
+    textClass: "social-link-title"
   },
   {
-    id: idGiver(),
     title: "Fiverr",
     url: "https://www.fiverr.com/arisbarlos?up_rollout=true",
-    linkClass: socialLinksLinkClass,
-    textClass: socialLinksTextClass
+    linkClass: "link link-container social-link",
+    textClass: "social-link-title"
   }
 ];
