@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
 /** *********************************************************************** Intro
  */
 class Text extends React.PureComponent {
@@ -121,7 +119,8 @@ class WelcomeView extends React.Component {
   }
 
   render() {
-    const welcomeComponents = welcome.map(sentence => <Text
+    const welcomeComponents = welcome.map((sentence, index) => <Text
+      key={"welcome-" + index}
       text={createHtmlFromSentence(sentence, this.state.textAnimation)}
       classNames={"presentation-text " + this.state.presentationSlide}
     />);
@@ -252,16 +251,12 @@ class ExperienceTimePeriod extends React.PureComponent {
   }
 };
 
-class ExperienceDecorationContainer extends React.PureComponent {
-  render() {
-    return (
-      <div className="decoration-container">
-        <div className="dec-bullet"></div>
-        <div className="line"></div>
-      </div>
-    );
-  }
-};
+const ExperienceDecorationContainer = () => (
+  <div className="decoration-container">
+    <div className="dec-bullet"></div>
+    <div className="line"></div>
+  </div>
+);
 
 class ExperienceTitleContainer extends React.PureComponent {
   render() {
@@ -289,7 +284,6 @@ class ExperienceDescriptionContainer extends React.PureComponent {
     for (let link of this.props.link.entries()) {
       linksAsJSX.push(<a className="link experience-link" href={link[1]} target="_blank"> {link[0]}</a>);
     }
-    console.log(linksAsJSX);
     return linksAsJSX;
   }
 

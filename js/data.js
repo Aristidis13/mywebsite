@@ -8,44 +8,36 @@ idGiver.counter = 0;
 
 const welcome = [
   {
-    id: idGiver(),
     text: "Hi! I'm Aris Barlos and welcome to my website."
   },
   {
-    id: idGiver(),
     text: "Currently, I work at \"Eurobank Ergasias\", one of the four systemic banks of Greece as a frontend developer."
   },
   {
-    id: idGiver(),
     text: "When I have spare time, I read books about programming or finance, play basketball and do personal projects for commercial use or fun."
   }
 ];
 
-/* Re-initialize counter */
-idGiver.counter = 0;
+
 
 /* Cube Sides */
 const cubeSides = [
   {
-    id: idGiver(),
     title: "Projects",
     section: "projects",
     class: "front cubeSide"
   },
   {
-    id: idGiver(),
     title: "Experience",
     section: "experience-elements",
     class: "right cubeSide"
   },
   {
-    id: idGiver(),
     title: "My Skills",
     section: "skills-section",
     class: "left cubeSide"
   },
   {
-    id: idGiver(),
     title: "Links",
     section: "social-links-section",
     class: "back cubeSide"
@@ -53,19 +45,14 @@ const cubeSides = [
 ];
 
 /* PROJECTS */
-
-idGiver.counter = 0;
-
 const projects = [
   {
-    id: idGiver(),
     title: "Mifid II",
     coreTechnologies: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
     description: "A 6-month work that solves a real-world problem for \"Eurobank Ergasias\" Bank. I developed the front end as part of a broader AGILE team. The user selects Investment Categories, answers questions that test his knowledge / experience, and signs the on-the-fly created document with the answers.",
     link: null
   },
   {
-    id: idGiver(),
     title: "Dog App",
     coreTechnologies: new Set(['React', 'TypeScript']),
     description:
@@ -73,7 +60,6 @@ const projects = [
     link: "https://github.com/Aristidis13/dogs"
   },
   {
-    id: idGiver(),
     title: "Crowdsource Analysis Website",
     coreTechnologies: new Set(['HTML5', 'PHP7', 'JavaScript', 'Chart.js', 'MySQL7']),
     description:
@@ -81,7 +67,6 @@ const projects = [
     link: "https://github.com/Aristidis13/Crowdsourcing-project"
   },
   {
-    id: idGiver(),
     title: "React Calculator",
     coreTechnologies: new Set(['React', 'JavaScript', 'Redux']),
     description:
@@ -89,7 +74,6 @@ const projects = [
     link: "https://github.com/Aristidis13/react-calculator"
   },
   {
-    id: idGiver(),
     title: "Social Media Network",
     coreTechnologies: new Set(['Java7']),
     description:
@@ -99,11 +83,8 @@ const projects = [
 ];
 
 /* EXPERIENCE */
-idGiver.counter = 0;
-
 const experience = [
   {
-    id: idGiver(),
     title: "Certifications",
     subtitle: "My Most Important",
     dateStart: "Sep 2020",
@@ -116,7 +97,6 @@ const experience = [
     ])
   },
   {
-    id: idGiver(),
     title: "Frontend Developer at Agile Actors",
     subtitle: "Contractor at Eurobank Ergasias",
     dateStart: "April 2022",
@@ -125,7 +105,6 @@ const experience = [
     link: null
   },
   {
-    id: idGiver(),
     title: "Frontend Developer in 3CP Digital Agency",
     subtitle: "Using Frontend Languages and Wordpress",
     dateStart: "Jan 2021",
@@ -135,7 +114,6 @@ const experience = [
     link: null
   },
   {
-    id: idGiver(),
     title: "Student at Computer Engineering and Informatics Department",
     subtitle: "University of Patras",
     dateStart: "Sep 2013",
@@ -147,126 +125,106 @@ const experience = [
 ];
 
 /* SKILLS */
-idGiver.counter = 0; // Restarts Counter
-
 const skills = [
   {
-    id: idGiver(),
     title: "React",
     image: "skills/react.svg",
     description:
       "Component-based and a powerful library that I use every day at work and for personal projects.",
   },
   {
-    id: idGiver(),
     title: "TypeScript",
     image: "/skills/typescript.svg",
     description:
       "A language I've used and like. I wish there was more TypeScript in the world. :)",
   },
   {
-    id: idGiver(),
     title: "CSS3",
     image: "/skills/css3.svg",
     description:
       "Having written thousands of lines, I firmly believe that CSS is one of the most important parts of every UI.",
   },
   {
-    id: idGiver(),
     title: "HTML5",
     image: "/skills/html5.svg",
     description:
       "Easy to learn, but hard to master, especially ARIA, Canvas API, and SVG Attributes.",
   },
   {
-    id: idGiver(),
     title: "JavaScript ES6+",
     image: "/skills/javascript.svg",
     description:
       "I've used JS countless times professionally and for personal projects.",
   },
   {
-    id: idGiver(),
     title: "jQuery",
     image: "/skills/jquery.svg",
     description: "A library I have used in my previous job and in college.",
   },
   {
-    "id": idGiver(),
     "title": "Node.js",
     "image": "/skills/node.svg",
     "description": "I prefer to use Node.js for the back-end of websites and apps alongside React and MongoDB.",
   },
   {
-    "id": idGiver(),
     "title": "MongoDB",
     "image": "/skills/mongodb.svg",
     "description": "A modern solution in Database Design that rapidly expands due to its flexibility and scalability.",
   },
   {
-    "id": idGiver(),
     "title": "MySQL",
     "image": "/skills/mysql.svg",
     "description": "The first Query-DataBase language I learned and used for the Database Design lab in the University.",
   },
   {
-    id: idGiver(),
     title: "Bulma",
     image: "/skills/bulma.svg",
     description:
       "A lightweight CSS framework I used on my previous website. Currently, I just use Grid or Flexbox. :)",
   },
   {
-    id: idGiver(),
     title: "Material UI",
     image: "/skills/material-ui.svg",
     description:
       "I use Material UI profesionally alongside Ant Design because it offers a variety of modern prebuilt components.",
   },
   {
-    id: idGiver(),
     title: "Ant Design",
     image: "/skills/ant-design.svg",
     description:
       "Ant Design is my favorite React UI library. It has an impressive set of high-quality and performant React components.",
   },
   {
-    id: idGiver(),
     title: "SEO",
     image: "/skills/seo.svg",
     description:
       "I learned SEO for completing my Thesis at University. I can comprehend the basics as a programmer or content creator.",
   },
   {
-    id: idGiver(),
     title: "PHP",
     image: "/skills/php.svg",
     description:
       "PHP was the first server language I understood. Nowadays, I have switched to NodeJS.",
   },
   {
-    id: idGiver(),
     title: "Java",
     image: "/skills/java.svg",
     description:
       "I learned Java during my college years, built a 3-person project alone, and understood OOP concepts.",
   },
   {
-    id: idGiver(),
     title: "Git",
     image: "/skills/git.svg",
     description:
       "A version control system I pair with Github. They have saved my projects many times. :)",
   },
   {
-    id: idGiver(),
     title: "Webpack 5",
     image: "/skills/webpack.svg",
     description:
       "I got interested to learn how Webpack works and found many utilities that made my life easier in a difficult personal project.",
   },
   {
-    id: idGiver(),
     title: "Express",
     image: "/skills/express-js.svg",
     description:
