@@ -15,7 +15,6 @@ html {
     --red-secondary: rgb(199, 43, 65);
     --mainTextColor: #ececec;
     --anime-color: rgba(199, 43, 65, 0.3);
-    --news-section-width: 70%;
     --startAnimation: 3s color: var(--mainTextColor);
 }
 
@@ -40,7 +39,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    font-family: 'Playfair Display', 'Open Sans', 'Archivo', sans-serif;
+    font-family: 'Playfair Display', 'Archivo', sans-serif;
     margin: 0;
     width: 80%;
     display: flex;
