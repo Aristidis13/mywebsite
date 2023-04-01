@@ -8,7 +8,7 @@ idGiver.counter = 0;
 
 const welcome = [
   {
-    text: "Hi! I'm Aris Barlos and welcome to my website."
+    text: "Hi, I'm Aris and welcome to my website!"
   },
   {
     text: "Currently, I work at \"Eurobank Ergasias\", one of the four systemic banks of Greece as a frontend developer."
@@ -38,7 +38,7 @@ const cubeSides = [
     class: "left cubeSide"
   },
   {
-    title: "Links",
+    title: "Contact",
     section: "social-links-section",
     class: "back cubeSide"
   }
@@ -65,20 +65,6 @@ const projects = [
     description:
       "My first Web Development project ever! The user (amongst other functionalities) can upload files with his google location history data and see charts and heatmaps with the results of the uploads.",
     link: "https://github.com/Aristidis13/Crowdsourcing-project"
-  },
-  {
-    title: "React Calculator",
-    coreTechnologies: new Set(['React', 'JavaScript', 'Redux']),
-    description:
-      "The user can perform a plethora of calculations and see the results.",
-    link: "https://github.com/Aristidis13/react-calculator"
-  },
-  {
-    title: "Social Media Network",
-    coreTechnologies: new Set(['Java7']),
-    description:
-      "My introduction to Object-Oriented Programming. The user can use this CLI to post, like, comment, message other users, add friends, and more.",
-    link: "https://github.com/Aristidis13/Social-Network"
   },
 ];
 
@@ -130,7 +116,7 @@ const skills = [
     title: "React",
     image: "skills/react.svg",
     description:
-      "Component-based and a powerful library that I use every day at work and for personal projects.",
+      "I prefer to write plain React apps but I've also incorporated React Component libraries like Material UI and Ant Design.",
   },
   {
     title: "TypeScript",
@@ -142,7 +128,7 @@ const skills = [
     title: "CSS3",
     image: "/skills/css3.svg",
     description:
-      "Having written thousands of lines, I firmly believe that CSS is one of the most important parts of every UI.",
+      "I can play with plain CSS, Sass and CSS Frameworks, to improve the aesthetics of any UI.",
   },
   {
     title: "HTML5",
@@ -151,7 +137,7 @@ const skills = [
       "Easy to learn, but hard to master, especially ARIA, Canvas API, and SVG Attributes.",
   },
   {
-    title: "JavaScript ES6+",
+    title: "JavaScript",
     image: "/skills/javascript.svg",
     description:
       "I've used JS countless times professionally and for personal projects.",
@@ -161,39 +147,21 @@ const skills = [
     image: "/skills/jquery.svg",
     description: "A library I have used in my previous job and in college.",
   },
-  {
-    "title": "Node.js",
-    "image": "/skills/node.svg",
-    "description": "I prefer to use Node.js for the back-end of websites and apps alongside React and MongoDB.",
-  },
-  {
-    "title": "MongoDB",
-    "image": "/skills/mongodb.svg",
-    "description": "A modern solution in Database Design that rapidly expands due to its flexibility and scalability.",
-  },
-  {
-    "title": "MySQL",
-    "image": "/skills/mysql.svg",
-    "description": "The first Query-DataBase language I learned and used for the Database Design lab in the University.",
-  },
-  {
-    title: "Bulma",
-    image: "/skills/bulma.svg",
-    description:
-      "A lightweight CSS framework I used on my previous website. Currently, I just use Grid or Flexbox. :)",
-  },
-  {
-    title: "Material UI",
-    image: "/skills/material-ui.svg",
-    description:
-      "I use Material UI profesionally alongside Ant Design because it offers a variety of modern prebuilt components.",
-  },
-  {
-    title: "Ant Design",
-    image: "/skills/ant-design.svg",
-    description:
-      "Ant Design is my favorite React UI library. It has an impressive set of high-quality and performant React components.",
-  },
+  // {
+  //   "title": "Node.js",
+  //   "image": "/skills/node.svg",
+  //   "description": "I prefer to use Node.js for the back-end of websites and apps alongside React and MongoDB.",
+  // },
+  // {
+  //   "title": "MongoDB",
+  //   "image": "/skills/mongodb.svg",
+  //   "description": "A modern solution in Database Design that rapidly expands due to its flexibility and scalability.",
+  // },
+  // {
+  //   "title": "MySQL",
+  //   "image": "/skills/mysql.svg",
+  //   "description": "The first Query-DataBase language I learned and used for the Database Design lab in the University.",
+  // },
   {
     title: "SEO",
     image: "/skills/seo.svg",
@@ -201,35 +169,23 @@ const skills = [
       "I learned SEO for completing my Thesis at University. I can comprehend the basics as a programmer or content creator.",
   },
   {
-    title: "PHP",
-    image: "/skills/php.svg",
-    description:
-      "PHP was the first server language I understood. Nowadays, I have switched to NodeJS.",
-  },
-  {
-    title: "Java",
-    image: "/skills/java.svg",
-    description:
-      "I learned Java during my college years, built a 3-person project alone, and understood OOP concepts.",
-  },
-  {
     title: "Git",
     image: "/skills/git.svg",
     description:
-      "A version control system I pair with Github. They have saved my projects many times. :)",
+      "A version control system I paired with Github / Bitbucket / Azure Repos. Saved my projects many times. :)",
   },
-  {
-    title: "Webpack 5",
-    image: "/skills/webpack.svg",
-    description:
-      "I got interested to learn how Webpack works and found many utilities that made my life easier in a difficult personal project.",
-  },
-  {
-    title: "Express",
-    image: "/skills/express-js.svg",
-    description:
-      "Express is a flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
-  }
+  // {
+  //   title: "Webpack 5",
+  //   image: "/skills/webpack.svg",
+  //   description:
+  //     "I got interested to learn how Webpack works and found many utilities that made my life easier in a difficult personal project.",
+  // },
+  // {
+  //   title: "Express",
+  //   image: "/skills/express-js.svg",
+  //   description:
+  //     "Express is a flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+  // }
 ];
 
 /* SOCIAL LINKS */
@@ -252,16 +208,4 @@ const socialLinks = [
     linkClass: "link link-container social-link",
     textClass: "social-link-title"
   },
-  {
-    title: "Facebook",
-    url: "https://www.facebook.com/people/Aris-Barlos/100009788894945/",
-    linkClass: "link link-container social-link",
-    textClass: "social-link-title"
-  },
-  {
-    title: "Fiverr",
-    url: "https://www.fiverr.com/arisbarlos?up_rollout=true",
-    linkClass: "link link-container social-link",
-    textClass: "social-link-title"
-  }
 ];
