@@ -74,27 +74,6 @@ ReactDOM.render(<Cube />, document.getElementById("header"));
 
 /********************************************************************** WelcomeSection
 */
-class Word extends React.PureComponent {
-  render() {
-    return (
-      <span className="word">
-        {
-          this.props.word
-            .split("")
-            .map(letter => <span className={"letter " + this.props.textAnimation}>
-              {letter}
-            </span>)}
-      </span>
-    );
-  }
-}
-
-const createHtmlFromSentence = (sentence, textAnimation) => sentence
-  .text
-  .split(" ")
-  .map(word =>
-    <Word word={word} textAnimation={textAnimation} />
-  )
 
 class WelcomeView extends React.Component {
   constructor(props) {
@@ -121,7 +100,7 @@ class WelcomeView extends React.Component {
   render() {
     const welcomeComponents = welcome.map((sentence, index) => <Text
       key={"welcome-" + index}
-      text={createHtmlFromSentence(sentence, this.state.textAnimation)}
+      text={<span className={`word ${this.state.textAnimation}`}> {sentence.text} </span>}
       classNames={"presentation-text " + this.state.presentationSlide}
     />);
 
