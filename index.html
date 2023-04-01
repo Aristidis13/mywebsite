@@ -2,32 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" style="overflow: hidden">
 
 <head>
-    <script async>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-T5VXKJM');
-    </script> <!-- Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P6M3NX6WNH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P6M3NX6WNH');
+    </script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!--Babel-->
     <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-    <!--React-->
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-    <!--ReactDOM-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Software Engineer - Aris Barlos</title>
     <meta name="description"
-        content="Hi, I'm Aris Barlos, a software Developer with an extreme level of interest in building projects for Frontend Web Development Applications. I also build apps for fun and to explore many different methodologies and programming concepts. If you have time, hop in.">
+        content="Hi, I'm Aris Barlos, a Frontend Engineer that loves building projects with JS Frameworks, mostly React. If you have time, hop in.">
     <link rel="stylesheet" href="external-css.css" type="text/css"> <!-- My Stylesheet-->
     <link rel="canonical" href="/" />
     <link href="#" rel="shortcut icon" type="image/x-icon" />
