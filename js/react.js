@@ -89,7 +89,6 @@ class WelcomeView extends React.Component {
 
   handleClick() {
     this.setState({
-      textAnimation: " letterAnimation",
       presentationSlide: " presentation-slide-animation",
       continueAnimation: " continue-animation",
       divAnimation: " divAnimation"
@@ -100,7 +99,7 @@ class WelcomeView extends React.Component {
   render() {
     const welcomeComponents = welcome.map((sentence, index) => <Text
       key={"welcome-" + index}
-      text={<span className={`word ${this.state.textAnimation}`}> {sentence.text} </span>}
+      text={<span className={`word `}> {sentence.text} </span>}
       classNames={"presentation-text " + this.state.presentationSlide}
     />);
 
