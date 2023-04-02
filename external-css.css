@@ -164,7 +164,7 @@ canvas {
 }
 
 .button-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
     opacity: 0;
     animation: .8s UpAnimation 5s linear forwards;
     cursor: grab;
@@ -364,13 +364,9 @@ canvas {
     transform-style: preserve-3d;
     display: inline-block;
     padding-left: 1rem;
+    font-size: 3rem;
+    font-weight: 600
 }
-
-.letter {
-    transform-origin: bottom right;
-    display: inline-block;
-}
-
 
 /*Photo section settings*/
 #photo-container {
@@ -633,7 +629,7 @@ h4.experience-secondary-title {
 /*--------------------------------------------------- Social Links ------------------------------------------------*/
 #social-links {
     display: grid;
-    grid: "area1 area1 void1 area2 area2" auto "void2 area3 area3 area3 void3" auto "area4 area4 void4 area5 area5" auto /20% 20% 20% 20% 20%;
+    grid: "area1 area1 void1 area2 area2" auto "void2 area3 area3 area3 void3" auto /20% 20% 20% 20% 20%;
     justify-items: center;
 }
 
@@ -653,14 +649,6 @@ h4.experience-secondary-title {
     grid-area: area3;
 }
 
-#socialLink-3 {
-    grid-area: area4;
-}
-
-#socialLink-4 {
-    grid-area: area5;
-}
-
 .link-container {
     text-decoration: none;
 }
@@ -671,24 +659,19 @@ h4.experience-secondary-title {
 }
 
 .link-container:hover {
-    animation: socialTextTransforms 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) .1s forwards;
+    animation: socialTextTransforms 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s both;
 }
 
 /*Animation*/
 @keyframes socialTextTransforms {
-    25% {
+    33% {
         transform: translateX(10%) scale(2, 2);
-        color: rgb(255, 0, 0);
+        color: var(--mainTextColor);
     }
 
-    50% {
-        transform: translateX(10%) scale(2, 1);
-        color: yellow;
-    }
-
-    75% {
-        transform: translateX(50%) scale(2, 2);
-        color: rgb(25, 194, 61);
+    67% {
+        transform: translateX(-10%) scale(2, 1);
+        color: var(--blue-secondary);
     }
 
     100% {

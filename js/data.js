@@ -12,9 +12,6 @@ const welcome = [
   },
   {
     text: "Currently, I work at \"Eurobank Ergasias\", one of the four systemic banks of Greece as a frontend developer."
-  },
-  {
-    text: "When I have spare time, I read books about programming or finance, play basketball and do personal projects for commercial use or fun."
   }
 ];
 
@@ -71,19 +68,7 @@ const projects = [
 /* EXPERIENCE */
 const experience = [
   {
-    title: "Certifications",
-    subtitle: "My Most Important",
-    dateStart: "Sep 2020",
-    dateEnd: "Present",
-    description: "",
-    link: new Map([
-      ["Integrated Master from C.E.I.D", '../files/Diploma.pdf'],
-      ["Responsive Web Design", "https://www.freecodecamp.org/certification/aristidis13/responsive-web-design"],
-      ["JavaScript Algorithms An Data Structures", "https://www.freecodecamp.org/certification/aristidis13/javascript-algorithms-and-data-structures"]
-    ])
-  },
-  {
-    title: "Frontend Developer at Agile Actors",
+    title: "Frontend Engineer at Agile Actors",
     subtitle: "Contractor at Eurobank Ergasias",
     dateStart: "April 2022",
     dateEnd: "Present",
@@ -106,7 +91,7 @@ const experience = [
     dateEnd: "Sep 2020",
     description:
       "In my studies at the University oF Patras, I learned how to learn, found my interest in coding, evolved as a person and realized that continuous learning, will be an X-Factor for success in business and life. My studies helped me understand how to program and what it takes to be good at this field. I had fun, built a plethora of programs, and met amazing people. :)",
-    link: new Map([["Computer Engineering and Informatics Department (C.E.I.D)", "https://www.ceid.upatras.gr/en"]])
+    link: new Map([["Integrated Master from C.E.I.D", '../files/Diploma.pdf']])
   }
 ];
 
@@ -134,7 +119,7 @@ const skills = [
     title: "HTML5",
     image: "/skills/html5.svg",
     description:
-      "Easy to learn, but hard to master, especially ARIA, Canvas API, and SVG Attributes.",
+      "Easy to learn, but hard to master, especially ARIA, and Canvas API.",
   },
   {
     title: "JavaScript",
@@ -147,45 +132,12 @@ const skills = [
     image: "/skills/jquery.svg",
     description: "A library I have used in my previous job and in college.",
   },
-  // {
-  //   "title": "Node.js",
-  //   "image": "/skills/node.svg",
-  //   "description": "I prefer to use Node.js for the back-end of websites and apps alongside React and MongoDB.",
-  // },
-  // {
-  //   "title": "MongoDB",
-  //   "image": "/skills/mongodb.svg",
-  //   "description": "A modern solution in Database Design that rapidly expands due to its flexibility and scalability.",
-  // },
-  // {
-  //   "title": "MySQL",
-  //   "image": "/skills/mysql.svg",
-  //   "description": "The first Query-DataBase language I learned and used for the Database Design lab in the University.",
-  // },
-  {
-    title: "SEO",
-    image: "/skills/seo.svg",
-    description:
-      "I learned SEO for completing my Thesis at University. I can comprehend the basics as a programmer or content creator.",
-  },
   {
     title: "Git",
     image: "/skills/git.svg",
     description:
       "A version control system I paired with Github / Bitbucket / Azure Repos. Saved my projects many times. :)",
   },
-  // {
-  //   title: "Webpack 5",
-  //   image: "/skills/webpack.svg",
-  //   description:
-  //     "I got interested to learn how Webpack works and found many utilities that made my life easier in a difficult personal project.",
-  // },
-  // {
-  //   title: "Express",
-  //   image: "/skills/express-js.svg",
-  //   description:
-  //     "Express is a flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
-  // }
 ];
 
 /* SOCIAL LINKS */
