@@ -8,10 +8,10 @@ idGiver.counter = 0;
 
 const welcome = [
   {
-    text: "Hi, I'm Aris and welcome to my website!"
+    text: "Welcome, I'm Aris! Thanks for passing by!"
   },
   {
-    text: "Currently, I work at \"Eurobank Ergasias\", one of the four systemic banks of Greece as a frontend developer."
+    text: "Currently, I work at \"Eurobank Ergasias\", as a Frontend Engineer."
   }
 ];
 
@@ -46,7 +46,7 @@ const projects = [
   {
     title: "Mifid II",
     coreTechnologies: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
-    description: "A 6-month work that solves a real-world problem for \"Eurobank Ergasias\" Bank. I developed the front end as part of a broader AGILE team. The user selects Investment Categories, answers questions that test his knowledge / experience, and signs the on-the-fly created document with the answers.",
+    description: "A 6-month work that solves a real-world problem for \"Eurobank Ergasias\" Bank. I developed all the views as a part of a broader AGILE team. The user selects Investment Categories, answers questions that test his investing experience, and signs the on-the-fly created document with the answers.",
     link: null
   },
   {
@@ -110,10 +110,10 @@ const skills = [
       "A language I've used and like. I wish there was more TypeScript in the world. :)",
   },
   {
-    title: "CSS3",
+    title: "CSS",
     image: "/skills/css3.svg",
     description:
-      "I can play with plain CSS, Sass and CSS Frameworks, to improve the aesthetics of any UI.",
+      "I can play with plain CSS3, Sass and CSS Frameworks, to improve the aesthetics of any UI.",
   },
   {
     title: "HTML5",
