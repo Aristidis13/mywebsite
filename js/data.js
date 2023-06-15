@@ -50,11 +50,17 @@ const projects = [
     link: null
   },
   {
+    title: "Jira substitute",
+    coreTechnologies: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
+    description: "A first step to the creation of an internal communication network for \"Eurobank Ergasias\" Bank with the goal to replace Jira, and save millions to the bank for the Jira usage. I developed almost all views and functionalities here too in the frontend. The user based on his role(s) can see a DashBoard with Analytics, filter and sort requests and make requests for different types of transactions.",
+    link: null
+  },
+  {
     title: "Dog App",
     coreTechnologies: new Set(['React', 'TypeScript']),
     description:
       "This app provides abundant pictures of our best friends from dog API. The user can search Dog Races and find mesmerizing or strange photos of that race or its subcategories.",
-    link: "https://github.com/Aristidis13/dogs"
+    link: "https://aristidis13.github.io/dogs/"
   },
   {
     title: "Crowdsource Analysis Website",
