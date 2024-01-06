@@ -48,13 +48,13 @@ const projects = [
     coreTechnologies: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
     description: "A 6-month work that solves a real-world problem for \"Eurobank Ergasias\" Bank. I developed all the views as a part of a broader AGILE team. The user selects Investment Categories, answers questions that test his investing experience, and signs the on-the-fly created document with the answers.",
     id: "mifid",
-    link: "/projects",
+    link: "/projects#mifid",
   },
   {
     title: "Jira replacement for Imports",
     coreTechnologies: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
     description: "A first step to the creation of an internal communication network for \"Eurobank Ergasias\" Bank with the goal to replace Jira, and save millions to the bank for the Jira usage. I developed almost all views and functionalities here too in the frontend. The user based on his role(s) can see a DashBoard with Analytics, filter and sort requests and make requests for different types of transactions.",
-    link: null
+    link: "/projects#jira"
   },
   {
     title: "Dog App",
