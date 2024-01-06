@@ -167,3 +167,28 @@ const socialLinks = [
     textClass: "social-link-title"
   },
 ];
+
+const baseUrl = 'http://127.0.0.1:5500'
+/* SOCIAL LINKS */
+const demoUrls = [
+  {
+    title: "Mifid Questionnaire",
+    id: "mifid",
+    url: baseUrl + "/projects/mifid.webm"
+  },
+  {
+    title: "Eurobank Jira replacement for Imports",
+    id: "jira",
+    url: baseUrl + "/jira"
+  },
+  {
+    title: "Cip Enhancement",
+    id: "cip",
+    url: baseUrl + "/cip"
+  },
+  {
+    title: "Suitability Questionnaire",
+    id: "suitability",
+    url: baseUrl + "/suitability"
+  },
+];

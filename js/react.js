@@ -1,77 +1,3 @@
-/** *********************************************************************** Intro
- */
-class Text extends React.PureComponent {
-  render() {
-    return (
-      <p className={"text " + this.props.classNames} id={this.props.propId}>
-        {this.props.text || this.props.children}
-      </p>
-    );
-  }
-};
-class SectionHeader extends React.PureComponent {
-  render() {
-    return (
-      <h2
-        className="section-header"
-        id={this.props.id}>
-        {this.props.title}
-      </h2>);
-  }
-}
-
-class Cube extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      spin: 0,
-      degrees: '',
-    };
-  }
-
-  componentDidMount() {
-    setInterval(() => {
-      const state = this.state;
-      this.setState({ spin: state.spin + 90 });
-      this.setState({ degrees: 'rotateY(' + this.state.spin + 'deg)' });
-    }, 3000);
-  }
-
-  render = () => (
-    <nav id="navbar">
-      <ul id="cube" style={{ transform: this.state.degrees }}>
-        {cubeSides.map((side, id) => (
-          <CubeSide
-            id={"cubeSide-" + id}
-            title={side.title}
-            section={side.section}
-            classNames={side.class}
-          />
-        ))}
-      </ul>
-    </nav>
-  );
-}
-
-class CubeSide extends React.PureComponent {
-  render() {
-    return (
-      <li className={this.props.classNames}>
-        <a
-          className="link list-item"
-          id={this.props.id}
-          href={"#" + this.props.section}
-          rel="nofollow"
-        >
-          <h2 className="nav-title"> {this.props.title}</h2>
-        </a>
-      </li>
-    );
-  }
-}
-
-ReactDOM.render(<Cube />, document.getElementById("header"));
-
 /********************************************************************** WelcomeSection
 */
 
@@ -111,57 +37,6 @@ class WelcomeView extends React.Component {
         <span className={"button-text " + this.state.continueAnimation} onClick={this.handleClick}> View My Site!</span>
       </div>
     )
-  }
-}
-
-/*
- ************************************************************************* Projects
- */
-
-class ProjectList extends React.Component {
-  render() {
-    const projectComponents = projects.map((project, id) => (
-      <Project
-        id={"project-" + id}
-        title={project.title}
-        description={project.description}
-        link={project.link}
-        coreSkills={project.coreTechnologies}
-      />
-    ));
-    return (
-      <section className="list-container" id="projects">
-        <SectionHeader title=" My Most Interesting Projects" />
-        {projectComponents}
-      </section>
-    );
-  }
-}
-
-class Project extends React.PureComponent {
-  constructor() {
-    super();
-    this.makeSkills = this.makeSkills.bind(this);
-  }
-  makeSkills() {
-    let coreTechnologiesAsStr = "";
-    this.props.coreSkills.forEach(skill => coreTechnologiesAsStr += skill + ', ');
-    return coreTechnologiesAsStr.substring(0, coreTechnologiesAsStr.length - 2);
-  }
-  render() {
-    return (
-      <section className="atomic-project" id={this.props.id}>
-        <a href={this.props.link} target="_blank">
-          <section className="project-info">
-            <h3 className="project-title"> {this.props.title}</h3>
-            <Text classNames="project-description">
-              <h4 className="project-subTitle"><i>{this.makeSkills()}</i></h4>
-              {this.props.description}
-            </Text>
-          </section>
-        </a>
-      </section>
-    );
   }
 }
 
@@ -411,4 +286,5 @@ class App extends React.PureComponent {
   }
 }
 
+ReactDOM.render(<Cube />, document.getElementById("header"))
 ReactDOM.render(<App />, document.getElementById("main"));
