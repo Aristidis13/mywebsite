@@ -62,3 +62,31 @@
     margin-top: 0;
     font-family: 'Playfair Display', serif;
 }
+
+@media screen and (min-width:360px) and (max-width:700px) {
+    #projects {
+        justify-content: center;
+    }
+
+    .atomic-project {
+        width: 80%;
+        padding: 5% 10%;
+        margin-bottom: 10%;
+    }
+
+    .atomic-project:nth-child(4n+2),
+    .atomic-project:nth-child(2n+3),
+    .atomic-project:nth-child(4n+4) {
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width:1000px) {
+    .atomic-project {
+        width: 65%;
+    }
+
+    .atomic-project:hover {
+        box-shadow: inset 65vw 0 1px 0 rgba(51, 68, 119, .5);
+    }
+}

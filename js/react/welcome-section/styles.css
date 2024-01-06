@@ -1,3 +1,91 @@
+@keyframes UpAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#presentation-slide {
+    display: flex;
+    justify-content: center;
+    max-height: 98%;
+}
+
+#welcome-view {
+    transform-style: preserve-3d;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    z-index: 2;
+    background-color: var(--mainTextColor);
+    color: var(--red-secondary);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: end;
+    animation: 3s welcomeAnimation ease forwards;
+}
+
+.divAnimation {
+    animation: 3s welcomeOutAnimation 3s ease forwards !important;
+}
+
+.letterAnimation {
+    animation: 4s letterAnimation .5s linear forwards;
+}
+
+.continue-animation {
+    animation-fill-mode: backwards !important;
+}
+
+@keyframes letterAnimation {
+    0% {
+        transform: perspective(500px) rotateX(0deg) rotate(5deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: perspective(50px) rotateX(360deg) rotate(5deg);
+    }
+}
+
+/*Animates the paragraphs*/
+.presentation-slide-animation {
+    transform: perspective(300px) translate3d(0, 0, 550px) rotate(25deg);
+    transition: 4s transform ease;
+}
+
+@keyframes welcomeAnimation {
+    from {
+        width: 0;
+        padding: 0;
+        right: 100%;
+    }
+
+    to {
+        right: 0;
+        padding: 2% 4%;
+    }
+}
+
+@keyframes welcomeOutAnimation {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
 #welcome-elements>.section-header {
     grid-area: title;
 }

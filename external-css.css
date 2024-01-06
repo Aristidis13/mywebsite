@@ -58,55 +58,6 @@ canvas {
 }
 
 /*---------------------------------------------------Welcome View --------------------------------------------------------------*/
-/*Animates letters*/
-.letterAnimation {
-    animation: 4s letterAnimation .5s linear forwards;
-}
-
-.continue-animation {
-    animation-fill-mode: backwards !important;
-}
-
-@keyframes letterAnimation {
-    0% {
-        transform: perspective(500px) rotateX(0deg) rotate(5deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: perspective(50px) rotateX(360deg) rotate(5deg);
-    }
-}
-
-/*Animates the paragraphs*/
-.presentation-slide-animation {
-    transform: perspective(300px) translate3d(0, 0, 550px) rotate(25deg);
-    transition: 4s transform ease;
-}
-
-@keyframes welcomeAnimation {
-    from {
-        width: 0;
-        padding: 0;
-        right: 100%;
-    }
-
-    to {
-        right: 0;
-        padding: 2% 4%;
-    }
-}
-
-@keyframes welcomeOutAnimation {
-    from {
-        right: 0;
-    }
-
-    to {
-        right: 100%;
-    }
-}
-
 @keyframes TextFadeAnimation {
     0% {
         opacity: 0;
@@ -115,46 +66,6 @@ canvas {
     100% {
         opacity: 1;
     }
-}
-
-@keyframes UpAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(20px)
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-#presentation-slide {
-    display: flex;
-    justify-content: center;
-    max-height: 98%;
-}
-
-#welcome-view {
-    transform-style: preserve-3d;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: 0;
-    z-index: 2;
-    background-color: var(--mainTextColor);
-    color: var(--red-secondary);
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: end;
-    animation: 3s welcomeAnimation ease forwards;
-}
-
-.divAnimation {
-    animation: 3s welcomeOutAnimation 3s ease forwards !important;
 }
 
 #text-container {
@@ -270,7 +181,6 @@ canvas {
         font-size: 10px;
     }
 
-    /*Header*/
     :root {
         --side: 8rem;
     }
@@ -278,69 +188,10 @@ canvas {
     #navbar {
         perspective: 20rem;
     }
-
-    /*Projects Section*/
-    #projects {
-        justify-content: center;
-    }
-
-    .atomic-project {
-        width: 80%;
-        padding: 5% 10%;
-        margin-bottom: 10%;
-    }
-
-    .atomic-project:nth-child(4n+2),
-    .atomic-project:nth-child(2n+3),
-    .atomic-project:nth-child(4n+4) {
-        justify-self: center;
-    }
-
-    /*Technical Experience*/
-    .experience-element-container {
-        grid: "time" auto "title" auto "description" auto "decoration" auto / 100%;
-        justify-content: center;
-    }
-
-    .time-period {
-        margin: 1rem 0;
-    }
-
-    .dec-bullet {
-        display: none;
-    }
-
-    .decoration-container {
-        margin-bottom: 1.5rem;
-    }
-
-    .line {
-        height: 2px;
-        background-color: var(--mainTextColor);
-        width: 100%;
-    }
-
-    /*Social Links*/
-    #social-links {
-        padding-bottom: 8rem;
-    }
-
-    .social-link-title {
-        font-size: 2rem;
-    }
 }
 
 @media screen and (min-width: 700px) and (max-width:1000px) {
     html {
         font-size: 13px;
-    }
-
-    /*Project*/
-    .atomic-project {
-        width: 65%;
-    }
-
-    .atomic-project:hover {
-        box-shadow: inset 65vw 0 1px 0 rgba(51, 68, 119, .5);
     }
 }
