@@ -1,5 +1,5 @@
-/** *********************************************************************** Intro
- */
+/*Class components that are reusable between different folders and modules across pages*/
+
 class Text extends React.PureComponent {
     render() {
         return (
@@ -19,3 +19,17 @@ class SectionHeader extends React.PureComponent {
             </h2>);
     }
 }
+
+const Link = (props) => {
+    return (
+        <a
+            className={props.linkClass}
+            id={props.id}
+            href={props.url}
+            target="_blank"
+            rel="nofollow"
+        >
+            <p className={props.textClass}>{props.title}</p>
+        </a>
+    );
+};

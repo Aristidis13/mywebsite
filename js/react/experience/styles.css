@@ -1,0 +1,116 @@
+/*--------------------------------------------- Technical Experience -----------------------------------------*/
+.exp-text-constainer {
+    padding-bottom: 1rem;
+}
+
+#experience-elements {
+    width: 100%
+}
+
+.experience-element-container {
+    display: grid;
+    grid: "time decoration title" auto "time decoration description" auto / 20% 10% 70%;
+    width: 100%;
+}
+
+/*Time Period Container*/
+.time-period {
+    grid-area: time;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.125rem;
+    color: white;
+}
+
+.experience-title {
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.experience-main-title {
+    font-family: Archivo, "sans-serif";
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.125rem;
+    font-weight: 400;
+}
+
+.experience-main-title,
+.experience-link {
+    /*    text-decoration: underline;
+ */
+    color: var(--red-secondary);
+    cursor: grab;
+    margin: 0;
+    width: fit-content;
+    transition: color .6s ease-in-out;
+    display: block;
+    width: 100%;
+    text-align: center;
+    word-break: break-all;
+    padding-bottom: 1rem;
+}
+
+
+.experience-main-title:hover,
+.experience-link:hover,
+.experience-main-title:active,
+.experience-link:active,
+.experience-main-title:focus,
+.experience-link:focus {
+    color: var(--blue-secondary);
+}
+
+.experience-description {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-align: justify;
+    text-justify: inter-character;
+    text-indent: 2rem;
+}
+
+h4.experience-secondary-title {
+    color: #706f6f;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0 0 2%;
+    text-align: center;
+}
+
+.exp-text-container {
+    flex: 4;
+    grid-area: title;
+    margin-bottom: .5rem;
+}
+
+/*Last Box Settings*/
+.exp-text-container:last-child {
+    padding-bottom: 0;
+}
+
+.decoration-container {
+    grid-area: decoration;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dec-bullet {
+    width: 1.125rem;
+    height: 1.125rem;
+    background-color: var(--mainTextColor);
+    border-radius: 50%;
+    align-self: center;
+}
+
+.line {
+    width: 0.125rem;
+    height: 100%;
+    background-color: var(--mainTextColor);
+}

@@ -1,0 +1,29 @@
+#welcome-elements>.section-header {
+    grid-area: title;
+}
+
+#welcome-elements {
+    display: grid;
+    grid: "title title title" auto "text void photo" auto / 60% 10% 30%;
+}
+
+#text-container {
+    grid-area: text;
+    margin: 0;
+}
+
+.presentation-text {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 0 1.5rem;
+    letter-spacing: .15em;
+    font-size: 1.5rem;
+}
+
+.word {
+    transform-style: preserve-3d;
+    display: inline-block;
+    padding-left: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600
+}

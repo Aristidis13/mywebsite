@@ -1,3 +1,9 @@
+/*--------------------------------------------- Projects Section CSS -----------------------------------------*/
+#projects {
+    display: grid;
+    text-decoration: none;
+}
+
 /*Project Class*/
 .atomic-project {
     width: 45%;

@@ -1,0 +1,53 @@
+/*--------------------------------------------------- Social Links ------------------------------------------------*/
+#social-links {
+    display: grid;
+    grid: "area1 area1 void1 area2 area2" auto "void2 area3 area3 area3 void3" auto /20% 20% 20% 20% 20%;
+    justify-items: center;
+}
+
+#links-container {
+    flex: 1;
+}
+
+#socialLink-0 {
+    grid-area: area1;
+}
+
+#socialLink-1 {
+    grid-area: area2;
+}
+
+#socialLink-2 {
+    grid-area: area3;
+}
+
+.link-container {
+    text-decoration: none;
+}
+
+.social-link-title {
+    font-size: 3rem;
+    letter-spacing: .25rem;
+}
+
+.link-container:hover {
+    animation: socialTextTransforms 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s both;
+}
+
+/*Animation*/
+@keyframes socialTextTransforms {
+    33% {
+        transform: translateX(10%) scale(2, 2);
+        color: var(--mainTextColor);
+    }
+
+    67% {
+        transform: translateX(-10%) scale(2, 1);
+        color: var(--blue-secondary);
+    }
+
+    100% {
+        transform: translateX(0) scale(2, 2);
+        color: grey;
+    }
+}
