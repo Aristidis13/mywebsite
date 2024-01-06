@@ -4,9 +4,9 @@
 
 class ProjectList extends React.Component {
     render() {
-        const projectComponents = projects.map((project, id) => (
+        const projectComponents = projects.map((project) => (
             <Project
-                id={"project-" + id}
+                id={"project-" + project.id}
                 title={project.title}
                 description={project.description}
                 link={project.link}
@@ -23,8 +23,8 @@ class ProjectList extends React.Component {
 }
 
 class Project extends React.PureComponent {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.makeSkills = this.makeSkills.bind(this);
     }
     makeSkills() {
@@ -48,5 +48,3 @@ class Project extends React.PureComponent {
         );
     }
 }
-
-ReactDOM.render(<ProjectList />, document.getElementById("header"));

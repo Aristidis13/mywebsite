@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" style="overflow: hidden">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
     <!-- Google tag (gtag.js) -->
@@ -17,15 +17,18 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script type="text/babel" src="/js/react/reusable-classes/index.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Aris Barlos - Projects</title>
     <meta name="description"
         content="Hi, I'm Aris Barlos, a Frontend Engineer that loves building projects with JS Frameworks, mostly React. If you have time, hop in.">
-    <link rel="stylesheet" href="../external-css.css" type="text/css"> <!-- My Stylesheet-->
+    <link rel="stylesheet" href="/external-css.css" type="text/css"> <!-- My Stylesheet-->
+    <link rel="stylesheet" href="/js/react/header/styles.css" type="text/css"> <!-- Header Cube CSS-->
+    <link rel="stylesheet" href="/js/react/project-demos/styles.css" type="text/css"> <!-- Project Demos-->
     <link rel="canonical" href="/" />
     <link href="#" rel="shortcut icon" type="image/x-icon" />
-    <link rel="icon" type="image/svg+xml" href="../photos/logo.svg">
+    <link rel="icon" type="image/svg+xml" href="/photos/logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Archivo:wght@200&display=swap"
@@ -33,15 +36,16 @@
 </head>
 
 <body>
-    <a href="#header" rel="nofollow" id="back-to-top"> <img src="../photos/up.svg"></a>
+    <a href="#header" rel="nofollow" id="back-to-top"> <img src="/photos/up.svg"></a>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-P6M3NX6WNH" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <header id="header"></header>
     <div id="intro"><canvas id="intro-canvas"></canvas></div>
     <main id="main"></main>
-    <script type="text/babel" src="../js/react-projects.js"></script>
-    <script src="../js/canvas.js" async></script>
-    <script src="../js/data.js"></script>
+    <script type="text/babel" src="/js/react/header/index.js"></script>
+    <script type="text/babel" src="/js/react/project-demos/index.js"></script>
+    <script src="/js/canvas.js" async></script>
+    <script src="/js/data.js"></script>
 </body>
 
 </html>

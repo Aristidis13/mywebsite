@@ -44,13 +44,14 @@ const cubeSides = [
 /* PROJECTS */
 const projects = [
   {
-    title: "Mifid II",
+    title: "Mifid II Questionnaire",
     coreTechnologies: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
     description: "A 6-month work that solves a real-world problem for \"Eurobank Ergasias\" Bank. I developed all the views as a part of a broader AGILE team. The user selects Investment Categories, answers questions that test his investing experience, and signs the on-the-fly created document with the answers.",
-    link: null
+    id: "mifid",
+    link: "/projects",
   },
   {
-    title: "Jira substitute",
+    title: "Jira replacement for Imports",
     coreTechnologies: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
     description: "A first step to the creation of an internal communication network for \"Eurobank Ergasias\" Bank with the goal to replace Jira, and save millions to the bank for the Jira usage. I developed almost all views and functionalities here too in the frontend. The user based on his role(s) can see a DashBoard with Analytics, filter and sort requests and make requests for different types of transactions.",
     link: null
@@ -97,7 +98,7 @@ const experience = [
     dateEnd: "Sep 2020",
     description:
       "In my studies at the University oF Patras, I learned how to learn, found my interest in coding, evolved as a person and realized that continuous learning, will be an X-Factor for success in business and life. My studies helped me understand how to program and what it takes to be good at this field. I had fun, built a plethora of programs, and met amazing people. :)",
-    link: new Map([["Integrated Master from C.E.I.D", '../files/Diploma.pdf']])
+    link: new Map([["Integrated Master from C.E.I.D", '/files/Diploma.pdf']])
   }
 ];
 
@@ -168,27 +169,26 @@ const socialLinks = [
   },
 ];
 
-const baseUrl = 'http://127.0.0.1:5500'
-/* SOCIAL LINKS */
+/* Project Links */
 const demoUrls = [
   {
-    title: "Mifid Questionnaire",
+    title: "Mifid II Questionnaire",
     id: "mifid",
-    url: baseUrl + "/projects/mifid.webm"
+    url: "/projects/mifid.webm"
   },
   {
     title: "Eurobank Jira replacement for Imports",
     id: "jira",
-    url: baseUrl + "/jira"
+    url: "/projects/jira.webm"
   },
   {
     title: "Cip Enhancement",
     id: "cip",
-    url: baseUrl + "/cip"
+    url: "/projects/cip.webm"
   },
   {
     title: "Suitability Questionnaire",
     id: "suitability",
-    url: baseUrl + "/suitability"
+    url: "/projects/suitability.webm"
   },
 ];
