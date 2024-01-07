@@ -57,6 +57,7 @@ ReactDOM.render(
             url='/'
             linkClass="link link-container return-to-main-link"
             textClass="text-link-title"
+            willOpenSelf
         />
         : <Cube />,
     document.getElementById("header"));
