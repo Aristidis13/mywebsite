@@ -44,27 +44,31 @@ const cubeSides = [
 /* PROJECTS */
 const projects = [
   {
-    title: "Mifid II",
-    coreTechnologies: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
+    id: "mifid",
+    title: "Mifid II Questionnaire",
+    coreSkills: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
     description: "A 6-month work that solves a real-world problem for \"Eurobank Ergasias\" Bank. I developed all the views as a part of a broader AGILE team. The user selects Investment Categories, answers questions that test his investing experience, and signs the on-the-fly created document with the answers.",
-    link: null
+    link: "/projects#mifid",
   },
   {
-    title: "Jira substitute",
-    coreTechnologies: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
+    id: "jira",
+    title: "Jira replacement for Imports",
+    coreSkills: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
     description: "A first step to the creation of an internal communication network for \"Eurobank Ergasias\" Bank with the goal to replace Jira, and save millions to the bank for the Jira usage. I developed almost all views and functionalities here too in the frontend. The user based on his role(s) can see a DashBoard with Analytics, filter and sort requests and make requests for different types of transactions.",
-    link: null
+    link: "/projects#jira"
   },
   {
+    id: "dogs-app",
     title: "Dog App",
-    coreTechnologies: new Set(['React', 'TypeScript']),
+    coreSkills: new Set(['React', 'TypeScript']),
     description:
       "This app provides abundant pictures of our best friends from dog API. The user can search Dog Races and find mesmerizing or strange photos of that race or its subcategories.",
     link: "https://aristidis13.github.io/dogs/"
   },
   {
+    id: "crowdsource",
     title: "Crowdsource Analysis Website",
-    coreTechnologies: new Set(['HTML5', 'PHP7', 'JavaScript', 'Chart.js', 'MySQL7']),
+    coreSkills: new Set(['HTML5', 'PHP7', 'JavaScript', 'Chart.js', 'MySQL7']),
     description:
       "My first Web Development project ever! The user (amongst other functionalities) can upload files with his google location history data and see charts and heatmaps with the results of the uploads.",
     link: "https://github.com/Aristidis13/Crowdsourcing-project"
@@ -97,7 +101,7 @@ const experience = [
     dateEnd: "Sep 2020",
     description:
       "In my studies at the University oF Patras, I learned how to learn, found my interest in coding, evolved as a person and realized that continuous learning, will be an X-Factor for success in business and life. My studies helped me understand how to program and what it takes to be good at this field. I had fun, built a plethora of programs, and met amazing people. :)",
-    link: new Map([["Integrated Master from C.E.I.D", '../files/Diploma.pdf']])
+    link: new Map([["Integrated Master from C.E.I.D", '/files/Diploma.pdf']])
   }
 ];
 
@@ -165,5 +169,29 @@ const socialLinks = [
     url: "mailto:contact@arisbarlos.com",
     linkClass: "link link-container social-link",
     textClass: "social-link-title"
+  },
+];
+
+/* Project Links */
+const demoUrls = [
+  {
+    title: "Mifid II Questionnaire",
+    id: "mifid",
+    url: "/files/mifid.webm"
+  },
+  {
+    title: "Eurobank Jira replacement for Imports",
+    id: "jira",
+    url: "/files/jira.webm"
+  },
+  {
+    title: "Cip Enhancement",
+    id: "cip",
+    url: "/files/cip.webm"
+  },
+  {
+    title: "Suitability Questionnaire",
+    id: "suitability",
+    url: "/files/suitability.webm"
   },
 ];
