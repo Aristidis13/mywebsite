@@ -24,6 +24,7 @@ class Cube extends React.Component {
                         title={side.title}
                         section={side.section}
                         classNames={side.class}
+                        isInProjectsPage={this.props.isInProjectsPage}
                     />
                 ))}
             </ul>
@@ -38,7 +39,7 @@ class CubeSide extends React.PureComponent {
                 <a
                     className="link list-item"
                     id={this.props.id}
-                    href={"#" + this.props.section}
+                    href={this.props.isInProjectsPage ? '/' : "#" + this.props.section}
                     rel="nofollow"
                 >
                     <h2 className="nav-title"> {this.props.title}</h2>
@@ -48,4 +49,4 @@ class CubeSide extends React.PureComponent {
     }
 }
 
-ReactDOM.render(<Cube />, document.getElementById("header"));
+ReactDOM.render(<Cube isInProjectsPage={globalThis.window.location.href.includes('/projects')} />, document.getElementById("header"));
