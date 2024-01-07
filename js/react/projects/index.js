@@ -1,18 +1,6 @@
-/*
- ************************************************************************* Projects
- */
-
 class ProjectList extends React.Component {
     render() {
-        const projectComponents = projects.map((project) => (
-            <Project
-                id={"project-" + project.id}
-                title={project.title}
-                description={project.description}
-                link={project.link}
-                coreSkills={project.coreTechnologies}
-            />
-        ));
+        const projectComponents = projects.map((project) => (<Project {...project} />));
         return (
             <section className="list-container" id="projects">
                 <SectionHeader title=" My Most Interesting Projects" />
@@ -48,3 +36,4 @@ class Project extends React.PureComponent {
         );
     }
 }
+
