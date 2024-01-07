@@ -20,16 +20,18 @@ class SectionHeader extends React.PureComponent {
     }
 }
 
-const Link = (props) => {
+const Link = ({
+    linkClass, id, url, willOpenSelf = false, textClass, title
+}) => {
     return (
         <a
-            className={props.linkClass}
-            id={props.id}
-            href={props.url}
-            target="_blank"
+            className={linkClass}
+            id={id}
+            href={url}
+            target={willOpenSelf ? "_self" : "_blank"}
             rel="nofollow"
         >
-            <p className={props.textClass}>{props.title}</p>
+            <p className={textClass}>{title}</p>
         </a>
     );
 };
