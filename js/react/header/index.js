@@ -39,7 +39,7 @@ class CubeSide extends React.PureComponent {
                 <a
                     className="link list-item"
                     id={this.props.id}
-                    href={this.props.isInProjectsPage ? '/' : "#" + this.props.section}
+                    href={"#" + this.props.section}
                     rel="nofollow"
                 >
                     <h2 className="nav-title"> {this.props.title}</h2>
@@ -49,4 +49,14 @@ class CubeSide extends React.PureComponent {
     }
 }
 
-ReactDOM.render(<Cube isInProjectsPage={globalThis.window.location.href.includes('/projects')} />, document.getElementById("header"));
+ReactDOM.render(
+    globalThis.window.location.href.includes('/projects')
+        ? <Link
+            id="main-page-redirector"
+            title='Return to Main Page'
+            url='/'
+            linkClass="link link-container return-to-main-link"
+            textClass="text-link-title"
+        />
+        : <Cube />,
+    document.getElementById("header"));
