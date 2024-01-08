@@ -1,23 +1,30 @@
 class Cube extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            spin: 0,
-            degrees: '',
-        };
+        this.state = { spin: 0 };
+        this.rotate = this.rotate.bind(this)
+    }
+    rotate(direction) {
+        direction === 'right'
+            ? this.setState({
+                ...this.state,
+                spin: this.state.spin + 90,
+            })
+            : this.setState({
+                ...this.state,
+                spin: this.state.spin - 90,
+            })
     }
 
     componentDidMount() {
         setInterval(() => {
-            const state = this.state;
-            this.setState({ spin: state.spin + 90 });
-            this.setState({ degrees: 'rotateY(' + this.state.spin + 'deg)' });
-        }, 3000);
+            this.setState({ spin: this.state.spin + 90 });
+        }, 10000);
     }
 
-    render = () => (
+    render = () => (<>
         <nav id="navbar">
-            <ul id="cube" style={{ transform: this.state.degrees }}>
+            <ul id="cube" style={{ transform: 'rotateY(' + this.state.spin + 'deg)' }}>
                 {cubeSides.map((side, id) => (
                     <CubeSide
                         id={"cubeSide-" + id}
@@ -29,6 +36,9 @@ class Cube extends React.Component {
                 ))}
             </ul>
         </nav>
+        <button onClick={() => { this.rotate('left') }}>Left</button>
+        <button onClick={() => { this.rotate('right') }}><i class="arrow right"></i></button>
+    </>
     );
 }
 
