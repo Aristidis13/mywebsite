@@ -1,4 +1,3 @@
-/*------------------------------------------------ Intro Section -------------------------------------------*/
 :root {
     --side: 12.5rem;
 }
@@ -6,14 +5,14 @@
 #header {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 #navbar {
     perspective: 31rem;
     display: flex;
     align-items: center;
-    width: 90vw;
-    height: 95vh;
+    height: 90vh;
     justify-content: center;
     cursor: grab;
 }
@@ -83,4 +82,66 @@
 
 .return-to-main-link {
     text-decoration: none;
+}
+
+/*Arrows CSS*/
+.swipeArrows {
+    margin: auto 8rem;
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.arrow {
+    color: white;
+    cursor: pointer;
+    height: 100%;
+}
+
+.leftArrowContainer {
+    margin-right: auto;
+}
+
+.leftArrow {
+    transform: rotate(90deg);
+}
+
+.rightArrowContainer {
+    margin-left: auto;
+}
+
+.rightArrow {
+    transform: rotate(270deg);
+}
+
+.arrow div {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(45deg);
+    animation: animate 2s infinite;
+}
+
+.arrow div:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow div:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
 }

@@ -1,10 +1,35 @@
+const SwipeArrows = ({ rotateCube }) => {
+    return <div class="swipeArrows">
+        <div
+            className="leftArrowContainer"
+            onClick={() => { rotateCube('left') }}
+        >
+            <div class="arrow leftArrow" >
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div
+            className="rightArrowContainer"
+            onClick={() => { rotateCube('right') }}
+        >
+            <div class="arrow rightArrow">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+}
+
 class Cube extends React.Component {
     constructor(props) {
         super(props);
         this.state = { spin: 0 };
-        this.rotate = this.rotate.bind(this)
+        this.rotateCube = this.rotateCube.bind(this)
     }
-    rotate(direction) {
+    rotateCube(direction) {
         direction === 'right'
             ? this.setState({
                 ...this.state,
@@ -36,8 +61,7 @@ class Cube extends React.Component {
                 ))}
             </ul>
         </nav>
-        <button onClick={() => { this.rotate('left') }}>Left</button>
-        <button onClick={() => { this.rotate('right') }}><i class="arrow right"></i></button>
+        <SwipeArrows rotateCube={this.rotateCube} />
     </>
     );
 }
