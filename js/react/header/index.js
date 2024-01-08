@@ -26,8 +26,13 @@ const SwipeArrows = ({ rotateCube }) => {
 class Cube extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { spin: 0 };
-        this.rotateCube = this.rotateCube.bind(this)
+        this.state = {
+            spin: 0,
+            pointerStartX: null,
+            pointerEndX: null
+        };
+        this.rotateCube = this.rotateCube.bind(this);
+        this.startX = React.createRef();
     }
     rotateCube(direction) {
         direction === 'right'
@@ -41,15 +46,29 @@ class Cube extends React.Component {
             })
     }
 
-    componentDidMount() {
-        setInterval(() => {
-            this.setState({ spin: this.state.spin + 90 });
-        }, 10000);
-    }
+    /* Remove it for better UX*/
+    // componentDidMount() {
+    //     setInterval(() => {
+    //         this.setState({ spin: this.state.spin + 90 });
+    //     }, 10000);
+    // }
 
     render = () => (<>
-        <nav id="navbar">
-            <ul id="cube" style={{ transform: 'rotateY(' + this.state.spin + 'deg)' }}>
+        <nav
+            id="navbar"
+            onPointerDown={e => {
+                this.startX = e.clientX
+            }}
+            onPointerUp={e => {
+                this.endX = e.clientX
+                this.swipeLeft = this.startX > this.endX;
+                this.swipeLeft ? this.rotateCube('left') : this.rotateCube('right')
+            }}
+        >
+            <ul
+                id="cube"
+                style={{ transform: 'rotateY(' + this.state.spin + 'deg)' }}
+            >
                 {cubeSides.map((side, id) => (
                     <CubeSide
                         id={"cubeSide-" + id}
@@ -61,7 +80,7 @@ class Cube extends React.Component {
                 ))}
             </ul>
         </nav>
-        <SwipeArrows rotateCube={this.rotateCube} />
+        {/* <SwipeArrows rotateCube={this.rotateCube} /> */}
     </>
     );
 }

@@ -12,9 +12,9 @@
     perspective: 31rem;
     display: flex;
     align-items: center;
-    height: 90vh;
+    height: 95vh;
     justify-content: center;
-    cursor: grab;
+    cursor: move;
 }
 
 #cube {
