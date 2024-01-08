@@ -12,9 +12,9 @@ html {
     /*Colors*/
     --background-main: #19091a;
     --blue-secondary: #347;
-    --red-secondary: rgb(199, 43, 65);
+    --red-secondary: rgb(221, 74, 95);
     --mainTextColor: #ececec;
-    --anime-color: rgba(199, 43, 65, 0.3);
+    --anime-color: rgba(221, 74, 95, 0.3);
     --startAnimation: 3s color: var(--mainTextColor);
 }
 
