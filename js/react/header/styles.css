@@ -12,7 +12,7 @@
     perspective: 31rem;
     display: flex;
     align-items: center;
-    height: 95vh;
+    height: 100vh;
     justify-content: center;
     cursor: move;
 }
@@ -84,7 +84,7 @@
     text-decoration: none;
 }
 
-/*Arrows CSS*/
+/*-------------------------------- Arrows CSS ------------------------------*/
 .swipeArrows {
     margin: auto 8rem;
     display: flex;
@@ -143,5 +143,39 @@
     100% {
         opacity: 0;
         transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+/*--------------------------------------Text -------------------------------------------*/
+
+.content {
+    position: relative;
+}
+
+.monitor {
+    width: 700px;
+    height: 100px;
+    background-color: #344151;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: inset 0px 5px 10px 2px rgba(0, 0, 0, 0.3)
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@keyframes move {
+    from {
+        left: 800px
+    }
+
+    to {
+        left: -4800px
     }
 }
