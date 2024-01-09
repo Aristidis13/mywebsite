@@ -30,12 +30,10 @@ class Skill extends React.Component {
     }
 
     handleTouchStart() {
-        !this.state.classNames.includes("touchedSkill")
-            ? this.setState({ classNames: "touchedSkill" })
-            : this.setState({ classNames: "" });
+        this.setState({ classNames: "touchedSkill" })
     }
 
-    handleTouchEnd(e) {
+    handleTouchEnd() {
         if (this.state.classNames.includes("touchedSkill")) {
             this.setState({ classNames: "" });
         }
@@ -53,6 +51,7 @@ class Skill extends React.Component {
                     className="skill-image"
                     src={this.props.image}
                     onTouchStart={this.handleTouchStart}
+                    onTouchMove={this.handleTouchStart}
                     onTouchEnd={this.handleTouchEnd}
                 />
                 <figcaption className="skill-text">
