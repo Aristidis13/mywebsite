@@ -1,5 +1,5 @@
 :root {
-    --side: 12.5rem;
+    --side: 11.5rem;
 }
 
 #header {
@@ -9,12 +9,12 @@
 }
 
 #navbar {
-    perspective: 31rem;
+    perspective: 61rem;
     display: flex;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
     justify-content: center;
-    cursor: move;
 }
 
 #cube {
@@ -22,7 +22,7 @@
     transform-style: preserve-3d;
     width: var(--side);
     height: var(--side);
-    margin: 0;
+    margin: auto 8rem 8rem;
     padding: 0;
     transition: 1s transform ease
 }
@@ -86,9 +86,8 @@
 
 /*-------------------------------- Arrows CSS ------------------------------*/
 .swipeArrows {
-    margin: auto 8rem;
     display: flex;
-    padding-bottom: 1rem;
+    width: 70%;
 }
 
 .arrow {
@@ -114,11 +113,10 @@
 }
 
 .arrow div {
-    width: 1.5vw;
-    height: 1.5vw;
-    border-bottom: 5px solid white;
-    border-right: 5px solid white;
-    transform: rotate(45deg);
+    width: 2.5vw;
+    height: 2.5vw;
+    border-bottom: 0.2rem solid white;
+    border-right: 0.2rem solid white;
     animation: animate 2s infinite;
 }
 
@@ -177,5 +175,35 @@
 
     to {
         left: -4800px
+    }
+}
+
+@media screen and (min-width:360px) and (max-width:700px) {
+    .swipeArrows {
+        margin-bottom: auto;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width:1000px) {
+    .swipeArrows {
+        margin-bottom: auto
+    }
+
+    .skill-text {
+        font-size: 1.5rem;
+    }
+
+    .skill-image {
+        height: auto;
+    }
+}
+
+@media screen and (max-height:300px) {
+    .swipeArrows {
+        margin-bottom: 0 !important;
+    }
+
+    #cube {
+        margin: 0
     }
 }

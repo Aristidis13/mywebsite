@@ -1,18 +1,7 @@
-class AnimatedText extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-    render() {
-        return <div class="content">
-            <h2>Swipe or Touch Anywhere!</h2>
-        </div>
-    }
-}
-
 class Arrow extends React.Component {
     render() {
         return <div
-            className={this.props.leftArrowContainer}
+            className={this.props.containerClassName}
             onClick={this.props.onClick}
         >
             <div class={"arrow " + this.props.arrowContainerClassName} >
@@ -50,20 +39,7 @@ class Cube extends React.Component {
             pointerStartX: null,
             pointerEndX: null
         };
-        this.locateStartPoint = this.locateStartPoint.bind(this);
-        this.locateEndPoint = this.locateEndPoint.bind(this)
         this.rotateCube = this.rotateCube.bind(this);
-        this.startX = React.createRef();
-    }
-
-    locateStartPoint(event) {
-        this.startX = event.clientX
-    }
-
-    locateEndPoint(e) {
-        this.endX = e.clientX
-        this.swipeLeft = this.startX > this.endX;
-        this.swipeLeft ? this.rotateCube('left') : this.rotateCube('right')
     }
 
     rotateCube(direction) {
@@ -79,11 +55,7 @@ class Cube extends React.Component {
     }
 
     render = () => (<>
-        <nav
-            id="navbar"
-            onPointerDown={e => this.locateStartPoint(e)}
-            onPointerUp={e => this.locateEndPoint(e)}
-        >
+        <nav id="navbar" >
             <ul
                 id="cube"
                 style={{ transform: 'rotateY(' + this.state.spin + 'deg)' }}
@@ -98,9 +70,8 @@ class Cube extends React.Component {
                     />
                 ))}
             </ul>
+            <SwipeArrows rotateCube={this.rotateCube} />
         </nav>
-        {/* <SwipeArrows rotateCube={this.rotateCube} /> */}
-        {/* <AnimatedText /> */}
     </>
     );
 }
