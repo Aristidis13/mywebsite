@@ -29,4 +29,6 @@ js Folder  | Description
 :---: | :---:     
 _data.js_  | Contains the content I render to the visitor.
 _canvas.js_ | Contains all the code I used for the canvas animations
-_react.js_ | Every Component I created for the website.
+_react.js_ | Every Reusable Component
+
+The rest of the files inside thr individual folders are the components that are used in the project.
