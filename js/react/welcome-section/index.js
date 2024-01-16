@@ -62,10 +62,8 @@ class WelcomeView extends React.Component {
 
         return (
             <div id="welcome-view" className={this.state.divAnimation}>
-                <section id="presentation-slide">
-                    <div id="text-container">
-                        {welcomeComponents?.[this.state.idOfTextToPresent]}
-                    </div>
+                <section id="text-container">
+                    {welcomeComponents?.[this.state.idOfTextToPresent]}
                 </section>
             </div>
         )
