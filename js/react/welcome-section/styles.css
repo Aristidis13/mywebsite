@@ -1,19 +1,5 @@
-@keyframes UpAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(20px)
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-#presentation-slide {
-    display: flex;
-    justify-content: center;
-    max-height: 98%;
+:root {
+    --animation-time: 2s
 }
 
 #welcome-view {
@@ -30,49 +16,53 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: end;
-    animation: 3s welcomeAnimation ease forwards;
+    align-items: center;
+    animation: var(--animation-time) welcomeAnimation ease forwards;
 }
 
 .divAnimation {
-    animation: 3s welcomeOutAnimation 3s ease forwards !important;
-}
-
-.letterAnimation {
-    animation: 4s letterAnimation .5s linear forwards;
+    animation: var(--animation-time) welcomeOutAnimation 0s ease forwards !important;
 }
 
 .continue-animation {
     animation-fill-mode: backwards !important;
 }
 
-@keyframes letterAnimation {
-    0% {
-        transform: perspective(500px) rotateX(0deg) rotate(5deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: perspective(50px) rotateX(360deg) rotate(5deg);
-    }
+#text-container {
+    margin: 0;
+    width: min-content;
 }
 
 /*Animates the paragraphs*/
 .presentation-slide-animation {
-    transform: perspective(300px) translate3d(0, 0, 550px) rotate(25deg);
-    transition: 4s transform ease;
+    transform: translate3d(0, 0, 550px) !important;
+    transition: 1s transform ease;
+}
+
+.presentation-text {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 0 1.5rem;
+    letter-spacing: .15em;
+    font-size: 2rem;
+}
+
+.word {
+    transform-style: preserve-3d;
+    display: inline-block;
+    padding-left: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600
 }
 
 @keyframes welcomeAnimation {
     from {
         width: 0;
-        padding: 0;
         right: 100%;
     }
 
     to {
         right: 0;
-        padding: 2% 4%;
     }
 }
 
@@ -86,32 +76,22 @@
     }
 }
 
-#welcome-elements>.section-header {
-    grid-area: title;
+@keyframes TextFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
-#welcome-elements {
-    display: grid;
-    grid: "title title title" auto "text void photo" auto / 60% 10% 30%;
-}
+@keyframes TextFadeOut {
+    from {
+        opacity: 1;
+    }
 
-#text-container {
-    grid-area: text;
-    margin: 0;
-}
-
-.presentation-text {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 0 0 1.5rem;
-    letter-spacing: .15em;
-    font-size: 1.5rem;
-}
-
-.word {
-    transform-style: preserve-3d;
-    display: inline-block;
-    padding-left: 1rem;
-    font-size: 2.5rem;
-    font-weight: 600
+    to {
+        opacity: 0;
+    }
 }
