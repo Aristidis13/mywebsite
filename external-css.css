@@ -57,7 +57,6 @@ canvas {
     right: 0;
 }
 
-/*---------------------------------------------------Welcome View --------------------------------------------------------------*/
 @keyframes TextFadeAnimation {
     0% {
         opacity: 0;
@@ -66,12 +65,6 @@ canvas {
     100% {
         opacity: 1;
     }
-}
-
-#text-container {
-    opacity: 0;
-    width: 70%;
-    animation: TextFadeAnimation 1s ease-in 3s forwards;
 }
 
 .button-text {

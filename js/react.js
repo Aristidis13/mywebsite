@@ -8,6 +8,7 @@ class App extends React.PureComponent {
   }
   hide() {
     this.setState({ welcomeSectionIsVisible: false });
+    document.documentElement.style.overflowY = "scroll"
   }
   render() {
     return <>

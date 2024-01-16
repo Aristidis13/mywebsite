@@ -1,13 +1,5 @@
-@keyframes UpAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(20px)
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
+:root {
+    --animation-time: 2s
 }
 
 #presentation-slide {
@@ -31,48 +23,31 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: end;
-    animation: 3s welcomeAnimation ease forwards;
+    animation: var(--animation-time) welcomeAnimation ease forwards;
 }
 
 .divAnimation {
-    animation: 3s welcomeOutAnimation 3s ease forwards !important;
-}
-
-.letterAnimation {
-    animation: 4s letterAnimation .5s linear forwards;
+    animation: var(--animation-time) welcomeOutAnimation 0s ease forwards !important;
 }
 
 .continue-animation {
     animation-fill-mode: backwards !important;
 }
 
-@keyframes letterAnimation {
-    0% {
-        transform: perspective(500px) rotateX(0deg) rotate(5deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: perspective(50px) rotateX(360deg) rotate(5deg);
-    }
-}
-
 /*Animates the paragraphs*/
 .presentation-slide-animation {
-    transform: perspective(300px) translate3d(0, 0, 550px) rotate(25deg);
-    transition: 4s transform ease;
+    transform: translate3d(0, 0, 550px) !important;
+    transition: 1s transform ease;
 }
 
 @keyframes welcomeAnimation {
     from {
         width: 0;
-        padding: 0;
         right: 100%;
     }
 
     to {
         right: 0;
-        padding: 2% 4%;
     }
 }
 
@@ -86,18 +61,30 @@
     }
 }
 
-#welcome-elements>.section-header {
-    grid-area: title;
-}
-
-#welcome-elements {
-    display: grid;
-    grid: "title title title" auto "text void photo" auto / 60% 10% 30%;
-}
-
 #text-container {
     grid-area: text;
     margin: 0;
+    width: 70%;
+}
+
+@keyframes TextFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes TextFadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .presentation-text {
