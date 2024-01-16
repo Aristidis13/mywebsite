@@ -8,7 +8,13 @@ idGiver.counter = 0;
 
 const welcome = [
   {
-    text: "Welcome, I'm Aris! Thanks for passing by!"
+    text: "Welcome!"
+  },
+  {
+    text: "I'm Aris"
+  },
+  {
+    text: "Nice to meet you"
   },
   {
     text: "Currently, I work at \"Eurobank Ergasias\", as a Frontend Engineer."
