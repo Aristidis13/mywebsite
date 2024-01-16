@@ -17,7 +17,13 @@ const welcome = [
     text: "Nice to meet you"
   },
   {
-    text: "Currently, I work at \"Eurobank Ergasias\", as a Frontend Engineer."
+    text: "I'm a fullstack developer that knows JavaScript"
+  },
+  {
+    text: "Currently, I work at \"Eurobank Ergasias\" as a Frontend Engineer"
+  },
+  {
+    text: "Take a peek at my portfolio"
   }
 ];
 

@@ -2,12 +2,6 @@
     --animation-time: 2s
 }
 
-#presentation-slide {
-    display: flex;
-    justify-content: center;
-    max-height: 98%;
-}
-
 #welcome-view {
     transform-style: preserve-3d;
     position: fixed;
@@ -22,7 +16,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     animation: var(--animation-time) welcomeAnimation ease forwards;
 }
 
@@ -34,10 +28,31 @@
     animation-fill-mode: backwards !important;
 }
 
+#text-container {
+    margin: 0;
+    width: min-content;
+}
+
 /*Animates the paragraphs*/
 .presentation-slide-animation {
     transform: translate3d(0, 0, 550px) !important;
     transition: 1s transform ease;
+}
+
+.presentation-text {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 0 1.5rem;
+    letter-spacing: .15em;
+    font-size: 2rem;
+}
+
+.word {
+    transform-style: preserve-3d;
+    display: inline-block;
+    padding-left: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600
 }
 
 @keyframes welcomeAnimation {
@@ -61,12 +76,6 @@
     }
 }
 
-#text-container {
-    grid-area: text;
-    margin: 0;
-    width: 70%;
-}
-
 @keyframes TextFadeIn {
     0% {
         opacity: 0;
@@ -78,27 +87,11 @@
 }
 
 @keyframes TextFadeOut {
-    0% {
+    from {
         opacity: 1;
     }
 
-    100% {
+    to {
         opacity: 0;
     }
-}
-
-.presentation-text {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 0 0 1.5rem;
-    letter-spacing: .15em;
-    font-size: 1.5rem;
-}
-
-.word {
-    transform-style: preserve-3d;
-    display: inline-block;
-    padding-left: 1rem;
-    font-size: 2.5rem;
-    font-weight: 600
 }
