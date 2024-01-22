@@ -11,10 +11,10 @@ const welcome = [
     text: "Welcome!"
   },
   {
-    text: "I'm Aris, a fullstack developer that knows JavaScript"
+    text: "I'm a fullstack developer that knows JavaScript"
   },
   {
-    text: "Currently, I work at \"Eurobank Ergasias\" as a Frontend Engineer"
+    text: "I work as Frontend Engineer at \"Eurobank Ergasias\""
   },
   {
     text: "Take a peek at my portfolio"
@@ -179,25 +179,4 @@ const socialLinks = [
 ];
 
 /* Project Links */
-const demoUrls = [
-  {
-    title: "Mifid II Questionnaire",
-    id: "mifid",
-    url: "/files/mifid.webm"
-  },
-  {
-    title: "Eurobank Jira replacement for Imports",
-    id: "jira",
-    url: "/files/jira.webm"
-  },
-  {
-    title: "Cip Enhancement",
-    id: "cip",
-    url: "/files/cip.webm"
-  },
-  {
-    title: "Suitability Questionnaire",
-    id: "suitability",
-    url: "/files/suitability.webm"
-  },
-];
+const demoUrls = [];
