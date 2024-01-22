@@ -11,13 +11,7 @@ const welcome = [
     text: "Welcome!"
   },
   {
-    text: "I'm Aris"
-  },
-  {
-    text: "Nice to meet you"
-  },
-  {
-    text: "I'm a fullstack developer that knows JavaScript"
+    text: "I'm Aris, a fullstack developer that knows JavaScript"
   },
   {
     text: "Currently, I work at \"Eurobank Ergasias\" as a Frontend Engineer"
