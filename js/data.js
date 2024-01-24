@@ -11,17 +11,15 @@ const welcome = [
     text: "Welcome!"
   },
   {
-    text: "I'm a fullstack developer that knows JavaScript"
+    text: "I solve problems with fullstack JavaScript"
   },
   {
-    text: "I work as Frontend Engineer at \"Eurobank Ergasias\""
+    text: "Currently, I work as Frontend Engineer"
   },
   {
-    text: "Take a peek at my portfolio"
+    text: "Take a peek"
   }
 ];
-
-
 
 /* Cube Sides */
 const cubeSides = [
@@ -36,7 +34,7 @@ const cubeSides = [
     class: "right cubeSide"
   },
   {
-    title: "My Skills",
+    title: "Skills",
     section: "skills-section",
     class: "left cubeSide"
   },
@@ -60,7 +58,7 @@ const projects = [
     id: "jira",
     title: "Jira replacement for Imports",
     coreSkills: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
-    description: "A first step to the creation of an internal communication network for \"Eurobank Ergasias\" Bank with the goal to replace Jira, and save millions to the bank for the Jira usage. I developed almost all views and functionalities here too in the frontend. The user based on his role(s) can see a DashBoard with Analytics, filter and sort requests and make requests for different types of transactions.",
+    description: "Created the frontend for an internal communications network for \"Eurobank Ergasias\" Bank with the goal to replace Jira, and save millions to the bank for the Jira usage. I developed all views and functionalities and trained two new developers by showing them concepts of my work. The user based on his role(s) can see a DashBoard with Analytics, filter and sort requests and make requests for different types of transactions.",
     link: null
   },
   {
@@ -123,7 +121,7 @@ const skills = [
     title: "TypeScript",
     image: "/skills/typescript.svg",
     description:
-      "A language I've used and like. I wish there was more TypeScript in the world. :)",
+      "A language I've used for personal projects and like for its explicit nature and declarative type system. :)",
   },
   {
     title: "CSS",
@@ -144,9 +142,25 @@ const skills = [
       "I've used JS countless times professionally and for personal projects.",
   },
   {
+    title: "Node.js",
+    image: "/skills/node.svg",
+    description: "I find Node.js and its philosophy handy for creating APIs and services.",
+  },
+  {
+    title: "Wordpress",
+    image: "/skills/wordpress.svg",
+    description: "I've used wordpress in my first job and to build sites for friends. I guess we all have to start from somewhere. :)",
+  },
+  {
     title: "jQuery",
     image: "/skills/jquery.svg",
-    description: "A library I have used in my previous job and in college.",
+    description: "A library I've used in my first job and in college.",
+  },
+  {
+    title: "Agile / Scrum",
+    image: "/skills/scrum.svg",
+    description:
+      "I have experience working in Agile Teams as Lead Developer.",
   },
   {
     title: "Git",
