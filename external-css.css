@@ -125,7 +125,9 @@ canvas {
     bottom: 2rem;
     right: 2rem;
     border-radius: 50%;
-    z-index: 1;
+    border: none;
+    z-index: 3;
+    cursor: grab;
     width: 4rem;
     height: 4rem;
     animation: ripple 1.5s linear infinite;
