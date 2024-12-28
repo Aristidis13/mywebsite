@@ -57,10 +57,12 @@
 
 @keyframes welcomeAnimation {
     from {
+        width: 0%;
         right: 100%;
     }
 
     to {
+        width: 100%;
         right: 0;
     }
 }
