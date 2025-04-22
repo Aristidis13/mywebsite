@@ -36,22 +36,23 @@ class Cube extends React.Component {
         super(props);
         this.state = {
             spin: 0,
-            pointerStartX: null,
-            pointerEndX: null
         };
         this.rotateCube = this.rotateCube.bind(this);
     }
 
     rotateCube(direction) {
-        direction === 'right'
-            ? this.setState({
+        if(direction === 'right') {
+            this.setState({
                 ...this.state,
                 spin: this.state.spin + 90,
             })
-            : this.setState({
+        }
+        else if(direction === 'left') {
+            this.setState({
                 ...this.state,
                 spin: this.state.spin - 90,
             })
+        }
     }
 
     render = () => (<>
@@ -67,6 +68,7 @@ class Cube extends React.Component {
                         section={side.section}
                         classNames={side.class}
                         isInProjectsPage={this.props.isInProjectsPage}
+                        rotateCube={this.rotateCube}
                     />
                 ))}
             </ul>
@@ -79,28 +81,52 @@ class Cube extends React.Component {
 class CubeSide extends React.PureComponent {
     constructor(props) {
         super(props);
-        this.stopBubbling = this.stopBubbling.bind(this);
+        this.handlePointerUp = this.handlePointerUp.bind(this);
+        this.state = {
+            pointerStartX: null,
+        }
     }
 
-    stopBubbling(e) {
-        e.stopPropagation();
+    handlePointerUp(e) {
+        const pointerEndX = e.clientX
+        const movementPointerDistance = pointerEndX - this.state.pointerStartX;
+        console.log('movementPointerDistance ',movementPointerDistance);
+        console.log('pointerStart ',this.state.pointerStartX);
+        console.log('pointerEnd ',pointerEndX);
+        this.setState(prev => ({...prev, pointerStartX: null }));
+        const action = Math.abs(movementPointerDistance) > 15 ? 'rotate' : 'navigate';
+        console.log('will ',action)
+        if(action==='navigate') {
+          document.getElementById(this.props.section).scrollIntoView();
+        }
+        else if (action === 'rotate' && pointerEndX > this.state.pointerStartX) {
+            this.props.rotateCube('right');
+        }
+        else if(action === 'rotate' && pointerEndX < this.state.pointerStartX) {
+            this.props.rotateCube('left');
+        }
+        e.stopPropagation()
     }
 
     render() {
         return (
-            <li
-                className={this.props.classNames}
-                onPointerUp={e => this.stopBubbling(e)}
-                onPointerDown={e => this.stopBubbling(e)}
-            >
-                <a
+            <li className={this.props.classNames}>
+                <div
                     className="link list-item"
                     id={this.props.id}
-                    href={"#" + this.props.section}
-                    rel="nofollow"
+                    onPointerUp={this.handlePointerUp}
+                    onPointerCancel={this.handlePointerUp}
+                    onPointerDown={e => {
+                        console.log('onPointerDown ',e);
+                        this.setState(prev=>({
+                            ...prev,
+                            pointerStartX: e.clientX
+                        }))
+                        e.stopPropagation()
+                    }}
                 >
                     <h2 className="nav-title"> {this.props.title}</h2>
-                </a>
+                </div>
             </li >
         );
     }
