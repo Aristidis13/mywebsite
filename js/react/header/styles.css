@@ -1,18 +1,19 @@
 :root {
-    --side: 11.5rem;
+    --side: 15rem;
+    --sidesDistance: 8rem;
 }
 
 #header {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: 100vh;
 }
 
 #navbar {
     perspective: 61rem;
     display: flex;
     align-items: center;
-    height: 100vh;
     flex-direction: column;
     justify-content: center;
 }
@@ -22,7 +23,6 @@
     transform-style: preserve-3d;
     width: var(--side);
     height: var(--side);
-    margin: auto 8rem 8rem;
     padding: 0;
     transition: 1s transform ease
 }
@@ -36,8 +36,12 @@
     background-color: aliceblue;
 }
 
+.listItem {
+    cursor: move !important;
+}
+
 .front {
-    transform: rotateY(0deg) translateZ(var(--side));
+    transform: rotateY(0deg) translateZ(var(--sidesDistance));
     transform-origin: bottom;
 }
 
@@ -46,23 +50,23 @@
 }
 
 .right {
-    transform: rotateY(90deg) translateZ(var(--side));
+    transform: rotateY(90deg) translateZ(var(--sidesDistance));
 }
 
 .back {
-    transform: rotateY(180deg) translateZ(var(--side));
+    transform: rotateY(180deg) translateZ(var(--sidesDistance));
 }
 
 .left {
-    transform: rotateY(-90deg) translateZ(var(--side));
+    transform: rotateY(-90deg) translateZ(var(--sidesDistance));
 }
 
 .top {
-    transform: rotateX(90deg) translateZ(var(--side));
+    transform: rotateX(90deg) translateZ(var(--sidesDistance));
 }
 
 .bottom {
-    transform: rotateX(-90deg) translateZ(var(--side));
+    transform: rotateX(-90deg) translateZ(var(--sidesDistance));
 }
 
 .cubeSide>.link {
@@ -85,31 +89,11 @@
 }
 
 /*-------------------------------- Arrows CSS ------------------------------*/
-.swipeArrows {
-    display: flex;
-    width: 70%;
-}
 
 .arrow {
     color: white;
     cursor: pointer;
     height: 100%;
-}
-
-.leftArrowContainer {
-    margin-right: auto;
-}
-
-.leftArrow {
-    transform: rotate(90deg);
-}
-
-.rightArrowContainer {
-    margin-left: auto;
-}
-
-.rightArrow {
-    transform: rotate(270deg);
 }
 
 .arrow div {
@@ -118,30 +102,6 @@
     border-bottom: 0.2rem solid white;
     border-right: 0.2rem solid white;
     animation: animate 2s infinite;
-}
-
-.arrow div:nth-child(2) {
-    animation-delay: -0.2s;
-}
-
-.arrow div:nth-child(3) {
-    animation-delay: -0.4s;
-}
-
-@keyframes animate {
-    0% {
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px, -20px);
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        transform: rotate(45deg) translate(20px, 20px);
-    }
 }
 
 /*--------------------------------------Text -------------------------------------------*/
