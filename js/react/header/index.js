@@ -37,7 +37,16 @@ class Cube extends React.Component {
         this.state = {
             spin: 0,
         };
+        this.handlePointerUp = this.handlePointerUp.bind(this);
         this.rotateCube = this.rotateCube.bind(this);
+    }
+
+    handlePointerUp(e) {
+        const pointerEndX = e.clientX
+        const centerOfDocument = document.body.clientWidth / 2;
+        const action = pointerEndX < centerOfDocument ? 'left' : 'right';
+        this.rotateCube(action);
+        e.stopPropagation()
     }
 
     rotateCube(direction) {
@@ -56,7 +65,11 @@ class Cube extends React.Component {
     }
 
     render = () => (<>
-        <nav id="navbar" >
+        <nav
+            id="navbar"
+            onPointerUp={this.handlePointerUp}
+            onPointerCancel={this.handlePointerUp}
+        >
             <ul
                 id="cube"
                 style={{ transform: 'rotateY(' + this.state.spin + 'deg)' }}
@@ -72,7 +85,6 @@ class Cube extends React.Component {
                     />
                 ))}
             </ul>
-            <SwipeArrows rotateCube={this.rotateCube} />
         </nav>
     </>
     );
@@ -90,12 +102,10 @@ class CubeSide extends React.PureComponent {
     handlePointerUp(e) {
         const pointerEndX = e.clientX
         const movementPointerDistance = pointerEndX - this.state.pointerStartX;
-        console.log('movementPointerDistance ',movementPointerDistance);
-        console.log('pointerStart ',this.state.pointerStartX);
-        console.log('pointerEnd ',pointerEndX);
+
         this.setState(prev => ({...prev, pointerStartX: null }));
         const action = Math.abs(movementPointerDistance) > 15 ? 'rotate' : 'navigate';
-        console.log('will ',action)
+
         if(action==='navigate') {
           document.getElementById(this.props.section).scrollIntoView();
         }
@@ -112,12 +122,11 @@ class CubeSide extends React.PureComponent {
         return (
             <li className={this.props.classNames}>
                 <div
-                    className="link list-item"
+                    className="link listItem"
                     id={this.props.id}
                     onPointerUp={this.handlePointerUp}
                     onPointerCancel={this.handlePointerUp}
                     onPointerDown={e => {
-                        console.log('onPointerDown ',e);
                         this.setState(prev=>({
                             ...prev,
                             pointerStartX: e.clientX
