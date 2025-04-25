@@ -42,9 +42,9 @@ class Cube extends React.Component {
     }
 
     handlePointerUp(e) {
-        const pointerEndX = e.clientX
+        const endPoint = e.clientX;
         const centerOfDocument = document.body.clientWidth / 2;
-        const action = pointerEndX < centerOfDocument ? 'left' : 'right';
+        const action = endPoint < centerOfDocument ? 'left' : 'right';
         this.rotateCube(action);
         e.stopPropagation()
     }
@@ -100,8 +100,18 @@ class CubeSide extends React.PureComponent {
     }
 
     handlePointerUp(e) {
-        const pointerEndX = e.clientX
-        const movementPointerDistance = pointerEndX - this.state.pointerStartX;
+        const endPoint = e.clientX;
+        const startPoint = this.state.pointerStartX;
+        const movementPointerDistance = endPoint - startPoint;
+
+        if(!startPoint) {
+            this.setState(prev => ({...prev, pointerStartX: null }));
+            e.stopPropagation()
+            return;
+        }
+
+        console.log('start '+startPoint);
+        console.log('end '+endPoint);
 
         this.setState(prev => ({...prev, pointerStartX: null }));
         const action = Math.abs(movementPointerDistance) > 15 ? 'rotate' : 'navigate';
@@ -109,10 +119,10 @@ class CubeSide extends React.PureComponent {
         if(action==='navigate') {
           document.getElementById(this.props.section).scrollIntoView();
         }
-        else if (action === 'rotate' && pointerEndX > this.state.pointerStartX) {
+        else if (action === 'rotate' && endPoint > startPoint) {
             this.props.rotateCube('right');
         }
-        else if(action === 'rotate' && pointerEndX < this.state.pointerStartX) {
+        else if(action === 'rotate' && endPoint < startPoint) {
             this.props.rotateCube('left');
         }
         e.stopPropagation()
