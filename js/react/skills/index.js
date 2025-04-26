@@ -34,9 +34,7 @@ class Skill extends React.Component {
     }
 
     handleTouchEnd() {
-        if (this.state.classNames.includes("touchedSkill")) {
-            this.setState({ classNames: "" });
-        }
+        this.setState({ classNames: "" });
     }
 
     render() {
@@ -46,13 +44,14 @@ class Skill extends React.Component {
                 id={"skill-" + this.props.id}
                 onTouchStart={this.handleTouchStart}
                 onTouchEnd={this.handleTouchEnd}
+                onTouchCancel={this.handleTouchEnd}
             >
                 <img
                     className="skill-image"
                     src={this.props.image}
                     onTouchStart={this.handleTouchStart}
-                    onTouchMove={this.handleTouchStart}
                     onTouchEnd={this.handleTouchEnd}
+                    onTouchCancel={this.handleTouchEnd}
                 />
                 <figcaption className="skill-text">
                     <h3 className="skill-title"> {this.props.title} </h3>
