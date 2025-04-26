@@ -1,52 +1,10 @@
-class Arrow extends React.Component {
-    render() {
-        return <div
-            className={this.props.containerClassName}
-            onClick={this.props.onClick}
-        >
-            <div class={"arrow " + this.props.arrowContainerClassName} >
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    }
-}
-
-class SwipeArrows extends React.Component {
-    render() {
-        return <div class="swipeArrows">
-            <Arrow
-                containerClassName="leftArrowContainer"
-                onClick={() => { this.props.rotateCube('left') }}
-                arrowContainerClassName='leftArrow'
-            />
-            <Arrow
-                containerClassName="rightArrowContainer"
-                onClick={() => { this.props.rotateCube('right') }}
-                arrowContainerClassName='rightArrow'
-            />
-
-        </div>
-    }
-}
-
 class Cube extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             spin: 0,
         };
-        this.handlePointerUp = this.handlePointerUp.bind(this);
         this.rotateCube = this.rotateCube.bind(this);
-    }
-
-    handlePointerUp(e) {
-        const endPoint = e.clientX;
-        const centerOfDocument = document.body.clientWidth / 2;
-        const action = endPoint < centerOfDocument ? 'left' : 'right';
-        this.rotateCube(action);
-        e.stopPropagation()
     }
 
     rotateCube(direction) {
@@ -64,12 +22,8 @@ class Cube extends React.Component {
         }
     }
 
-    render = () => (<>
-        <nav
-            id="navbar"
-            onPointerUp={this.handlePointerUp}
-            onPointerCancel={this.handlePointerUp}
-        >
+    render = () => (
+        <nav id="navbar">
             <ul
                 id="cube"
                 style={{ transform: 'rotateY(' + this.state.spin + 'deg)' }}
@@ -86,7 +40,6 @@ class Cube extends React.Component {
                 ))}
             </ul>
         </nav>
-    </>
     );
 }
 
@@ -94,38 +47,70 @@ class CubeSide extends React.PureComponent {
     constructor(props) {
         super(props);
         this.handlePointerUp = this.handlePointerUp.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.handlePointerDown = this.handlePointerDown.bind(this);
+        this.handlePointerMove = this.handlePointerMove.bind(this);
+        this.handleRotateState = this.handleRotateState.bind(this);
         this.state = {
             pointerStartX: null,
+            cancelClick: false,
         }
     }
 
-    handlePointerUp(e) {
+    handleRotateState() {
+        this.setState(prev => ({
+            ...prev,
+            cancelClick: true,
+            pointerStartX: null
+        }))
+    }
+
+    handleClick() {
+        if(this.state.cancelClick === false) {
+            document.getElementById(this.props.section).scrollIntoView();
+        }
+    }
+
+    /**
+     * Locates the starting point of the animation
+     * @param {object} e - The pointerDown event object
+     */
+    handlePointerDown(e) {
+        this.setState(prev=>({
+            ...prev,
+            pointerStartX: e.clientX
+        }));
+    }
+
+    /**
+     * Stops `cancelClick` and clears `pointerStartX` state
+     */
+    handlePointerUp() {
+        this.setState(prev => ({
+            ...prev,
+            cancelClick: false,
+            pointerStartX: null
+        }));
+    }
+
+    handlePointerMove(e) {
+        if(!this.state.pointerStartX) return;
+
         const endPoint = e.clientX;
         const startPoint = this.state.pointerStartX;
         const movementPointerDistance = endPoint - startPoint;
+        const cubeWillRotate = Math.abs(movementPointerDistance) > 7;
 
-        if(!startPoint) {
-            this.setState(prev => ({...prev, pointerStartX: null }));
-            e.stopPropagation()
-            return;
-        }
+        const action = cubeWillRotate ? 'rotate' : null;
 
-        console.log('start '+startPoint);
-        console.log('end '+endPoint);
-
-        this.setState(prev => ({...prev, pointerStartX: null }));
-        const action = Math.abs(movementPointerDistance) > 15 ? 'rotate' : 'navigate';
-
-        if(action==='navigate') {
-          document.getElementById(this.props.section).scrollIntoView();
-        }
-        else if (action === 'rotate' && endPoint > startPoint) {
+        if (action === 'rotate' && endPoint > startPoint) {
+            this.handleRotateState()
             this.props.rotateCube('right');
         }
         else if(action === 'rotate' && endPoint < startPoint) {
+            this.handleRotateState();
             this.props.rotateCube('left');
         }
-        e.stopPropagation()
     }
 
     render() {
@@ -134,15 +119,11 @@ class CubeSide extends React.PureComponent {
                 <div
                     className="link listItem"
                     id={this.props.id}
+                    onClick={this.handleClick}
                     onPointerUp={this.handlePointerUp}
                     onPointerCancel={this.handlePointerUp}
-                    onPointerDown={e => {
-                        this.setState(prev=>({
-                            ...prev,
-                            pointerStartX: e.clientX
-                        }))
-                        e.stopPropagation()
-                    }}
+                    onPointerMove={this.handlePointerMove}
+                    onPointerDown={this.handlePointerDown}
                 >
                     <h2 className="nav-title"> {this.props.title}</h2>
                 </div>
