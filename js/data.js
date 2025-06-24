@@ -11,13 +11,7 @@ const welcome = [
     text: "Welcome!"
   },
   {
-    text: "I solve problems with fullstack JavaScript"
-  },
-  {
     text: "Currently, I work as Frontend Engineer"
-  },
-  {
-    text: "Take a peek"
   }
 ];
 
@@ -39,7 +33,7 @@ const cubeSides = [
     class: "left cubeSide"
   },
   {
-    title: "Contact",
+    title: "Let's Connect",
     section: "social-links-section",
     class: "back cubeSide"
   }
@@ -86,7 +80,7 @@ const experience = [
     subtitle: "Contractor at Eurobank Ergasias",
     dateStart: "April 2022",
     dateEnd: "Present",
-    description: "I create new Views and aesthetic UIs for \"Eurobank Ergasias\" to transition this great Greek Bank to new heights as part of an AGILE team. The work is challenging but the working environment is pleasant, and the projects are interesting. I saw a new world of problems, challenges, and ways to think, and learned how a big company operates.",
+    description: "I create new Views and aesthetic UIs for \"Eurobank Ergasias\". The work is challenging but the working environment is pleasant, and the projects are interesting. I saw a new world of problems, challenges, and ways to think, communicate and work.",
     link: null
   },
   {
@@ -114,32 +108,27 @@ const skills = [
   {
     title: "React",
     image: "skills/react.svg",
-    description:
-      "I prefer to write plain React apps but I've also incorporated React Component libraries like Material UI and Ant Design.",
+    description: "I think I know a couple of things...",
   },
   {
     title: "TypeScript",
     image: "/skills/typescript.svg",
-    description:
-      "A language I've used for personal projects and like for its explicit nature and declarative type system. :)",
+    description: "A language I've used for personal projects and work",
   },
   {
     title: "CSS",
     image: "/skills/css3.svg",
-    description:
-      "I can play with plain CSS3, Sass and CSS Frameworks, to improve the aesthetics of any UI.",
+    description: "I can play with plain CSS3, Sass and CSS Frameworks, to improve the aesthetics of any UI.",
   },
   {
     title: "HTML5",
     image: "/skills/html5.svg",
-    description:
-      "Easy to learn, but hard to master, especially ARIA, and Canvas API.",
+    description: "Easy to learn, but hard to master, especially ARIA, and Canvas API.",
   },
   {
     title: "JavaScript",
     image: "/skills/javascript.svg",
-    description:
-      "I've used JS countless times professionally and for personal projects.",
+    description: "I've used this old lady, countless times professionally and for personal projects.",
   },
   {
     title: "Node.js",
@@ -149,7 +138,12 @@ const skills = [
   {
     title: "Wordpress",
     image: "/skills/wordpress.svg",
-    description: "I've used wordpress in my first job and to build sites for friends. I guess we all have to start from somewhere. :)",
+    description: "I've used wordpress in my first job and to build sites for friends.",
+  },
+    {
+    title: "Java",
+    image: "/skills/java.svg",
+    description: "I've used Java to build services for a variety of tasks.",
   },
   {
     title: "jQuery",
@@ -159,14 +153,12 @@ const skills = [
   {
     title: "Agile / Scrum",
     image: "/skills/scrum.svg",
-    description:
-      "I have experience working in Agile Teams as Lead Developer.",
+    description: "I have experience working in Agile Teams as Lead Developer.",
   },
   {
     title: "Git",
     image: "/skills/git.svg",
-    description:
-      "A version control system I paired with Github / Bitbucket / Azure Repos. Saved my projects many times. :)",
+    description: "Saved my projects many times.",
   },
 ];
 
@@ -179,18 +171,9 @@ const socialLinks = [
     textClass: "social-link-title"
   },
   {
-    title: "LinkedIn",
-    url: "https://www.linkedin.com/in/aris-barlos-69a3b8153/",
-    linkClass: "link link-container social-link",
-    textClass: "social-link-title"
-  },
-  {
     title: "Email Me",
     url: "mailto:contact@arisbarlos.com",
     linkClass: "link link-container social-link",
     textClass: "social-link-title"
   },
 ];
-
-/* Project Links */
-const demoUrls = [];
