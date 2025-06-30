@@ -132,4 +132,15 @@ class CubeSide extends React.PureComponent {
     }
 }
 
-ReactDOM.render(<Cube />, document.getElementById("header"));
+ReactDOM.render(
+    globalThis.window.location.href.includes('/projects')
+        ? <Link
+            id="main-page-redirector"
+            title='Return to Main Page'
+            url='/'
+            linkClass="link link-container return-to-main-link"
+            textClass="text-link-title"
+            willOpenSelf
+        />
+        : <Cube />,
+    document.getElementById("header"));
