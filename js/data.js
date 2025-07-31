@@ -15,8 +15,8 @@ const disableMsgForDarkReader = [
 
 const welcome = [
   { text: "Welcome!" },
-  { text: "Currently, I work as Frontend Engineer" },
-  { text: "Send me a `hello` before you leave!" }
+  { text: "Currently, I work as Frontend Engineer." },
+  { text: "Feel free to say hello!☺️" }
 ];
 
 /* Cube Sides */
@@ -82,9 +82,9 @@ const experience = [
   {
     title: "Frontend Engineer at Agile Actors",
     subtitle: "Contractor at Eurobank Ergasias",
-    dateStart: "April 2022",
+    dateStart: "Mar 2022",
     dateEnd: "Present",
-    description: "I create new Views and aesthetic UIs for \"Eurobank Ergasias\". The work is challenging but the working environment is pleasant, and the projects are interesting. I saw a new world of problems, challenges, and ways to think, communicate and work.",
+    description: "Delivered complex, high-stakes digital banking solutions as a Frontend Engineer at Agile Actors, rescuing delayed projects, improving system performance by 40–50%, and accelerating development speed by creating reusable frameworks while mentoring junior developers.",
     link: null
   },
   {
@@ -92,8 +92,7 @@ const experience = [
     subtitle: "Using Frontend Languages and Wordpress",
     dateStart: "Jan 2021",
     dateEnd: "Sep 2021",
-    description:
-      "3CP Digital Agency is a company based in Patras, Greece. I created, maintained, and expanded a plethora of sites. I used custom code to make sliders, carousels, and more in a very professional and fast-paced environment. The start of my corporate experience.",
+    description: "Delivered and optimized commercial websites for small businesses, quickly mastering unfamiliar tech stacks to ship production-ready solutions under tight client deadlines.",
     link: null
   },
   {
@@ -101,8 +100,7 @@ const experience = [
     subtitle: "University of Patras",
     dateStart: "Sep 2013",
     dateEnd: "Sep 2020",
-    description:
-      "In my studies at the University oF Patras, I learned how to learn, found my interest in coding, evolved as a person and realized that continuous learning, will be an X-Factor for success in business and life. My studies helped me understand how to program and what it takes to be good at this field. I had fun, built a plethora of programs, and met amazing people. :)",
+    description: "Completed a 5-year Integrated Master’s in Computer Engineering, achieving a Very Good distinction through leading high-performing atomic and team-based college projects.",
     link: new Map([["Integrated Master from C.E.I.D", '/files/Diploma.pdf']])
   }
 ];
