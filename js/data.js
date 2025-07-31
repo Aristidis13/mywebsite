@@ -6,13 +6,17 @@ function idGiver() {
 
 idGiver.counter = 0;
 
+const disableMsgForDarkReader = [
+  { text: "It seems you’re using a Dark Mode plugin." },
+  { text: "This site is already optimized for visual comfort." },
+  { text: "Colors are carefully balanced for contrast and readability." },
+  { text: "For the intended experience, please disable Dark Mode." }
+]
+
 const welcome = [
-  {
-    text: "Welcome!"
-  },
-  {
-    text: "Currently, I work as Frontend Engineer"
-  }
+  { text: "Welcome!" },
+  { text: "Currently, I work as Frontend Engineer" },
+  { text: "Send me a `hello` before you leave!" }
 ];
 
 /* Cube Sides */
@@ -173,6 +177,12 @@ const socialLinks = [
   {
     title: "Email Me",
     url: "mailto:contact@arisbarlos.com",
+    linkClass: "link link-container social-link",
+    textClass: "social-link-title"
+  },
+  {
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/aris-barlos-69a3b8153/",
     linkClass: "link link-container social-link",
     textClass: "social-link-title"
   },
