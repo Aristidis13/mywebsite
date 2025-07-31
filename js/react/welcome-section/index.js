@@ -1,3 +1,17 @@
+/**
+ * Function to calculate the messages the user will see
+ */
+const calculateMessages = () => {
+    const htmlElement = document.getElementsByTagName("html")?.[0];
+    const htmlBackgroundColor = globalThis.getComputedStyle(htmlElement)?.backgroundColor;
+    const addedFilter = globalThis.getComputedStyle(htmlElement)?.filter;
+    const darkModeMessage = [ ...disableMsgForDarkReader, ...welcome.slice(1) ]
+
+    return htmlBackgroundColor === "rgb(25, 9, 26)" && addedFilter === "none"
+    ? welcome
+    : darkModeMessage
+}
+
 class WelcomeView extends React.Component {
     constructor(props) {
         super(props);
@@ -5,6 +19,7 @@ class WelcomeView extends React.Component {
             idOfTextToPresent: 0,
             divAnimation: "",
             presentationSlide: "",
+            welcome: calculateMessages()
         };
         this.changeTextInScreen = this.changeTextInScreen.bind(this)
         this.updateState = this.updateState.bind(this);
@@ -26,11 +41,11 @@ class WelcomeView extends React.Component {
             props: { hide }
         } = this
 
-        if (idOfTextToPresent < welcome.length - 1)
+        if (idOfTextToPresent < this.state.welcome.length - 1)
             updateState({
                 idOfTextToPresent: idOfTextToPresent + 1
             })
-        else if (idOfTextToPresent === welcome.length - 1) {
+        else if (idOfTextToPresent === this.state.welcome.length - 1) {
             updateState({
                 ...this.state,
                 presentationSlide: "presentation-slide-animation",
@@ -45,7 +60,7 @@ class WelcomeView extends React.Component {
     }
 
     render() {
-        const welcomeComponents = welcome.map((sentence, index) => <Text
+        const welcomeComponents = this.state.welcome.map((sentence, index) => <Text
             id={index.toString()}
             key={"welcome-" + index}
             text={<span className="word" style={{
