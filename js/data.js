@@ -46,20 +46,6 @@ const cubeSides = [
 /* PROJECTS */
 const projects = [
   {
-    id: "mifid",
-    title: "Mifid II Questionnaire",
-    coreSkills: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
-    description: "A 6-month work that solves a real-world problem for \"Eurobank Ergasias\" Bank. I developed all the views as a part of a broader AGILE team. The user selects Investment Categories, answers questions that test his investing experience, and signs the on-the-fly created document with the answers.",
-    link: null,
-  },
-  {
-    id: "jira",
-    title: "Jira replacement for Imports",
-    coreSkills: new Set(['React', 'JavaScript', 'CSS3', 'Redux']),
-    description: "Created the frontend for an internal communications network for \"Eurobank Ergasias\" Bank with the goal to replace Jira, and save millions to the bank for the Jira usage. I developed all views and functionalities and trained two new developers by showing them concepts of my work. The user based on his role(s) can see a DashBoard with Analytics, filter and sort requests and make requests for different types of transactions.",
-    link: null
-  },
-  {
     id: "dogs-app",
     title: "Dog App",
     coreSkills: new Set(['React', 'TypeScript']),
@@ -68,12 +54,11 @@ const projects = [
     link: "https://aristidis13.github.io/dogs/"
   },
   {
-    id: "crowdsource",
-    title: "Crowdsource Analysis Website",
-    coreSkills: new Set(['HTML5', 'PHP7', 'JavaScript', 'Chart.js', 'MySQL7']),
-    description:
-      "My first Web Development project ever! The user (amongst other functionalities) can upload files with his google location history data and see charts and heatmaps with the results of the uploads.",
-    link: "https://github.com/Aristidis13/Crowdsourcing-project"
+    id: "calculator",
+    title: "A React Calculator",
+    coreSkills: new Set(['React', 'JavaScript', 'CSS3', 'CSS Modules']),
+    description: "This is a fully functional calculator built with React and styled using CSS modules. It supports consecutive calculations, making it behave like a real calculator rather than just solving one equation at a time. What makes this project special is that it was my first React project!",
+    link: "https://aristidis13.github.io/react-calculator/"
   },
 ];
 

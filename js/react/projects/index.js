@@ -3,7 +3,7 @@ class ProjectList extends React.Component {
         const projectComponents = projects.map((project) => (<Project {...project} />));
         return (
             <section className="list-container" id="projects">
-                <SectionHeader title=" My Most Interesting Projects" />
+                <SectionHeader title=" My Live Projects" />
                 {projectComponents}
             </section>
         );
